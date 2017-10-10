@@ -1,95 +1,89 @@
-\documentclass[journal, letterpaper, draftclsnofoot, onecolumn, 10pt]{IEEEtran}
-
+\documentclass[onecolumn, draftclsnofoot,10pt, compsoc]{IEEEtran}
 \usepackage{graphicx}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-
-\usepackage{alltt}
-\usepackage{float}
-\usepackage{color}
 \usepackage{url}
-\usepackage{listings}
+\usepackage{setspace}
 
-\usepackage{balance}
-\usepackage[TABBOTCAP, tight]{subfigure}
-\usepackage{enumitem}
-\usepackage{pstricks, pst-node}
-\usepackage{placeins}
 \usepackage{geometry}
-\usepackage{hyperref}
-\geometry{textheight=8.5in, textwidth=6in}
+\geometry{textheight=9.5in, textwidth=7in}
 
-\lstset{
-  language=C,                % choose the language of the code
-  numbers=left,                   % where to put the line-numbers
-  stepnumber=1,                   % the step between two line-numbers.
-  numbersep=5pt,                  % how far the line-numbers are from the code
-  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
-  showspaces=false,               % show spaces adding particular underscores
-  showstringspaces=false,         % underline spaces within strings
-  showtabs=false,                 % show tabs within strings adding particular underscores
-  tabsize=8,                      % sets default tabsize to 2 spaces
-  captionpos=b,                   % sets the caption-position to bottom
-  breaklines=true,                % sets automatic line breaking
-  breakatwhitespace=true,         % sets if automatic breaks should only happen at whitespace
-  title=\lstname,                 % show the filename of files included with \lstinputlisting;
-}
+% 1. Fill in these details
+\def \CapstoneTeamName{		AKARobotics}
+\def \CapstoneTeamNumber{		13}
+\def \GroupMemberOne{			Kevin Talik}
+\def \GroupMemberTwo{			Anish Asrani}
+\def \GroupMemberThree{			Arthur Shing}
+\def \CapstoneProjectName{		How to Build an Effective Robot Comedian}
+\def \CapstoneSponsorCompany{	Oregon State University}
+\def \CapstoneSponsorPerson{		Heather Knight}
 
-%random comment
+% 2. Uncomment the appropriate line below so that the document type works
+\def \DocType{		Problem Statement
+				%Requirements Document
+				%Technology Review
+				%Design Document
+				%Progress Report
+				}
 
-\newcommand{\cred}[1]{{\color{red}#1}}
-\newcommand{\cblue}[1]{{\color{blue}#1}}
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+% 3. If the document is not to be signed, uncomment the RENEWcommand below
+%\renewcommand{\NameSigPair}[1]{#1}
 
-\newcommand{\toc}{\tableofcontents}
-
-
-\def\name{Kevin Talikk, Anish Asrani, and Arthur Shing}
-
-%% The following metadata will show up in the PDF properties
-\hypersetup{
-   colorlinks = true,
-   urlcolor = black,
-   linkcolor = black,
-   pdfauthor = {\name},
-   pdfkeywords = {cs461 senior capstone robot comedian},
-   pdftitle = {CS 461 Problem Statement},
-   pdfsubject = {CS 461 Problem Statement},
-   pdfpagemode = UseNone
-}
-
-\parindent = 0.0 in
-\parskip = 0.1 in
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\title{How to make an effective robot comedian}
-\author{Kevin Talikk, Anish Asrani, and Arthur Shing}
-%TODO Insert class, title, term
-
 \begin{titlepage}
     \pagenumbering{gobble}
-    \centering
-    \maketitle
-    CS 461 - Senior Capstone\par
-    Fall term\par
-    \vspace{1cm}
-    \begin{abstract}
-      This project is about creating an effective robot comedian.
-      The following is a brief statement of the project's problem, proposed solution, and performance metrics.
-      The problem described is about the lack of a sense of liveliness in robotic interaction.
-      In solution, the authors aim to create a robot comedian that reacts to audience reaction.
-      The effectiveness of this will be measured after a series of studies on a live audience.
-    \end{abstract}
-
-
+    \begin{singlespace}
+    	% \includegraphics[height=4cm]{coe_v_spot1}
+        \hfill
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
+        %\includegraphics[height=4cm]{CompanyLogo}
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge CS Capstone \DocType \par
+            {\large\today}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            {\large Prepared for}\par
+            \Huge \CapstoneSponsorCompany\par
+            \vspace{5pt}
+            {\Large\NameSigPair{\CapstoneSponsorPerson}\par}
+            {\large Prepared by }\par
+            Group\CapstoneTeamNumber\par
+            % 5. comment out the line below this one if you do not wish to name your team
+            \CapstoneTeamName\par
+            \vspace{5pt}
+            {\Large
+                \NameSigPair{\GroupMemberOne}\par
+                \NameSigPair{\GroupMemberTwo}\par
+                \NameSigPair{\GroupMemberThree}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+        % 6. Fill in your abstract
+				This project is about creating an effective robot comedian.
+				The following is a brief statement of the project's problem, proposed solution, and performance metrics.
+				The problem described is about the lack of a sense of liveliness in robotic interaction.
+				In solution, the authors aim to create a robot comedian that reacts to audience reaction.
+				The effectiveness of this will be measured after a series of studies on a live audience.
+        \end{abstract}
+    \end{singlespace}
 \end{titlepage}
+\newpage
 \pagenumbering{arabic}
-% \tableofcontents
-% \clearpage
+\tableofcontents
+% 7. uncomment this (if applicable). Consider adding a page break.
+%\listoffigures
+%\listoftables
+\clearpage
 
+% 8. now you write!
 \section{Problem Statement}
-% Keep this part blank
 
 \subsection{The Problem}
 
@@ -105,12 +99,7 @@ Like stand-up comedy, flexibility in robot interaction could convey a greater se
 
 The goal in this project is to improve the flexibility of robotic interaction.
 
-
-
-% Define and describe the problem for a general but educated audience
-
-
-\subsection{Proposed Solution}
+\subsection{The Proposed Solution}
 
 % Talk about proposed solution here
 
@@ -148,5 +137,5 @@ A NAO bot with a set list of jokes that can deviate from what was pre-prepared b
 % 4. Series of studies with live audiences
 
 
-\FloatBarrier
+
 \end{document}
