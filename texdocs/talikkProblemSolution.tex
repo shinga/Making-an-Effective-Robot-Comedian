@@ -7,14 +7,14 @@
 \geometry{textheight=9.5in, textwidth=7in}
 
 % 1. Fill in these details
-\def \CapstoneTeamName{		The Cleverly Named Team}
-\def \CapstoneTeamNumber{		777}
-\def \GroupMemberOne{			David Hume}
-\def \GroupMemberTwo{			Thomas Kuhn}
-\def \GroupMemberThree{			Karl Popper}
-\def \CapstoneProjectName{		Building a Robot Using Only Philosophy}
-\def \CapstoneSponsorCompany{	Cheap Robots, Inc}
-\def \CapstoneSponsorPerson{		Roger Bacon}
+\def \CapstoneTeamName{		AKA Robotics}
+\def \CapstoneTeamNumber{		13}
+\def \GroupMemberOne{			Anish Asrani}
+\def \GroupMemberTwo{			Kevin Talik}
+\def \GroupMemberThree{			Arthur Shing}
+\def \CapstoneProjectName{		How to Make an Effective Robot Comedian}
+\def \CapstoneSponsorCompany{	Oregon State University}
+\def \CapstoneSponsorPerson{		Heather Knight PhD}
 
 % 2. Uncomment the appropriate line below so that the document type works
 \def \DocType{		Problem Statement
@@ -36,7 +36,6 @@
 \begin{titlepage}
     \pagenumbering{gobble}
     \begin{singlespace}
-    	\includegraphics[height=4cm]{coe_v_spot1}
         \hfill 
         % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
         %\includegraphics[height=4cm]{CompanyLogo}   
@@ -66,9 +65,9 @@
         }
         \begin{abstract}
         % 6. Fill in your abstract    
-        	This document is written using one sentence per line.
-        	This allows you to have sensible diffs when you use \LaTeX with version control, as well as giving a quick visual test to see if sentences are too short/long.
-        	If you have questions, ``The Not So Short Guide to LaTeX'' is a great resource (\url{https://tobi.oetiker.ch/lshort/lshort.pdf})
+        Human-Computer interaction can learn a lot from stand-up comedy.
+        A stand-up set has scripted jokes, statements that are predetermined, as well as improvisational statements, that give the performance a sense of liveliness and character. A comedian can observe an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and genuine for the observer.
+        The goal of this project is to develop and implement a robot character that can sense and quantify audience interaction and perform jokes with authenticity and fluent delivery.
         \end{abstract}     
     \end{singlespace}
 \end{titlepage}
@@ -81,12 +80,33 @@
 \clearpage
 
 % 8. now you write!
-\section{The First Section}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Etiam elementum mi at magna imperdiet, sit amet feugiat ligula maximus. 
-Ut ultrices viverra est, ac condimentum massa scelerisque tincidunt. 
-Mauris lacus nunc, suscipit at risus sit amet, viverra bibendum dui. 
-Maecenas eu urna et lorem dapibus tincidunt quis sit amet neque. 
-Vivamus ac felis fermentum, blandit mauris in, posuere libero. 
+\section{Problem Definition}
+{\it{Character}} is a set of traits that describe and distinguish an individual. For a robot, the quality of a character needs to be discernible as an individual and unique, and yet the traits that can simultaneously describe a {\it{human}} character.
+A relatable character can connect to an audience on a familiar field, and the individuality of the robot's character can abstract the observer from the technology that is driving the machines decisions.
+We want to use the metaphor of stand-up comedy to design a set list that can convey a sense of character to an audience. The character of the robot needs to show a sense of improvisation with dialogue and originality of content.
+\section{Proposed Solution}
+
+We want to design and implement a software solution to simulate a character for a robot; it will communicate and operate in the context of stand-up comedy by creating set lists for performances.
+Using sensors to detect the reaction from the crowd, the robot will convey jokes, and improvise variant deliveries of jokes to make a set to perform in front of an audience. Hopefully, the audience will enjoy the experience.
+
+The software will read in a raw audience input from the sensors, and interpret the information into quantifiable data. From this, machine will gauge input and test jokes. Each reaction to a joke will determine a better joke based off of how it was received by the audience.
+
+Using machine learning concepts, the software will reference previously seen audience patterns and decide which joke is best fit for situation. Machine learning will help the software learn how to react and improvise statements based on the performance metrics.
+This will give the most experience for the robot, in addition to making a stronger performance.
+\section{Performance Metrics}
+
+This robot will need to quantify an audience driven input, and respond in a manner that is funny for an audience, but also appropriate and understandable. It is important to monitor the quality of the audience reactions for a given action, and understand patterns of audience interaction. The machine needs to have the forethought to set up jokes, and deliver suitable content. This concept will be a working prototype that highlights human computer interaction and machine that improvise dialogue.
+
+The robot will sense input from the audience, improvise a portion of a set list and deliver the joke to the audience. It will need to watch what jokes do well, and which jokes "bomb." Based off the input, the robot can change and alter a set list to cater to a crowd.
+
+An audience needs to be modeled virtually for the robot so that it can understand the setting it is in. An audience can be of variable length, and should describe the people who are receiving the jokes. An audience can be uncomfortable and displeased with the performance, or they will be involved and happy. The robot needs to be able to quantify how the audience is following the delivery of the robot, as well as react accordingly; it will need to make sure that its' jokes are landing.
+
+Each joke, or portion of a stand-up set, will need to be internally described by indexable qualities. The machine needs to be able to understand joke,and make sure that it is apply it to the proper context. A joke may not be understood by the audience, and that needs to be an quantifiable outcome of the performance.
+
+A set needs to have a net outcome for the series of jokes, to determine the delivery and timing between transitions of jokes. A set that does well overall may have jokes that do not do well, and the software needs to build a context for what jokes don't work for the audience.
+
+These metrics described need to respond and explain the choices for the machine's response to an interaction, as well as value the outcome of the interaction. The robot (and developers) need to know how to improve an interaction, and how to devise a sentence for a human.
+
+
 
 \end{document}
