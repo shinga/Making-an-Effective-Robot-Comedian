@@ -23,7 +23,7 @@
 				%Design Document
 				%Progress Report
 				}
-			
+
 \newcommand{\NameSigPair}[1]{\par
 \makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
 \par\vspace{-12pt} \textit{\tiny\noindent
@@ -36,13 +36,13 @@
 \begin{titlepage}
     \pagenumbering{gobble}
     \begin{singlespace}
-        \hfill 
+        \hfill
         % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
-        %\includegraphics[height=4cm]{CompanyLogo}   
+        %\includegraphics[height=4cm]{CompanyLogo}
         \par\vspace{.2in}
         \centering
         \scshape{
-            \huge CS Capstone \DocType \par
+             \huge CS Capstone \DocType \par
             {\large\today}\par
             \vspace{.5in}
             \textbf{\Huge\CapstoneProjectName}\par
@@ -54,7 +54,7 @@
             {\large Prepared by }\par
             Group\CapstoneTeamNumber\par
             % 5. comment out the line below this one if you do not wish to name your team
-            \CapstoneTeamName\par 
+            \CapstoneTeamName\par
             \vspace{5pt}
             {\Large
                 \NameSigPair{\GroupMemberOne}\par
@@ -65,13 +65,13 @@
         }
         \begin{abstract}
         % 6. Fill in your abstract
-        
-        
-        
-        
+
+
+
+
         The purpose of this project is to make a robot that performs comedy. Robot interaction lacks the traits of human interaction. Character, authenticity, and liveliness are some traits of human interaction that enables people to stay invested in an interaction, and are important aspects of successful stand-up comedy. In an effort to create an effective robot comedian, these traits should be present in the robot. The challenge will be to make the robot feel and perform more like a human would while keeping the audience engaged. This can be overcome by considering audience feedback after every joke or story that is told and using artificial intelligence to adjust future jokes. We propose that the robot should be able to construct its own jokes according to these traits, and also in accordance with audience reaction. The robot’s performance will be measured using audience sensing tools.
-        	
-        \end{abstract}     
+
+        \end{abstract}
     \end{singlespace}
 \end{titlepage}
 \newpage
@@ -84,24 +84,19 @@
 
 \section{The Problem}
 
+“The jostling of ideas... produces a physical jostling of our internal organs and we enjoy that physical stimulation.”  {Morreall}
 
+Humor is an entertaining break in expectations and can happen in any interaction. The element of incongruity has long been acknowledged to be an essential part of humor, and has been noted by philosophers such as Aristotle and Kant {\cite{StanfordHum:2016}}. A form of modern comedy that capitalizes on this element of incongruity is stand-up comedy.
 
-%[Problem questions]
+In stand-up comedy, comedians have to rely on their scripted jokes and their ability to improvise to have a successful performance. In many ways, a robot interaction can be compared to a stand-up set. Within the context of stand up comedy, a robot must be receptive to an audience and tell jokes to make an audience laugh. Some robots, such as an ATM or an automated cashier, require successful interactions to complete tasks. These machines are not funny, and the interaction is less significant.
 
-%We want to use the metaphor of stand-up comedy to design a set list that can convey a sense of character to an audience. The character of the robot needs to show a sense of improvisation with dialogue and originality of content.
+However, even if a task is unsuccessful, the attitude towards a robot can be positively connotated by a more responsive and empathetic machine. {\cite{DesignExBeh:2017}}
 
+There have been studies on the comedic value of jokes told by a robot. In one study, Sjöbergh and Araki {\cite{RobotsMakeThings:2008}} examined the significance of having a robot tell a joke. However, this study evaluated joke performance by a robot, but not an entire stand-up set. In addition, another study by Katevas et al. {\cite{RobotComedyLab:2015}} evaluated the influence of non-verbal aspects of joke delivery. To extend on these lines of research, we intend to focus on what character qualities robot express during a stand-up performance, both verbally and physically to an audience.
 
-The key to keeping a human invested in a conversation is keeping them engaged and curious. An engaging conversation has content valuable to both people in the conversation, and upholding curiosity necessitates unknown content; people will be more interested in something they have not seen before. For a robot interaction, it is difficult to determine if what the robot is responding with is what the developer wrote, or what the machine created. 
+While robots can perform comedy to some extent, there is still a significant gap between human and robot performances. One of the biggest factors leading to this is that robots have limitations detecting and reacting to the dynamics of the audience behavior {\cite{KatevasRobot:2014}}. This may go unnoticed in shorter sets but when performing for extended periods, this would be very prominent and could potentially leave the audience uninterested.
 
-The goal of research in AI and HCI is to create a sense of liveliness and flexibility in an interaction where there is none. 
-A verbal interaction between a robot and a human can be compared to a stand-up comedy set. In comedy, comedians have to rely on their scripted jokes and their ability to improvise, the latter giving a sense of authenticity through their spontaneous interactions with the audience. With it’s interaction, the robot needs to convey a sense of character to assist in anthropomorphizing itself to portray authenticity . Comedians must also have an acute perception of the audience, and the flexibility to adjust their prepared performance for the audience. 
-
-{\it{Character}} is a set of traits that describe and distinguish an individual. For a robot, the quality of a character needs to be discernible as individual and unique. It’s character traits should also simultaneously be capable of describing a {\it{human}} character.
-A relatable character can connect to an audience and give a sense of familiarity, and the individuality of the robot's character can abstract the observer from the technology that is driving the machine’s decisions. 
-
-Despite the ability of a well-crafted character to engage an audience from the mechanical wirings and programming of the robot, robot stand-up is ontologically different from a human doing stand-up. As such, there are certain things that being a {\it{robot on stage}} enables a robot comedian to have that human comedians do not. 
-
-Additionally, a robot must “act” alive, responding to an audience in a way that is both comedic and convincingly natural, rather than mechanically moving on from one joke to another.
+Existing research with robot comedians has given rise to the questions of the nature of comedy: What does robot comedy need to succeed? What is it that makes a performance engaging and alive? How might comedy exclusive to a robotic comedian improve its act {\cite{RobotsMakeThings:2008}}? To answer these questions, we hypothesize that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction.
 
 
 
@@ -112,36 +107,26 @@ Additionally, a robot must “act” alive, responding to an audience in a way t
 
 \section{Proposed Solution}
 
-%Bot crafts its own jokes
-%H1: Audience Engagement + Cooperation will improve quality of robot comedy 
-We hypothesize that what makes an interaction feel authentic and engaging is the perceived character through improvisational dialogue. To implement this solution, we intend to make an Artificial Intelligence system that can analyze human provided topics, construct jokes, and deliver content from character decisions. The system will also be able to determine which portion of an interaction did well, and base future decisions from successful dialogue history.
+To make robot comedy successful, we hypothesize that the comedian-audience interaction feel authentic and engaging is the perceived character through improvisational dialogue. We intend to evaluate an audience's experience during a robot comedy set to interpret how a robot’s character is received.
 
-The four core components of this system are the analysis of human topics (or intended subject), the content and joke creation algorithm, the delivery decision for the created content, and the robot's ability to learn from successful dialogue.
+In a final performance, we want to see an audience who is responsive to the robot comedian, and a robot that is adaptively communicating a set of jokes to a dynamic audience. To build up to this, we want to see separately, a robot that can functionally tell jokes through a personality, and then view how an live audience responds to the delivery. In order to make this feasible, some steps will first be taken locally and remotely.
 
-For initializing a dialogue from the robot, the system will need to describe and understand the context of an interaction. For example, if the person speaking to the robot mentions a subject, the robot needs to have some definitions of what a subject is,{ and the perceived character from the human}. The input can be something non-specific, such as laughter, or applause. If there is no specific noun, or topic, the robot should be able to have some experiences and stories written that it can talk about.
+Locally in our group, we want to determine what a robot can be technically limited to, and how to structure the software behind character parameters and verbal sentences. Through this process, we can design jokes and set segments. We will also design character personas that the robot will use, and test sets ourselves with our friends and peers to ensure the hilarity of the set.
 
-The joke creation algorithm will create a vocabulary and the conversation topic. For example, if the audience mentions an apple, the robot can reference an apple as round, fruit, red, seeds, etc. The model for humor, or what constitutes a joke as “funny”, will be quality of how an expectation is broken for a predicted outcome of a conversation. 
+Outside of our groups, we want to see how our jokes are communicating to the audience. Not only do we want to see jokes performed by the robot, but we also want to test our jokes performed by a human, and compare the response. Once we can see how an audience interacts with a robot, we want to observe decisions that can the robot can make to engage the audience and adapt to measured responses.
 
-The delivery of a joke can make a joke well received (it is interpreted as “funny” for the audience), or it can illicit a negative response. The proposed solution for this system is dependent on a robot being able to exude a sense of character that is descriptively round; we want a human to be able to describe our robot with traits that project personality and charisma in a conversation.
+In the “Real World”, our robot performance will make sets dynamically, and observe audiences to choose jokes adaptively; the robot will be socially intelligent. Additionally, in line with work done by Katevas et al. {\cite{RobotComedyLab:2015}} and Sjöbergh and Araki {\cite{RobotsMakeThings:2008}}, the robot should make use of non-verbal cues. This includes looking at the audience while talking to them, making appropriate hand gestures to supplement the jokes, and walking back and forth on stage. These aspects of body language will help keep the audience engaged and give the robot a human touch.
 
-After a joke has been told to an audience, the robot needs to be able to quantify and categorize how the joke was received to an audience, and if the response was net positive, or net negative. This metric (described more in performance metric), will further aid the robots character decision making, and how it will choose and deliver jokes. This will contribute to making the robot interact with a human audience more authentically.
- 
 
 \section{Performance Metrics}
 
-% Did the bot accurately perceive audience reaction?
-% Did the bot accurately respond to the perceived reaction?
-% Response sensing: Cards, auditory sensing, maybe clickers
-% Did we find if audience engagement/cooperation improves bot comedy quality?
+Broad metrics involved will include the audience’s evaluation of the robot’s character and response to jokes. We also need to measure the robot’s ability to deliver jokes and adapt to a response.
 
-% Did we have x amount of audience tests?
+The robot will be tested by giving it different personas at different performances. To see if the robot’s character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. “Would you invite this robot to dinner?” These responses will also be used to study if the robot matched the expected persona.
 
-The robot should be able to sense the audience by using audio cues and analyzing laughter (e.g. read cue cards that will be provided to the audience). If the audience is enjoying themselves, the robot was successful. If the robot receives a negative response and the audience isn’t enjoying themselves, it should change its content accordingly to impress the audience. The goal is to keep the audience captivated. This partially involves writing a good variety of jokes and giving it to the robot, and the robot improvising to deliver the most appropriate jokes at every point. How the robot changes its tone and genre of jokes should be tested as well. 
+Audience response to jokes will also be measured by behavioral observation. With consent, the audience may be recorded for their reactions, such that responses can be retrospectively observed to see which parts of the set worked and which parts were less successful.
 
-There should be ways to test the robot even when there is no audience available. This could be done by feeding the response inputs manually and testing how it changed its jokes for different kinds of responses. 
+\bibliographystyle{./IEEEtran}
 
-Every story or joke that it is telling should have some structure to it. It should set-up the joke and allow the audience to visualize what is going on, describe it, then deliver the punchline. The jokes it makes should make use of the fact that it is a robot. A robot would potentially face different problems than what humans do. The audience would enjoy hearing things from a perspective they haven’t seen before. While doing this, it should also feel human. The robot should not feel flat and monotonous (e.g. Siri). The challenge will be to find the right balance between both of them.
-
-The audience could be surveyed after every performance and ask them to describe the robot. These surveys could then be used to improve the robot little by little after every performance. 
-
+\bibliography{refs}
 \end{document}
