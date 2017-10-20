@@ -1,4 +1,4 @@
-# This file seems to originate from something called 'the ultimate
+$(OUTPUTPDF)# This file seems to originate from something called 'the ultimate
 # latex makefile' that different authors worked on. Find original
 # versions at:
 # http://tadek.pietraszek.org/blog/2006/03/24/the-ultimate-latex-makefile/
@@ -28,6 +28,7 @@ DVIFILES = capstone.dvi
 MAINTEXFILE = $(DVIFILES:.dvi=.tex)
 SUBTEXFILES =
 BIBFILES = refs.bib
+OUTPUTPDF = problem_statement.pdf
 
 #switch = to # when using ps2pdf in win32 (mingw/msys), i.e. uncomment 2nd line
 #E=\=
@@ -130,7 +131,7 @@ $(MAINTEXFILE) : $(SUBTEXFILES) $(BIBFILES)
 	"-dColorImageFilter$E/FlateEncode" \
 	"-dGrayImageFilter$E/FlateEncode" \
 	"-dMonoImageFilter$E/FlateEncode" \
-	$< template.pdf
+	$< $(OUTPUTPDF)
 
 #				$(PDFLATEX) $<
 
@@ -146,12 +147,12 @@ $(MAINTEXFILE) : $(SUBTEXFILES) $(BIBFILES)
 	"-dMonoImageFilter=/FlateEncode" \
 	"-dDownsampleGrayImages=false" \
 	"-dDownsampleColorImages=false" \
-	$< template.pdf
+	$< $(OUTPUTPDF)
 #                               $(PDFLATEX) $<
 
 # cleans anything that can be re-generated automatically, plus emacs backups
 clean:
 				rm -f *.aux *.log *.bbl *.blg *.brf *.cb *.ind *.idx *.ilg	\
-				*.inx *.toc *.out $(DVIFILES) $(PSFILES) template.pdf *~
+				*.inx *.toc *.out $(DVIFILES) $(PSFILES) $(OUTPUTPDF) *~
 
 .PHONY : all pdf ps dvi clean $(MAINTEXFILE)
