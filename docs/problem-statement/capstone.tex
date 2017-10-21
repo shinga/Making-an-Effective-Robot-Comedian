@@ -5,6 +5,7 @@
 
 \usepackage{geometry}
 \geometry{textheight=9.5in, textwidth=7in,margin=0.75in}
+\bibliographystyle{IEEEtran}
 
 % 1. Fill in these details
 \def \CapstoneTeamName{		AKARobotics}
@@ -23,7 +24,7 @@
 				%Design Document
 				%Progress Report
 				}
-
+			
 \newcommand{\NameSigPair}[1]{\par
 \makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
 \par\vspace{-12pt} \textit{\tiny\noindent
@@ -32,6 +33,7 @@
 %\renewcommand{\NameSigPair}[1]{#1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
 \bstctlcite{IEEEexample:BSTcontrol}
@@ -39,9 +41,9 @@
 \begin{titlepage}
     \pagenumbering{gobble}
     \begin{singlespace}
-        \hfill
+        \hfill 
         % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
-        %\includegraphics[height=4cm]{CompanyLogo}
+        %\includegraphics[height=4cm]{CompanyLogo}   
         \par\vspace{.2in}
         \centering
         \scshape{
@@ -57,7 +59,7 @@
             {\large Prepared by }\par
             Group\CapstoneTeamNumber\par
             % 5. comment out the line below this one if you do not wish to name your team
-            \CapstoneTeamName\par
+            \CapstoneTeamName\par 
             \vspace{5pt}
             {\Large
                 \NameSigPair{\GroupMemberOne}\par
@@ -68,13 +70,14 @@
         }
         \begin{abstract}
         % 6. Fill in your abstract
+        
+        
+        
+        
+Human-Robot interaction can learn a lot from stand-up comedy. A stand-up set has scripted jokes, statements that are predetermined, as well as improvisational statements, that give the performance a sense of liveliness and character. A comedian can observe an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and genuine for the observer. The purpose of this project is to to discover what makes an entertaining interaction by studying a robot that performs comedy. We propose that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction. These propositions will be tested locally, remotely, and in a real stand-up setting. Audience response will be evaluated.
 
-
-
-
-				Human-Robot interaction can learn a lot from stand-up comedy. A stand-up set has scripted jokes, statements that are predetermined, as well as improvisational statements, that give the performance a sense of liveliness and character. A comedian can observe an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and genuine for the observer. The purpose of this project is to to discover what makes an entertaining interaction by studying a robot that performs comedy. We propose that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction. These propositions will be tested locally, remotely, and in a real stand-up setting. Audience response will be evaluated.
-
-        \end{abstract}
+        	
+        \end{abstract}     
     \end{singlespace}
 \end{titlepage}
 \newpage
@@ -92,40 +95,45 @@
 \end{quote}
 Humor is an entertaining break in expectations and can happen in any interaction. The element of incongruity has long been acknowledged to be an essential part of humor, and has been noted by philosophers such as Aristotle and Kant {\cite{StanfordHum:2016}}. A form of modern comedy that capitalizes on this element of incongruity is stand-up comedy.
 
-In stand-up comedy, comedians have to rely on their scripted jokes and their ability to improvise to have a successful performance. In many ways, a robot interaction can be compared to a stand-up set. Within the context of stand up comedy, a robot must be receptive to an audience and tell jokes to make an audience laugh.
+In stand-up comedy, comedians have to rely on their scripted jokes and their ability to improvise to have a successful performance. In many ways, a robot interaction can be compared to a stand-up set. Within the context of stand up comedy, a robot must be receptive to an audience and tell jokes to make an audience laugh. 
+ 
+Why is the field of robot comedy relevant and worth studying? With automation slowly replacing menial tasks in society, such as an ATM or an automated cashier, interactions with bots are going to be much more common. These machines are less engaging to interact with, but require reciprocity to obtain a goal. While these machines do improve ease of use and convenience, people are not as expressive towards the robot. Even if the machine is unsuccessful in completing its task, expressive robots are received in a more empathetic manner by the users {\cite{DesignExBeh:2017}}. The user’s perception of a robot’s expression is more significant than its true internal state when seeking to generate engaging interactions {\cite{KnightEightLessons:2011}}. 
 
-Why is the field of robot comedy relevant and worth studying? With automation slowly replacing menial tasks in society, such as an ATM or an automated cashier, interactions with bots are going to be much more common . These machines are less engaging to interact with, but require reciprocity to obtain a goal. While these machines do improve ease of use and convenience, people are not as expressive towards the robot. Even if the machine is unsuccessful in completing its task, expressive robots are received in a more empathetic manner by the users.{\cite{DesignExBeh:2017}}.
+Researcher Heather Knight noted the importance of the audience recognizing the performer as a social being, rather than as a dull object. In this respect, artificial social intelligence can bring greater engagement to the realm of the theatre. A socially intelligent robot comedian can be crafted by utilizing non-verbal gestures and by conveying a sense of character through spontaneous interactions with the audience {\cite{KnightEightLessons:2011}}.  Additionally, a study by Katevas et al. {\cite{RobotComedyLab:2015}} evaluated the influence of non-verbal aspects of joke delivery. Knight also noted how physical presence and embodiment in a robot creates a more expressive and engaging interaction {\cite{KnightEightLessons:2011}}. In another study done by Sjöbergh and Araki {\cite{RobotsMakeThings:2008}}, having a robot tell a joke was found to generate more of an audience reaction than having the joke read by a human. However, this study evaluated joke performance by a robot, but not an entire stand-up set. To extend on these lines of research, we intend to focus on the effect of verbally and physically expressing robot character qualities during a stand-up performance. 
+ 
+ Previous attempts by Knight to create an adaptive robot comedian have not fared nearly as well as human performances. This could be improved by changing various attributes about the overall performance. These could include - tone of voice, accent, costuming, props, gestures, timing, lighting, and pose {\cite{KnightSavvy:2011}}. There is still a significant gap between human and robot performances. One of the biggest factors leading to this is that robots have limitations detecting and reacting to the dynamics of the audience behavior {\cite{KatevasRobot:2014}}.This may go unnoticed in shorter sets but when performing for extended periods, it would become prominent and could potentially leave the audience uninterested. 
 
-There have been studies on the comedic value of jokes told by a robot. In one study, Sjöbergh and Araki {\cite{RobotsMakeThings:2008}} examined the significance of having a robot tell a joke. However, this study evaluated joke performance by a robot, but not an entire stand-up set. In addition, another study by Katevas et al. {\cite{RobotComedyLab:2015}} evaluated the influence of non-verbal aspects of joke delivery. To extend on these lines of research, we intend to focus on the effect of verbally and physically expressing robot character qualities during a stand-up performance.
-
-While robots can perform comedy to some extent, there is still a significant gap between human and robot performances. One of the biggest factors leading to this is that robots have limitations detecting and reacting to the dynamics of the audience behavior {\cite{KatevasRobot:2014}}. This may go unnoticed in shorter sets but when performing for extended periods, it would become prominent and could potentially leave the audience uninterested.
-
-Existing research with robot comedians has given rise to the questions of the nature of comedy: What does robot comedy need to succeed? What is it that makes a performance engaging and alive? How might comedy exclusive to a robotic comedian improve its act {\cite{RobotsMakeThings:2008}}? To answer these questions, we hypothesize that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction.
+The goal of this project is to investigate the following research questions: What does robot comedy need to succeed? What is it that makes a performance engaging and alive? How might comedy exclusive to a robotic comedian improve its act {\cite{RobotsMakeThings:2008}}? To answer these questions, we hypothesize that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction.
 
 
 
 
 \section{Proposed Solution}
 
-To make robot comedy successful, we propose that conveying character through improvisational dialogue will make the comedian-audience interaction feel authentic and engaging. We intend to evaluate a robotic character is received by an audience during a stand-up performance. To make this feasible, some steps will first be taken locally and remotely before field testing.
+	
+A final robot performance will convey character through improvisational dialogue which will make the comedian-audience interaction feel authentic and engaging. The character of the machine will influence the delivery and transition between jokes. This will add to the robot's charisma. We intend to evaluate how a robotic character is received by an audience during a stand-up performance. To make this feasible, some steps will first be taken locally and remotely before field testing. 
 
-	Locally in our group, we will determine what a robot can be technically limited to, and learn how to structure the software behind character parameters and verbal sentences. Through this process, we can design jokes and set segments. We will also design character personas that the robot will use, and test sets ourselves with our friends to check the quality of the set.
 
-	Outside of our group, after sets and personas are developed we will test how our jokes are communicating to the audience. We can perform and record a scripted set on a live audience to improve the performance Sets will be scripted and non-adaptive initially, such that revisions to sets can be made to further ensure that our sets are funny. Sets may include scripted quasi-spontaneous interactions with the audience.
+To make robot comedy successful, we propose that conveying character through improvisational dialogue will make the comedian-audience interaction feel authentic and engaging. We intend to evaluate how a robotic character is received by an audience during a stand-up performance. To make this feasible, some steps will first be taken locally and remotely before field testing. 
 
-Additionally, in line with work done by Katevas et al. {\cite{RobotComedyLab:2015}} and Sj{\"o}bergh and Araki {\cite{RobotsMakeThings:2008}}, the robot should make use of non-verbal cues. This includes looking at the audience while talking to them, making appropriate hand gestures to supplement the jokes, and walking back and forth on stage. These aspects of body language will help keep the audience engaged and give the robot a human touch.
+	Locally in our group, we will determine what a robot can be technically limited to, and learn how to structure the software behind character parameters and verbal sentences. Through this process, we can design jokes and set segments. We will also design character personas that the robot will use, and test sets ourselves with our friends to check the quality of the set. 
 
-	After remote testing is completed, tests in the real world will be run. Our robot performance will make sets dynamically, and observe audiences to choose jokes adaptively; the robot will be socially intelligent. We also hope to compare the responses to jokes performed by the robot against the same jokes performed by a human. Once we can see how an audience interacts with a robot, we want to observe decisions that the robot can make to engage the audience and adapt to measured responses.
+	Outside of our group, after sets and personas are developed we will test how our jokes are communicating to the audience. We can perform and record a scripted set on a live audience to improve the performance. These sets will be scripted and non-adaptive initially, such that revisions to sets can be made to further ensure that our sets are funny. Sets may also include scripted quasi-spontaneous interactions with the audience. 
+
+Additionally, in line with work done by Katevas et al. {\cite{RobotComedyLab:2015}} and Sj{\"o}bergh and Araki {\cite{RobotsMakeThings:2008}}, the robot should make use of non-verbal cues. This includes looking at the audience while talking to them, making appropriate hand gestures to supplement the jokes, and walking back and forth on stage. These aspects of body language will help keep the audience engaged and give the robot a human touch. 
+
+	After remote testing is completed, tests in the real world will be run. Our robot performance will make sets dynamically, and observe audiences to choose jokes adaptively; the robot will be socially intelligent. We also hope to compare the responses to jokes performed by the robot against the same jokes performed by a human. Once we can see how an audience interacts with a robot, we want to observe decisions that the robot can make to engage the audience and adapt to measured responses. 
+
 
 \section{Performance Metrics}
 
-Metrics involved will include the audience’s evaluation of the robot’s character and response to jokes. We also need to measure the robot’s ability to deliver jokes and adapt to an audience response.
+The main gauge of a comedy show is the audience. Surveys can help understand how audience opinion's changed before and after the show, or capture their reactions. Behavioral annotations or automated audience detection systems can help us measure their behavioral response.
 
-The robot will be tested by giving it different personas at different performances. To see if the robot’s character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. “Would you invite this robot to dinner?” These responses will be used to study if the robot matched the expected persona and gauge how comfortable the people are with the robot.
+Metrics involved will include the audience evaluation of the robot’s character and response to jokes. These metrics can be used to improve the robot's ability to deliver jokes and understand the utility of adapting. For example, to see if the robot’s character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. "Would you invite this robot to dinner?" These responses will be used to study if the robot matched the expected persona and gauge how comfortable the people are with the robot. 
 
-Audience response to jokes will also be measured by behavioral observation. With consent, the audience may be recorded for their reactions, such that responses can be retrospectively observed to see which parts of the set worked and which parts were less successful.
+Audience response to jokes will also be measured by behavioral observation. With consent, the audience may be recorded for their reactions, such that responses can be retrospectively observed to see which parts of the set worked and which parts were less successful. 
 
 
-\bibliographystyle{./IEEEtran}
+\bibliographystyle{IEEEtran}
 \bibliography{refs}
 \end{document}
