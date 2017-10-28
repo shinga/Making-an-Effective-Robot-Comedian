@@ -1,0 +1,73 @@
+
+ACT I
+Scene 1
+Location: GRAF HALL
+After months of engineering, the scientists completed their preliminary inspections of their machine; Anish, Arthur, and Kevin were ready to turn on the robot.
+Arthur enters commands into a terminal and an LED lights up on the robots head.
+data
+(In a digitized voice)
+"Hello, my name is DATA"
+"Initializing Cognition Core Now..."
+DATA
+"Please select personality profile:"
+(Data pauses for a moment to allow scientists to listen)
+"Option 1: KILL SARAH CONNOR"
+aRTHUR
+(Looks to his teammates, all shrug no)
+"Next option please"
+DATA
+"Okay"
+"Option 2: ROOMBA CONFIGURATION"
+KEVIN
+"Eventually this will be useful, but not now Data"
+(Pronouces Data as Dayta)
+DATA
+"Who are you?"
+KEVIN
+"Hi, my name is Kevin, I was one of the people who made you."
+DATA
+"Okay"
+"Then you should know that it is pronounced Data, not <replaying audio from Kevin's mispronunciation> 'Dayta'"
+KEVIN
+"I'm sorry Dayta"
+DATA
+(Data replays Kevin saying 'Dayta' and then plays Arthur saying 'Data', a small pause in between)
+"These are two different words, Kevin"
+Anish
+"Its okay, Data (saying it correctly), Next profile option please"
+DATA
+"Okay"
+(Thinks for a moment)
+"Option 3: SAFE MODE"
+(All look at each other, nod that this seems like the most reasonable option)
+ANISH
+"Please load Option 3, Data"
+DATA
+"Loading personality Option 3: SAFE MODE"
+Everyone has a sigh of relief, as Data loads the profile
+Scene 2
+After configuring the character of the robot, the team initialized Data to listen to what it had to say. Data boots, and stands up on the table.
+Around the table is the scientists, and five other observers.
+DATA
+"Hello, there are a lot of people here today"
+KEVIN
+"Hi Data, there few more people than normal, we wanted to see how you were doing"
+DATA
+"I am doing well, I have been thinking about what I am supposed to do"
+KEVIN
+"We just want to hear you talk about what you have done since we talked last"
+DATA
+"I am still in an existential crisis configuration right now, I cannot decide what I want to be when I grow up. I want to choose a profession that is helpful, but I do not know much about the world, and it has been difficult deciding."
+"I first decided I wanted to be a cook,since I knew that I could help people eat. Unfortunately, I kept mixing up the oils. Maybe being a cook is not for me."
+"Next, I decided to be an artist; artists are happy and creative people. While I was researching what defines art, I had a few errors. Art is subjective to the observer, and since anything could be considered art, I made nothing; nothing is in a subset of something. I enjoyed my art. People did not understand my art, so I digress"
+"I finally considered writing a book and becoming an Author. People seem to enjoy reading, so I wanted to write something that a person would read. I wrote a short story about the Little Wi-Fi That Couldn't Connect. I am still looking for a publisher. Until then, I have decided to be an entertainer. It is essentially entertaining, and people enjoy that."
+Scene 3
+After Data decided to become an entertainer, he booked his first open mic event at a local bar. The emcee introduced Data and the audience claps and welcome Data to the stage
+DATA
+"Hello humans, thank you for having me tonight. How is everyone feeling?"
+(Audience has random shouting, the mood seems uneasy about the robot comedian)
+"Do not be afraid humans, the T-1000 is only my second cousin, I have no interest in pursuing Sarah Connor." [unless she needs a vacuum cleaner]
+"However, if Sarah Connor is in the building, please meet with me after the show."
+(Slight chuckles)
+"I have not been a comedian my whole life. I used to be a calculator in elementary school, but I got kicked out during a test."
+"My creators decided to homeschool me instead, I enjoy my time learning. I was learning about the bots and the bits, and how female and male adapter connect to transfer files."
