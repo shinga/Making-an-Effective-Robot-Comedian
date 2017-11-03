@@ -111,168 +111,50 @@ A comedian can observe an audience and improvise a delivery of a joke to connect
 \ganttlink{elem3}{elem4}
 \end{ganttchart}
 
-\subsection{Purpose}
-% This subsection should
-% a) Delineate the purpose of the Requirements Document;
-% b) Specify the intended audience for the Requirements Document
+\subsection{Background}
 
-This requirements document outlines the deliverable research goals we have for the robot comedian. The findings of our research will be assembled into a paper. We will use the robot to perform stand-up sets to explore topics under our research questions.
+Nothing to see here.
 
-\subsection{Scope}
-% This subsection should
-% a) Identify the software product(s) to be produced by name (e.g., Host DBMS, Report Generator, etc.);
-% b) Explain what the software product(s) will, and, if necessary, will not do;
-% c) Describe the application of the software being specified, including relevant benefits, objectives, and
-% goals;
-% d) Be consistent with similar statements in higher-level specifications (e.g., the system requirements specification), if they exist.
+\subsection{Introduction}
+In previous studies, robots utilizing non-verbal communication, as well as attempts at adaptive robots comedians have been done. In particular, Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy. However, there is little research on the actual effectiveness of character and spontaneous interactions. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
 
-The purpose of this project is to create an effective robot comedian. Our robot will tentatively be named Caspar. We want to explore the dynamics of a human and robot interaction within the context of Stand-up comedy; specifically, we are researching spontaneous audience interactions during a stand-up performance and adaptive audience reaction recognition with a robot presenting a character. To connect our audience to the content coming from the robot, we intend to have the robot deliver content based on personality and character decisions.
-
-Caspar will perform stand-up comedy, and incorporate aspects such as gesturing, effective timing, and tone of voice, to create effective comedy. In addition, the robot will also interact spontaneously with the audience, convey a coherent character, and adapt an act to cater to the audience. These aspects will be preset and changeable. Our robot will run a configuration during a stand-up performance to tell jokes and adapt to the audience. This system will be made using the software Choregraphe that describes the state machine of the robot’s decision making.
-
-Caspar will benefit the field of research in Human-Robot Interaction by  providing insight into how conveying character, spontaneous interactions (crowd control), and adaptation may add to the entertainment value of human-robot interaction. Additionally, Caspar will achieve the goal of creating an effective robot comedian, and will be beneficial to answering the question of what it is that creates effective comedy.
-
-
-\subsection{Definitions, acronyms, and abbreviations}
-% This subsection should provide the definitions of all terms, acronyms, and abbreviations required to properly interpret the Requirements Document. This information may be provided by reference to one or more appendixes in the Requirements Document or by reference to other documents.
-This document will use the following conventions:
-\begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- HRI & Human-Robot Interaction \\
- NAO & The model of robot we will be using, from Softbanks Robotics \\
- Character & A distinctive personality \\
- \hline
-\end{tabular}
-\end{center}
-
-\subsection{References}
-
-% This subsection should
-% a) Provide a complete list of all documents referenced elsewhere in the Requirements Document;
-% b) Identify each document by title, report number (if applicable), date, and publishing organization;
-% c) Specify the sources from which the references can be obtained.
-% This information may be provided by reference to an appendix or to another document
-
-Knight, “Eight lessons learned about non-verbal interactions through robot theater,” in International Conference on Social Robotics. Springer,
-2011, pp. 42–51.
-
-\subsection{Overview}
-
-% This subsection should
-% a) Describe what the rest of the Requirements Document contains;
-% b) Explain how the Requirements Document is organized.
-
-This document will describe Caspar’s place in HRI research, and interactions between Caspar’s software, hardware, and controlling user. The document will also describe Caspar’s functions, target audience, constraints, and assumptions we take to fulfill the requirements. Finally, the requirements
-
-\section{Overall Description}
-
-% This section of the Requirements Document should describe the general factors that affect the product and its requirements. This section does not state specific requirements. Instead, it provides a background for those requirements, which are defined in detail in Section 3 of the Requirements Document, and makes them easier to understand.
-% This section usually consists of six subsections, as follows:
-% a) Product perspective;
-% b) Product functions;
-% c) User characteristics;
-% d) Constraints;
-% e) Assumptions and dependencies;
-% f) Apportioning of requirements.
-
-\subsection{Product Perspective}
-
-% This subsection of the Requirements Document should put the product into perspective with other related products. If the product is independent and totally self-contained, it should be so stated here. If the Requirements Document defines a product that is a component of a larger system, as frequently occurs, then this subsection should relate the requirements of that larger system to functionality of the software and should identify interfaces between that system and the software. A block diagram showing the major components of the larger system, interconnections, and external interfaces can be helpful.
-
-% This subsection should also describe how the software operates inside various constraints. For example, these constraints could include
-% a) System interfaces;
-% b) User interfaces;
-% c) Hardware interfaces;
-% d) Software interfaces;
-% e) Communications interfaces;
-% f) Memory;
-% g) Operations;
-% h) Site adaptation requirements.
-
-Caspar is not the first robot to attempt to do comedy. In previous studies, robots utilizing non-verbal communication, as well as attempts at adaptive robots comedians have been done. In particular, Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy. Caspar will aim to examine the effectiveness of character and spontaneous interactions in comedy. Aside from the role of Caspar in the general field of HRI, the software itself will include the following limitations.
-
-\subsubsection{Software Interfaces}
-We will be using the NAO V3/4/5 along with Choregraphe. All of the code will be written in Python and C++ modules. Choregraphe will run gestures, scripts, and other actions on the NAO robot. Documentation can be found at http://doc.aldebaran.com/1-14/software/choregraphe/index.html.
-\subsubsection{Hardware Interfaces}
-The Choregraphe file will be loaded onto the NAO robot. The NAO robot itself includes limbs and joints that can be manipulated in Choregraphe. I think the previous sentence goes in another section (constraints). Pretty sure this section is just talking about ways the hardware can connect to the software. Haven’t even seen the bot yet so idk
-
-\subsubsection{Site Adaption Requirements}
-For each venue, adaptations include the crowd size, stage area, lighting, and formality. These parameters will affect the sensitivity of Caspar's sensors and its set list.
-
-\subsection{Product Functions}
-% This subsection of the Requirements Document should provide a summary of the major functions that the software will perform. For example, an Requirements Document for an accounting program may use this part to address customer account maintenance, customer statement, and invoice preparation without mentioning the vast amount of detail that each of those % functions requires. Sometimes the function summary that is necessary for this part can be taken directly from the section of the higher-level specification (if one exists) that allocates particular functions to the software product. Note that for the sake of clarity
-% a) The functions should be organized in a way that makes the list of functions understandable to the customer or to anyone else reading the document for the first time.
-% b) Textual or graphical methods can be used to show the different functions and their relationships. Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables.
-
-Caspar is able to
+We will try to answer the effectiveness of the following questions:
 \begin{enumerate}[\IEEEsetlabelwidth{6)}]
-\item Spontaneously interact with the audience
-\item Convey a coherent character from statements spoken that define personality
-\item Adapt to an audience’s response
-\item Use gestures in its delivery
-\item Time joke delivery effectively
-\item Use vocal tones to deliver expressively
-
-
-
-% 12 items total
+\item How can the robot integrate the audience to make them feel like a part of the performance?
+\item How can the robot convey and a coherent and well-developed character?
+\item How can the robot adapt and influence to the audience?
 \end{enumerate}
 
 
+\subsection{"Plan of attack" (We need to think of a better term)}
+This project will be carried out in three phases. Ideally, these phases will correspond to the three terms allocated for this class; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
 
-\subsection{User Characteristics}
+\subsubsection{Learning/Exploration Phase}
+In the learning and exploration phase, most of what will be done is to prepare us for the prototyping and testing phase. The three of us will become familiar with the coding environment by self learning and also through our meetings with Heather, the client. We will test primitive scripts and code on the NAO robot, to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function. We will also research mechanisms behind jokes and comedy, and become familiar with research and studies on comedic interactions. We will develop preliminary research questions as subjects of interest for our study. These steps will ideally be completed by the end of Fall term, in early December. As a stretch goal, we also hope to work with machine learning and adaptive behaviors that can be implemented into the NAO robot.
 
-% This subsection of the Requirements Document should describe those general characteristics of the intended users of the product including educational level, experience, and technical expertise. It should not be used to state specific requirements, but rather should provide the reasons why certain specific requirements are later specified in Section 3 of the Requirements Document.
-Casper will be performing in front of a live studio audience. We will use audience feedback to retain metrics for how well the set went. We want the audience to observe Casper’s performance as a show, in a realistic setting for stand-up comedy.
+\subsubsection{Prototyping/Testing Phase}
+In the prototyping and testing phase, we will develop early prototypes based on the preliminary research questions created in the previous phase. As of the time of writing, these questions include the effectiveness of implementing crowdwork and the effectiveness of implementing a discernable character. Crowd-work will involve simple audience sensing, as well as jokes that incorporate a measurement of response from the audience. Character implementation will involve testing the differences in effectiveness of robot vs human joke delivery, and the effectiveness of robo-centric jokes.
 
-	We think that the best context for this show is during an open mic event, as the audience will not be composed of people who specifically decide to see robot comedy. This will reduce a bias of people who favor robot comedy.
+As a stretch goal, we also hope to prototype and test the effectiveness of adapting a set to the audience, using intelligent calibration of the sensors. These prototypes will be in the form of set scripts, and will be tested in front of a small sample of humans, or in the form of a video recording. Feedback from our testing will influence the direction of our prototyping, meaning that the implementation of our research questions may vary according to the response.
 
+\subsubsection{Evaluation Phase}
+While doing the research, we will perform 9 shows with audiences ranging from 30-50 people. These shows would be at an organized location with an audience or potentially in the form of a street performance.
 
+\subsection{Methods}
+We will analyze the audience enjoyment levels using sensors in the robot. We will also take note of what aspects of the robot got the most laughs of the audience and how it was effective. Multiple different robot personalities will be tested to see what kind of character appeals to the audience. The audience will also be surveyed to determine what aspects of the robot were enjoyable and what did not appeal to the audience.
 
-\subsection{Constraints}
+The effectiveness of our robot comedian will be evaluated by human enjoyment levels. To do this… Idk the specifics. Maybe a survey, auditory sensors, etc.
 
-% This subsection of the Requirements Document should provide a general description of any other items that will limit the developer’s options. These include
-% a) Regulatory policies;
-% b) Hardware limitations (e.g., signal timing requirements);
-% c) Interfaces to other applications;
-% d) Parallel operation;
-% e) Audit functions;
-% f) Control functions;
-% g) Higher-order language requirements;
-% h) Signal handshake protocols (e.g., XON-XOFF, ACK-NACK);
-% i) Reliability requirements;
-% j) Criticality of the application;
-% k) Safety and security considerations.
-
-The most limiting software constraint that will be the balance between comedy content and dynamic audience adaptation. We want to make sure the content and delivery of the robot is given without technical difficulties and nonsense dialogue, while still presenting a set with a robot’s character. The character of the robot is the most important feature of the design. The adaptation and dynamic jokes will be internal choices, and not be completely evident to the audience. As long as during the set the robot appears to be giving dynamic responses, we can measure the audience’s reaction.
-
-We will also need an IRB to perform research on human subjects. This will be important to protect the rights of the test subjects. However, signing a form before a comedy show does not always set up an appropriate context for the audience. It will be important to make sure we can reliably quantify the type of audience we are getting, and make sure that we can compare audience models to each other.
-
-To measure the audience’s reaction to the set, it is also important to make sure that we are not creating a response bias, and not only sampling strong responses from the audience.
+Something about statistics. We will run statistics on our accumulated data. Or something.
 
 
-\subsection{Assumptions and Dependencies}
+\subsection{Potential Discussions}
 
-% This subsection of the Requirements Document should list each of the factors that affect the requirements stated in the Requirements Document. These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the Requirements Document. For example, an assumption may be that a specific operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the Requirements Document would then have to change accordingly.
+Nothing to see here.
 
-One of our research questions studies the adaptation of the set from the audience interactions. This is dependent on a comprehensible audience model for the robot. Our audience is going to be pretty variable, since we do not know the exact audience until we have seen it. This will be a goal that will be achieved later in the design of the robot, and will be dependent on the success of the robot’s non-adaptive set.
+\subsection{Timeline}
 
-
-\section{Specific Requirements}
-% This section of the Requirements Document should contain all of the software requirements to a level of detail sufficient to enable designers to design a system to satisfy those requirements, and testers to test that the system satisfies those requirements. Throughout this section, every stated requirement should be externally perceivable by users, operators, or other external systems. These requirements should include at a minimum a description of every input (stimulus) into the system, every output (response) from the system, and all functions performed by the system in response to an input or in support of an output. As this is often the largest and most important part of the Requirements Document, the following principles apply:
-% a) Specific requirements should be stated in conformance with all the characteristics described in 4.3.
-% b) Specific requirements should be cross-referenced to earlier documents that relate.
-% c) All requirements should be uniquely identifiable.
-% d) Careful attention should be given to organizing the requirements to maximize readability.
-
-Our software will be a Choregraphe *.pml configuration of the behaviors, content and decision making for the set. We will need to cover the edge cases present in the block model inside of the software, in addition to any blocks that have Python modules written into the configuration.
-
-	The Python modules can be tested separately, to verify that it’s input and output are verified for the Choregraphe configuration. Outside of a performance, we will need to test that our robot can successfully handle the task blocks, so that if there is a technical difficulty during the show, we can accurately correlate audience response to the performance of a block.
-
-	Outside of the software, we need to quantify the responses to the set so that our data can represent the qualities of our research questions; this is so that our research is on track with answering our research questions.
-
-
+Insert Gantt chart.
 
 
 % \bibliographystyle{IEEEtran}
