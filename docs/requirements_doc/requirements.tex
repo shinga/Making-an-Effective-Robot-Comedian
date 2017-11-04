@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{setspace}
+\usepackage{pdflscape}
 
 \usepackage{tikz}
 \usetikzlibrary{%
@@ -99,17 +100,51 @@ A comedian can observe an audience and improvise a delivery of a joke to connect
 
 \section{Introduction}
 
-\begin{ganttchart}{1}{12}
-\gantttitle{2011}{12} \\
-\gantttitlelist{1,...,12}{1} \\
-\ganttgroup{Group 1}{1}{7} \\
-\ganttbar{Task 1}{1}{2} \\
-\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-\ganttmilestone{Milestone}{7} \ganttnewline
-\ganttbar{Final Task}{8}{12}
-\ganttlink{elem2}{elem3}
-\ganttlink{elem3}{elem4}
+
+\pagebreak
+\begin{landscape}
+
+\begin{ganttchart}[
+	hgrid,
+  vgrid=true]{1}{27}
+
+\gantttitle{Title}{27} \\
+\gantttitle{Fall}{10}
+\gantttitle{Winter}{10}
+\gantttitle{Spring}{7} \\
+\gantttitlelist{1,...,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7}{1} \\
+\ganttgroup{Learning \& Exploration}{1}{10} \\
+\ganttbar{Learn Choregraphe}{3}{8} \\
+\ganttlinkedbar{Supplementary Scripts}{8}{10} \\
+\ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
+\ganttmilestone[name=M1]{Acquire Research Questions}{7} \\
+\ganttgroup{Prototyping \& Testing}{11}{20} \\
+\ganttbar[name=S2]{Developed Scripts}{11}{13} \\
+\ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
+\ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
+\ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
+\ganttmilestone[name=M2]{Have a decent robot}{20} \\
+\ganttgroup{Live Testing \& Evaluation}{21}{27} \\
+\ganttbar[name=T3]{Live Testing}{21}{27} \\
+\ganttbar{Evaluate Performance}{21}{27}
+
+\ganttlink{Research}{M1}
+\ganttlink{M1}{S2}
+\ganttlink{Q}{M2}
+\ganttlink{M2}{T3}
+
+
+
+% \ganttlink{elem2}{elem3}
+% \ganttlink{elem3}{elem4}
 \end{ganttchart}
+
+\end{landscape}
+\pagebreak
+
+
+
+
 
 \subsection{Background}
 
