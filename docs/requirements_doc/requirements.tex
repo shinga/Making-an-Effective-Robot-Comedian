@@ -117,13 +117,13 @@ A comedian can observe an audience and improvise a delivery of a joke to connect
 \ganttbar{Learn Choregraphe}{3}{8} \\
 \ganttlinkedbar{Supplementary Scripts}{8}{10} \\
 \ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
-\ganttmilestone[name=M1]{Acquire Research Questions}{7} \\
+\ganttmilestone[name=M1]{Evaluate Research Questions}{7} \\
 \ganttgroup{Prototyping \& Testing}{11}{20} \\
 \ganttbar[name=S2]{Developed Scripts}{11}{13} \\
 \ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
 \ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
 \ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
-\ganttmilestone[name=M2]{Have a decent robot}{20} \\
+\ganttmilestone[name=M2]{Robot Stand-up Set Completed}{20} \\
 \ganttgroup{Live Testing \& Evaluation}{21}{27} \\
 \ganttbar[name=T3]{Live Testing}{21}{27} \\
 \ganttbar{Evaluate Performance}{21}{27}
@@ -148,10 +148,10 @@ A comedian can observe an audience and improvise a delivery of a joke to connect
 
 \subsection{Background}
 
-Nothing to see here.
+
 
 \subsection{Introduction}
-In previous studies, robots utilizing non-verbal communication, as well as attempts at adaptive robots comedians have been done. In particular, Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy. However, there is little research on the actual effectiveness of character and spontaneous interactions. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
+In previous studies, robots utilizing non-verbal communication, as well as attempts at adaptive robots comedians have been done. In particular, Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
 
 We will try to answer the effectiveness of the following questions:
 \begin{enumerate}[\IEEEsetlabelwidth{6)}]
@@ -161,11 +161,11 @@ We will try to answer the effectiveness of the following questions:
 \end{enumerate}
 
 
-\subsection{"Plan of attack" (We need to think of a better term)}
-This project will be carried out in three phases. Ideally, these phases will correspond to the three terms allocated for this class; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
+\subsection{Reseach Approach}
+This project will be carried out in three phases; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
 
 \subsubsection{Learning/Exploration Phase}
-In the learning and exploration phase, most of what will be done is to prepare us for the prototyping and testing phase. The three of us will become familiar with the coding environment by self learning and also through our meetings with Heather, the client. We will test primitive scripts and code on the NAO robot, to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function. We will also research mechanisms behind jokes and comedy, and become familiar with research and studies on comedic interactions. We will develop preliminary research questions as subjects of interest for our study. These steps will ideally be completed by the end of Fall term, in early December. As a stretch goal, we also hope to work with machine learning and adaptive behaviors that can be implemented into the NAO robot.
+This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The NAO robot behaviors are programmed in the software Choreographe, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function. The sensors in the NAO will be how the virtual audience model is generated. To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices. A large gap in current Robot Comedy is adaptive audience interaction and witty, spontaneous jokes \cite{KatevasRobot:2014}. The difficulty in this process is effectively understanding an audience model, and timing a coherent joke that accurately relates to the audience.
 
 \subsubsection{Prototyping/Testing Phase}
 In the prototyping and testing phase, we will develop early prototypes based on the preliminary research questions created in the previous phase. As of the time of writing, these questions include the effectiveness of implementing crowdwork and the effectiveness of implementing a discernable character. Crowd-work will involve simple audience sensing, as well as jokes that incorporate a measurement of response from the audience. Character implementation will involve testing the differences in effectiveness of robot vs human joke delivery, and the effectiveness of robo-centric jokes.
@@ -176,11 +176,7 @@ As a stretch goal, we also hope to prototype and test the effectiveness of adapt
 While doing the research, we will perform 9 shows with audiences ranging from 30-50 people. These shows would be at an organized location with an audience or potentially in the form of a street performance.
 
 \subsection{Methods}
-We will analyze the audience enjoyment levels using sensors in the robot. We will also take note of what aspects of the robot got the most laughs of the audience and how it was effective. Multiple different robot personalities will be tested to see what kind of character appeals to the audience. The audience will also be surveyed to determine what aspects of the robot were enjoyable and what did not appeal to the audience.
-
-The effectiveness of our robot comedian will be evaluated by human enjoyment levels. To do this… Idk the specifics. Maybe a survey, auditory sensors, etc.
-
-Something about statistics. We will run statistics on our accumulated data. Or something.
+We will make a virtual audience model from the senors on the NAO. Using this model, we can identify the mood of the audience to determine what each response is to each segment of the stand-up set. This will help determine which bits of the set were effective. Multiple robot personalities will be tested to see what kind of character appeals to the audience. The audience will also be surveyed to determine what aspects of the performance were enjoyable and what was not.
 
 
 \subsection{Potential Discussions}
@@ -192,6 +188,6 @@ Nothing to see here.
 Insert Gantt chart.
 
 
-% \bibliographystyle{IEEEtran}
-% \bibliography{refs}
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
 \end{document}
