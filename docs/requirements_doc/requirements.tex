@@ -94,17 +94,17 @@ A comedian can observe an audience and improvise a delivery of a joke to connect
 \pagenumbering{arabic}
 \tableofcontents
 % 7. uncomment this (if applicable). Consider adding a page break.
-%\listoffigures
-%\listoftables
+% \listoffigures
+\listoftables
 \clearpage
 
-
+\section{Introduction}
 \subsection{Background}
 Robot interactions can learn a lot from stand-up comedy. A stand-up performance has a basis of scripted content, from which the comedian delivers jokes to enage theaudience. A good comedian can read the audience, and adapt delivery based on the mood of the room \cite{talkingFunny}. In social robotics, when a robot shares a space with a human, an interaction can influence the humans opinion of the robot. Additionally, evident character traits presented (through dialogue and non-verbal motion) by the machine can anthropomorphize itself, making it easier and more enjoyable to connect with for the human \cite{KnightEightLessons:2011}.
 
 
 
-\subsection{Introduction}
+\subsection{Hypotheses}
 In previous studies, robots utilizing non-verbal communication, as well as attempts at adaptive robots comedians have been done. In particular, Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
 
 We will try to answer the effectiveness of the following questions:
@@ -145,44 +145,49 @@ The goal of the audience tracking using sensors is to maximize enjoyment. The en
 
 Pausing and letting the audience laugh is vital as well. Starting the next joke too early can break the rhythm and leave the audience baffled. Looking around and body poses should be used to fill the pause {\cite{KnightEightLessons:2011}}.
 
+% \subsection{Timeline}
 \pagebreak
-\subsection{Timeline}
 \begin{landscape}
 
-\begin{ganttchart}[
-	hgrid,
-  vgrid=true]{1}{27}
+\begin{table}
+	\begin{ganttchart}[
+		hgrid,
+		vgrid=true]{1}{27}
 
-\gantttitle{Title}{27} \\
-\gantttitle{Fall}{10}
-\gantttitle{Winter}{10}
-\gantttitle{Spring}{7} \\
-\gantttitlelist{1,...,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7}{1} \\
-\ganttgroup{Learning \& Exploration}{1}{10} \\
-\ganttbar{Learn Choregraphe}{3}{8} \\
-\ganttlinkedbar{Supplementary Scripts}{8}{10} \\
-\ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
-\ganttmilestone[name=M1]{Evaluate Research Questions}{7} \\
-\ganttgroup{Prototyping \& Testing}{11}{20} \\
-\ganttbar[name=S2]{Developed Scripts}{11}{13} \\
-\ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
-\ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
-\ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
-\ganttmilestone[name=M2]{Robot Stand-up Set Completed}{20} \\
-\ganttgroup{Live Testing \& Evaluation}{21}{27} \\
-\ganttbar[name=T3]{Live Testing}{21}{27} \\
-\ganttbar{Evaluate Performance}{21}{27}
+		\gantttitle{Title}{27} \\
+		\gantttitle{Fall}{10}
+		\gantttitle{Winter}{10}
+		\gantttitle{Spring}{7} \\
+		\gantttitlelist{1,...,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7}{1} \\
+		\ganttgroup{Learning \& Exploration}{1}{10} \\
+		\ganttbar{Learn Choregraphe}{3}{8} \\
+		\ganttlinkedbar{Supplementary Scripts}{8}{10} \\
+		\ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
+		\ganttmilestone[name=M1]{Evaluate Research Questions}{7} \\
+		\ganttgroup{Prototyping \& Testing}{11}{20} \\
+		\ganttbar[name=S2]{Developed Scripts}{11}{13} \\
+		\ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
+		\ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
+		\ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
+		\ganttmilestone[name=M2]{Robot Stand-up Set Completed}{20} \\
+		\ganttgroup{Live Testing \& Evaluation}{21}{27} \\
+		\ganttbar[name=T3]{Live Testing}{21}{27} \\
+		\ganttbar{Evaluate Performance}{21}{27}
 
-\ganttlink{Research}{M1}
-\ganttlink{M1}{S2}
-\ganttlink{Q}{M2}
-\ganttlink{M2}{T3}
+		\ganttlink{Research}{M1}
+		\ganttlink{M1}{S2}
+		\ganttlink{Q}{M2}
+		\ganttlink{M2}{T3}
 
 
 
-% \ganttlink{elem2}{elem3}
-% \ganttlink{elem3}{elem4}
-\end{ganttchart}
+		% \ganttlink{elem2}{elem3}
+		% \ganttlink{elem3}{elem4}
+	\end{ganttchart}
+	\caption{A gantt chart showing the projected timeline of the project.}
+	\label{Gantt Chart}
+
+\end{table}
 
 \end{landscape}
 \pagebreak
