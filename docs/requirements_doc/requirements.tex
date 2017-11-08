@@ -140,7 +140,7 @@ We will make a virtual audience model from the sensors on the NAO. Using this mo
 Other studies by Katevas et al. \cite{KatevasRobot:2014} that involved evaluating the social dynamics of a live performance by a robot have used SHORE\textsuperscript{TM} vision framework software to analyze and detect faces in the audience. SHORE\textsuperscript{TM} allows for facial expression recognition, estimated age, gender, and eye or mouth openings \cite{SHORE}, giving the study a heterogenous audience model. These allowed for the robot to interact directly with specific audience members. However, usage of SHORE\textsuperscript{TM} involves expenses and funds that are unavailable to us, so we will encounter behavioral limitations dealing with a homogenous audience model.
 
 
-\section{Background} 
+\section{Background}
 
 Research on the improvement of HRI is indispensable for our project. In Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
 Relatable and appropriate gestures significantly helps improve communication between the robot and the audience. If the actions are predictable, humans can relate to the robot.
@@ -159,35 +159,42 @@ Researchers have also proposed multiple design patterns to promote sociability i
 \pagebreak
 \begin{landscape}
 
+\ganttset{calendar week text = \small{{\startday}}}
+
 \begin{table}
 	\begin{ganttchart}[
 		hgrid,
-		vgrid=true]{1}{27}
+		x unit = 0.09cm,
+		y unit title = 1cm,
+		y unit chart = 1cm,
+		vgrid,
+		time slot format=isodate,
+		]{2017-10-13}{2018-05-18}
 
-		\gantttitle{Title}{27} \\
-		\gantttitle{Fall}{10}
-		\gantttitle{Winter}{10}
-		\gantttitle{Spring}{7} \\
-		\gantttitlelist{1,...,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7}{1} \\
-		\ganttgroup{Learning \& Exploration}{1}{10} \\
-		\ganttbar{Learn Choregraphe}{3}{8} \\
-		\ganttlinkedbar{Supplementary Scripts}{8}{10} \\
-		\ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
-		\ganttmilestone[name=M1]{Evaluate Research Questions}{7} \\
-		\ganttgroup{Prototyping \& Testing}{11}{20} \\
-		\ganttbar[name=S2]{Developed Scripts}{11}{13} \\
-		\ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
-		\ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
-		\ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
-		\ganttmilestone[name=M2]{Robot Stand-up Set Completed}{20} \\
-		\ganttgroup{Live Testing \& Evaluation}{21}{27} \\
-		\ganttbar[name=T3]{Live Testing}{21}{27} \\
-		\ganttbar{Evaluate Performance}{21}{27}
-
-		\ganttlink{Research}{M1}
-		\ganttlink{M1}{S2}
-		\ganttlink{Q}{M2}
-		\ganttlink{M2}{T3}
+		\gantttitlecalendar{year, month=shortname, week}{week} \\
+		% \gantttitle{Fall}{10}
+		% \gantttitle{Winter}{10}
+		% \gantttitle{Spring}{7} \\
+		% \gantttitlelist{1,...,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7}{1} \\
+		% \ganttgroup{Learning \& Exploration}{1}{10} \\
+		% \ganttbar{Learn Choregraphe}{3}{8} \\
+		% \ganttlinkedbar{Supplementary Scripts}{8}{10} \\
+		% \ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
+		% \ganttmilestone[name=M1]{Evaluate Research Questions}{7} \\
+		% \ganttgroup{Prototyping \& Testing}{11}{20} \\
+		% \ganttbar[name=S2]{Developed Scripts}{11}{13} \\
+		% \ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
+		% \ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
+		% \ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
+		% \ganttmilestone[name=M2]{Robot Stand-up Set Completed}{20} \\
+		% \ganttgroup{Live Testing \& Evaluation}{21}{27} \\
+		% \ganttbar[name=T3]{Live Testing}{21}{27} \\
+		% \ganttbar{Evaluate Performance}{21}{27}
+		%
+		% \ganttlink{Research}{M1}
+		% \ganttlink{M1}{S2}
+		% \ganttlink{Q}{M2}
+		% \ganttlink{M2}{T3}
 
 
 
