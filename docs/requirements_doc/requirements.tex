@@ -103,8 +103,29 @@ A comedian can observe an audience and improvise a delivery of a joke to connect
 \section{Introduction}
 The field of human-robot interaction can learn a lot from stand-up comedy. A stand-up performance has a basis of scripted content, from which the comedian delivers jokes to engage the audience. Good Comedians can read the audience and sometimes adapt their delivery based on the mood of the room \cite{talkingFunny}. In social robotics, when a robot shares a space with a human, an interaction can influence the people's opinions of the robot. Additionally, evident character traits presented (through dialogue and non-verbal motion) by the machine can anthropomorphize itself, making it easier and more enjoyable to connect with for the human \cite{KnightEightLessons:2011}. The purpose of this work is to explicitly evaluate what aspects of a robot comedian's performance are most salient to human audience.
 
-Robots utilizing non-verbal communication and statically written audience engagement have been attempted in robot comedy. In particular, Dr. Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions \cite{KatevasRobot:2014}. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
 
+\section{Previous Research}
+
+Research on the improvement of HRI is indispensable for our project. In Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
+Relatable and appropriate gestures significantly helps improve communication between the robot and the audience. If the actions are predictable, humans can relate to the robot.
+When watching someone perform an action, the human brain maps the actions onto itself and simulates the action in the best way possible. This is a physiological experience that should be replicated by the robot in order to enhance relatability. Simplicity is important as well. {\cite{KnightEightLessons:2011}}
+
+In addition, Knight observed that having the robot portrayed as a living character rather than just an object that is kept up on stage improved the overall experience for the observers. Having believable interactions can enhance the feeling of a living character.
+The goal of the audience tracking using sensors is to maximize enjoyment. The enjoyment levels were be read by the robot and used to modify upcoming jokes {\cite{KnightEightLessons:2011}}. Pausing and letting the audience laugh is vital as well. Starting the next joke too early can break the rhythm and leave the audience baffled. Looking around and body poses should be used to fill the pause {\cite{KnightEightLessons:2011}}.
+
+In a previous study of robot comedy \cite{RobotComedyLab:2015}, Katevas found that when a robot engaged the audience through eye contact, the audience was more receptive to the performance. Eye contact from the robot is important, as it is a non-verbal cue for direct interaction. The audience members can identify that the machine is making an attempt to engage with specific members of the audience. We will investigate this further by having the robot perform various non-verbal and verbal interactions using sensors. The idea is to have the audience be a part of the performance even if they are not the ones performing. This can be accomplished if the robot is socially intelligent.
+
+Other studies by Katevas et al. \cite{KatevasRobot:2014} that involved evaluating the social dynamics of a live performance by a robot have used SHORE\textsuperscript{TM} vision framework software to analyze and detect faces in the audience. SHORE\textsuperscript{TM} allows for facial expression recognition, estimated age, gender, and eye or mouth openings \cite{SHORE}, giving the study a heterogeneous audience model. These allowed for the robot to interact directly with specific audience members. However, usage of SHORE\textsuperscript{TM} involves expenses and funds that are unavailable to us, so we will encounter behavioral limitations dealing with a homogeneous audience model.
+
+A study by Guy Hoffman {\cite{hoffman2010anticipation}} noted the importance of anticipation in human-robot interaction (HRI). The timing and meshing of anticipatory action and perception are a useful framework for HRI. The greatest challenge when designing a robot that will perform on stage is to enable the robot to be both - expressive and responsive. Robot models in the past have ended up on either extreme; they are either real-time and do not allow for continuous expression, or they are very animated but do not allow well times reactive behavior.
+
+
+Researchers have also proposed multiple design patterns to promote sociability in Human-Robot Interaction (HRI). Some of these include having an initial introduction, some sort of didactic communication, including personal interests or history, and recovering from mistakes \cite{Kahn:2008}. These patterns in design are proposed to allow for more effective and meaningful social interactions. While there is yet to be much data or research on the validity of these claims, they may still prove to be useful in guiding the designs of our project.
+
+
+% The effectiveness of our robot comedian will be evaluated by human enjoyment levels. Specifics regarding measurements and analysis will be later discussed with the client. Some possible methods include handing out surveys for the audience to fill out, which may include questions regarding the subjective reception of the robot comedian. Additionally, behavioral statistics may be used to evaluate the effectiveness of the comedy.
+
+Robots utilizing non-verbal communication and statically written audience engagement have been attempted in robot comedy. In particular, Dr. Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions \cite{KatevasRobot:2014}. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
 
 \section{Hypothesis}
 
@@ -115,13 +136,26 @@ Our research will be guided by the following questions:
 \item How can the robot adapt and influence to the audience?
 \end{enumerate}
 
-In a previous study of robot comedy \cite{RobotComedyLab:2015}, Katevas found that when a robot engaged the audience through eye contact, the audience was more receptive to the performance. Eye contact from the robot is important, as it is a non-verbal cue for direct interaction. The audience members can identify that the machine is making an attempt to engage with specific members of the audience. We will investigate this further by having the robot perform various non-verbal and verbal interactions using sensors. The idea is to have the audience be a part of the performance even if they are not the ones performing. This can be accomplished if the robot is socially intelligent.
+We hypothesize that comedy scripts with greater degrees of (1) crowdwork, (2) character, and (3) adaptiveness, will create more effective comedy, and have a more positive response from the audience.
 
-We hypothesize a distinct character for the robot will positively influence the performance, and will engage the audience better than a set with no personifications. Dr. Heather Knight has researched Robot Theatre as a metaphor for HRI, and found that when a robot is viewed as an agent (characterized object), the interaction arc with a human is stronger than if the robot is treated as a prop. When a robot conveys an intelligence and characterizations of itself, the audience can connect to the robot as an agent, and not inanimate.
+\subsection{Crowdwork}
 
+% TODO: Explain why crowdwork might have effects (reference 8 lessons?) and what crowdwork might look like in a script
+
+\subsection{Character}
+
+% TODO: Explain why character might have effects (reference 8 lessons?) and what character might look like in a script
+
+\subsection{Adaptiveness}
+
+% TODO: Explain why adaptiveness might have effects (reference 8 lessons?) and what adaptivity might look like in a script
+
+% TODO: Find a better place to put this? Maybe it fits here
 Expressing character will be understood from the robot under the "theory of the mind" \cite{leslie}. Understanding the agents meta-representation of a behavior is helpful for the audience in relating to the robot's intent, desires and knowledge. A robot attempts this to understand and relate its desires and intent better to the audience \cite{theoryOfMindRobots}.
 
+
 When the robot tells a joke, it needs to make adaptive transitions that correlates with the response. For example, if a joke does well and is received with laughter, the robot needs to time the next joke so that it is delivering it when the audience is ready, and can hear. However, if a joke is not well received by the audience, the time a robot needs to wait for the next joke will be different than if there is laughter. This is important for the effectiveness of a performance, as the connotation of the next joke is determined by the result of the previous joke; an audience that is told a bad joke will be hesitant to enjoy a joke if the previous jokes were bad. A robot comedian needs to be able to stay in a joke if the audience likes it, or address/recover the bad joke before starting a new sequence.
+
 
 \section{Research Approach}
 This project will be carried out in three phases; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
@@ -138,30 +172,34 @@ These prototypes will be in the form of 3-6 minute set scripts with several vari
 While doing the research, we will perform 6 shows with audiences ranging from 10-30 people. Tests in this phase will be at a greater scale and with a more realistic environment. Each stand-up performance, or set, will contain bits, or sections of content that will be categorized as crowd work, characterization dialogue, and jokes. We will be testing on a live human audience to learn the effectiveness of each bit in a set. Based of the effectiveness of each set, we will modify the set and behavior of the robot. By the end of this phase, we hope to have a working, effective robot comedian.
 
 \section{Methods}
-We will make a virtual audience model from the sensors on the NAO. Using this model, we can identify the mood of the audience to determine what each response is to each segment of the stand-up set. This will help determine which bits of the set were effective. Multiple robot personalities will be tested to see what kind of character appeals to the audience. The audience will also be surveyed to determine what aspects of the performance were enjoyable and what was not.
+
+% Experiment Design,
+% Algorithms for Adaptive Behavior,
+% Behavioral Statistics, whatever the hell that is
+\subsection{Tests}
+
+To test the effectiveness of our robot comedian, we will conduct tests on the three research questions.
+We will create scripts with varying degrees of (1) crowdwork, (2) character, and (3) adaptiveness.
+To test crowdwork, we may create one script may include no references to the audience (low degree of crowdwork), while another may include many instances of interactions with the audience (high degree of crowdwork).
+% Example of interaction in script
+% For instance, an interaction with the audience may include lines such as, "You guys look great today!"
+To test the effectiveness of adding character, we may create a script with random jokes (low degree of character), and one with a coherent character throughout the set (high degree of character).
+Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.
+The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to.
+For instance, if one joke performs very well, the next joke from the robot might be a similar joke.
+% Something about adaptive algorithms here?
+These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
+
+\subsection{Metrics}
+
+% Copied the next three paragraphs from PROBLEM STATEMENT
+Surveys can help understand how audience opinion's changed before and after the show, or capture their reactions. Behavioral annotations or automated audience detection systems can help us measure their behavioral response.
+
+Metrics involved will include the audience evaluation of the robot’s character and response to jokes. These metrics can be used to improve the robot's ability to deliver jokes and understand the utility of adapting. For example, to see if the robot’s character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. "Would you invite this robot to dinner?" These responses will be used to study if the robot matched the expected persona and gauge how comfortable the people are with the robot.
+
+Audience response to jokes will also be measured by behavioral observation. With consent, the audience may be recorded for their reactions, such that responses can be retrospectively observed to see which parts of the set worked and which parts were less successful.
 
 
-Other studies by Katevas et al. \cite{KatevasRobot:2014} that involved evaluating the social dynamics of a live performance by a robot have used SHORE\textsuperscript{TM} vision framework software to analyze and detect faces in the audience. SHORE\textsuperscript{TM} allows for facial expression recognition, estimated age, gender, and eye or mouth openings \cite{SHORE}, giving the study a heterogeneous audience model. These allowed for the robot to interact directly with specific audience members. However, usage of SHORE\textsuperscript{TM} involves expenses and funds that are unavailable to us, so we will encounter behavioral limitations dealing with a homogeneous audience model.
-
-
-\section{Background}
-
-Research on the improvement of HRI is indispensable for our project. In Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
-Relatable and appropriate gestures significantly helps improve communication between the robot and the audience. If the actions are predictable, humans can relate to the robot.
-When watching someone perform an action, the human brain maps the actions onto itself and simulates the action in the best way possible. This is a physiological experience that should be replicated by the robot in order to enhance relatability. Simplicity is important as well. {\cite{KnightEightLessons:2011}}
-
-
-In addition, Knight observed that having the robot portrayed as a living character rather than just an object that is kept up on stage improved the overall experience for the observers. Having believable interactions can enhance the feeling of a living character.
-The goal of the audience tracking using sensors is to maximize enjoyment. The enjoyment levels were be read by the robot and used to modify upcoming jokes {\cite{KnightEightLessons:2011}}. Pausing and letting the audience laugh is vital as well. Starting the next joke too early can break the rhythm and leave the audience baffled. Looking around and body poses should be used to fill the pause {\cite{KnightEightLessons:2011}}.
-
-A study by Guy Hoffman {\cite{hoffman2010anticipation}} noted the importance of anticipation in human-robot interaction (HRI). The timing and meshing of anticipatory action and perception are a useful framework for HRI. The greatest challenge when designing a robot that will perform on stage is to enable the robot to be both - expressive and responsive. Robot models in the past have ended up on either extreme; they are either real-time and do not allow for continuous expression, or they are very animated but do not allow well times reactive behavior.
-
-The effectiveness of our robot comedian will be evaluated by human enjoyment levels. Specifics regarding measurements and analysis will be later discussed with the client. Some possible methods include handing out surveys for the audience to fill out, which may include questions regarding the subjective reception of the robot comedian. Additionally, behavioral statistics may be used to evaluate the effectiveness of the comedy.
-
-Researchers have also proposed multiple design patterns to promote sociability in Human-Robot Interaction (HRI). Some of these include having an initial introduction, some sort of didactic communication, including personal interests or history, and recovering from mistakes \cite{Kahn:2008}. These patterns in design are proposed to allow for more effective and meaningful social interactions. While there is yet to be much data or research on the validity of these claims, they may still prove to be useful in guiding the designs of our project.
-
-
-% \subsection{Timeline}
 \pagebreak
 \begin{landscape}
 
