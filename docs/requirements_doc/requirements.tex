@@ -154,7 +154,7 @@ We hypothesize that comedy scripts with greater degrees of (1) crowdwork, (2) ch
 Expressing character will be understood from the robot under the "theory of the mind" \cite{leslie}. Understanding the agents meta-representation of a behavior is helpful for the audience in relating to the robot's intent, desires and knowledge. A robot attempts this to understand and relate its desires and intent better to the audience \cite{theoryOfMindRobots}.
 
 
-When the robot tells a joke, it needs to make adaptive transitions that correlates with the response. For example, if a joke does well and is received with laughter, the robot needs to time the next joke so that it is delivering it when the audience is ready, and can hear. However, if a joke is not well received by the audience, the time a robot needs to wait for the next joke will be different than if there is laughter. This is important for the effectiveness of a performance, as the connotation of the next joke is determined by the result of the previous joke; an audience that is told a bad joke will be hesitant to enjoy a joke if the previous jokes were bad. A robot comedian needs to be able to stay in a joke if the audience likes it, or address/recover the bad joke before starting a new sequence.
+When the robot tells a joke, it needs to make adaptive transitions that correlates with the response. For example, if a joke does well and is received with laughter, the robot needs to time the next joke so that it is delivering it when the audience is ready, and can hear. However, if a joke is not well received by the audience, the time a robot needs to wait for the next joke will be different than if there is laughter. This is important for the effectiveness of a performance, as the connotation of the next joke is determined by the result of the previous joke; an audience that is told a bad joke will be hesitant to enjoy a joke if the previous jokes were bad. A robot comedian needs to be able to stay in a joke if the audience likes it, or address/recover the bad joke before starting a new sequence. Timing, or anticipation for a new joke, when coordinated correctly, positively influences the fluidity of the task (the performance) \cite{hoffman2010anticipation}.
 
 
 \section{Research Approach}
@@ -186,10 +186,10 @@ To test crowdwork, we may create one script may include no references to the aud
 To test the effectiveness of adding character, we may create a script with random jokes (low degree of character), and one with a coherent character throughout the set (high degree of character).
 
 
-Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.
-The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, and is designed to handle smaller scale interactions. NAO interprets words with the ALSpeechRecognitionProxy and ALTextToSpeechProxy. 
-% TODO put these in the glossary, and add more about microphones
-These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
+Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
+
+The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, as it is designed to handle smaller scale interactions. NAO interprets speech with the ALSpeechRecognitionProxy and ALTextToSpeechProxy. 
+
 
 \subsection{Metrics}
 
@@ -260,8 +260,16 @@ Audience response to jokes will also be measured by behavioral observation. With
 \clearpage
 \section{Glossary}
 \begin{description}
+  \item [ALSpeechRecognitionProxy] \hfill \\ API for the NAO that converts received speech to text
+  \item [ALTextToSpeechProxy] \hfill \\ API for the NAO that converts text to speech
+  \item [API] \hfill \\ Application Programming Interface
   \item [Choregraphe] \hfill \\ Software used to program behavior and performance sets, made by SoftBank Robotics
+  \item [Crowdwork] \hfill \\ Part of a Comedian's performance that involves content from the current audience
   \item [NAO] \hfill \\ Model of Robot that will be used as the Comedian Agent, made by SoftBank Robotics
+  \item [NAOqi] \hfill \\ The API library for all functions used to program the NAO robot
+  \item [Python] \hfill \\ An Object-Orientated programming language
+  \item [SoftBank Robotics] \hfill \\ Manufacturer of the NAO robot, NAOqi API, and Choregraphe software
+
 \pagebreak
 \end{description}
 \bibliographystyle{IEEEtran}
