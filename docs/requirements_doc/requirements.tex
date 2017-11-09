@@ -3,18 +3,8 @@
 \usepackage{url}
 \usepackage{setspace}
 \usepackage{pdflscape}
-\usepackage{glossaries}
+%\usepackage{}
 
-\makeglossaries
-\newglossaryentry{NAO}{
-  name=NAO,
-  description={Model of Robot used for Comedian, made by SoftBank Robotics}
-}
-
-\newglossaryentry{Choregraphe}{
-  name=Choregraphe,
-  description={Software used to program behavior into NAO robot. Made by Softbank Robotics}
- }
 
 \usepackage{tikz}
 \usetikzlibrary{%
@@ -137,7 +127,7 @@ The robot should be able to understand what kind of reception it is receiving vi
 This project will be carried out in three phases; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
 
 \subsection{Learning/Exploration Phase}
-This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The \gls{NAO} robot behaviors are programmed in the software \gls{Choregraphe}, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function. The sensors in the \gls{NAO} will generate the virtual audience model. To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices. A large gap in current Robot Comedy is adaptive audience interaction and witty, spontaneous jokes \cite{KatevasRobot:2014}. The difficulty in this process is effectively understanding an audience model, and timing a coherent joke that accurately relates to the audience.
+This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The NAO robot behaviors are programmed in the software Choregraphe, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function. The sensors in the NAO will generate the virtual audience model. To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices. A large gap in current Robot Comedy is adaptive audience interaction and witty, spontaneous jokes \cite{KatevasRobot:2014}. The difficulty in this process is effectively understanding an audience model, and timing a coherent joke that accurately relates to the audience.
 
 \subsection{Prototyping/Testing Phase}
 In the prototyping and testing phase, we will develop early sets for the robot. These implementations need to reflect and support our research questions. Crowd-work will involve audience sensing, as well as jokes that incorporate a measurement of response from the audience. Character implementation will involve testing the differences in effectiveness of robot vs human joke delivery, and the effectiveness of robo-centric jokes. As a stretch goal, we also hope to prototype and test the effectiveness of adapting a set to the audience, using intelligent calibration of the sensors.
@@ -169,6 +159,7 @@ A study by Guy Hoffman {\cite{hoffman2010anticipation}} noted the importance of 
 The effectiveness of our robot comedian will be evaluated by human enjoyment levels. Specifics regarding measurements and analysis will be later discussed with the client. Some possible methods include handing out surveys for the audience to fill out, which may include questions regarding the subjective reception of the robot comedian. Additionally, behavioral statistics may be used to evaluate the effectiveness of the comedy.
 
 Researchers have also proposed multiple design patterns to promote sociability in Human-Robot Interaction (HRI). Some of these include having an initial introduction, some sort of didactic communication, including personal interests or history, and recovering from mistakes \cite{Kahn:2008}. These patterns in design are proposed to allow for more effective and meaningful social interactions. While there is yet to be much data or research on the validity of these claims, they may still prove to be useful in guiding the designs of our project.
+
 
 % \subsection{Timeline}
 \pagebreak
@@ -228,8 +219,12 @@ Researchers have also proposed multiple design patterns to promote sociability i
 \end{landscape}
 \pagebreak
 \clearpage
-
-\printglossaries
+\section{Glossary}
+\begin{description}
+  \item [Choregraphe] \hfill \\ Software used to program behavior and performance sets, made by SoftBank Robotics
+  \item [NAO] \hfill \\ Model of Robot that will be used as the Comedian Agent, made by SoftBank Robotics
+\pagebreak
+\end{description}
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
 \end{document}
