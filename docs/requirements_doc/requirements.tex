@@ -168,51 +168,54 @@ Researchers have also proposed multiple design patterns to promote sociability i
 \ganttset{calendar week text = \small{{\startday}}}
 
 \begin{table}
-	\begin{ganttchart}[
-		hgrid,
-		vgrid={*6{draw=none, dotted}, dotted},
-		x unit = 0.095cm,
-		y unit title = 1cm,
-		y unit chart = 1cm,
-		time slot format=isodate,
-		milestone/.append style = {inner sep=3.5pt}
-		]{2017-10-09}{2018-05-20}
+\begin{ganttchart}[
+	hgrid,
+	vgrid={*6{draw=none, dotted}, dotted},
+	x unit = 0.085cm,
+	y unit title = 0.8cm,
+	y unit chart = 0.65cm,
+	time slot format=isodate,
+	milestone/.append style = {inner sep=3.5pt}
+	]{2017-10-09}{2018-05-20}
 
-		\gantttitlecalendar{year, month=shortname, week}{week} \\
-		% \gantttitle{Fall}{10}
-		% \gantttitle{Winter}{10}
-		% \gantttitle{Spring}{7} \\
-		\ganttgroup{Learning \& Exploration}{2017-10-09}{2017-12-01} \\
-		\ganttbar{Learn Choregraphe}{2017-10-09}{2017-12-01} \\
-		\ganttbar{Supplementary Scripts}{2017-11-03}{2017-12-20} \\
-		\ganttbar[name=Research]{Research Comedy \& HRI}{2017-10-09}{2017-11-18} \\
-		\ganttmilestone[name=M1]{Evaluate Research Questions}{2017-12-01} \\
-		\ganttgroup{Prototyping \& Testing}{2018-01-12}{2018-03-29} \\
-		\ganttbar[name=S2]{Developed Scripts}{2018-01-12}{2018-01-29} \\
-		\ganttlinkedbar[name=T1]{Testing}{2018-01-29}{2018-03-25} \\
-		% \ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
-		\ganttmilestone[name=M2]{Robot Stand-up Set Completed}{2018-03-26} \\
-		\ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{2018-01-29}{2018-04-16} \\
-		\ganttmilestone[name=M2]{Robot ready for Live Performance}{2018-03-26} \\
-		\ganttgroup{Live Testing \& Evaluation}{2018-03-30}{2018-05-20} \\
-		\ganttbar[name=T3]{Live Testing}{2018-03-30}{2018-04-22} \\
-		\ganttbar{Evaluate Performance}{2018-03-30}{2018-04-22} \\
-		\ganttbar{Writing}{2018-04-22}{2018-05-20}
-		%
-		% \ganttlink{Research}{M1}
-		% \ganttlink{M1}{S2}
-		% \ganttlink{Q}{M2}
-		% \ganttlink{M2}{T3}
+	\gantttitlecalendar{year, month=shortname, week}{week} \\
+	% \gantttitle{Fall}{10}
+	% \gantttitle{Winter}{10}
+	% \gantttitle{Spring}{7} \\
+	\ganttgroup{Learning \& Exploration}{2017-10-09}{2017-12-01} \\
+	\ganttbar{Learn Choregraphe}{2017-10-09}{2017-12-01} \\
+	\ganttbar[name=Research]{Research Comedy \& HRI}{2017-10-09}{2017-11-18} \\
+	\ganttmilestone[name=M1]{Evaluate Research Questions}{2017-12-01} \\
+  \ganttbar[name=S1]{Supplementary Scripts}{2017-11-03}{2017-12-20} \\
+	\ganttgroup{Prototyping \& Testing}{2018-01-12}{2018-03-29} \\
+  \ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{2018-01-29}{2018-04-16} \\
+	\ganttbar[name=S2]{Developed Scripts}{2018-01-12}{2018-01-28} \\
+  \ganttmilestone[name=M2]{Robot Stand-up Set Completed}{2018-01-29} \\
+  \ganttlinkedbar[name=T1]{Testing}{2018-01-29}{2018-03-25} \\
+	% \ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
+  \ganttmilestone[name=M3]{Robot ready for Live Performance}{2018-03-26} \\
+	\ganttgroup{Live Testing \& Evaluation}{2018-03-30}{2018-05-20} \\
+  \ganttbar[name=T3]{Live Testing}{2018-03-30}{2018-04-22} \\
+	\ganttbar{Evaluate Performance}{2018-03-30}{2018-04-22} \\
+	\ganttbar{Writing}{2018-04-22}{2018-05-20}
+
+  \ganttlink{Research}{M1}
+	\ganttlink{S1}{S2}
+	\ganttlink{S2}{M2}
+	\ganttlink{T1}{M3}
+	\ganttlink{M3}{T3}
+	% \ganttlink{M2}{T3}
 
 
 
-		% \ganttlink{elem2}{elem3}
-		% \ganttlink{elem3}{elem4}
+	% \ganttlink{elem2}{elem3}
+	% \ganttlink{elem3}{elem4}
 	\end{ganttchart}
 	\caption{A gantt chart showing the projected timeline of the project.}
 	\label{Gantt Chart}
 
 \end{table}
+
 \end{landscape}
 \pagebreak
 \clearpage
