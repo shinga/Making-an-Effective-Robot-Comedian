@@ -138,9 +138,32 @@ These prototypes will be in the form of 3-6 minute set scripts with several vari
 While doing the research, we will perform 6 shows with audiences ranging from 10-30 people. Tests in this phase will be at a greater scale and with a more realistic environment. Each stand-up performance, or set, will contain bits, or sections of content that will be categorized as crowd work, characterization dialogue, and jokes. We will be testing on a live human audience to learn the effectiveness of each bit in a set. Based of the effectiveness of each set, we will modify the set and behavior of the robot. By the end of this phase, we hope to have a working, effective robot comedian.
 
 \section{Methods}
-We will make a virtual audience model from the sensors on the NAO. Using this model, we can identify the mood of the audience to determine what each response is to each segment of the stand-up set. This will help determine which bits of the set were effective. Multiple robot personalities will be tested to see what kind of character appeals to the audience. The audience will also be surveyed to determine what aspects of the performance were enjoyable and what was not.
 
+% Experiment Design,
+% Algorithms for Adaptive Behavior,
+% Behavioral Statistics, whatever the hell that is
 
+To test the effectiveness of our robot comedian, we will conduct tests on the three research questions.
+We will create scripts with varying degrees of (1) crowdwork, (2) character, and (3) adaptiveness.
+We hypothesize that the scripts with greater degrees of crowdwork, character, and adaptiveness, will create more effective comedy, and have a more positive response from the audience.
+To test crowdwork, we may create one script may include no references to the audience (low degree of crowdwork), while another may include many instances of interactions with the audience (high degree of crowdwork).
+% Example of interaction in script
+% For instance, an interaction with the audience may include lines such as, "You guys look great today!"
+To test the effectiveness of adding character, we may create a script with random jokes (low degree of character), and one with a coherent character throughout the set (high degree of character).
+Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.
+The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to.
+For instance, if one joke performs very well, the next joke from the robot might be a similar joke.
+% Something about adaptive algorithms here?
+These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
+
+% Copied the next three paragraphs from PROBLEM STATEMENT
+Surveys can help understand how audience opinion's changed before and after the show, or capture their reactions. Behavioral annotations or automated audience detection systems can help us measure their behavioral response.
+
+Metrics involved will include the audience evaluation of the robot’s character and response to jokes. These metrics can be used to improve the robot's ability to deliver jokes and understand the utility of adapting. For example, to see if the robot’s character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. "Would you invite this robot to dinner?" These responses will be used to study if the robot matched the expected persona and gauge how comfortable the people are with the robot.
+
+Audience response to jokes will also be measured by behavioral observation. With consent, the audience may be recorded for their reactions, such that responses can be retrospectively observed to see which parts of the set worked and which parts were less successful.
+
+% TODO: MOVE THIS TO BACKGROUND
 Other studies by Katevas et al. \cite{KatevasRobot:2014} that involved evaluating the social dynamics of a live performance by a robot have used SHORE\textsuperscript{TM} vision framework software to analyze and detect faces in the audience. SHORE\textsuperscript{TM} allows for facial expression recognition, estimated age, gender, and eye or mouth openings \cite{SHORE}, giving the study a heterogeneous audience model. These allowed for the robot to interact directly with specific audience members. However, usage of SHORE\textsuperscript{TM} involves expenses and funds that are unavailable to us, so we will encounter behavioral limitations dealing with a homogeneous audience model.
 
 
