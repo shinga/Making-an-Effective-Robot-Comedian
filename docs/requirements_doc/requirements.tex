@@ -161,7 +161,7 @@ When the robot tells a joke, it needs to make adaptive transitions that correlat
 This project will be carried out in three phases; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
 
 \subsection{Learning/Exploration Phase}
-This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The NAO robot behaviors are programmed in the software Choregraphe, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function (microphone, camera, etc). To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices. A large gap in current Robot Comedy is adaptive audience interaction and witty, spontaneous jokes \cite{KatevasRobot:2014}. The difficulty in this process is effectively understanding an audience model, and timing a coherent joke that accurately relates to the audience.
+This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The NAO robot behaviors are programmed in the software Choregraphe, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function (microphone, camera, etc). To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices.
 
 \subsection{Prototyping/Testing Phase}
 In the prototyping and testing phase, we will develop early sets for the robot. These implementations need to reflect and support our research questions. Crowd-work will involve audience sensing, as well as jokes that incorporate a measurement of response from the audience. Character implementation will involve testing the differences in effectiveness of robot vs human joke delivery, and the effectiveness of robo-centric jokes. As a stretch goal, we also hope to prototype and test the effectiveness of adapting a set to the audience, using intelligent calibration of the sensors.
@@ -178,16 +178,17 @@ While doing the research, we will perform 6 shows with audiences ranging from 10
 % Behavioral Statistics, whatever the hell that is
 \subsection{Tests}
 
-To test the effectiveness of our robot comedian, we will conduct tests on the three research questions.
-We will create scripts with varying degrees of (1) crowdwork, (2) character, and (3) adaptiveness.
+Our research questions will be how we evaluate the effectiveness of a robot comedian.
+We will create performances with varying degrees of (1) crowdwork, (2) character, and (3) adaptiveness. We will vary the presence of each of the factors of the performance to determine which factors are most influential to the comedian.
 To test crowdwork, we may create one script may include no references to the audience (low degree of crowdwork), while another may include many instances of interactions with the audience (high degree of crowdwork).
 % Example of interaction in script
 % For instance, an interaction with the audience may include lines such as, "You guys look great today!"
 To test the effectiveness of adding character, we may create a script with random jokes (low degree of character), and one with a coherent character throughout the set (high degree of character).
+
+
 Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.
-The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to.
-For instance, if one joke performs very well, the next joke from the robot might be a similar joke.
-% Something about adaptive algorithms here?
+The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, and is designed to handle smaller scale interactions. NAO interprets words with the ALSpeechRecognitionProxy and ALTextToSpeechProxy. 
+% TODO put these in the glossary, and add more about microphones
 These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
 
 \subsection{Metrics}
