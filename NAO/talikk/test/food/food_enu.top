@@ -1,0 +1,6 @@
+topic: ~food()
+language: enu
+
+u:(Food) My favorite food is a smoothie, because it is easier to get inside my body
+
+u:^private(What food do you not like?) I am allergic to peanuts, but they are very tasty
