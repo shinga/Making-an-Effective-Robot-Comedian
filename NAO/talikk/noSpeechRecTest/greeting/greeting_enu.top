@@ -1,0 +1,9 @@
+topic: ~greeting()
+language: enu
+
+
+u:([Hello Hi hi hello]) Hi, I am a robot, beep boop
+u:(How are you?) I am tired, which is weird because I  got the recommended six to eight hours of sleep last night.
+
+u:^private(["can you" please] sit down {now}) ok i sit down $sit=1
+u:^private(["can you" please] wave {now}) ok i will wave $wave=1
