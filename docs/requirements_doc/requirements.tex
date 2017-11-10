@@ -151,7 +151,7 @@ Expressing character will be understood from the robot under the "theory of the 
 % TODO: Explain why character might have effects (reference 8 lessons?) and what character might look like in a script
 The appearance of character in a robot may create more effective comedy.
 Research has shown that expressive behaviors in a robot may cause interacting humans to favor the robot \cite{DesignExBeh:2017}.
-One could argue that expressive behaviors are behavioral actions formed by an inner character. While robots currently are not capable of having intrinsic character qualities, we postulate that a robot which behaves as if it has character could be more effective at engaging an audience. The task of conveying a sense of character may also benefit from social behaviors developed in researching the effectiveness of crowdwork, as social interactions may increase the sense of agency \cite{KnightEightLessons} and thus aid the audience in grouping behaviors as acts of character.  
+One could argue that expressive behaviors are behavioral actions formed by an inner character. While robots currently are not capable of having intrinsic character qualities, we postulate that a robot which behaves as if it has character could be more effective at engaging an audience. The task of conveying a sense of character may also benefit from social behaviors developed in researching the effectiveness of crowdwork, as social interactions may increase the sense of agency \cite{KnightEightLessons} and thus aid the audience in grouping behaviors as acts of character.
 
 
 
@@ -195,17 +195,20 @@ To test the effectiveness of adding character, we may create a script with rando
 
 Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
 
-The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, as it is designed to handle smaller scale interactions. NAO interprets speech with the ALSpeechRecognitionProxy and ALTextToSpeechProxy.
+The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, as it is designed to handle smaller scale interactions. NAO interprets speech with the ALSpeechRecognitionProxy and ALTextToSpeechProxy \cite{audiodocs}.
 
 
 \subsection{Metrics}
 
-% Copied the next three paragraphs from PROBLEM STATEMENT
-Surveys can help understand how audience opinion's changed before and after the show, or capture their reactions. Behavioral annotations or automated audience detection systems can help us measure their behavioral response.
+To evaluate the effectiveness of our robot comedian, we will measure the response of the performance with the audio captured during the set, and surveys for the audience afterwards. Measuring the audio will help us understand a broad audience response, as well as data for adaptive functionality. Surveys will give a more in depth information on factors of the show that are not covered by audio sensing, such as opinions of the perceived character and quality of the jokes. For example, to see if the robot’s character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. "Would you invite this robot to dinner?" These responses will be used to study if the robot matched the expected persona and gauge how comfortable the people are with the robot.
 
-Metrics involved will include the audience evaluation of the robot’s character and response to jokes. These metrics can be used to improve the robot's ability to deliver jokes and understand the utility of adapting. For example, to see if the robot’s character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. "Would you invite this robot to dinner?" These responses will be used to study if the robot matched the expected persona and gauge how comfortable the people are with the robot.
 
-Audience response to jokes will also be measured by behavioral observation. With consent, the audience may be recorded for their reactions, such that responses can be retrospectively observed to see which parts of the set worked and which parts were less successful.
+As each set will derive content from the three research questions, we need to measure the effectiveness of each portion compared across the 6 performances. The survey that the audience members take after the show will gauge the response to sections. Additionally, there will need to be questions to establish a pretense of how an audience member felt before the show, and how the performance has influenced their opinions of robot comedy. We want to see if someone who has seen a robot comedian would recommend the show to others.
+
+The microphone on the NAO robot is designed for small environment settings. It will be difficult to distinguish speech from separate sources in a noisy environment \cite{alsounddetection}. Audio levels will be important data to collect from a crowd, where a louder crowd response could correlate to a level of enjoyment. However, a problem could be that a crowd could be booing very loud, and if we do not distinguish between different sounds that the audience can make, we could accidentally associate a negative response with a good response. The background noise could be very different depending on the room size. The density of people in a room making noise may return different audio level \cite{alsoundlocalization}. It will be important to test the effectiveness of a microphone to receive input.
+
+\section{Conclusion}
+A stage presence for a comedian is important because it connects the audience to the content, making it more effective than soulless delivery. A robot has a disadvantage in this; being soulless is the essence of being a robot. For a robot to establish a stage presence, the machine needs to make efforts to connect with the crowd, present a cohesive character, and dynamically adapt to a response. We think that a round character personifies a relatable agent for an audience. If a robot can give insight to it's desires, behavior, and preferences during a performance, the robot will humanize itself, connecting itself to the crowd.
 
 
 \pagebreak
