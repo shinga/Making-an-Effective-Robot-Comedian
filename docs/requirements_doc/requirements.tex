@@ -106,7 +106,7 @@ The field of human-robot interaction can learn a lot from stand-up comedy. A sta
 
 \section{Previous Research}
 
-Research on the improvement of HRI is indispensable for our project. In Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
+Research on the improvement of HRI is indispensable for our project. In Heather Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
 Relatable and appropriate gestures significantly helps improve communication between the robot and the audience. If the actions are predictable, humans can relate to the robot.
 When watching someone perform an action, the human brain maps the actions onto itself and simulates the action in the best way possible. This is a physiological experience that should be replicated by the robot in order to enhance relatability. Simplicity is important as well. {\cite{KnightEightLessons:2011}}
 
@@ -125,7 +125,7 @@ Researchers have also proposed multiple design patterns to promote sociability i
 
 % The effectiveness of our robot comedian will be evaluated by human enjoyment levels. Specifics regarding measurements and analysis will be later discussed with the client. Some possible methods include handing out surveys for the audience to fill out, which may include questions regarding the subjective reception of the robot comedian. Additionally, behavioral statistics may be used to evaluate the effectiveness of the comedy.
 
-Robots utilizing non-verbal communication and statically written audience engagement have been attempted in robot comedy. In particular, Dr. Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions \cite{KatevasRobot:2014}. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
+Robots utilizing non-verbal communication and statically written audience engagement have been attempted in robot comedy. In particular, Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions \cite{KatevasRobot:2014}. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
 
 \section{Hypothesis}
 
@@ -141,18 +141,24 @@ We hypothesize that comedy scripts with greater degrees of (1) crowdwork, (2) ch
 \subsection{Crowdwork}
 % TODO: Explain why crowdwork might have effects (reference 8 lessons?) and what crowdwork might look like in a script
 
-Keeping the audience engaged is vital in creating an entertaining performance. Dr. Katevas et al. had some success leading to a better audience response when using gestures and acknowledging the audience's presence. A successful performance manages the dynamics of various aspects of interaction to the benefit of both - the performer and the audience \cite{RobotComedyLab:2015}. Interaction with the audience will make the comedian robot feel more authentic, like an entity, and less like an object. Dr. Heater Knight's research found that the robot's connection with the audience is stronger if the robot is able to convey social intelligence. This helps the robot display that it is not just an inanimate object \cite {KnightEightLessons:2011}.
+Keeping the audience engaged is vital in creating an entertaining performance. Katevas et al. had some success leading to a better audience response when using gestures and acknowledging the audience's presence. A successful performance manages the dynamics of various aspects of interaction to the benefit of both the performer and the audience \cite{RobotComedyLab:2015}. Interaction with the audience will make the comedian robot feel more authentic, like an entity, and less like an object. Knight's research found that the robot's connection with the audience is stronger if the robot is able to convey social intelligence. This helps the robot display that it is not just an inanimate object \cite {KnightEightLessons:2011}.
 
 \subsection{Character}
+% TODO: Find a better place to put this? Maybe it fits here
+Expressing character will be understood from the robot under the "theory of the mind" \cite{leslie}. Understanding the agents meta-representation of a behavior is helpful for the audience in relating to the robot's intent, desires and knowledge. A robot attempts this to understand and relate its desires and intent better to the audience \cite{theoryOfMindRobots}.
+
 
 % TODO: Explain why character might have effects (reference 8 lessons?) and what character might look like in a script
+The appearance of character in a robot may create more effective comedy.
+Research has shown that expressive behaviors in a robot may cause interacting humans to favor the robot \cite{DesignExBeh:2017}.
+One could argue that expressive behaviors are behavioral actions formed by an inner character. While robots currently are not capable of having intrinsic character qualities, we postulate that a robot which behaves as if it has character could be more effective at engaging an audience. The task of conveying a sense of character may also benefit from social behaviors developed in researching the effectiveness of crowdwork, as social interactions may increase the sense of agency \cite{KnightEightLessons} and thus aid the audience in grouping behaviors as acts of character.  
+
+
 
 \subsection{Adaptiveness}
 
 % TODO: Explain why adaptiveness might have effects (reference 8 lessons?) and what adaptivity might look like in a script
 
-% TODO: Find a better place to put this? Maybe it fits here
-Expressing character will be understood from the robot under the "theory of the mind" \cite{leslie}. Understanding the agents meta-representation of a behavior is helpful for the audience in relating to the robot's intent, desires and knowledge. A robot attempts this to understand and relate its desires and intent better to the audience \cite{theoryOfMindRobots}.
 
 
 When the robot tells a joke, it needs to make adaptive transitions that correlates with the response. For example, if a joke does well and is received with laughter, the robot needs to time the next joke so that it is delivering it when the audience is ready, and can hear. However, if a joke is not well received by the audience, the time a robot needs to wait for the next joke will be different than if there is laughter. This is important for the effectiveness of a performance, as the connotation of the next joke is determined by the result of the previous joke; an audience that is told a bad joke will be hesitant to enjoy a joke if the previous jokes were bad. A robot comedian needs to be able to stay in a joke if the audience likes it, or address/recover the bad joke before starting a new sequence. Timing, or anticipation for a new joke, when coordinated correctly, positively influences the fluidity of the task (the performance) \cite{hoffman2010anticipation}.
@@ -189,7 +195,7 @@ To test the effectiveness of adding character, we may create a script with rando
 
 Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
 
-The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, as it is designed to handle smaller scale interactions. NAO interprets speech with the ALSpeechRecognitionProxy and ALTextToSpeechProxy. 
+The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, as it is designed to handle smaller scale interactions. NAO interprets speech with the ALSpeechRecognitionProxy and ALTextToSpeechProxy.
 
 
 \subsection{Metrics}
