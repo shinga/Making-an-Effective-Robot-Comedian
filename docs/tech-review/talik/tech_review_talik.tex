@@ -2,62 +2,49 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{setspace}
-\usepackage{pdflscape}
-
-\usepackage{tikz}
-\usetikzlibrary{%
-	arrows, backgrounds, calc,%
-    patterns, positioning, shapes.geometric%
-}
-\RequirePackage{pgfcalendar}
-\usepackage{pgfgantt}
 
 \usepackage{geometry}
-\geometry{textheight=9.5in, textwidth=7in,margin=0.75in}
-\bibliographystyle{IEEEtran}
+\geometry{textheight=9.5in, textwidth=7in}
 
 % 1. Fill in these details
-\def \CapstoneTeamName{			AKARobotics}
+\def \CapstoneTeamName{		AKA Robotics}
 \def \CapstoneTeamNumber{		13}
-\def \GroupMemberOne{			Anish Asrani}
+\def \GroupMemberOne{}
 \def \GroupMemberTwo{			Kevin Talik}
-\def \GroupMemberThree{			Arthur Shing}
+\def \GroupMemberThree{}
 \def \CapstoneProjectName{		How to Make an Effective Robot Comedian}
 \def \CapstoneSponsorCompany{	Oregon State University}
 \def \CapstoneSponsorPerson{		Heather Knight}
 
 % 2. Uncomment the appropriate line below so that the document type works
-\def \DocType{
-% Problem Statement
-				% Requirements Document
+\def \DocType{		%Problem Statement
+				%Requirements Document
 				Technology Review
 				%Design Document
 				%Progress Report
 				}
-
+			
 \newcommand{\NameSigPair}[1]{\par
 \makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
 \par\vspace{-12pt} \textit{\tiny\noindent
 \makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
 % 3. If the document is not to be signed, uncomment the RENEWcommand below
-%\renewcommand{\NameSigPair}[1]{#1}
+\renewcommand{\NameSigPair}[1]{#1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
 \bstctlcite{IEEEexample:BSTcontrol}
-
 \begin{titlepage}
     \pagenumbering{gobble}
     \begin{singlespace}
-        \hfill
-        % 4. If you have a logo, use this include graphics command to put it on the coversheet.
-        %\includegraphics[height=4cm]{CompanyLogo}
+        \hfill 
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
+        %\includegraphics[height=4cm]{CompanyLogo}   
         \par\vspace{.2in}
         \centering
         \scshape{
-             \huge CS Capstone \DocType \par
+            \huge CS Capstone \DocType \par
             {\large\today}\par
             \vspace{.5in}
             \textbf{\Huge\CapstoneProjectName}\par
@@ -69,7 +56,7 @@
             {\large Prepared by }\par
             Group\CapstoneTeamNumber\par
             % 5. comment out the line below this one if you do not wish to name your team
-            \CapstoneTeamName\par
+            \CapstoneTeamName\par 
             \vspace{5pt}
             {\Large
                 \NameSigPair{\GroupMemberOne}\par
@@ -79,129 +66,61 @@
             \vspace{20pt}
         }
         \begin{abstract}
-        % 6. Fill in your abstract
+          
+          A comedian can observe an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and genuine for the observer. The purpose of this project is to to discover what makes an entertaining interaction by studying a robot that performs comedy. We propose that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction. This document covers the technical requirements for our project, as well as a description of software, hardware, and outside limitations.
 
-
-
-
-A comedian can observe an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and genuine for the observer. The purpose of this project is to to discover what makes an entertaining interaction by studying a robot that performs comedy. We propose that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction. This document covers the technical requirements for our project, as well as a description of software, hardware, and outside limitations.
-
-
-        \end{abstract}
+        \end{abstract}     
     \end{singlespace}
 \end{titlepage}
 \newpage
 \pagenumbering{arabic}
 \tableofcontents
 % 7. uncomment this (if applicable). Consider adding a page break.
-% \listoffigures
-\listoftables
+%\listoffigures
+%\listoftables
 \clearpage
 
+% 8. now you write!
 \section{Introduction}
-The field of human-robot interaction can learn a lot from stand-up comedy. A stand-up performance has a basis of scripted content, from which the comedian delivers jokes to engage the audience. A good comedian can read the audience and sometimes adapt their delivery based on the mood of the room \cite{talkingFunny}. In social robotics, when a robot shares a space with a human, an interaction can influence the people's opinions of the robot. Additionally, evident character traits presented (through dialogue and non-verbal motion) by the machine can anthropomorphize itself, making it easier and more enjoyable to connect with for the human \cite{KnightEightLessons:2011}. The purpose of this work is to explicitly evaluate what aspects of a robot comedian's performance are most salient to human audience.
 
-Robots utilizing non-verbal communication and statically written audience engagement have been attempted in robot comedy. In particular, Dr. Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions \cite{KatevasRobot:2014}. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
+  To make an effective robot comedian, we have developed three research questions that will be the basis of three internal systems for the machine. First, we are investigating how spontaneous interactions benefit a set. Second, we want to quantify the benefits of the robot's ability to personify it's character, and lastly how to adapt it's set corresponding to the audiences reaction. My role in this project is to develop an algorithm to adapt the robot's set of jokes based off of audience response.
 
+  Timing and anticipation for jokes are crucial for the success of the set. Every joke that is told provides information to the audience about the robot, and from the opening joke, each new part of the set will build the repertoire of the bot. If a joke is well received by the audience, the relationship between the comedian and the crowd is strengthened, as the people will become more trusting of the content. Every joke will enable the audience to connote decisions, preferences and knowledge of the robot. This is where the connection, otherwise known as the "Theory of Mind", is made with the audience\cite{leslie}.
 
-\section{Hypothesis}
+\section{Individual Role in Project}
 
-Our research will be guided by the following questions:
-\begin{enumerate}[\IEEEsetlabelwidth{6)}]
-\item How can the robot make the audience feel like a part of the performance?
-\item How can the robot convey and a coherent and well-developed character?
-\item How can the robot adapt and influence to the audience?
-\end{enumerate}
+Our group will be working collectively to make an effective robot comedian, but I will be specifically working on our third research question: the robots ability to adapt a set based off of audience response. From audience response to a joke, or bit, the algorithm should be able to determine the best fit for the next joke. The bit that tests the audience's preference for humor will be known as the "seed". The seed will be a small subset of jokes that represent the collective set of jokes. For example, the seed bit may have three jokes; one joke could be a self-depreciating joke, one could be a joke about food, and another could be a quick observational joke about the audience. If the audience responded well to the self-depreciating joke, the algorithm should choose the next joke should be at the expense of the robot. 
 
-We hypothesize that a distinct character for the robot will positively influence the performance, and will engage the audience better than a set with no personifications. In a previous study of robot comedy \cite{RobotComedyLab:2015}, Katevas found that when a robot engaged the audience through eye contact, the audience was more receptive to the performance. Eye contact from the robot is important, as it is a non-verbal cue for direct interaction. The audience members can identify that the machine is making an attempt to engage with specific members of the audience. This correlates with Dr. Heather Knight's \cite{KnightEightLessons:2011} research that outward communication results in a feeling of accomplishment for a human observer.
+The seed of the set will give the audience pretense to the performance, and is the introduction of our robot. The delivery of the joke, and the content given has a large impact of robot character, and is out of the scope of the set creation; this is more suited toward the characterization research question. Also, the robot may need a more fluid way to interact with the audience (such as small talk, or crowd-work), which is underneath the breadth of the second research question about audience interaction. My contributions will be towards the system that determines which jokes, from our library of jokes, is best fit for our audience.
 
-Dr. Heather Knight has researched Robot Theatre as a metaphor for HRI, and found that when a robot is viewed as an agent (characterized object), the interaction arc with a human is stronger than if the robot is treated as a prop. When a robot conveys an intelligence and characterizations of itself, the audience can connect to the robot as an agent, and not inanimate.
+The algorithm will need to be able to input the strength of a delivered joke, and return a joke with attributes that match the strength of the joke. This will begin at the seed portion of the algorithm, and pick jokes until the set has lasted 3-6 minutes. The jokes will have some small variability in delivery, that correspond to the tasks of audience interaction and characterization.
 
-Expressing character will be understood from the robot under the "theory of the mind" \cite{leslie}. Understanding the agents metarepresentation of a behavior is helpful for the audience in relating to the robot's intent, desires and knowledge. A robot attempts this to understand and relate its desires and intent better to the audience \cite{theoryOfMindRobots}.
+\section{Technology overview}
+    There have been a couple of previous studies of robot theatre, most notably Dr. Heather Knight \cite{KnightEightLessons:2011}, Katevas et al \cite{KatevasRobot:2014}, and Dr. Guy Hoffman \cite{hoffman2010anticipation}. To accomplish this task of designing an algorithm that can learn from the audiences' response to jokes, it is important to look at previous research, as well as the tools available for accomplishing this task.
+\subsection{Previous Work}
+  \subsection{ComedyParser}
+  Katevas et al \cite{KatevasRobot:2014} has researched a robotic comedian agent previously with some success. During their research, they implemented a program called ComedyParser (https://github.com/minoskt/ComedyParser ) that collects audience response information from SHORE computer vision, and performs the stand up set. The decision components, or what the robot does with information gathered from the SHORE vision, will be most important for implementing an algorithm in our project. 
+  A limitation with ComedyParser is that is specifically needs the SHORE vision to operate. SHORE will be too expensive for our project, and we will have to pursue more freely available systems. One solution that we had devised was to interprate the strength of the audience response to buttons on the robot. This will bypass the sensing component of comedy parser, as sensors for creating an audience model are out of the scope of this project.
 
-\section{Research Approach}
-This project will be carried out in three phases; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
+  \subsection{Anticipation in Robot Theatre}
+  Research conducted by Dr. Guy Hoffman studying the implications of anticipatory actions in social robotics \cite{hoffman2010anticipation}. This particular study found that humans working with a robot that can monitor anticipation for an event allows humans to anthropomorphize the robot with more human like attributes. This study uses non-atomic Markov Decision Processes (MDPs) to model the decisions for events. Additionally, Hoffman models anticipation with an impulse-cue situation, where the robot is waiting for an impulse to trigger a specific cue. This is non-deterministic, as the MDP process is modeled around the probability of an event happening.
 
-\subsection{Learning/Exploration Phase}
-This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The NAO robot behaviors are programmed in the software Choregraphe, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function. The sensors in the NAO will generate the virtual audience model. To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices. A large gap in current Robot Comedy is adaptive audience interaction and witty, spontaneous jokes \cite{KatevasRobot:2014}. The difficulty in this process is effectively understanding an audience model, and timing a coherent joke that accurately relates to the audience.
+  This will be helpful to use in our model, as Python, the main programming language for this project, has several implementations for MDPs, and the related automata "Context Free Grammar" (CFG).
+\section{Tools}
 
-\subsection{Prototyping/Testing Phase}
-In the prototyping and testing phase, we will develop early sets for the robot. These implementations need to reflect and support our research questions. Crowd-work will involve audience sensing, as well as jokes that incorporate a measurement of response from the audience. Character implementation will involve testing the differences in effectiveness of robot vs human joke delivery, and the effectiveness of robo-centric jokes. As a stretch goal, we also hope to prototype and test the effectiveness of adapting a set to the audience, using intelligent calibration of the sensors.
+  \subsection{Programming Languages}
+  \subsection{Python}
+  \subsection{java}
 
-These prototypes will be in the form of 3-6 minute set scripts with several variants in Choregraphe. The variants will help us evaluate the research questions and can be be tested in front of a small sample of humans, or in the form of a video recording. For example, the robot may perform in front of a handful of friends, or recordings may be to show online live viewers. Non-mechanical feedback from our testing will influence the direction of our prototyping, meaning that the implementation of our research questions will adapt according to the audience response. By the time this phase is completed, we will have working sets of robot stand-up.
-
-\subsection{Evaluation Phase}
-While doing the research, we will perform 6 shows with audiences ranging from 10-30 people. Tests in this phase will be at a greater scale and with a more realistic environment. Each stand-up performance, or set, will contain bits, or sections of content that will be categorized as crowd work, characterization dialogue, and jokes. We will be testing on a live human audience to learn the effectiveness of each bit in a set. Based of the effectiveness of each set, we will modify the set and behavior of the robot. By the end of this phase, we hope to have a working, effective robot comedian.
-
-\section{Methods}
-We will make a virtual audience model from the sensors on the NAO. Using this model, we can identify the mood of the audience to determine what each response is to each segment of the stand-up set. This will help determine which bits of the set were effective. Multiple robot personalities will be tested to see what kind of character appeals to the audience. The audience will also be surveyed to determine what aspects of the performance were enjoyable and what was not.
+\section{Libraries}
+  \subsection{Natural Language ToolKit}
+  \subsection{PyKov: Markov Chains in Python}
 
 
-Other studies by Katevas et al. \cite{KatevasRobot:2014} that involved evaluating the social dynamics of a live performance by a robot have used SHORE\textsuperscript{TM} vision framework software to analyze and detect faces in the audience. SHORE\textsuperscript{TM} allows for facial expression recognition, estimated age, gender, and eye or mouth openings \cite{SHORE}, giving the study a heterogenous audience model. These allowed for the robot to interact directly with specific audience members. However, usage of SHORE\textsuperscript{TM} involves expenses and funds that are unavailable to us, so we will encounter behavioral limitations dealing with a homogenous audience model.
-
-A study by Guy Hoffman {\cite{hoffman2010anticipation}} noted the importance of anticipation in human-robot interaction (HRI). The timing and meshing of anticipatory action and perception are a useful framework for HRI. The greatest challenge when designing a robot that will perform on stage is to enable the robot to be both - expressive and responsive. Robot models in the past have ended up on either extreme; they are either real-time and do not allow for continuous expression, or they are very animated but do not allow well times reactive behavior.
-
-The effectiveness of our robot comedian will be evaluated by human enjoyment levels. Specifics regarding measurements and analysis will be later discussed with the client. Some possible methods include handing out surveys for the audience to fill out, which may include questions regarding the subjective reception of the robot comedian. Additionally, behavioral statistics may be used to evaluate the effectiveness of the comedy.
-
-\section{Background}
-
-Research on the improvement of HRI is indispensible for our project. In Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
-Relatable and appropriate gestures significantly helps improve communication between the robot and the audience. If the actions are predictable, humans can relate to the robot.
-When watching someone perform an action, the human brain maps the actions onto itself and simulates the action in the best way possible. This is a physiological experience that should be replicated by the robot in order to enhance relatability. Simplicity is important as well. {\cite{KnightEightLessons:2011}}
-
-
-In addition, Knight observed that having the robot portrayed as a living character rather than just an object that is kept up on stage improved the overall experience for the observers. Having believable interactions can enhance the feeling of a living character.
-The goal of the audience tracking using sensors is to maximize enjoyment. The enjoyment levels were be read by the robot and used to modify upcoming jokes {\cite{KnightEightLessons:2011}}. Pausing and letting the audience laugh is vital as well. Starting the next joke too early can break the rhythm and leave the audience baffled. Looking around and body poses should be used to fill the pause {\cite{KnightEightLessons:2011}}.
-
-Researchers have also proposed multiple design patterns to promote sociability in Human-Robot Interaction (HRI). Some of these include having an initial introduction, some sort of didactic communication, including personal interests or history, and recovering from mistakes \cite{Kahn:2008}. These patterns in design are proposed to allow for more effective and meaningful social interactions. While there is yet to be much data or research on the validity of these claims, they may still prove to be useful in guiding the designs of our project.
-% \subsection{Timeline}
-\pagebreak
-\begin{landscape}
-
-\begin{table}
-	\begin{ganttchart}[
-		hgrid,
-		vgrid=true]{1}{27}
-
-		\gantttitle{Title}{27} \\
-		\gantttitle{Fall}{10}
-		\gantttitle{Winter}{10}
-		\gantttitle{Spring}{7} \\
-		\gantttitlelist{1,...,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7}{1} \\
-		\ganttgroup{Learning \& Exploration}{1}{10} \\
-		\ganttbar{Learn Choregraphe}{3}{8} \\
-		\ganttlinkedbar{Supplementary Scripts}{8}{10} \\
-		\ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
-		\ganttmilestone[name=M1]{Evaluate Research Questions}{7} \\
-		\ganttgroup{Prototyping \& Testing}{11}{20} \\
-		\ganttbar[name=S2]{Developed Scripts}{11}{13} \\
-		\ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
-		\ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
-		\ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
-		\ganttmilestone[name=M2]{Robot Stand-up Set Completed}{20} \\
-		\ganttgroup{Live Testing \& Evaluation}{21}{27} \\
-		\ganttbar[name=T3]{Live Testing}{21}{27} \\
-		\ganttbar{Evaluate Performance}{21}{27}
-
-		\ganttlink{Research}{M1}
-		\ganttlink{M1}{S2}
-		\ganttlink{Q}{M2}
-		\ganttlink{M2}{T3}
-
-
-
-		% \ganttlink{elem2}{elem3}
-		% \ganttlink{elem3}{elem4}
-	\end{ganttchart}
-	\caption{A gantt chart showing the projected timeline of the project.}
-	\label{Gantt Chart}
-
-\end{table}
-
-\end{landscape}
 \pagebreak
 
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
+
 \end{document}
