@@ -66,9 +66,7 @@
             \vspace{20pt}
         }
         \begin{abstract}
-          
-          A comedian can observe an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and genuine for the observer. The purpose of this project is to to discover what makes an entertaining interaction by studying a robot that performs comedy. We propose that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction. This document covers the technical requirements for our project, as well as a description of software, hardware, and outside limitations.
-
+          To make an effective robot comedian, one of the topics we are researching is the dynamic performance set creation of jokes based from the audience reaction. Each joke that is told to the audience will illicit a reaction. If the robot can quantify heuristics for different types of responses, the robot can intelligently choose the next joke that fits the audiences preferences. By adapting to the unique qualities and preferences of different audiences, the robot can make a stronger attempt to connect to each person \cite{leslie} \cite{theoryOfMindRobots}
         \end{abstract}     
     \end{singlespace}
 \end{titlepage}
@@ -87,17 +85,18 @@
 
   Timing and anticipation for jokes are crucial for the success of the set. Every joke that is told provides information to the audience about the robot, and from the opening joke, each new part of the set will build the repertoire of the bot. If a joke is well received by the audience, the relationship between the comedian and the crowd is strengthened, as the people will become more trusting of the content. Every joke will enable the audience to connote decisions, preferences and knowledge of the robot. This is where the connection, otherwise known as the "Theory of Mind", is made with the audience\cite{leslie}.
 
+  This paper is an overview for the technology that will be used to create this algorithm. There will be a brief discussion on some of the previous work done in this field. Next, there will be a comparison of programming languages that will best suit this project, followed by a section describing some of the available tools for creating an Artificially Intelligent machine. Since audience feedback is a large portion of how this robot will attribute heuristics of the audience, there will be one section describing different ways to provide input from the robot.
+
 \section{Individual Role in Project}
 
-Our group will be working collectively to make an effective robot comedian, but I will be specifically working on our third research question: the robots ability to adapt a set based off of audience response. From audience response to a joke, or bit, the algorithm should be able to determine the best fit for the next joke. The bit that tests the audience's preference for humor will be known as the "seed". The seed will be a small subset of jokes that represent the collective set of jokes. For example, the seed bit may have three jokes; one joke could be a self-depreciating joke, one could be a joke about food, and another could be a quick observational joke about the audience. If the audience responded well to the self-depreciating joke, the algorithm should choose the next joke should be at the expense of the robot. 
+Our group will be working collectively to make an effective robot comedian, but I will be specifically working on our third research question: the robots ability to adapt a set based off of audience response. From audience response to a joke, or bit, the algorithm should be able to determine the best fit for the next joke. This algorithm will continue to find the next best fit for a set until the 3-6 minute set is complete. The portion of the algorithm that tests the audience's preference for humor will be known as the "seed". The seed will be a small subset of jokes, 2 - 3 jokes, that represent the collection of available jokes. For example, the seed bit may have three jokes; one joke could be a self-depreciating joke, one could be a joke about food, and another could be a quick observational joke about the audience. If the audience responded well to the self-depreciating joke, the algorithm should choose the next joke should be at the expense of the robot. 
 
 The seed of the set will give the audience pretense to the performance, and is the introduction of our robot. The delivery of the joke, and the content given has a large impact of robot character, and is out of the scope of the set creation; this is more suited toward the characterization research question. Also, the robot may need a more fluid way to interact with the audience (such as small talk, or crowd-work), which is underneath the breadth of the second research question about audience interaction. My contributions will be towards the system that determines which jokes, from our library of jokes, is best fit for our audience.
 
 The algorithm will need to be able to input the strength of a delivered joke, and return a joke with attributes that match the strength of the joke. This will begin at the seed portion of the algorithm, and pick jokes until the set has lasted 3-6 minutes. The jokes will have some small variability in delivery, that correspond to the tasks of audience interaction and characterization.
 
-\section{Technology overview}
+\section{Previous Work}
     There have been a couple of previous studies of robot theatre, most notably Dr. Heather Knight \cite{KnightEightLessons:2011}, Katevas et al \cite{KatevasRobot:2014}, and Dr. Guy Hoffman \cite{hoffman2010anticipation}. To accomplish this task of designing an algorithm that can learn from the audiences' response to jokes, it is important to look at previous research, as well as the tools available for accomplishing this task.
-\subsection{Previous Work}
   \subsection{ComedyParser}
   Katevas et al \cite{KatevasRobot:2014} has researched a robotic comedian agent previously with some success. During their research, they implemented a program called ComedyParser (https://github.com/minoskt/ComedyParser ) that collects audience response information from SHORE computer vision, and performs the stand up set. The decision components, or what the robot does with information gathered from the SHORE vision, will be most important for implementing an algorithm in our project. 
   A limitation with ComedyParser is that is specifically needs the SHORE vision to operate. SHORE will be too expensive for our project, and we will have to pursue more freely available systems. One solution that we had devised was to interprate the strength of the audience response to buttons on the robot. This will bypass the sensing component of comedy parser, as sensors for creating an audience model are out of the scope of this project.
@@ -105,17 +104,29 @@ The algorithm will need to be able to input the strength of a delivered joke, an
   \subsection{Anticipation in Robot Theatre}
   Research conducted by Dr. Guy Hoffman studying the implications of anticipatory actions in social robotics \cite{hoffman2010anticipation}. This particular study found that humans working with a robot that can monitor anticipation for an event allows humans to anthropomorphize the robot with more human like attributes. This study uses non-atomic Markov Decision Processes (MDPs) to model the decisions for events. Additionally, Hoffman models anticipation with an impulse-cue situation, where the robot is waiting for an impulse to trigger a specific cue. This is non-deterministic, as the MDP process is modeled around the probability of an event happening.
 
-  This will be helpful to use in our model, as Python, the main programming language for this project, has several implementations for MDPs, and the related automata "Context Free Grammar" (CFG).
-\section{Tools}
+\section{Programming Languages}
 
-  \subsection{Programming Languages}
+  There are three pieces of software provided by the manufacturer that are required to program the robot: Choregraphe, NaoQi, and Monitor. Choregraphe is the What-you-See-Is-What-You-Get (WYSIWYG) software used to visually program tasks as "boxes", that can be linked together to create sequentially or simultaneously executed behaviors. Each behavior is a series of tasks (boxes in Choregraphe) for the robot consisting of dialogue, movements, and sensing. NaoQi is the name of the developers SDK for programming tasks to the robot over text. It comes in many programming languages such as C/C++, Java, and Python. Choregraphe has boxes that allow only Python scripts to be executed \cite{programmingLanguages}. Monitor is the monitoring software that monitors the memory allocation on the robot, as well as the camera \cite{monitor}.
+
+  This section will discuss the benefits and downsides to each programming language that is available for this project. There are seven SDK variations that support different languages; the most complete versions of the NaoQI SDK are, in order from most complete to least, are C/C++, Python, Java \cite{programmingLanguages}.  
+ 
   \subsection{Python}
-  \subsection{java}
+  Python is a translated language that is popular in scientific programming \cite{Python.org}. Pythons simple syntax and simple library integration make it quick to prototype and implement systems. Python is the second most complete SDK in terms of API functionality (C++ is the most complete) \cite{languageBenefits}. Python however is the only language that supports scripting from choregraphe. Python is considerably slower than other compiled languages, and is not recommended for computations that are slower than 10 ms \cite{programmingLanguages}. It is important to note that all of the C++ API functions are available from python as well \cite{pythonSDK}. Machine learning and A.I. are commonly implemented with Python, as such, there are a considerable amount of tools for implementing finite state machines and language processing. These tools are discussed below, in the "Libraries and Artificial Intelligence Tools" section.
+  \subsection{Java}
 
-\section{Libraries}
-  \subsection{Natural Language ToolKit}
+  Java is one of the least complete SDKs that is available for NaoQi \cite{programmingLanguages}. Java is an object-orientated compiled language that is commonly used in mobile and app development. It is a higher level programming language than C++, that is more accessible 
+  \subsection{C/C++}
+
+\section{Libraries and Artificial Intelligence Tools}
+  \subsection{Natural Language ToolKit (NLTK)}
   \subsection{PyKov: Markov Chains in Python}
+  \subsection{TensorFlow}
+  \subsection{PyTorch}
 
+\section{Feedback Methods}
+  \subsection{Tactile Sensors on NAO Robot}
+  \subsection{Audio Sensors on NAO Robot}
+  \subsection{Mobile Application for Operator Control and Audience Feedback}
 
 \pagebreak
 
