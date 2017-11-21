@@ -55,9 +55,9 @@
 \def \CapstoneSponsorPerson{		Heather Knight}
 
 % 2. Uncomment the appropriate line below so that the document type works
-\def \DocType{		Problem Statement
+\def \DocType{		% Problem Statement
 				%Requirements Document
-				%Technology Review
+				Technology Review
 				%Design Document
 				%Progress Report
 				}
@@ -104,11 +104,15 @@
         }
         \begin{abstract}
         % 6. Fill in your abstract
-				This project is about creating an effective robot comedian.
-				The following is a brief statement of the project's problem, proposed solution, and performance metrics.
-				The problem described is about the lack of a sense of liveliness in robotic interaction.
-				In solution, the authors aim to create a robot comedian that reacts to audience reaction.
-				The effectiveness of this will be measured after a series of studies on a live audience.
+        % TODO: Abstract
+				This document is a Technology Review written by Arthur Shing of Capstone Group 13, for the research project "How to Create an Effective Robot Comedian" for Heather Knight.
+				This document covers an introduction of Shing's roles in the project.
+				It also covers topics the group considered for research questions.
+				These topics include the effectiveness of different genres, multiple parties, and character.
+				This document also reviews different technology that could be used for the robot and its development.
+				These include the RoboThespian, the Pepper robot, and the NAO robot.
+				Additionally, the development environments considered are the C++ SDK, the Python SDK, and the Choregraphe environment for the NAO robot. 
+
         \end{abstract}
     \end{singlespace}
 \end{titlepage}
@@ -134,12 +138,59 @@ In seeking to create an effective comedian, we hypothesize that comedy scripts w
 As for my own role in this project, I am focusing on (2) the effectiveness of coherent character in comedy.
 This entails the creation of comedic scripts with varying degrees of character coherency.
 
-\subsection{Pieces and Technologies}
-In the following sections, I will explore the options and choices we had for robots, SDKs and environments, and research design for (2) character. Unlike the technology used for the other two research questions of (1) crowdwork and (3) adaptiveness, implementing character will require fewer technologies. For instance, both of the other variables will require some sort of sensing technology, while the implementation of character will not. Consequently, I had fewer technological features to choose from after research questions were decided.
+\subsection{Technologies and Research Design}
+In the following sections, I will explore the options and choices we had for alternative topics for our second research question on (2) character, robots, and SDKs and environments. Unlike the technology used for the other two research questions of (1) crowd work and (3) adaptiveness, implementing character will require fewer pieces of technology. For instance, both of the other variables will require some sort of sensing technology, while the implementation of character will not. Consequently, I had fewer technological features to choose from after research questions were decided. In place of the third piece of technology, I will discuss choices we considered for research questions.
 
+
+\section{Research Questions}
+The three research questions our group has decided on are the effectiveness of (1) crowd work, (2) character, and (3) adaptiveness in comedy. As a research project, these questions may be subject to change in the future. In deciding upon these three topics, various limitations were taken into account. In this section, I will discuss the decision on (2) character, as well as other topics we considered.
+
+\subsection{Comedic Genre as a research topic}
+One topic we considered was the effectiveness of different genres of comedy.
+This includes genres such as deadpan, black comedy, slapstick, or specialized robot comedy.
+The first thing we considered was the feasibility of implementation.
+Deadpan comedy would either be the easiest or hardest part of the implementation, depending on the dynamics of the vocal software.
+The NAO's software is likely unable to mimic exaggerations in vocal expressions, but its monotonous (although mildly expressive) delivery may give way to a successful deadpan delivery.
+Black comedy is likewise feasible, although probably inappropriate for research.
+Slapstick humor would be harder to implement, with movement limitations that the NAO robot has.
+Similarly, the NAO robot would be limited by its battery life and its tendency to fall over.
+Specialized robot comedy is an area of great interest to us.
+This genre of comedy might include robot-specific jokes; jokes that only a robot would have the right to make.
+For instance, joking about its own programming, motor, or intellectual deficiencies might prove to be effective.
+
+
+\subsection{Dialogical Comedy as a research topic}
+Another topic we considered was the effectiveness of two parties in stand-up comedy.
+In previous tests done by Heather Knight, it was found that a robot by itself could only maintain the attention of a human audience for 2-3 minutes \cite{OneNote:Anish}.
+However, with a human interacting with the robot, this time could be extended to twice or three times as long.
+Additionally, studies and research could be taken from ventriloquism.
+One example of a successful implementation of a robot comedian in tandem with a stand-up comedian in popular culture is Geoff Peterson from The Late Late Show with Craig Ferguson \cite{GeoffPeterson}.
+Peterson acted as a sidekick to Ferguson, and although he had an actual voice actor behind the scenes, Peterson could serve as an example of a goal for this topic.
+As for implementation on the NAO bot, most of the dialogue would be prescripted with lengths of time between each line for the human to speak.
+Another option would be for the human to hold a remote that activates the robot's next line, although this would seem much more scripted.
+
+
+\subsection{Character as a research topic}
+The effectiveness of character design was also a topic under consideration.
+In much of early previous work on robot comedy, jokes were simply read off one at a time, resulting in a rigid, static comedic structure \cite{RobotsMakeThings:2008}.
+Stand-up comedy, however, seems to thrive off of the buildup before each punchline, as well as the quirkiness of the comedian.
+Implementation of this may include writing scripts with varying degrees of character.
+Character might involve nonverbal gestures, expressivity, and consistency.
+For instance, a script with a high degree of character may mean more pronounced, expressive motions, as well as stronger expressive language.
+A script with a moderate degree of character may only include expressive language, or might even employ morose language to portray a different type of character.
+On the other hand, a script with a low degree of character may simply ramble off jokes, or speak with a minimal amount of non-verbal language.
+
+\subsection{Discussion of Research Topic Ideas}
+Overall, we found that the discussion of character as a research topic might prove to be the more fruitful endeavor.
+Additionally, aspects of comedic genre could be incorporated into the topic as a subtopic or stretch goal, seeing that certain genres of comedy necessitate certain comedians.
+For instance, robot-specific comedy may require a comedian with a consistently dry or self-deprecating character.
+Having the effectiveness of character as a research topic gives us more flexibility in adjusting our research questions in the future, as well as a broader range of ideas to draw from.
+
+\subsection{Conclusion of Research Topic Ideas}
+We will research the effectiveness of character implementation in robot comedy.
 
 \section{Robots}
-Our project will require a robot as the comedian to conduct testing.
+Our project will require a robot as the comedian to conduct testing. This robot ideally has vocal capabilities, as well as gesturing capabilities. The three following robots include both of these capabilities.
 
 \subsection{Robothespian}
 The Robothespian has been implemented in Human-Robot Interaction studies in the past.
@@ -150,7 +201,7 @@ The Robothespian is constructed by Engineering Arts, and comes with a touchscree
 For the most part, the Robothespian uses predefined timed animations in its performances through its stock software \cite{KatevasRobot:2014}.
 However, its responsiveness can be optimized in a Python IDE that is provided by Engineering Arts.
 The Robothespian stands at a height of roughly 6\", and weighs 97 lbs including a floor base.
-The robot also features pneumatic and DC servo motor actuators for the upper body, upper limbs and head, including jaw actuation and distinct fingers.
+The robot also features pneumatic and DC servo motor actuators for the upper body, upper limbs, and head, including jaw actuation and distinct fingers.
 It also has a starting price of \pounds59000 \cite{EngineeredArts}.
 
 
@@ -159,19 +210,19 @@ The Pepper robot is a small humanoid robot that was built to perceive and respon
 Designed by Aldebaran Robotics, the Pepper bot was created to interact as natural and intuitive as possible.
 It includes 4 directional microphones on its head, as well as two HD and one 3D camera to locate and identify emotions in voices and faces.
 It also comes with six laser sensors, three obstacle detectors, and two ultrasound sensors.
-The Pepper robot has also had experience in stagework, and has been used in Japan to mild success \cite{PepperVid}.
-It specializes in socializing, and reacting to perceived emotions.
+The Pepper robot has also had experience in stage work and has been used in Japan to mild success \cite{PepperVid}.
+It specializes in socializing and reacting to perceived emotions.
 The robot also comes with a tablet on its chest to supplement human interactivity.
 The Pepper weighs in at 62 lbs.
 It has a starting price of \$25,000. However, when it was first released, it had a starting price of \$2,000 with a \$300 monthly maintenance fee.
-A Pepper SDK for android was released just this year. \cite{PepperBot}
+A Pepper SDK for Android was released just this year. \cite{PepperBot}
 
 \subsection{NAO robot}
 The NAO robot is a humanoid robot featuring upper and lower body joints.
 Also designed by Aldebaran Robotics, it has 25 degrees of freedom and multiple sensors for perceiving the environment.
 These include 4 directional microphones, as well as two HD cameras for vocal and facial recognition.
 The NAO robot was created to be extremely customizable.
-It has a small frame, weighing at 9.5 lbs.
+It has a small frame, weighing 9.5 lbs.
 It has been previously used to study Human-Robot Interaction and comedy by Knight et al. \cite{KnightSavvy:2011}.
 The robot can be programmed through a software produced by Aldebaran Robotics, called Choregraphe.
 It has a starting price of \$9,500 \cite{BuyNAO}. \cite{NAORobot}
@@ -181,7 +232,7 @@ The NAO Robot is the most accessible to us, as our client already owns one.
 The Robothespian and Pepper robot have also only recently launched SDKs for development.
 This led us to be wary of possible bugs and issues that have not yet been addressed in development.
 Our client is also familiar with the development environment for the NAO robot, which will make learning it an easier process.
-In addition, the Robothespian and Pepper robot are priced much higher, and lack lower body mobility.
+In addition, the Robothespian and Pepper robot are priced much higher and lack lower body mobility.
 The lower body mobility of the NAO robot may benefit from using non-verbal gestural cues that cannot be done on the other two robots.
 These gestures may increase the effectiveness of our comedy \cite{KnightEightLessons:2011}.
 The Robothespian and Pepper Robot are also significantly heavier than the tiny NAO robot, which may impact our efficiency with hands-on programming and transporting the robot.
@@ -190,13 +241,14 @@ The Robothespian and Pepper Robot are also significantly heavier than the tiny N
 We decided to use the NAO Robot for our project, based on accessibility and efficiency.
 
 \section{SDKs and Environments}
-The NAO Robot can be programmed in several different ways, and comes with several different SDKs. It uses an API called NAOqi that is available in eight different languages. However, only C++ and Python are supported on the robot, while the others are only supported on the computer for remote access \cite{NAOSDK:Overview}.
+The NAO Robot can be programmed in several different ways and comes with several different SDKs. It uses an API called NAOqi that is available in eight different languages. However, only C++ and Python are supported on the robot, while the others are only supported on the computer for remote access \cite{NAOSDK:Overview}.
 
 \subsection{C++}
 The C++ framework is the most complete one, and allows a developer to write real-time code at high speeds.
 The developer can access specialized proxies, which are optimized and give direct access to existing methods.
 These proxies also provide compile-time type checking.
 The following is an example of specialized proxy usage.
+
 \begin{lstlisting}[language=C++]
 	#include <alproxies/altexttospeechproxy.h>
 
@@ -204,11 +256,13 @@ The following is an example of specialized proxy usage.
 	AL::ALTextToSpeechProxy tts("nao.local" , 9559);
 	tts.say("Hello world");
 \end{lstlisting}
+
 In addition to these optimized proxies, generic proxies can also be used.
 With these, methods must be specified by the developer, which may be more prone to err.
-These are slower than specialized proxies, but can adapt to any module.
+These are slower than specialized proxies but can adapt to any module.
 This includes user-created modules. User-created method names cannot clash with names bound by ALModule methods.
 The following is an example of generic proxy usage. \cite{NAOSDK:C++}
+
 \begin{lstlisting}[language=C++]
 	#include <alcommon/alproxy.h>
 
@@ -306,7 +360,7 @@ Choregraphe can also connect to an actual or virtual NAO robot as shown in Figur
 	\label{fig:choregraphe-robot}
 \end{figure}
 
-Animations can also be created in tandem with vocalizations using a timeline feature, as shown in Figure \ref{fig:choregraphe-timeline}. This feature allows a developer to choose the frames at which the NAO robot will position itself, as well as the words that will be spoken while doing so.
+Animations can also be created in tandem with vocalizations using a timeline feature, as shown in Figure \ref{fig:choregraphe-timeline}. This feature allows a developer to choose the frames at which the NAO robot will position itself, as well as the words that will be spoken while doing so. \cite{NAOSDK:Choregraphe}
 
 \begin{figure}[H]
 	\centering
@@ -322,11 +376,6 @@ As most tests will involve predetermined scripts and little sensor usage, moveme
 
 \subsection{Conclusion of SDK and Environment Choice}
 For our purposes, Choregraphe will be used to program the robot.
-
-\section{Character Frameworks}
-
-\
-
 
 
 
