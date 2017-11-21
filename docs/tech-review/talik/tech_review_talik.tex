@@ -135,8 +135,13 @@ The algorithm will need to be able to input the strength of a delivered joke, an
 
 \section{Feedback Methods}
   \subsection{Tactile Sensors on NAO Robot}
+   There are a few touch sensors on the robot, two on each feet, two on each hand, and one on the head. This would be the most simple solution to implement, as each button would correlate to an audience response. For example, if the audience likes a joke, I would touch the left foot, and otherwise I could touch the right foot. A difficulty with this approach is that there is a limited amount of buttons, and giving the robot a small input may limit the information the algorithm can use to make a decision. 
+
   \subsection{Audio Sensors on NAO Robot}
+    Nao has 4 microphones on it's head, two on the front of the head, and two on the back. The sensitivity of each microphone is 20mV/Pa +/-3dB. This converts to -33.98 dBV/Pa. This means that a decibel noise that is 33.98 dBV/Pa when it is heard from the source will be picked up. The acceptable frequency range is 150Hz to 12kHz. This is a sensitive microphone, that would work better in small, controlled environments. The robot also can also only pick up audio from one source at a time. Making this microphone work for a large audience would be difficult, and may be a challenge differentiating between a loud "booing" sound, and a loud "applause." The benefit of using audio sensors is that we would not need to touch the robot while it is working, and could more naturally receive input.
   \subsection{Mobile Application for Operator Control and Audience Feedback}
+
+  The Javascript module QiMessaging \cite{qimessagingjavascript} is used to send messages to the robot over Socke.IO \cite{socketIO}. This would be useful to remotely send signals to the robot by using an HTML5 webpage. Using this model, we would bypass the sensors on the robot and directly communicate from it. We would use our observations of the audience to relay to the robot for the algorithm to make choices on the joke. This would be useful to have, but would be time consuming to create. Depending on the timeframe of the project, we may not have time to implement a system like this.
 
 \pagebreak
 
