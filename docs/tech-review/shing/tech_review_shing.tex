@@ -1,35 +1,62 @@
 \documentclass[onecolumn, draftclsnofoot,10pt, compsoc]{IEEEtran}
-\usepackage{graphicx}
-\usepackage{url}
-\usepackage{setspace}
-\usepackage{pdflscape}
 
-\usepackage{tikz}
-\usetikzlibrary{%
-	arrows, backgrounds, calc,%
-    patterns, positioning, shapes.geometric%
-}
-\RequirePackage{pgfcalendar}
-\usepackage{pgfgantt}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+\usepackage{url}
+\usepackage{float}
+\usepackage{setspace}
+
+\usepackage{listings}
 
 \usepackage{geometry}
-\geometry{textheight=9.5in, textwidth=7in,margin=0.75in}
-\bibliographystyle{IEEEtran}
+\geometry{textheight=9.5in, textwidth=7in}
+
+\usepackage{color}
+
+
+% COLOR DEFINITIONS FOR CODE LISTINGS
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
 
 % 1. Fill in these details
-\def \CapstoneTeamName{			AKARobotics}
+\def \CapstoneTeamName{		AKARobotics}
 \def \CapstoneTeamNumber{		13}
-\def \GroupMemberOne{			Anish Asrani}
-\def \GroupMemberTwo{			Kevin Talik}
+\def \GroupMemberOne{			Kevin Talik}
+\def \GroupMemberTwo{			Anish Asrani}
 \def \GroupMemberThree{			Arthur Shing}
-\def \CapstoneProjectName{		How to Make an Effective Robot Comedian}
+\def \CapstoneProjectName{		How to Build an Effective Robot Comedian}
 \def \CapstoneSponsorCompany{	Oregon State University}
 \def \CapstoneSponsorPerson{		Heather Knight}
 
 % 2. Uncomment the appropriate line below so that the document type works
-\def \DocType{
-% Problem Statement
-				% Requirements Document
+\def \DocType{		% Problem Statement
+				%Requirements Document
 				Technology Review
 				%Design Document
 				%Progress Report
@@ -43,21 +70,18 @@
 %\renewcommand{\NameSigPair}[1]{#1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
-
-\bstctlcite{IEEEexample:BSTcontrol}
-
 \begin{titlepage}
     \pagenumbering{gobble}
     \begin{singlespace}
+    	% \includegraphics[height=4cm]{coe_v_spot1}
         \hfill
-        % 4. If you have a logo, use this include graphics command to put it on the coversheet.
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
         %\includegraphics[height=4cm]{CompanyLogo}
         \par\vspace{.2in}
         \centering
         \scshape{
-             \huge CS Capstone \DocType \par
+            \huge CS Capstone \DocType \par
             {\large\today}\par
             \vspace{.5in}
             \textbf{\Huge\CapstoneProjectName}\par
@@ -76,16 +100,18 @@
                 \NameSigPair{\GroupMemberTwo}\par
                 \NameSigPair{\GroupMemberThree}\par
             }
-            \vspace{20pt}
+						\vspace{20pt}
         }
         \begin{abstract}
         % 6. Fill in your abstract
-
-
-
-
-A comedian can observe an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and genuine for the observer. The purpose of this project is to to discover what makes an entertaining interaction by studying a robot that performs comedy. We propose that a performance is enhanced when (1) the comedian interacts spontaneously with the audience, (2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience based on their reaction. This document covers the technical requirements for our project, as well as a description of software, hardware, and outside limitations.
-
+        % TODO: Abstract
+				This document is a Technology Review written by Arthur Shing of Capstone Group 13, for the research project "How to Create an Effective Robot Comedian" for Heather Knight.
+				This document covers an introduction of Shing's roles in the project.
+				It also covers topics the group considered for research questions.
+				These topics include the effectiveness of different genres, multiple parties, and character.
+				This document also reviews different technology that could be used for the robot and its development.
+				These include the RoboThespian, the Pepper robot, and the NAO robot.
+				Additionally, the development environments considered are the C++ SDK, the Python SDK, and the Choregraphe environment for the NAO robot.
 
         \end{abstract}
     \end{singlespace}
@@ -94,114 +120,271 @@ A comedian can observe an audience and improvise a delivery of a joke to connect
 \pagenumbering{arabic}
 \tableofcontents
 % 7. uncomment this (if applicable). Consider adding a page break.
-% \listoffigures
-\listoftables
+%\listoffigures
+%\listoftables
 \clearpage
 
+% 8. now you write!
+
+
 \section{Introduction}
-The field of human-robot interaction can learn a lot from stand-up comedy. A stand-up performance has a basis of scripted content, from which the comedian delivers jokes to engage the audience. A good comedian can read the audience and sometimes adapt their delivery based on the mood of the room \cite{talkingFunny}. In social robotics, when a robot shares a space with a human, an interaction can influence the people's opinions of the robot. Additionally, evident character traits presented (through dialogue and non-verbal motion) by the machine can anthropomorphize itself, making it easier and more enjoyable to connect with for the human \cite{KnightEightLessons:2011}. The purpose of this work is to explicitly evaluate what aspects of a robot comedian's performance are most salient to human audience.
 
-Robots utilizing non-verbal communication and statically written audience engagement have been attempted in robot comedy. In particular, Dr. Heather Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions \cite{KatevasRobot:2014}. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
+This is a tech review for Group 13, written by Arthur Shing, for the project "How to Create an Effective Robot Comedian".
+This project is a research project that intends to extend on research done in the field of Human-Robot Interaction.
+Our end goal for this project is to create an effective robot comedian that can perform in front of a live audience.
+In seeking to create an effective comedian, we hypothesize that comedy scripts with greater degrees of (1) crowdwork, (2) character, and (3) adaptiveness, will create more effective comedy, and have a more positive response from the audience.
 
+\subsection{Role}
+As for my own role in this project, I am focusing on (2) the effectiveness of coherent character in comedy.
+This entails the creation of comedic scripts with varying degrees of character coherency.
 
-\section{Hypothesis}
-
-Our research will be guided by the following questions:
-\begin{enumerate}[\IEEEsetlabelwidth{6)}]
-\item How can the robot make the audience feel like a part of the performance?
-\item How can the robot convey and a coherent and well-developed character?
-\item How can the robot adapt and influence to the audience?
-\end{enumerate}
-
-We hypothesize that a distinct character for the robot will positively influence the performance, and will engage the audience better than a set with no personifications. In a previous study of robot comedy \cite{RobotComedyLab:2015}, Katevas found that when a robot engaged the audience through eye contact, the audience was more receptive to the performance. Eye contact from the robot is important, as it is a non-verbal cue for direct interaction. The audience members can identify that the machine is making an attempt to engage with specific members of the audience. This correlates with Dr. Heather Knight's \cite{KnightEightLessons:2011} research that outward communication results in a feeling of accomplishment for a human observer.
-
-Dr. Heather Knight has researched Robot Theatre as a metaphor for HRI, and found that when a robot is viewed as an agent (characterized object), the interaction arc with a human is stronger than if the robot is treated as a prop. When a robot conveys an intelligence and characterizations of itself, the audience can connect to the robot as an agent, and not inanimate.
-
-Expressing character will be understood from the robot under the "theory of the mind" \cite{leslie}. Understanding the agents metarepresentation of a behavior is helpful for the audience in relating to the robot's intent, desires and knowledge. A robot attempts this to understand and relate its desires and intent better to the audience \cite{theoryOfMindRobots}.
-
-\section{Research Approach}
-This project will be carried out in three phases; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
-
-\subsection{Learning/Exploration Phase}
-This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The NAO robot behaviors are programmed in the software Choregraphe, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function. The sensors in the NAO will generate the virtual audience model. To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices. A large gap in current Robot Comedy is adaptive audience interaction and witty, spontaneous jokes \cite{KatevasRobot:2014}. The difficulty in this process is effectively understanding an audience model, and timing a coherent joke that accurately relates to the audience.
-
-\subsection{Prototyping/Testing Phase}
-In the prototyping and testing phase, we will develop early sets for the robot. These implementations need to reflect and support our research questions. Crowd-work will involve audience sensing, as well as jokes that incorporate a measurement of response from the audience. Character implementation will involve testing the differences in effectiveness of robot vs human joke delivery, and the effectiveness of robo-centric jokes. As a stretch goal, we also hope to prototype and test the effectiveness of adapting a set to the audience, using intelligent calibration of the sensors.
-
-These prototypes will be in the form of 3-6 minute set scripts with several variants in Choregraphe. The variants will help us evaluate the research questions and can be be tested in front of a small sample of humans, or in the form of a video recording. For example, the robot may perform in front of a handful of friends, or recordings may be to show online live viewers. Non-mechanical feedback from our testing will influence the direction of our prototyping, meaning that the implementation of our research questions will adapt according to the audience response. By the time this phase is completed, we will have working sets of robot stand-up.
-
-\subsection{Evaluation Phase}
-While doing the research, we will perform 6 shows with audiences ranging from 10-30 people. Tests in this phase will be at a greater scale and with a more realistic environment. Each stand-up performance, or set, will contain bits, or sections of content that will be categorized as crowd work, characterization dialogue, and jokes. We will be testing on a live human audience to learn the effectiveness of each bit in a set. Based of the effectiveness of each set, we will modify the set and behavior of the robot. By the end of this phase, we hope to have a working, effective robot comedian.
-
-\section{Methods}
-We will make a virtual audience model from the sensors on the NAO. Using this model, we can identify the mood of the audience to determine what each response is to each segment of the stand-up set. This will help determine which bits of the set were effective. Multiple robot personalities will be tested to see what kind of character appeals to the audience. The audience will also be surveyed to determine what aspects of the performance were enjoyable and what was not.
+\subsection{Technologies and Research Design}
+In the following sections, I will explore the options and choices we had for alternative topics for our second research question on (2) character, robots, and SDKs and environments. Unlike the technology used for the other two research questions of (1) crowd work and (3) adaptiveness, implementing character will require fewer pieces of technology. For instance, both of the other variables will require some sort of sensing technology, while the implementation of character will not. Consequently, I had fewer technological features to choose from after research questions were decided. In place of the third piece of technology, I will discuss choices we considered for research questions.
 
 
-Other studies by Katevas et al. \cite{KatevasRobot:2014} that involved evaluating the social dynamics of a live performance by a robot have used SHORE\textsuperscript{TM} vision framework software to analyze and detect faces in the audience. SHORE\textsuperscript{TM} allows for facial expression recognition, estimated age, gender, and eye or mouth openings \cite{SHORE}, giving the study a heterogenous audience model. These allowed for the robot to interact directly with specific audience members. However, usage of SHORE\textsuperscript{TM} involves expenses and funds that are unavailable to us, so we will encounter behavioral limitations dealing with a homogenous audience model.
+\section{Research Questions}
+The three research questions our group has decided on are the effectiveness of (1) crowd work, (2) character, and (3) adaptiveness in comedy. As a research project, these questions may be subject to change in the future. In deciding upon these three topics, various limitations were taken into account. In this section, I will discuss the decision on (2) character, as well as other topics we considered.
 
-A study by Guy Hoffman {\cite{hoffman2010anticipation}} noted the importance of anticipation in human-robot interaction (HRI). The timing and meshing of anticipatory action and perception are a useful framework for HRI. The greatest challenge when designing a robot that will perform on stage is to enable the robot to be both - expressive and responsive. Robot models in the past have ended up on either extreme; they are either real-time and do not allow for continuous expression, or they are very animated but do not allow well times reactive behavior.
-
-The effectiveness of our robot comedian will be evaluated by human enjoyment levels. Specifics regarding measurements and analysis will be later discussed with the client. Some possible methods include handing out surveys for the audience to fill out, which may include questions regarding the subjective reception of the robot comedian. Additionally, behavioral statistics may be used to evaluate the effectiveness of the comedy.
-
-\section{Background}
-
-Research on the improvement of HRI is indispensible for our project. In Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
-Relatable and appropriate gestures significantly helps improve communication between the robot and the audience. If the actions are predictable, humans can relate to the robot.
-When watching someone perform an action, the human brain maps the actions onto itself and simulates the action in the best way possible. This is a physiological experience that should be replicated by the robot in order to enhance relatability. Simplicity is important as well. {\cite{KnightEightLessons:2011}}
-
-
-In addition, Knight observed that having the robot portrayed as a living character rather than just an object that is kept up on stage improved the overall experience for the observers. Having believable interactions can enhance the feeling of a living character.
-The goal of the audience tracking using sensors is to maximize enjoyment. The enjoyment levels were be read by the robot and used to modify upcoming jokes {\cite{KnightEightLessons:2011}}. Pausing and letting the audience laugh is vital as well. Starting the next joke too early can break the rhythm and leave the audience baffled. Looking around and body poses should be used to fill the pause {\cite{KnightEightLessons:2011}}.
-
-Researchers have also proposed multiple design patterns to promote sociability in Human-Robot Interaction (HRI). Some of these include having an initial introduction, some sort of didactic communication, including personal interests or history, and recovering from mistakes \cite{Kahn:2008}. These patterns in design are proposed to allow for more effective and meaningful social interactions. While there is yet to be much data or research on the validity of these claims, they may still prove to be useful in guiding the designs of our project.
-% \subsection{Timeline}
-\pagebreak
-\begin{landscape}
-
-\begin{table}
-	\begin{ganttchart}[
-		hgrid,
-		vgrid=true]{1}{27}
-
-		\gantttitle{Title}{27} \\
-		\gantttitle{Fall}{10}
-		\gantttitle{Winter}{10}
-		\gantttitle{Spring}{7} \\
-		\gantttitlelist{1,...,10,1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7}{1} \\
-		\ganttgroup{Learning \& Exploration}{1}{10} \\
-		\ganttbar{Learn Choregraphe}{3}{8} \\
-		\ganttlinkedbar{Supplementary Scripts}{8}{10} \\
-		\ganttbar[name=Research]{Research Comedy \& HRI}{1}{7} \\
-		\ganttmilestone[name=M1]{Evaluate Research Questions}{7} \\
-		\ganttgroup{Prototyping \& Testing}{11}{20} \\
-		\ganttbar[name=S2]{Developed Scripts}{11}{13} \\
-		\ganttlinkedbar[name=T1]{Test w/ Friends}{13}{16} \\
-		\ganttlinkedbar[name=T2]{Video Tests}{16}{20} \\
-		\ganttbar[name=Q]{Tweak R1, R2, R3 implementations}{13}{20} \\
-		\ganttmilestone[name=M2]{Robot Stand-up Set Completed}{20} \\
-		\ganttgroup{Live Testing \& Evaluation}{21}{27} \\
-		\ganttbar[name=T3]{Live Testing}{21}{27} \\
-		\ganttbar{Evaluate Performance}{21}{27}
-
-		\ganttlink{Research}{M1}
-		\ganttlink{M1}{S2}
-		\ganttlink{Q}{M2}
-		\ganttlink{M2}{T3}
+\subsection{Comedic Genre as a research topic}
+One topic we considered was the effectiveness of different genres of comedy.
+This includes genres such as deadpan, black comedy, slapstick, or specialized robot comedy.
+The first thing we considered was the feasibility of implementation.
+Deadpan comedy would either be the easiest or hardest part of the implementation, depending on the dynamics of the vocal software.
+The NAO's software is likely unable to mimic exaggerations in vocal expressions, but its monotonous (although mildly expressive) delivery may give way to a successful deadpan delivery.
+Black comedy is likewise feasible, although probably inappropriate for research.
+Slapstick humor would be harder to implement, with movement limitations that the NAO robot has.
+Similarly, the NAO robot would be limited by its battery life and its tendency to fall over.
+Specialized robot comedy is an area of great interest to us.
+This genre of comedy might include robot-specific jokes; jokes that only a robot would have the right to make.
+For instance, joking about its own programming, motor, or intellectual deficiencies might prove to be effective.
 
 
+\subsection{Dialogical Comedy as a research topic}
+Another topic we considered was the effectiveness of two parties in stand-up comedy.
+In previous tests done by Heather Knight, it was found that a robot by itself could only maintain the attention of a human audience for 2-3 minutes \cite{OneNote:Anish}.
+However, with a human interacting with the robot, this time could be extended to twice or three times as long.
+Additionally, studies and research could be taken from ventriloquism.
+One example of a successful implementation of a robot comedian in tandem with a stand-up comedian in popular culture is Geoff Peterson from The Late Late Show with Craig Ferguson \cite{GeoffPeterson}.
+Peterson acted as a sidekick to Ferguson, and although he had an actual voice actor behind the scenes, Peterson could serve as an example of a goal for this topic.
+As for implementation on the NAO bot, most of the dialogue would be prescripted with lengths of time between each line for the human to speak.
+Another option would be for the human to hold a remote that activates the robot's next line, although this would seem much more scripted.
 
-		% \ganttlink{elem2}{elem3}
-		% \ganttlink{elem3}{elem4}
-	\end{ganttchart}
-	\caption{A gantt chart showing the projected timeline of the project.}
-	\label{Gantt Chart}
 
-\end{table}
+\subsection{Character as a research topic}
+The effectiveness of character design was also a topic under consideration.
+In much of early previous work on robot comedy, jokes were simply read off one at a time, resulting in a rigid, static comedic structure \cite{RobotsMakeThings:2008}.
+Stand-up comedy, however, seems to thrive off of the buildup before each punchline, as well as the quirkiness of the comedian.
+Implementation of this may include writing scripts with varying degrees of character.
+Character might involve nonverbal gestures, expressivity, and consistency.
+For instance, a script with a high degree of character may mean more pronounced, expressive motions, as well as stronger expressive language.
+A script with a moderate degree of character may only include expressive language, or might even employ morose language to portray a different type of character.
+On the other hand, a script with a low degree of character may simply ramble off jokes, or speak with a minimal amount of non-verbal language.
 
-\end{landscape}
-\pagebreak
+\subsection{Discussion of Research Topic Ideas}
+Overall, we found that the discussion of character as a research topic might prove to be the more fruitful endeavor.
+Additionally, aspects of comedic genre could be incorporated into the topic as a subtopic or stretch goal, seeing that certain genres of comedy necessitate certain comedians.
+For instance, robot-specific comedy may require a comedian with a consistently dry or self-deprecating character.
+Having the effectiveness of character as a research topic gives us more flexibility in adjusting our research questions in the future, as well as a broader range of ideas to draw from.
+
+\subsection{Conclusion of Research Topic Ideas}
+We will research the effectiveness of character implementation in robot comedy.
+
+\section{Robots}
+Our project will require a robot as the comedian to conduct testing. This robot ideally has vocal capabilities, as well as gesturing capabilities. The three following robots include both of these capabilities.
+
+\subsection{RoboThespian}
+The RoboThespian has been implemented in Human-Robot Interaction studies in the past.
+It is a humanoid, life-sized robot designed for human interaction in public.
+It was used to great success in stand-up comedy performance study done by Katevas et. al \cite{KatevasRobot:2014}.
+Additionally, it has been used in other theatrical contexts \cite{Spillikin} to some success.
+The RoboThespian is constructed by Engineering Arts, and comes with a touchscreen kiosk for the user that can be used to trigger content, view sensors, and actively engage or control the robot.
+For the most part, the RoboThespian uses predefined timed animations in its performances through its stock software \cite{KatevasRobot:2014}.
+However, its responsiveness can be optimized in a Python IDE that is provided by Engineering Arts.
+The RoboThespian stands at a height of roughly 6\", and weighs 97 lbs including a floor base.
+The robot also features pneumatic and DC servo motor actuators for the upper body, upper limbs, and head, including jaw actuation and distinct fingers.
+It also has a starting price of \pounds59000 \cite{EngineeredArts}.
+
+
+\subsection{Pepper}
+The Pepper robot is a small humanoid robot that was built to perceive and respond to emotions.
+Designed by Aldebaran Robotics, the Pepper bot was created to interact as natural and intuitive as possible.
+It includes 4 directional microphones on its head, as well as two HD and one 3D camera to locate and identify emotions in voices and faces.
+It also comes with six laser sensors, three obstacle detectors, and two ultrasound sensors.
+The Pepper robot has also had experience in stage work and has been used in Japan to mild success \cite{PepperVid}.
+It specializes in socializing and reacting to perceived emotions.
+The robot also comes with a tablet on its chest to supplement human interactivity.
+The Pepper weighs in at 62 lbs.
+It has a starting price of \$25,000. However, when it was first released, it had a starting price of \$2,000 with a \$300 monthly maintenance fee.
+A Pepper SDK for Android was released just this year. \cite{PepperBot}
+
+\subsection{NAO robot}
+The NAO robot is a humanoid robot featuring upper and lower body joints.
+Also designed by Aldebaran Robotics, it has 25 degrees of freedom and multiple sensors for perceiving the environment.
+These include 4 directional microphones, as well as two HD cameras for vocal and facial recognition.
+The NAO robot was created to be extremely customizable.
+It has a small frame, weighing 9.5 lbs.
+It has been previously used to study Human-Robot Interaction and comedy by Knight et al. \cite{KnightSavvy:2011}.
+The robot can be programmed through a software produced by Aldebaran Robotics, called Choregraphe.
+It has a starting price of \$9,500 \cite{BuyNAO}. \cite{NAORobot}
+
+\subsection{Discussion of Robots}
+The NAO Robot is the most accessible to us, as our client already owns one.
+The RoboThespian and Pepper robot have also only recently launched SDKs for development.
+This led us to be wary of possible bugs and issues that have not yet been addressed in development.
+Our client is also familiar with the development environment for the NAO robot, which will make learning it an easier process.
+In addition, the RoboThespian and Pepper robot are priced much higher and lack lower body mobility.
+The lower body mobility of the NAO robot may benefit from using non-verbal gestural cues that cannot be done on the other two robots.
+These gestures may increase the effectiveness of our comedy \cite{KnightEightLessons:2011}.
+The RoboThespian and Pepper Robot are also significantly heavier than the tiny NAO robot, which may impact our efficiency with hands-on programming and transporting the robot.
+
+\subsection{Conclusion of Robot Choice}
+We decided to use the NAO Robot for our project, based on accessibility and efficiency.
+
+\section{SDKs and Environments}
+The NAO Robot can be programmed in several different ways and comes with several different SDKs. It uses an API called NAOqi that is available in eight different languages. However, only C++ and Python are supported on the robot, while the others are only supported on the computer for remote access \cite{NAOSDK:Overview}.
+
+\subsection{C++}
+The C++ framework is the most complete one, and allows a developer to write real-time code at high speeds.
+The developer can access specialized proxies, which are optimized and give direct access to existing methods.
+These proxies also provide compile-time type checking.
+The following is an example of specialized proxy usage.
+
+\begin{lstlisting}[language=C++]
+	#include <alproxies/altexttospeechproxy.h>
+
+	const std::string phraseToSay = "Hello world";
+	AL::ALTextToSpeechProxy tts("nao.local" , 9559);
+	tts.say("Hello world");
+\end{lstlisting}
+
+In addition to these optimized proxies, generic proxies can also be used.
+With these, methods must be specified by the developer, which may be more prone to err.
+These are slower than specialized proxies but can adapt to any module.
+This includes user-created modules. User-created method names cannot clash with names bound by ALModule methods.
+The following is an example of generic proxy usage. \cite{NAOSDK:C++}
+
+\begin{lstlisting}[language=C++]
+	#include <alcommon/alproxy.h>
+
+	const std::string phraseToSay = "Hello world";
+	AL::ALProxy proxy("ALTextToSpeech", "nao.local", 9559);
+	proxy.callVoid("say", phraseToSay);
+
+
+	// Or, if the method returns something, you
+	// must use a template parameter
+	bool ping = proxy.call<bool>("ping");
+\end{lstlisting}
+
+Movement programmed in C++ is done by calling the angleInterpolation method under the ALMotionProxy module.
+This is used by creating an ALValue::array of target angles and times, and passing them into the method.
+The following is an example of using angleInterpolation to move the NAO robot's head.
+\begin{lstlisting}[language=C++]
+	/**
+	* Copyright (c) 2011 Aldebaran Robotics. All Rights Reserved
+	*/
+	#include <iostream>
+	#include <alerror/alerror.h>
+	#include <alproxies/almotionproxy.h>
+
+	int main(int argc, char* argv[]) {
+		const AL::ALValue jointName = "HeadYaw";
+    AL::ALMotionProxy motion(argv[1], 9559);
+	 	/** Set the target angle list, in radians. */
+    AL::ALValue targetAngles = AL::ALValue::array(-1.5f, 1.5f, 0.0f);
+    /** Set the corresponding time lists, in seconds. */
+    AL::ALValue targetTimes = AL::ALValue::array(3.0f, 6.0f, 9.0f);
+    /** Specify that the desired angles are absolute. */
+    bool isAbsolute = true;
+    /** Call the angle interpolation method. The joint will reach the
+    * desired angles at the desired times.
+    */
+    motion.angleInterpolation(jointName, targetAngles, targetTimes, isAbsolute);
+  	exit(0);
+	}
+
+\end{lstlisting}
+
+
+
+\subsection{Python}
+The Python framework is the second most complete, and allows a developer to run embedded code.
+Unlike C++, Python does not have two different kinds of proxies.
+However, methods can be directly accessed once an ALProxy is set to a module.
+The Python API allows a developer to use all of the C++ API from a remote machine.
+We can infer that this includes user-created modules.
+Programming movement in Python is also done by calling the angleInterpolation method under the ALMotion proxy.
+Unlike C++, Python does not require the usage of AL::ALValue::array, and uses its built-in lists.
+The following is an example of moving the NAO robot's knee in Python. \cite{NAOSDK:Python}
+\begin{lstlisting}[language=Python]
+	import sys
+	import math
+	from naoqi import ALProxy
+
+	def main(robotIP):
+    motionProxy = ALProxy("ALMotion", robotIP, 9559)
+    # KneePitch angleInterpolation
+    # Without Whole Body balancer, foot will fall down
+    names      = ["LKneePitch", "RKneePitch"]
+    angleLists = [ [0.0, 40.0*math.pi/180.0], [0.0, 40.0*math.pi/180.0]]
+    timeLists  = [ [5.0, 10.0], [5.0, 10.0]]
+    isAbsolute = True
+    motionProxy.angleInterpolation(names, angleLists, timeLists, isAbsolute)
+
+	if __name__ == "__main__":
+    robotIp = "127.0.0.1"
+    main(robotIp)
+
+\end{lstlisting}
+
+\subsection{Choregraphe}
+Choregraphe is a multi-platform desktop application that is designed to create and test animations and behaviors.
+Unlike an SDK, Choregraphe allows for development with significantly less coding involved.
+All of the NAOqi API is accessible in Choregraphe, and animations can be done in an intuitive way.
+Each joint of the NAO robot can be virtually manipulated in a control console. Figure \ref{fig:choregraphe-movement} shows the ways that the left arm of the robot might be manipulated in the console.
+These manipulations require no coding and allow for quick and intuitive viewing of movement options.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{choregraphe-movement}
+	\caption{The motion box in Choregraphe allowing for joint manipulation in the left arm.}
+	\label{fig:choregraphe-movement}
+\end{figure}
+
+Choregraphe can also connect to an actual or virtual NAO robot as shown in Figure \ref{fig:choregraphe-robot}, allowing programs to be run on the spot.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{choregraphe-robot}
+	\caption{The virtual robot in Choregraphe. In this image, the left arm can be manipulated.}
+	\label{fig:choregraphe-robot}
+\end{figure}
+
+Animations can also be created in tandem with vocalizations using a timeline feature, as shown in Figure \ref{fig:choregraphe-timeline}. This feature allows a developer to choose the frames at which the NAO robot will position itself, as well as the words that will be spoken while doing so. \cite{NAOSDK:Choregraphe}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{choregraphe-timeline}
+	\caption{The Choregraphe environment. In this image, the timeline is being manipulated for animations along with vocalizations.}
+	\label{fig:choregraphe-timeline}
+\end{figure}
+
+\subsection{Discussion of SDKs and Environments}
+While the C++ and Python SDKs are comprehensive and well made, for my purposes, animations and dynamic actions are a greater focal point.
+Because of this, Choregraphe seems like the ideal environment for the research question of the effectiveness of character.
+As most tests will involve predetermined scripts and little sensor usage, movement will be a vital part of conveying certain character traits. This will be most efficiently done in Choregraphe.
+
+\subsection{Conclusion of SDK and Environment Choice}
+For our purposes, Choregraphe will be used to program the robot.
+
+
+
+
+
+
 
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
+
 \end{document}
