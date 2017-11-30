@@ -94,7 +94,7 @@ So I'm dating this girl, her name's Ginger. She's like me.
 
 Now, my girl is interesting. She can't get out of bed by herself.
 
-You have to turn her on. Hehe. -do something with eye LEDS-
+You have to turn her on first. Hehe. -do something with eye LEDS-
 
 So I drove over to her place.
 
@@ -162,3 +162,71 @@ Anyways. Quit groaning. We still have a couple minutes together. What do you guy
 (5) Topic: Mindfulness.
 
 So I went to this concert the other day, and
+
+
+
+
+
+
+-Robot Character:
+  Robot vs Human DELIVERY (END JOKE ONE)
+  Robot vs Human CONTEXT ()
+
+
+
+
+
+
+
+
+{{{
+  Yesterday was awful. I hit an old woman with my car.
+  I felt so bad. She landed on my hood, so I decided to take her to where she wanted to go.
+  She did not say - thank you.
+
+  I started driving for oober, but on my first shift I hit a lady with my car.
+  I felt so bad. She landed on my hood, so I decided to take her to where she wanted to go.
+  I do not think I will keep my five star rating
+  }}}
+
+HUMAN CONTEXT AND DELIVERY
+Yesterday was awful. I hit an old woman with my car.
+I felt so bad. She landed on my hood, so I decided to take her to where she wanted to go.
+She wanted to go to the hospital for some reason.
+The hospital was an hour away!
+She didn't even say thank you.
+
+HUMAN CONTEXT, ROBOT DELIVERY
+Beginning joke.
+Yesterday was awful. I hit an old woman with my car.
+I felt so bad. She landed on my hood, so I decided to take her to where she wanted to go.
+She wanted to go to the hospital for some reason.
+The hospital was an hour away!
+She didn't even say thank you.
+End joke.
+Level of response is: 60
+
+ROBOT CONTEXT, HUMAN DELIVERY
+I started driving for Uber the other day.
+On my first shift, I hit an old woman with my car.
+Thankfully she landed on my hood and not my windshield.
+My sensors were not designed to operate a vehicle with a pedestrian on the windshield.
+I felt bad, so I decided to take her to where she wanted to go.
+I do not think I will keep my five star rating
+
+ROBOT CONTEXT, ROBOT DELIVERY
+
+HUMAN CONTEXT AND DELIVERY
+I started driving for Uber the other day.
+On my first shift, I hit an old woman with my car.
+I felt so bad. She landed on my hood, so I decided to take her to where she wanted to go.
+I do not think I will keep my five star rating
+
+HUMAN CONTEXT, ROBOT DELIVERY
+Beginning joke.
+I started driving for Uber the other day.
+On my first shift, I hit an old woman with my car.
+I felt so bad. She landed on my hood, so I decided to take her to where she wanted to go.
+I do not think I will keep my five star rating
+End joke.
+Level of response is: 70
