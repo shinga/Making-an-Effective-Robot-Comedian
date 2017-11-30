@@ -1,0 +1,7 @@
+This is makeindex, version 2.15 [TeX Live 2015] (kpathsea + Thai support).
+Scanning style file ./requirements.ist.............................done (29 attributes redefined, 0 ignored).
+Scanning input file requirements.glo....done (4 entries accepted, 0 rejected).
+Sorting entries....done (9 comparisons).
+Generating output file requirements.gls....done (12 lines written, 0 warnings).
+Output written in requirements.gls.
+Transcript written in requirements.glg.

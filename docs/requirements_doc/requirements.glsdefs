@@ -1,0 +1,60 @@
+\ifglsentryexists{NAO}{}%
+{%
+\gls@defglossaryentry{NAO}%
+{%
+name={NAO},%
+sort={NAO},%
+type={main},%
+first={NAO},%
+firstplural={NAOs},%
+text={NAO},%
+plural={NAOs},%
+description={Model of Robot used for Comedian, made by SoftBank Robotics},%
+descriptionplural={Model of Robot used for Comedian, made by SoftBank Robotics},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{NAO}{}%
+{%
+\gls@defglossaryentry{NAO}%
+{%
+name={NAO},%
+sort={NAO},%
+type={main},%
+first={NAO},%
+firstplural={NAOs},%
+text={NAO},%
+plural={NAOs},%
+description={Model of Robot used for Comedian, made by SoftBank Robotics},%
+descriptionplural={Model of Robot used for Comedian, made by SoftBank Robotics},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
