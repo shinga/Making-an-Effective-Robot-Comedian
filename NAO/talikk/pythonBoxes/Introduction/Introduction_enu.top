@@ -1,0 +1,12 @@
+topic: ~Introduction()
+language: enu
+
+u:(Hello) Hi, my name is Ginger, I am between jobs right now, so I am doing stand-up comedy to make ends meet.
+u:(jokes) I have one joke $jokes=1
+
+u:(Small talk) Here is a story $smallTalk=1
+u:(food) As expected, I am not a fan of food orientated holidays $thanksgiving=1
+
+u:(test edges) one
+u:(test edges) two
+u:(test edges) three
