@@ -93,16 +93,17 @@
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig0}
-  \caption{This shows how algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of all jokes, and may be outside of a specific theme. There could be different spanning trees of performances that end at the same closing joke}
+  \caption{This shows how the algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of the set of all jokes, and may be outside of a specific theme. There could be different spanning trees of performances that end at the same closing joke}
 \end{figure}
 
 Figure 2 depicts how a joke will be represented by the robot. It will perform the joke, collect audience feedback information, and branch to the joke that will best fit the response. For example, if two of the seed jokes are about "food" and "Mindfulness", the performance will branch to the respective theme that matches the audience response (Branch 1 "Food" or Branch 2 "Mindfulness"). If jokes with a theme of "food" are not landing with the audience, the algorithm will need to know when to transition to a new theme, or when to end the set. When the robot tells a joke, it needs to be able to analyze the feedback and choose the next joke to perform. This needs to be done quickly, so that the robot is not spending noticeable time (for the audience) choosing a joke. There may not be a lot of jokes to choose from, but the choice needs to be made fast.
 
-Generally, the performance will have three parts: The Seed Jokes, Middle Content, and Closing Joke. This adaption algorithm will determine the transitions between all of these parts and the jokes they consist of. The Seed will influence the Middle Content, which will be chosen themed jokes and basis of the show. The Middle Content will transition to the Closing Joke when it is time to end the show. The most work that needs to be done is learning about closing jokes, and their influence on the performance. This final joke needs to reflect the performance that the robot gave.
+Generally, the performance will have three parts: the Seed Jokes, the Middle Content, and the Closing Joke. This adaption algorithm will determine the transitions between all of these parts and the jokes they consist of. The Seed will influence the Middle Content (which will be chosen themed jokes and basis of the show). The Middle Content will transition to the Closing Joke when it is time to end the show. This final joke needs to reflect the performance that the robot gave. The most work that needs to be done is learning about closing jokes, and their influence on the performance and difference between other jokes
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig1}
-  \caption{}
+  \caption{ This flow-chart depicts how, once the robot delivers a joke, will wait for feedback, interpret data, and then make a joke decision (Branch 1 and Branch 2)}
 \end{figure}
 
 \section{Crowd-work}
