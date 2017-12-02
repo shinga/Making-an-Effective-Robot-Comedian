@@ -4,6 +4,41 @@
 \usepackage{setspace}
 \usepackage{pstricks-add}
 \usepackage{float}
+\usepackage{soul}
+\usepackage{color}
+
+\usepackage{listings}
+
+
+% COLOR DEFINITIONS FOR CODE LISTINGS
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{
+	escapeinside={(*@}{@*)},
+	style=mystyle
+}
 
 \usepackage{geometry}
 \geometry{textheight=9.5in, textwidth=7in}
@@ -25,7 +60,7 @@
 				Design Document
 				%Progress Report
 				}
-			
+
 \newcommand{\NameSigPair}[1]{\par
 \makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
 \par\vspace{-12pt} \textit{\tiny\noindent
@@ -40,9 +75,9 @@
 \begin{titlepage}
     \pagenumbering{gobble}
     \begin{singlespace}
-        \hfill 
+        \hfill
         % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
-        %\includegraphics[height=4cm]{CompanyLogo}   
+        %\includegraphics[height=4cm]{CompanyLogo}
         \par\vspace{.2in}
         \centering
         \scshape{
@@ -58,7 +93,7 @@
             {\large Prepared by }\par
             Group\CapstoneTeamNumber\par
             % 5. comment out the line below this one if you do not wish to name your team
-            \CapstoneTeamName\par 
+            \CapstoneTeamName\par
             \vspace{5pt}
             {\Large
                 \NameSigPair{\GroupMemberOne}\par
@@ -68,7 +103,7 @@
             \vspace{20pt}
         }
         \begin{abstract}
-        \end{abstract}     
+        \end{abstract}
     \end{singlespace}
 \end{titlepage}
 \newpage
@@ -102,11 +137,64 @@ Generally, the performance will have three parts: The Seed Jokes, Middle Content
 \end{figure}
 
 \section{Crowd-work}
-Crowd-work in a performance involves incorporating the audience and making them feel like they are a part of the show. This can be done in various different ways -  calling out and talking to the audience, listening to the audience and making relevant comments, asking them questions to keep them engaged. We want to analyze the importance of this crowd-work in a robot stand-up comedy performance. 
+Crowd-work in a performance involves incorporating the audience and making them feel like they are a part of the show. This can be done in various different ways -  calling out and talking to the audience, listening to the audience and making relevant comments, asking them questions to keep them engaged. We want to analyze the importance of this crowd-work in a robot stand-up comedy performance.
 
-There are various degrees of this crowd-work we want to test. The first one would be no crowd-work whatsoever. The robot goes about performing its set and may acknowledges its lack of sensing and interaction. The second would be over the top and inaccurate crowd-work. The absurdity of a robot trying to understand the audience and being completely off could be entertaining for the audience. The third way would be realistic but pre-meditated. Some comments will be made toward the audience that could be estimated by knowing the audience demographic. The fourth would be actually looking for cues from the audience during certain situations. This would be done by asking certain questions and capturing words from the audience and using the specific word in a comment later, or tracking the audience volume levels after the delivery of jokes. The robot could acknowledge when the audience really enjoyed a joke, and when they did not. 
+There are various degrees of this crowd-work we want to test. The first one would be no crowd-work whatsoever. The robot goes about performing its set and may acknowledges its lack of sensing and interaction. The second would be over the top and inaccurate crowd-work. The absurdity of a robot trying to understand the audience and being completely off could be entertaining for the audience. The third way would be realistic but pre-meditated. Some comments will be made toward the audience that could be estimated by knowing the audience demographic. The fourth would be actually looking for cues from the audience during certain situations. This would be done by asking certain questions and capturing words from the audience and using the specific word in a comment later, or tracking the audience volume levels after the delivery of jokes. The robot could acknowledge when the audience really enjoyed a joke, and when they did not.
 
 These methods will be used to verify the importance of crowd-work in a stand-up performance. While doing so, we will also see at what extent of crowd-work does the audience feel like they are being talked to and integrated in the performance. Since crowd-work and interaction are very "human", the audience response will be used to see if they enjoy a humanized robot or if they prefer a more robotic one, or maybe a combination of both.
+
+
+\section{Character}
+\subsection{Goal}
+In Jerry Palmer's \textit{Taking Humor Seriously}, comic meaning is argued to depend on the interrelated factors of a joke's context and setting, its delivery, the identity of the deliverer, and the audience \cite{Palmer:1993}.
+Of specific interest to us are the factors of a joke's delivery and the identity of the deliverer.
+In previous studies, robot comedy has been used to analyze effective aspects of joke delivery.
+However, little has been done in discovering effective aspects of a joke's content as it relates to the identity of the deliverer.
+For example, Sj\"{o}bergh and Araki \cite{RobotsMakeThings:2008} found that jokes were perceived as funnier when delivered by a robot, rather than being delivered in text form.
+Sj\"{o}bergh and Araki used word-play jokes that were gathered from the internet, and delivered them through a robot by using a flat, machine-like sounding text-to-speech tool called AquesTalk.
+While Sj\"{o}bergh and Araki did not implement measures for analyzing non-verbal delivery, other work has examined the importance of non-verbal signals in joke delivery \cite{KatevasRobot:2014} \cite{KnightEightLessons:2011}.
+Despite this, there is little to no existing literature on the effectiveness of jokes related to the identity of the deliverer.
+In our context, this means examining the effectiveness of robot-specific jokes in robot comedy.
+The goal of this section of the project is to examine whether or not robot comedy can benefit from having jokes delivered from a robot's perspective.
+
+\subsection{Methods}
+To address this goal, jokes will be written from a human or robot perspective.
+The jokes written from a human perspective will have a corresponding robot version, ideally with as much one-to-one correspondence as possible, where possible.
+These jokes will be subject to intense scrutiny by members of the project and by the client, such that revisions and edits can be made to create funny jokes with a definite correspondence between the two versions.
+For example, a human version of a joke might look like the following. Lines with a definite correspondence with the robot version are highlighted.
+
+\begin{lstlisting}
+Hey, hey, I got news. This is big.
+Ok, quiet down. Get this.
+That's RIGHT folks.
+I'm no longer single. *throws hands up*
+(*@  \hl{I met a man on tinder.}  @*)
+(*@  \hl{His name's Sebastian. He's a math nerd.}  @*)
+(*@  \hl{Swiped right as fast as my fingers could move.}  @*)
+\end{lstlisting}
+
+The robot version of the above joke is shown below.
+
+\begin{lstlisting}
+Hey, hey, I got news. This is big.
+Ok, quiet down. Get this.
+That's RIGHT folks.
+I'm no longer single. *throws hands up*
+(*@  \hl{I met a robot on tinder. }  @*)
+(*@  \hl{His name's Data.  He's a really geeky robot.}  @*)
+(*@  \hl{Swiped right as fast as my motors could turn.}  @*)
+\end{lstlisting}
+
+These jokes will be scripted in Choregraphe, where adjustments to vocal tones and pausing will be made.
+Then, animating the robot for non-verbal gestures will be done to enhance the delivery.
+The overall process may look similar to Figure \ref{fig:write_process}. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{joke_writing_process}
+  \caption{The work flow from joke writing to testing.}
+	\label{fig:write_process}
+\end{figure}
 
 \pagebreak
 
