@@ -116,10 +116,21 @@
 \clearpage
 
 % 8. now you write!
-\section{Introduction}
-  We have distributed the work of the project to the three of us working on the robot comedian. \GroupMemberTwo will be develop the adaptive transitioning algorithm between the jokes, \GroupMemberThree will be studying the effect of integrating the audience into the performance of the set, and \GroupMemberOne will examine the character of a robotic comedian, and it's portrayal to the audience.
+\section{Overview}
 
-  The first section covers the adaptation algorithm, the components of a stand-up set, and audience response comprehension. The next section explains "crowd-work", and how we will examine the influence of incorporating the audience into the robot's performance. Finally, the last section will cover the diversity of being a robot comedian, and how the qualities of a robot characterize the comedian.
+\subsection{Scope}
+	This research project is an investigation on developing and creating an effective robot comedian.
+	This document is intended for communicating the purpose and planned design for the three areas of intended research.
+	These areas include development of the adaptive transitioning algorithm between jokes, the integration of an audience into the performance of a set, and the exploration of robotic character in joke content and delivery.
+	As this document is intended for designing a research project, processes may differ from conventional development project designs.
+
+\subsection{Purpose}
+	This document describes the design and road map for the development of the robot comedian. The design is subject to change, and will be revised as development progresses. Findings or limitations in the developmental process may influence the overall design of the product.
+
+\subsection{Intended Audience}
+	This document is intended for stakeholders and developers in the research project \textit{How to Make an Effective Robot Comedian}.
+
+	% The first section covers the adaptation algorithm, the components of a stand-up set, and audience response comprehension. The next section explains "crowd-work", and how we will examine the influence of incorporating the audience into the robot's performance. Finally, the last section will cover the diversity of being a robot comedian, and how the qualities of a robot characterize the comedian.
 
 \section{Adaptation}
   We hypothesize that to make the set the most effective, the comedian needs to transition to topics dependent on the audience response. The goal of this portion of the project is to determine if adapting the content from the audience response will enhance the overall performance of the comedian. In the beginning of the set, the comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. From the Seed Jokes, one of the themes we have developed will be chosen. The closing jokes set will be a subset of all jokes. These jokes might be stronger jokes than some of the others, and is helpful in ending the show on a stronger note. It may be a stretch to optimize with traditional machine learning because there may not be a large enough data set to adequately return results. Primarily, this algorithm needs to choose an optimal joke to fill the performance, while taking the audience into account.
@@ -195,6 +206,7 @@ I'm no longer single. *throws hands up*
 (*@  \hl{Swiped right as fast as my motors could turn.}  @*)
 \end{lstlisting}
 
+\subsection{Development process of joke writing}
 These jokes will be scripted in Choregraphe, where adjustments to vocal tones and pausing will be made.
 Then, animating the robot for non-verbal gestures will be done to enhance the delivery.
 The overall process may look similar to Figure \ref{fig:write_process}.
@@ -206,13 +218,17 @@ The overall process may look similar to Figure \ref{fig:write_process}.
 	\label{fig:write_process}
 \end{figure}
 
+
+
+
 \pagebreak
 
 \pagebreak
 \clearpage
-\section{Glossary}
+\section{Definitions}
 \begin{description}
   \item [Algorithm] \hfill \\ The software program that receives input to make an optimized choice; in this project, the algorithm is in context to the adaptation program.
+	\item [Animating] \hfill \\ The NAO robot can be programmed to animate and move while speaking. This can be used to improve non-verbal communication between the robot and the audience.
   \item [API] \hfill \\ Application Programming Interface
   \item [Branch] \hfill \\Looking at the graph (edges and nodes) of a performance, a branch is a decision choice made by the algorithm.
   \item [Choregraphe] \hfill \\ Software used to program behavior and performance sets, made by SoftBank Robotics
