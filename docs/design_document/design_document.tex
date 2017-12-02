@@ -84,15 +84,22 @@
   This is an intro
 
 \section{Adaptation}
-  We hypothesize that to make the set the most effective, the comedian needs to transition to topics; this is dependent on the audience response to jokes. The comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. The closing joke will be a subset of all jokes that might be stronger joke than some of the others, and is helpful in ending the show on a stronger note.
+  We hypothesize that to make the set the most effective, the comedian needs to transition to topics; this is dependent on the audience response to jokes. The goal of this portion of the project is to determine if adapting the content from the audience response will enhance the overall performance of the comedian. In the beginning of the set, the comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. The closing joke will be a subset of all jokes that might be stronger joke than some of the others, and is helpful in ending the show on a stronger note. It may be a stretch to optimize with traditional machine learning because there may not be a large enough data set to adequately return results. Primarily, this algorithm needs to choose an optimal joke to fill the performance, while taking the audience into account.
 
-%\begin{figure}[H]
-%  \centering
-%  \includegraphics[width=0.5\textwidth,height=0.5\textheight]{fig0}
-%\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig0}
+  \caption{This shows how algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of all jokes, and may be outside of a specific theme. There could be different spanning trees of performances that end at the same closing joke}
+\end{figure}
 
-Figure 2 depicts how a joke will be interpreted by the robot. It will perform the joke, collect audience feedback information, then look up the jokes that will best fit the response. Further work needs to be done on heuristics for each joke, and matching that with audience feedback.
-%\caption{Figure 1: Shows how algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of all jokes, and may be outside of a specific theme.}
+Figure 2 depicts how a joke will be represented by the robot. It will perform the joke, collect audience feedback information, and branch to the joke that will best fit the response. For example, if two of the seed jokes are about "food" and "mindfulness", the performance will branch to the respective theme that matches the audience response (Branch 1 or Branch 2). If jokes with a theme of "food" are not landing with the audience, the algorithm will need to know when to transition to a new theme, or when to end the set. When the robot tells a joke, it needs to be able to analyze the feedback and choose the next joke to perform. This needs to be done quickly, so that the robot is not spending noticeable time (to the audience) choosing a joke. There may not be a lot of jokes to choose from, but the choice needs to be made fast.
+
+Generally, the performance will have three parts: The Seed Jokes, Middle Content, and Closing Joke. The Seed will influence the Middle Content, which will be chosen themed jokes and basis of the show. The Middle Content will transition to the Closing Joke when it is time to end the show. The most work that needs to be done is learning about closing jokes, and their influence on the performance. This final joke needs to reflect the performance that the robot gave.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig1}
+  \caption{}
+\end{figure}
 
 \pagebreak
 
