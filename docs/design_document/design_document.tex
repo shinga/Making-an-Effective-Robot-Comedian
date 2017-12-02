@@ -142,7 +142,7 @@ In the beginning of the set, the comedian will present an "initialization" proce
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig0}
-  \caption{This shows how the algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of the set of all jokes, and may be outside of a specific theme. There could be different spanning trees of performances that end at the same closing joke}
+  \caption{This shows how the algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of the set of all jokes, and may be outside of a specific theme. There could be different spanning trees of jokes that end at the same closing joke}
 \end{figure}
 
 Figure 2 depicts how a joke will be represented by the robot. It will perform the joke, collect audience feedback information, and branch to the joke that will best fit the response. For example, if two of the seed jokes are about "food" and "Mindfulness", the performance will branch to the respective theme that matches the audience response (Branch 1 "Food" or Branch 2 "Mindfulness"). If jokes with a theme of "food" are not landing with the audience, the algorithm will need to know when to transition to a new theme, or when to end the set. When the robot tells a joke, it needs to be able to analyze the feedback and choose the next joke to perform. This needs to be done quickly, so that the robot is not spending noticeable time (for the audience) choosing a joke. There may not be a lot of jokes to choose from, but the choice needs to be made fast.
