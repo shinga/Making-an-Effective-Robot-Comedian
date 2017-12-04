@@ -24,7 +24,7 @@ $(OUTPUTPDF)# This file seems to originate from something called 'the ultimate
 #adjust the following for your purpose
 
 #set the a .dvi name that corresponds to your main .tex file
-DVIFILES = capstone.dvi
+DVIFILES = progress_report.dvi
 MAINTEXFILE = $(DVIFILES:.dvi=.tex)
 SUBTEXFILES =
 BIBFILES = refs.bib
