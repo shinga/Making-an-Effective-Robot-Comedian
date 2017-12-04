@@ -28,7 +28,7 @@ DVIFILES = progress_report.dvi
 MAINTEXFILE = $(DVIFILES:.dvi=.tex)
 SUBTEXFILES =
 BIBFILES = refs.bib
-OUTPUTPDF = problem_statement.pdf
+OUTPUTPDF = progress_report.pdf
 
 #switch = to # when using ps2pdf in win32 (mingw/msys), i.e. uncomment 2nd line
 #E=\=

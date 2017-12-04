@@ -23,7 +23,7 @@
 				%Design Document
 				Progress Report
 				}
-			
+
 \newcommand{\NameSigPair}[1]{\par
 \makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
 \par\vspace{-12pt} \textit{\tiny\noindent
@@ -38,9 +38,9 @@
 \begin{titlepage}
     \pagenumbering{gobble}
     \begin{singlespace}
-        \hfill 
+        \hfill
         % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
-        %\includegraphics[height=4cm]{CompanyLogo}   
+        %\includegraphics[height=4cm]{CompanyLogo}
         \par\vspace{.2in}
         \centering
         \scshape{
@@ -56,7 +56,7 @@
             {\large Prepared by }\par
             Group\CapstoneTeamNumber\par
             % 5. comment out the line below this one if you do not wish to name your team
-            \CapstoneTeamName\par 
+            \CapstoneTeamName\par
             \vspace{5pt}
             {\Large
                 \NameSigPair{\GroupMemberOne}\par
@@ -67,7 +67,7 @@
         }
         \begin{abstract}
        	Hello abstract
-        \end{abstract}     
+        \end{abstract}
     \end{singlespace}
 \end{titlepage}
 \newpage
@@ -80,19 +80,42 @@
 
 % 8. now you write!
 \section{Introduction/Problem}
-A lot of the machines that surround us aren't very engaging to interact with. They serve their purpose, people get what they need, and the interaction is over. People do not consider robots as entities. That is the gap we are trying to close by performing stand-up comedy with a robot. Stand-up comedy is a casual and entertaining way for people to get more exposure to robots and see that robots are not just objects, but they are much more than that. 
+A lot of the machines that surround us aren't very engaging to interact with. They serve their purpose, people get what they need, and the interaction is over. People do not consider robots as entities. That is the gap we are trying to close by performing stand-up comedy with a robot. Stand-up comedy is a casual and entertaining way for people to get more exposure to robots and see that robots are not just objects, but they are much more than that.
 
-An effective robot comedian should be able to entertain the audience and generate laughs. We hypothesize that the effectiveness is dependent on three major aspects - crowd-work or the ability to integrate the audience in the performance, portraying a coherent and convincing character, and the ability to adapt the performance based on audience feedback. We will base our performances and studies around these three areas. 
+An effective robot comedian should be able to entertain the audience and generate laughs. We hypothesize that the effectiveness is dependent on three major aspects - crowd-work or the ability to integrate the audience in the performance, portraying a coherent and convincing character, and the ability to adapt the performance based on audience feedback. We will base our performances and studies around these three areas.
 
 \section{Progress So Far}
 We managed to get a lot more time to work with the robot over the past few weeks. This has helped us better understand how it works and what we can do with it.
 We have managed to put together some simple comedy scripts and interactive sets that take into consideration the feedback from the audience using speech recognition. We perform a fair bit of animations with the robot as well.
 
+\section{Week-by-week Summary}
+
+
+\subsection{Week 1}
+Nothing happened here.
+\subsection{Week 2}
+We were assigned groups. We got in touch with each other and set up a slack channel to communicate. We also found a suitable time to work weekly and also set up a weekly meeting time with our client. We also began working on the problem statement.
+\subsection{Week 3}
+We set up a GitHub repository for the project, and wrote a rough draft of the problem statement. We initially had trouble figuring out how performance metrics would work, but our client helped us out with that. For homework, our client requested that we watch some comedy and bring some clips to the next meeting.
+\subsection{Week 4}
+We showed our problem statement rough draft to our client. Apparently we started off on the wrong foot, so we made major revisions. We also began to research and look at existing research on Human-Robot Interaction and humor.
+\subsection{Week 5}
+We worked on the requirements document. We discussed our problem statement with Kirsten. We also wrote some sample scripts, and discovered how difficult it was to write jokes. As our problem statement had been pushed back because it needed major revisions, we were a little behind on the requirements document.
+\subsection{Week 6}
+We showed a rough draft of the requirements document to our client. We were still on the mostly wrong foot, so we made major revisions. Our instructors and TA began mentioning the difficulty of our project, which brought us some concern. We were unsure whether to write a literature review for our tech review or not.
+\subsection{Week 7}
+We met the robot for the first time, and tried playing around with it in Choregraphe. We assigned research questions and began to branch off and work on our own individual sections of the project. We began to write more scripts.
+\subsection{Week 8}
+We worked on our tech reviews. We also tested early implementations of our respective research questions in Choregraphe. We learned how to animate the robot.
+\subsection{Week 9}
+We further developed and tested early implementations. Some of these were scrapped. We had trouble thinking of topics/subjects to write jokes about. We finished our tech reviews.
+\subsection{Week 10}
+We wrote some comedy scripts for the robot. We implemented a human and robot version of a joke that we wrote at the beginning of the term. We also made examples for crowdwork and adaptive topic selection. Our aim was to have something presentable for the progress report. We worked on the design document as well.
 
 \section{Issues and Solutions}
 One of the issues we have had so far is coming up with material to write for the robot. Unsurprisingly, being funny is not easy and a lot goes into making a reasonable script that works well with the robot and appeals to other people. Overcoming this will involve gaining a lot more experience with the robot, and exposure to different kinds of comedy.
 
-Animating the robot can be tricky as well. Each keyframe needs to be stored in a timeline block and the animation needs to iterate through these frames at a reasonable rate. Push the animations too fast and the robot will topple over and fall flat on its face. Have the animations too slow, and it goes out of sync from the joke it is trying to say. Timing each word to correctly match the animation can be tedious and time-consuming. This will come down to practice and working more and more with the robot to get an idea of what "works" and what does not. 
+Animating the robot can be tricky as well. Each keyframe needs to be stored in a timeline block and the animation needs to iterate through these frames at a reasonable rate. Push the animations too fast and the robot will topple over and fall flat on its face. Have the animations too slow, and it goes out of sync from the joke it is trying to say. Timing each word to correctly match the animation can be tedious and time-consuming. This will come down to practice and working more and more with the robot to get an idea of what "works" and what does not.
 (Can someone put a diagram for timeline here?)
 
 The voice recognition on the robot can inconsistent sometimes. The range on the microphone isn't the greatest either. It will miss our cues completely at times, or go in a whole different direction sometimes. (Solution??)
@@ -103,16 +126,71 @@ Outside the robot, one of the major issues we faced was writing documentation fo
 
 \section{Retrospective}
 
-\subsection{Positives}
+\begin{tabular}{|p{0.25\linewidth}|p{0.25\linewidth}|p{0.25\linewidth}|p{0.25\linewidth}|}
+\hline
+\centering  Week &
+\centering  Positives &
+\centering Deltas &
+\centering Actions \tabularnewline
+\hline
 
-\subsection{Changes Required}
-
-\subsection{Actions}
+Week 1 &
+Positives we did week 1 &
+Deltas from week 1 &
+Actions from week 1
+\tabularnewline
+Week 2 &
+Positives we did week 2 &
+Deltas from week 2 &
+Actions from week 2
+\tabularnewline
+Week 3 &
+Positives we did week 3 &
+Deltas from week 3 &
+Actions from week 3
+\tabularnewline
+Week 4 &
+Positives we did week 4 &
+Deltas from week 4 &
+Actions from week 4
+\tabularnewline
+Week 5 &
+Positives we did week 5 &
+Deltas from week 5 &
+Actions from week 5
+\tabularnewline
+Week 6 &
+Positives we did week 6 &
+Deltas from week 6 &
+Actions from week 6
+\tabularnewline
+Week 7 &
+Positives we did week 7 &
+Deltas from week 7 &
+Actions from week 7
+\tabularnewline
+Week 8 &
+Positives we did week 8 &
+Deltas from week 8 &
+Actions from week 8
+\tabularnewline
+Week 9 &
+Positives we did week 9 &
+Deltas from week 9 &
+Actions from week 9
+\tabularnewline
+Week 10 &
+Positives we did week 10 &
+Deltas from week 10 &
+Actions from week 10
+\tabularnewline
+\hline
+\end{tabular}
 
 \pagebreak
 
 
-\bibliographystyle{IEEEtran}
-\bibliography{refs}
+% \bibliographystyle{IEEEtran}
+% \bibliography{refs}
 
 \end{document}
