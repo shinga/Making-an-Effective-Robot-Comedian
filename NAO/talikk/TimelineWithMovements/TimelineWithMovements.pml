@@ -10,6 +10,7 @@
     </Dialogs>
     <Resources>
         <File name="rimshot" src="rimshot.wav" />
+        <File name="swiftswords_ext" src="behavior_1/swiftswords_ext.mp3" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
