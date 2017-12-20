@@ -60,13 +60,15 @@ if __name__=="__main__":
     bar.update(progress)
 
 
-    print "Here are 5 random sentences no more than 140 characters:\n\n"
-    for i in range(5):
-        string = allText.make_short_sentence(140)
+    print "Here are 3 random sentences:\n\n"
+    for i in range(3):
+        string = allText.make_short_sentence(70)
+        print string
 
+        '''TODO
         for word in string.split(' '):
             print "Syllables in " + str( word ) + ": " + str( countSyllables(word))
-
+        '''
     print "\n"
 
     progress+=1
