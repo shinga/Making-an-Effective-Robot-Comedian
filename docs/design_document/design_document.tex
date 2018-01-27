@@ -123,11 +123,11 @@
   Comedy can come from robots of any kind. A carpet cleaning bot could miscalculate the end of a floor and tumble down a flight of stairs, or a voice-assisted tool might accidentally confuse a “Dinnertime Jazz” playlist for “Death Metal Essentials”. These actions that happen around a human can become shared experiences and references for the observer. For every shared task between a robot and a human, the human will often feel more empathetic towards a robot that makes an effort to be more aware of surroundings\cite{DesignExBeh:2017}. If the robot wants to become an effective comedian, it will have to attempt to be empathetic as well; it has to listen to the response of a completed action, and consider the change the bot brought to the setting.
 
 \subsection{Scope}
-	This paper covers the research questions that will guide the investigation of the interaction between a crowd and a robot, as well as the main design goals for implementing behaviors for comedy in a NAO Robot. There are three areas of intended research. These areas include the development of the adaptive transitioning algorithm between jokes, the integration of an audience into the performance of a set, and the exploration of robotic character in joke content and reaction. All of these components will culminate into the robot comedian, Ginger. At the end of the academic year, we will have a Robot Comedian that we can evaluate the effectiveness of. Two of the end-products will be a specifically a stand-up comedy set performed by the NAO robot, as well as a paper presenting our findings.
+	This paper covers the research questions that will guide the investigation of the interaction between a crowd and a robot, as well as the main design goals for implementing behaviors for comedy in a NAO Robot. There are three areas of intended research. These areas include the development of the adaptive transitioning algorithm between jokes, the integration of an audience into the performance of a set, and the exploration of robotic character in joke content and reaction. All of these components will culminate into the robot comedian, Ginger. At the end of the academic year, we will have a Robot Comedian that we can evaluate the effectiveness of. Two of the end-products will be specifically a stand-up comedy set performed by the NAO robot, as well as a paper presenting our findings.
 
 
   \subsection{Purpose}
-	The purpose of this document is to describe the design and roadmap for the development of the robot comedian, as well as the methods employed to study the three research areas.
+	The purpose of this document is to describe the development of the robot comedian, as well as the methods employed to study the three research areas.
 
 \subsection{Intended Audience}
 	This document is intended for stakeholders and developers in the research project \textit{How to Make an Effective Robot Comedian}.
@@ -135,7 +135,7 @@
 	% The first section covers the adaptation algorithm, the components of a stand-up set, and audience response comprehension. The next section explains "crowd-work", and how we will examine the influence of incorporating the audience into the robot's performance. Finally, the last section will cover the diversity of being a robot comedian, and how the qualities of a robot characterize the comedian.
 
 \section{Research Design Overview}
-  	This section will cover the research questions for evaluating the effectiveness of a robot comedian. These questions will be the basis of the implementation of the comedian system. First, all three research questions will be presented including the goals of the expected research and the methods of investigation.
+  	This section will cover the research questions for evaluating the effectiveness of a robot comedian. These questions will be the basis of the implementation of the comedian system. All three research questions will be presented including the goals of the expected research and the methods of investigation.
 
   	The comedian system that is implemented will test three critical areas of a comedic performance corresponding to our research. The first question is about adaptation of a performance, and how the robot and interpret an audience response. The second question studies “Crowd Work” during a show, and the choices a Comedian can make to engage the audience. Lastly, the third considers the implications of a perceivable character that the Robot can portray.
 
@@ -167,12 +167,14 @@ Generally, the performance will have three parts: the Seed Jokes, the Middle Con
 
 
 \subsection{Crowd-work}
+\subsubsection{Goals}
+
+We want to analyze the importance of this crowd-work relating to the central design of the project.
 Crowd-work in a performance involves incorporating the audience and making them feel like they are a part of the
 show. This can be done in different ways - calling out and talking to the audience, listening to the audience and
-making relevant comments, asking them questions to keep them engaged. We want to analyze the importance of this
-crowd-work relating to the central design of the project.
+making relevant comments, asking them questions to keep them engaged.
 
-
+\subsubsection{Methods}
 There are various degrees of this crowd-work we want to test. The first one would be no crowd-work whatsoever.
 The robot goes about performing its set while acknowledging its lack of sensing and interaction. The robot does not
 directly address the audience at all.
