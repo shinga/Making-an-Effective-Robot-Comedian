@@ -1,3 +1,8 @@
+'''
+This program just counts syllables
+It looks up a word in a dictionary, 
+where the syllables were counted before
+'''
 import curses
 from curses.ascii import isdigit
 import nltk

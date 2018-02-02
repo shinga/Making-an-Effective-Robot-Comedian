@@ -9,18 +9,31 @@ d = cmudict.dict()
 
 def countSyllables(word):
 
+
+    #print list(word)
+
+
+    word = word.replace('-',' ')
+    filterList = [',','.','?',':']
+    for pattern in filterList:
+        word = word.strip( pattern )
     count = 0
-    print("Entry for " + word + ": " + str(d[word.lower()]) )
+
+    try:
+        test = strd[word.lower()]
+
+    except:
+        print "This word is not in the cmu dictionary!: ",word
+        return 0
 
     #Some words have more than one way to prounce it
     diffPronounce = len(d[word.lower()]) 
-
-    for char in d[word.lower()][0]:
-        for element in char:
-            if element[-1] in ['0','1','2']:
-                count+=1
+    for part in word.split(' '):
+        for char in d[word.lower()][0]:
+            for element in char:
+                if element[-1] in ['0','1','2']:
+                    count+=1
     return count
-
 
 
 
