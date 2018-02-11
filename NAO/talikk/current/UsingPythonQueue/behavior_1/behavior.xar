@@ -32,12 +32,14 @@ class MyClass(GeneratedClass):
 
     def onUnload(self):
         #put clean-up code here
+
         pass
 
     def onInput_onStart(self):
         #self.onStopped() #activate the output of the box
 
         self.logger.info("Pushing to queue")
+        self.onStopped()
         #pass
 
     def onInput_onStop(self):
