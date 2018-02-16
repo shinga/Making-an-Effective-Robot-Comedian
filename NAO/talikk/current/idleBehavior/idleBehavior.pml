@@ -8,7 +8,15 @@
     <Resources>
         <File name="choice_sentences" src="behavior_1/Aldebaran/choice_sentences.xml" />
         <File name="choice_sentences_light" src="behavior_1/Aldebaran/choice_sentences_light.xml" />
+        <File name="funnyJokes" src="funnyJokes.p" />
+        <File name="loadFunnyJokes" src="loadFunnyJokes.py" />
+        <File name="makeFunnyJokes" src="makeFunnyJokes.py" />
+        <File name="makeFunnyJokes" src="makeFunnyJokes.pyc" />
+        <File name="jokeObj" src="jokeObj.py" />
+        <File name="jokeObj" src="jokeObj.pyc" />
     </Resources>
     <Topics />
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src="behavior_1/.behavior.xar.swp" />
+    </IgnoredPaths>
 </Package>
