@@ -87,83 +87,141 @@ based on their reaction. These propositions will be tested locally, remotely, an
 \clearpage
 
 % 8. now you write!
-\section{Introduction/Problem}
+\section{Recap}
+
 A lot of the machines that surround us aren't very engaging to interact with. They serve their purpose, people get what they need, and the interaction is over. People do not consider robots as entities. That is the gap we are trying to close by performing stand-up comedy with a robot. Stand-up comedy is a casual and entertaining way for people to get more exposure to robots and see that robots are not just objects, but they are much more than that.
 
 An effective robot comedian should be able to entertain the audience and generate laughs. We hypothesize that the effectiveness is dependent on three major aspects - crowd-work or the ability to integrate the audience in the performance, portraying a coherent and convincing character, and the ability to adapt the performance based on audience feedback. We will base our performances and studies around these three areas.
 
 \section{Progress So Far}
-We managed to get a lot more time to work with the robot over the past few weeks. This has helped us better understand how it works and what we can do with it.
-We have managed to put together some simple comedy scripts and interactive sets that take into consideration the feedback from the audience using speech recognition. We perform a fair bit of animations with the robot as well.
 
-\section{Week-by-week Summary}
+We have started to execute a number of jokes on the robot; from one-liners to story-telling with a punchline. We have also started to make use of various sensors on the robot. There is an audio tracker which makes the robot look in the direction where any sound is coming from. This can be used to make the robot feel more natural during the performance and make relevant comments when there is a sudden spike in volume levels. 
 
+\section{Left To Do}
 
-\subsection{Week 1}
-Nothing happened here. This was the first week of class, we got a general idea of how the class is supposed to work for the next year, and we started considering project preferences.
+While we have managed to execute many jokes on the robot, we have to determine a solid script that connects all these jokes together. Once we do that, we can go ahead and perform shows with the robot. This will enable to us get relevant data from the audience and analyze it to answer our research questions. 
 
-\subsection{Week 2}
-We finally got our project, \textit{How to Make an Effective Robot Comedian}.  We got in touch with each other and set up a slack channel to communicate (akarobotics.slack.com). We also found a suitable time to work weekly and also set up a weekly meeting time with our client. We also began working on the problem statement.
-\subsection{Week 3}
-We set up a GitHub repository for the project, and wrote a rough draft of the problem statement. Our client meeting with Heather Knight was an introduction to the research that we would be performing. Heather explained what social robotics is to us, and our three research questions; Topic adaptation during a performance, crowd work, and characterization. Comedy is building a bond of trust with the audience, and conveying topics that break the audiences expectation. We started to learn how we would evaluate our components to our system. We initially had trouble figuring out how performance metrics would work, but our client helped us out with that. For homework, our client requested that we watch some comedy and bring some clips to the next meeting.
-\subsection{Week 4}
-We showed our problem statement rough draft to our client. Apparently we started off on the wrong foot, so we made major revisions. We also began to research and look at existing research on Human-Robot Interaction and humor. We started to learn the software Choregraphe, from which our robot is programmed. This week was an extreme learning opportunity with LaTeX.
+\section{Problems}
 
-\subsection{Week 5}
-We worked on the requirements document. We discussed our problem statement with Kirsten. Our team started to draft our technical overview, and reviewing tools that could be used to develop or respective system in the robot comedian. Kevin looked at natural language processing tools, integrating them into the Choregraphe environment and implementing abstract state machines for conversation. We also wrote some sample scripts, and discovered how difficult it was to write jokes. As our problem statement had been pushed back because it needed major revisions, we were a little behind on the requirements document.
-\subsection{Week 6}
-We showed a rough draft of the requirements document to our client, Heather. We were still on the mostly wrong foot, so we made major revisions. Our instructors and TA began mentioning the difficulty of our project, which brought us some concern. We were unsure whether to write a literature review for our tech review or not. Our meetings with Heather are starting to get more elaborate. Now that we understand the tools, Heather started to show us more specific examples of how to implement animations for jokes, and the general joke writing process. During this phase, we started to gather metrics for how our jokes will be identified. We started to experiment with the audio sensors, and quickly realized that the NAO robot was not designed to listen to large crowds.
-\subsection{Week 7}
-We met the robot for the first time, and tried playing around with it in Choregraphe. We assigned research questions and began to branch off and work on our own individual sections of the project. We began to write more scripts. Kevin developed the Seed Joke, Middle content, and closing joke design for dynamic set performance with Heather. This is how the robot internally represents the performance.
-\subsection{Week 8}
-We worked on our tech reviews. We also tested early implementations of our respective research questions in Choregraphe. We learned how to animate the robot. Meetings with Heather during this phase of the project are dedicated to iterating through the animations and jokes that we have written so far. Technically, the writing process of comedy is different from the other work for this project, and it is interesting to write content for an entertainment audience. Heather helped us condense our text jokes so that the robot can be understood. We started to evaluate ambient movement during a joke, such as moving hands and nodding the head.
-\subsection{Week 9}
-We further developed and tested early implementations. Some of these were scrapped. We had trouble thinking of topics/subjects to write jokes about. We finished our tech reviews. Before we reflected on this term, we started to visualize what work we need to complete over the next two terms. Animating jokes is going to be the most time consuming task, so we need to have a large base for this. Upon looking at the tasks completed during this term, we determined what is going well, and how we need to progress into the next phases of the project. We are getting close to implementing.
-\subsection{Week 10}
-We wrote some comedy scripts for the robot. We synthesized the work that had been completed this term across our three research questions. For adaptation, Kevin filmed simple branching between two jokes that have different topics from simple audience input. Arthur developed robotic and humanoid versions of jokes to evaluate the importance of robot character. Anish further investigated ways to interact with the audience. We all filmed the work that had been completed, and how it relates to our system. We also made examples for crowd-work and adaptive topic selection. Our aim was to have something presentable for the progress report. We worked on the design document as well.
+\section{Experimental Design}
 
+The comedian system that is implemented will test three critical areas of a comedic performance corresponding to our research. The first question is about \textbf{adaptation} of a performance -- how the robot and interpret an audience response. The second question studies \textbf{crowd work} during a show, and the choices a Comedian can make to engage the audience. Lastly, the third considers the implications of a perceivable \textbf{character} that the robot can portray, in particular robotic versus humanlike.
 
-\section{Issues and Solutions}
-One of the issues we have had so far is coming up with material to write for the robot. Unsurprisingly, being funny is not easy and a lot goes into making a reasonable script that works well with the robot and appeals to other people. Overcoming this will involve gaining a lot more experience with the robot, and exposure to different kinds of comedy.
+\subsection{Adaptation}
+\subsubsection{Goal}
+  We hypothesize that audiences will prefer a robot that acknowledges them, and integrates their data and responses into its set. To test this hypothesis we propose two tests: (1) to transition to topics dependent on the
+  audience response, and (2) to present a crowd report upon completion of the set. The goal of this portion of the project is to determine if incorporating the audience into the set will enhance the overall performance of the comedian. To evaluate these hypotheses, we will conduct live studies in which people experience different versions of the software described below.
+  
+\subsubsection{Methods}
+Generally, the performance will have two to three parts: the Seed Jokes, the Middle Content, and the Close. The Seed will influence the Middle Content (which will be chosen themed jokes and basis of the show). The Middle Content will transition to a intelligent or generalized Closing Joke when it is time to end the show.
 
-Animating the robot can be tricky as well. Each keyframe needs to be stored in a timeline block and the animation needs to iterate through these frames at a reasonable rate. Push the animations too fast and the robot will topple over and fall flat on its face. Have the animations too slow, and it goes out of sync from the joke it is trying to say. Timing each word to correctly match the animation can be tedious and time-consuming. This will come down to practice and working more and more with the robot to get an idea of what "works" and what does not. The timeline is shown in Figure \ref{fig:timeline}.
+Figure 2 depicts how a joke will be represented by the robot. It will perform the joke, collect audience feedback information, and branch to the joke that will best fit the response. At the end of the set, the robot will present a summary of what it thought that audience liked.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{timeline}
-  \caption{The timeline frame of Choregraphe, used for animating with keyframes.}
-	\label{fig:timeline}
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig0}
+  \caption{This shows how the algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of the set of all jokes, and may be outside of a specific theme. There could be different spanning trees of jokes that end at the same closing joke}
 \end{figure}
 
-The voice recognition on the robot can be inconsistent sometimes. The range on the microphone isn't the greatest either. It will miss our cues completely at times, or go in a whole different direction.
+\textit{TOPIC TRANSITIONS: }In the beginning of the set, the comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. From the Seed Jokes, one of the themes will be chosen. If there is time, we may also explore the choice of strategic closing jokes. These jokes might be stronger jokes than some of the others, and is helpful in ending the show on a stronger note. 
 
-While working on the robot, the robot needs breaks pretty regularly or it overheats. This can break the flow while testing and eliminates the possibility of longer performances/sets. There is not much we can do about it other than plan our scripts around the restrictions.
+For example, if two of the seed jokes are about "food" and "Mindfulness", the performance will branch to the respective theme that matches the audience response (Branch 1 "Food" or Branch 2 "Mindfulness"). If jokes with a theme of "food" are not landing with the audience, the algorithm will need to know when to transition to a new theme, or when to end the set. When the robot tells a joke, it needs to be able to analyze the feedback and choose the next joke to perform. This needs to be done quickly, so that the robot is not spending noticeable time (for the audience) choosing a joke. There may not be a lot of jokes to choose from, but the choice needs to be made fast.
 
-Outside the robot, one of the major issues we faced was writing documentation for the class as a research group.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig1}
+  \caption{ This flow-chart depicts how, once the robot delivers a joke, will wait for feedback, interpret data, and then make a joke decision (Branch 1 and Branch 2)}
+\end{figure}
 
-\section{Retrospective}
+\textit{AUDIENCE REPORT:} The close of the robot's act will include the robot's report of what attributes the audience responded to most. The hypothesis here is that getting insight into the robot's algorithms will increase the audience's perception of the robot's intelligence, and, second, that it will make them laugh. People enjoy hearing about themselves.
 
-Overall, this term, we have gotten a good grasp about the expectations from the project which were a little puzzling at the start of the term. We are starting to get the hang of our development environment - Choregraphe. Our understanding of the ins and outs of Choregraphe will only get better as we delve more into it. \\ \\
-
-\begin{tabular}{|p{0.25\linewidth}|p{0.25\linewidth}|p{0.25\linewidth}|}
-\hline
-\centering  Positives &
-\centering Deltas &
-\centering Actions \tabularnewline
-\hline
-
-Starting to get a good grasp about project expectations &
-Need to learn about people's comedy expectations &
-Gain more exposure to different kinds of comedy and learn by some trial and error. \\
-\hline
-Becoming familiar with Choregraphe &
-Need better jokes and better joke delivery &
-Scripts will be rewritten \\
-\hline
+All of the above behaviors, from adaptation to the end of performance audience report need to be evaluated with real people. Initial tests will be done on campus with small groups of people, the final test will be done in conjuction with the crowd-work and character manipulations, testing the entire algorithm together with a larger crowd, e.g., 10-25 people.
 
 
+\subsection{Crowd-work}
+\subsubsection{Goals}
 
-\end{tabular}
+Similar to the crowd report described above, we hypothesize that generally interacting with the audience (a.k.a crowd-work) throughout the performance, will improve the audience'soverall enjoyment of the show. We want to analyze the importance of this crowd-work relating to the central design of the project. 
+Crowd-work should make the audience feel like they are a part of the show. This can be done in different ways - calling out and talking to the audience, watching the audience and incorporating them into the jokes, and asking them questions to keep them engaged, or to build off to make new jokes.
+
+\subsubsection{Methods}
+There are various kinds of crowd-work we want to test: one research question is whether crowdwork matters at all, and the second is does the crowdwork needs to be real or robot can just pretend it is paying attention? 
+
+To answer these questions we suggest three research conditions: (1) no crowdwork, (2) fake crowdwork, (3) real crowdwork. The first one would be no crowd-work whatsoever. The robot goes about performing its set and does not directly address the audience at all. The second could spanover-the-top and inaccurate crowd-work, or best-guess crowdwork, with the possibility of being real (e.g., predicting that most people in the audience were from Oregon, even if it didn't really hear what they said). The third case would integrate actual robot sensing. It would be important for conditions \#2 and \#3 to be parallel to assess whether crowdwork really matters.
+
+As condition one is fairly obvious, let us discuss deeper possibilities for condition \#2. In the obviously fake research condition, the robot will talk to the audience directly but it will be completely wrong in its observation. The absurdity of a robot trying to understand the audience and being completely off could be entertaining for the audience, or it may not connect with the audience at all. The exact reception of this sort of crowd-work is something we are trying to study.
+
+The other version of condition \#2 is realistic but premeditated. For example, pre-known facts about the audience could be built into the robot or guessed. These pre-known facts could include the location of the performance, age demographics of the audience. For example, if the audience is known to be college-aged, the robot could be fed input to make comments about things relevant to college students.
+
+Using actual robot sensing data is condition \#3, and is certainly the ideal model, but requires sensing capabilities, processing power and hardware, so it would be good to know if it is really necessary. In this condition, the robot would be actually looking for cues from the audience during certain situations. For example, one example is asking questions and capturing words from the audience, then using that same word later. For example, the robot could ask a simple question about the weather, or the audience member's hometown. In this case, the robot can listen for specific words and ask another question about that specific town or city. 
+
+Another real sensing capability the robot could use is  audience volume levels after the delivery of jokes. The robot will keep track of the audience input. The robot could then acknowledge if the audience enjoyed the joke or did not enjoy the joke using these inputs. Additional sensors and processing abilities on the Nao robot include face-detection and bumper detection, so the exploration of audience sensing could potentially include speech, volume, vision, and touch.
+
+All of these condiditons will be assessed with live audiences (even if its just a few people in a classroom) to check to what degree is crowd-work important for a robot comedian. The audience's response will be used to see if they enjoy a humanized robot or if they prefer a more robotic one, or maybe even a combination of both. As crowd work is just a form of human interaction, we expect it will improve the audience's perception of the robot's intelligence, add surprise to the show, and increase audience enjoyment levels. On the other hand, perhaps faking it can get 80\% of the effect of the real version. That will be part of the evaluation.
+
+
+\subsection{Character}
+\subsubsection{Goal}
+The goal of this section of the project is to examine whether or not robot comedy can benefit from having jokes delivered from a robot's perspective. Our hypotheses are that a robot presenting jokes about technology or being a robot will be funnier than a human telling the same jokes, and that robots will be less funny than humans at telling jokes from a human perspective.
+
+In Jerry Palmer's \textit{Taking Humor Seriously}, comic meaning is argued to depend on the interrelated factors of a joke's context and setting, its delivery, the identity of the deliverer, and the audience \cite{Palmer:1993}.
+Of specific interest to us are the factors of a joke's delivery and the identity of the deliverer.
+In previous studies, robot comedy has been used to analyze effective aspects of joke delivery.
+However, little has been done in discovering effective aspects of a joke's content as it relates to the identity of the deliverer.
+For example, Sj\"{o}bergh and Araki \cite{RobotsMakeThings:2008} found that jokes were perceived as funnier when delivered by a robot, rather than being delivered in text form.
+However, Sj\"{o}bergh and Araki used word-play jokes that were gathered from the internet, and delivered them through a robot by using a flat, machine-like sounding text-to-speech tool called AquesTalk. This form of delivery does not take into account the importance of effective joke delivery. While Sj\"{o}bergh and Araki did not implement measures for analyzing non-verbal delivery, other work has examined the importance of non-verbal signals in delivering jokes \cite{KatevasRobot:2014} \cite{KnightEightLessons:2011}.
+Despite this, there is little to no existing literature on the effectiveness of jokes related to the identity of the deliverer.
+In our context, this means examining the effectiveness of robot-specific jokes in robot comedy.
+
+\subsubsection{Methods}
+To address this goal, jokes will be written from a human or robot perspective.
+The jokes written from a human perspective will have a corresponding robot version, ideally with as much one-to-one correspondence as possible in regards to cadence, length of joke, parrallel content, similar motions, and so forth.
+These jokes will be subject to intense scrutiny by members of the project and by the client, such that revisions and edits can be made to create funny jokes with a definite correspondence between the two versions.
+For example, a human version of a joke might look like the following (lines with a definite correspondence with the robot version are highlighted):
+
+\begin{lstlisting}
+Hey, hey, I got news. This is big.
+Ok, quiet down. Get this.
+That's RIGHT folks.
+I'm no longer single. *throws hands up*
+(*@  \hl{I met a man on tinder.}  @*)
+(*@  \hl{His name's Sebastian. He's a math nerd.}  @*)
+(*@  \hl{Swiped right as fast as my fingers could move.}  @*)
+\end{lstlisting}
+
+Whereas, the robot version of the above joke is shown below:
+
+\begin{lstlisting}
+Hey, hey, I got news. This is big.
+Ok, quiet down. Get this.
+That's RIGHT folks.
+I'm no longer single. *throws hands up*
+(*@  \hl{I met a robot on tinder. }  @*)
+(*@  \hl{His name's Data.  He's a really geeky robot.}  @*)
+(*@  \hl{Swiped right as fast as my motors could turn.}  @*)
+\end{lstlisting}
+
+\subsubsection{Development process of joke writing}
+These jokes will be scripted in Choregraphe, where adjustments to vocal tones and pausing will be made.
+Then, animating the robot for non-verbal gestures will be done to enhance the delivery.
+The overall process may look similar to Figure \ref{fig:write_process}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{joke_writing_process}
+  \caption{The work flow from joke writing to testing.}
+	\label{fig:write_process}
+\end{figure}
+
+\subsubsection{Experimentation}
+The stand-up routine of the robot will comprise of text of the joke themselves, the motions that the robot uses to accompany them, and the way the robot surveys the audience after each punchline, e.g., in a human or robotic fashion.
+To determine the differences in audience response to the routines, studies will be done first on Amazon Mechanical Turk, and later with co-located audiences.
+Participants will be shown a video of the robot's stand-up routine, and then presented with a short survey.
+The routines will be between 5 and 10 minutes long, and the survey will include questions pertaining to each joke or routine.
+Participants will be compensated with standard rates for watching brief videos and answering survey questions.
+
+
+\section{Conclusion}
 
 \pagebreak
 
