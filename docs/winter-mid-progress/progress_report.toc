@@ -1,17 +1,24 @@
 \contentsline {section}{\numberline {1}Recap}{2}
-\contentsline {section}{\numberline {2}Progress So Far}{2}
-\contentsline {section}{\numberline {3}Left To Do}{2}
-\contentsline {section}{\numberline {4}Problems}{2}
-\contentsline {section}{\numberline {5}Experimental Design}{2}
-\contentsline {subsection}{\numberline {5.1}Adaptation}{2}
-\contentsline {subsubsection}{\numberline {5.1.1}Goal}{2}
-\contentsline {subsubsection}{\numberline {5.1.2}Methods}{3}
-\contentsline {subsection}{\numberline {5.2}Crowd-work}{4}
-\contentsline {subsubsection}{\numberline {5.2.1}Goals}{4}
-\contentsline {subsubsection}{\numberline {5.2.2}Methods}{4}
-\contentsline {subsection}{\numberline {5.3}Character}{5}
-\contentsline {subsubsection}{\numberline {5.3.1}Goal}{5}
-\contentsline {subsubsection}{\numberline {5.3.2}Methods}{6}
-\contentsline {subsubsection}{\numberline {5.3.3}Development process of joke writing}{6}
-\contentsline {subsubsection}{\numberline {5.3.4}Experimentation}{7}
-\contentsline {section}{\numberline {6}Conclusion}{7}
+\contentsline {section}{\numberline {2}Kevin Talik}{2}
+\contentsline {subsection}{\numberline {2.1}Progress So Far}{2}
+\contentsline {subsection}{\numberline {2.2}Left To Do}{2}
+\contentsline {subsection}{\numberline {2.3}Experimental Design}{2}
+\contentsline {subsubsection}{\numberline {2.3.1}Adaptation}{2}
+\contentsline {subsubsection}{\numberline {2.3.2}Goal}{2}
+\contentsline {subsubsection}{\numberline {2.3.3}Methods}{2}
+\contentsline {section}{\numberline {3}Anish Asrani}{4}
+\contentsline {subsection}{\numberline {3.1}Progress So Far}{4}
+\contentsline {subsection}{\numberline {3.2}Left To Do}{4}
+\contentsline {subsection}{\numberline {3.3}Problems}{4}
+\contentsline {subsection}{\numberline {3.4}Experimental Design}{4}
+\contentsline {subsubsection}{\numberline {3.4.1}Crowd-work}{5}
+\contentsline {section}{\numberline {4}Arthur Shing}{6}
+\contentsline {subsection}{\numberline {4.1}Progress So Far}{6}
+\contentsline {subsection}{\numberline {4.2}Left To Do}{6}
+\contentsline {subsection}{\numberline {4.3}Experimental Design}{6}
+\contentsline {subsection}{\numberline {4.4}Character}{6}
+\contentsline {subsubsection}{\numberline {4.4.1}Goal}{6}
+\contentsline {subsubsection}{\numberline {4.4.2}Methods}{6}
+\contentsline {subsubsection}{\numberline {4.4.3}Development process of joke writing}{7}
+\contentsline {subsubsection}{\numberline {4.4.4}Experimentation}{7}
+\contentsline {section}{\numberline {5}Conclusion}{7}
