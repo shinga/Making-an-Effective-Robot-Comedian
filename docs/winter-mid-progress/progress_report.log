@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 FEB 2018 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,42 +321,50 @@ No file progress_report.toc.
 
 [1]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 110.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 97.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 111.
- [2
-
-] <fig0.png, id=17, 1657.19125pt x 738.76pt>
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 100.
+ <fig0.png, id=13, 1657.19125pt x 738.76pt>
 File: fig0.png Graphic file (type png)
  <use fig0.png>
-Package pdftex.def Info: fig0.png used on input line 122.
+Package pdftex.def Info: fig0.png used on input line 112.
 (pdftex.def)             Requested size: 379.4012pt x 169.1334pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 123.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 113.
+ [2
 
+]
 <fig1.png, id=18, 1168.365pt x 599.23875pt>
 File: fig1.png Graphic file (type png)
  <use fig1.png>
-Package pdftex.def Info: fig1.png used on input line 132.
+Package pdftex.def Info: fig1.png used on input line 122.
 (pdftex.def)             Requested size: 379.41106pt x 194.59483pt.
  [3 <./fig0.png>]
 [4 <./fig1.png>]
-
-LaTeX Warning: Citation `Palmer:1993' on page 5 undefined on input line 167.
-
-
-LaTeX Warning: Citation `RobotsMakeThings:2008' on page 5 undefined on input li
-ne 171.
-
-
-LaTeX Warning: Citation `KatevasRobot:2014' on page 5 undefined on input line 1
-72.
-
-
-LaTeX Warning: Citation `KnightEightLessons:2011' on page 5 undefined on input 
-line 172.
-
+! Undefined control sequence.
+l.148 \subsubsubsection
+                       {Goals}
+? 
+! Undefined control sequence.
+l.153 \subsubsubsection
+                       {Methods}
+? 
 [5]
+
+LaTeX Warning: Citation `Palmer:1993' on page 6 undefined on input line 176.
+
+
+LaTeX Warning: Citation `RobotsMakeThings:2008' on page 6 undefined on input li
+ne 180.
+
+
+LaTeX Warning: Citation `KatevasRobot:2014' on page 6 undefined on input line 1
+81.
+
+
+LaTeX Warning: Citation `KnightEightLessons:2011' on page 6 undefined on input 
+line 181.
+
 
 ! LaTeX Error: Environment lstlisting undefined.
 
@@ -364,19 +372,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182 \begin{lstlisting}
+l.191 \begin{lstlisting}
                         
 ? 
 ! Undefined control sequence.
-l.187 (*@  \hl
+l.196 (*@  \hl
               {I met a man on tinder.}  @*)
 ? 
 ! Undefined control sequence.
-l.188 (*@  \hl
+l.197 (*@  \hl
               {His name's Sebastian. He's a math nerd.}  @*)
 ? 
 ! Undefined control sequence.
-l.189 (*@  \hl
+l.198 (*@  \hl
               {Swiped right as fast as my fingers could move.}  @*)
 ? 
 
@@ -386,9 +394,10 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.190 \end{lstlisting}
+l.199 \end{lstlisting}
                       
 ? 
+[6]
 
 ! LaTeX Error: Environment lstlisting undefined.
 
@@ -396,19 +405,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.194 \begin{lstlisting}
+l.203 \begin{lstlisting}
                         
 ? 
 ! Undefined control sequence.
-l.199 (*@  \hl
+l.208 (*@  \hl
               {I met a robot on tinder. }  @*)
 ? 
 ! Undefined control sequence.
-l.200 (*@  \hl
+l.209 (*@  \hl
               {His name's Data.  He's a really geeky robot.}  @*)
 ? 
 ! Undefined control sequence.
-l.201 (*@  \hl
+l.210 (*@  \hl
               {Swiped right as fast as my motors could turn.}  @*)
 ? 
 
@@ -418,20 +427,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 \end{lstlisting}
+l.211 \end{lstlisting}
                       
 ? 
 
-LaTeX Warning: Reference `fig:write_process' on page 6 undefined on input line 
-207.
+LaTeX Warning: Reference `fig:write_process' on page 7 undefined on input line 
+216.
 
-<joke_writing_process.png, id=29, 723.70375pt x 332.24126pt>
+<joke_writing_process.png, id=33, 723.70375pt x 332.24126pt>
 File: joke_writing_process.png Graphic file (type png)
 
 <use joke_writing_process.png>
-Package pdftex.def Info: joke_writing_process.png used on input line 211.
+Package pdftex.def Info: joke_writing_process.png used on input line 220.
 (pdftex.def)             Requested size: 379.4201pt x 174.18593pt.
- [6 <./joke_writing_process.png>] [7]
+ [7 <./joke_writing_process.png>]
 (./progress_report.aux)
 
 LaTeX Warning: There were undefined references.
@@ -455,7 +464,7 @@ xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /urw/palatino/uplri8a.pfb>
-Output written on progress_report.pdf (8 pages, 238885 bytes).
+Output written on progress_report.pdf (8 pages, 239280 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
