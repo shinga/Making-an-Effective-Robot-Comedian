@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,10 +642,10 @@ Non-PDF special ignored!
 Non-PDF special ignored!{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 118.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 118.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 114.
  (./progress_report.toc
 LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -659,84 +659,146 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `progress_report.toc'.
 
  [1]
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 132.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 135.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 133.
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
 
-<fig0.png, id=13, 1657.19125pt x 738.76pt>
-File: fig0.png Graphic file (type png)
- <use fig0.png>
-Package pdftex.def Info: fig0.png used on input line 147.
-(pdftex.def)             Requested size: 379.4012pt x 169.1334pt.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 148.
- [2
+<class_joke.png, id=13, 469.00218pt x 261.97874pt>
+File: class_joke.png Graphic file (type png)
+ <use class_joke.png>
+Package pdftex.def Info: class_joke.png used on input line 138.
+(pdftex.def)             Requested size: 379.41737pt x 211.93779pt.
 
-]
-<fig1.png, id=18, 1168.365pt x 599.23875pt>
-File: fig1.png Graphic file (type png)
- <use fig1.png>
-Package pdftex.def Info: fig1.png used on input line 157.
-(pdftex.def)             Requested size: 379.41106pt x 194.59483pt.
- [3 <./fig0.png>]
-[4 <./fig1.png>] [5]
+[2
 
-LaTeX Warning: Citation `Palmer:1993' on page 6 undefined on input line 214.
+] <set_list.png, id=17, 890.5772pt x 374.90062pt>
+File: set_list.png Graphic file (type png)
+ <use set_list.png>
+Package pdftex.def Info: set_list.png used on input line 149.
+(pdftex.def)             Requested size: 480.59198pt x 202.31174pt.
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+ [3 <./class_joke.png> <./set_list.png>] [4] [5] [6]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 228.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8.03> on input line 228.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.62097> on input line 228.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.015> on input line 228.
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¶ in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¶ in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 248.
 
 
-LaTeX Warning: Citation `RobotsMakeThings:2008' on page 6 undefined on input li
-ne 218.
-
-
-LaTeX Warning: Citation `KatevasRobot:2014' on page 6 undefined on input line 2
-19.
-
-
-LaTeX Warning: Citation `KnightEightLessons:2011' on page 6 undefined on input 
-line 219.
-
-[6]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 233.
-
- (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsppl.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <8.03> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 233.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 248.
+ [7]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 263.
 
-<joke_writing_process.png, id=33, 723.70375pt x 332.24126pt>
+<joke_writing_process.png, id=36, 723.70375pt x 332.24126pt>
 File: joke_writing_process.png Graphic file (type png)
 
 <use joke_writing_process.png>
-Package pdftex.def Info: joke_writing_process.png used on input line 258.
+Package pdftex.def Info: joke_writing_process.png used on input line 298.
 (pdftex.def)             Requested size: 379.4201pt x 174.18593pt.
- [7 <./joke_writing_process.png>] [8]
-(./progress_report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ [8] [9 <./joke_writing_process.png>]
+(./progress_report.aux) ) 
 Here is how much of TeX's memory you used:
- 13413 strings out of 492995
- 234975 string characters out of 6132704
- 394745 words of memory out of 5000000
- 16742 multiletter control sequences out of 15000+600000
- 49702 words of font info for 98 fonts, out of 8000000 for 9000
+ 13430 strings out of 492995
+ 235240 string characters out of 6132704
+ 414761 words of memory out of 5000000
+ 16755 multiletter control sequences out of 15000+600000
+ 49383 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,54p,814b,1136s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
-rw/palatino/uplri8a.pfb>
-Output written on progress_report.pdf (9 pages, 252099 bytes).
+ 44i,7n,54p,835b,1136s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/ba
+se/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on progress_report.pdf (10 pages, 355775 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
