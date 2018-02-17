@@ -2,8 +2,43 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{setspace}
+\usepackage{pstricks-add}
 \usepackage{float}
+\usepackage{soul}
+\usepackage{color}
 
+\usepackage{listings}
+
+
+% COLOR DEFINITIONS FOR CODE LISTINGS
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{
+	escapeinside={(*@}{@*)},
+	style=mystyle
+}
 
 \usepackage{geometry}
 \geometry{textheight=9.5in, textwidth=7in}
@@ -101,7 +136,7 @@ An effective robot comedian should be able to entertain the audience and generat
 \subsubsection{Goal}
   We hypothesize that audiences will prefer a robot that acknowledges them, and integrates their data and responses into its set. To test this hypothesis we propose two tests: (1) to transition to topics dependent on the
   audience response, and (2) to present a crowd report upon completion of the set. The goal of this portion of the project is to determine if incorporating the audience into the set will enhance the overall performance of the comedian. To evaluate these hypotheses, we will conduct live studies in which people experience different versions of the software described below.
-  
+
 \subsubsection{Methods}
 Generally, the performance will have two to three parts: the Seed Jokes, the Middle Content, and the Close. The Seed will influence the Middle Content (which will be chosen themed jokes and basis of the show). The Middle Content will transition to a intelligent or generalized Closing Joke when it is time to end the show.
 
@@ -113,7 +148,7 @@ Figure 2 depicts how a joke will be represented by the robot. It will perform th
   \caption{This shows how the algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of the set of all jokes, and may be outside of a specific theme. There could be different spanning trees of jokes that end at the same closing joke}
 \end{figure}
 
-\textit{TOPIC TRANSITIONS: }In the beginning of the set, the comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. From the Seed Jokes, one of the themes will be chosen. If there is time, we may also explore the choice of strategic closing jokes. These jokes might be stronger jokes than some of the others, and is helpful in ending the show on a stronger note. 
+\textit{TOPIC TRANSITIONS: }In the beginning of the set, the comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. From the Seed Jokes, one of the themes will be chosen. If there is time, we may also explore the choice of strategic closing jokes. These jokes might be stronger jokes than some of the others, and is helpful in ending the show on a stronger note.
 
 For example, if two of the seed jokes are about "food" and "Mindfulness", the performance will branch to the respective theme that matches the audience response (Branch 1 "Food" or Branch 2 "Mindfulness"). If jokes with a theme of "food" are not landing with the audience, the algorithm will need to know when to transition to a new theme, or when to end the set. When the robot tells a joke, it needs to be able to analyze the feedback and choose the next joke to perform. This needs to be done quickly, so that the robot is not spending noticeable time (for the audience) choosing a joke. There may not be a lot of jokes to choose from, but the choice needs to be made fast.
 
@@ -131,17 +166,17 @@ All of the above behaviors, from adaptation to the end of performance audience r
 \section{Anish Asrani}
 
 \subsection{Progress So Far}
-I have started to understand how the sensors work a lot better. More specifically, there's sensors to track audio and for facial recognition. The robot can turn its head to whatever direction it can detect sound coming from. It can determine if there is a face in its view and it can differentiate the number of faces it can see at a given time. These aspects will be integrated into the performance to make appropriate comments when it detects faces in the audience. 
+I have started to understand how the sensors work a lot better. More specifically, there's sensors to track audio and for facial recognition. The robot can turn its head to whatever direction it can detect sound coming from. It can determine if there is a face in its view and it can differentiate the number of faces it can see at a given time. These aspects will be integrated into the performance to make appropriate comments when it detects faces in the audience.
 
 \subsection{Left To Do}
 
-While we have managed to execute many jokes on the robot and different sensor interactions, we have to determine a solid script that connects all the jokes and interactions together. The jokes interactions should feel fluid and not sudden. They should not break the flow of the performance. 
+While we have managed to execute many jokes on the robot and different sensor interactions, we have to determine a solid script that connects all the jokes and interactions together. The jokes interactions should feel fluid and not sudden. They should not break the flow of the performance.
 
 Once we accomplish some of these things, we can go ahead and perform shows with the robot. This will enable us to actually go ahead and perform the experiments and surveys which is the whole purpose of the project.
 
 \subsection{Problems}
 
-One of the problems we have is that the sensors can be unpredictable at times. It can capture some ambient background noise and ignore the louder sounds which can lead to delays in triggering the relevant events on the robot. Sometimes, the sensors can lead to the ongoing animations to stop completely which can break the flow of the performance. We need to experiment more with how the sensors (like sound and face tracking) interact with the various animations and the robot joint keyframes in order to ensure that we can execute a successful performance without major interruptions on the robot. 
+One of the problems we have is that the sensors can be unpredictable at times. It can capture some ambient background noise and ignore the louder sounds which can lead to delays in triggering the relevant events on the robot. Sometimes, the sensors can lead to the ongoing animations to stop completely which can break the flow of the performance. We need to experiment more with how the sensors (like sound and face tracking) interact with the various animations and the robot joint keyframes in order to ensure that we can execute a successful performance without major interruptions on the robot.
 
 \subsection{Experimental Design}
 
@@ -150,11 +185,11 @@ The comedian system that is implemented will test three critical areas of a come
 %\subsubsection{Crowd-work}
 \subsubsection{Goals}
 
-We hypothesize that generally interacting with the audience (a.k.a crowd-work) throughout the performance, will improve the audience's overall enjoyment of the show. We want to analyze the importance of this crowd-work relating to the central design of the project. 
+We hypothesize that generally interacting with the audience (a.k.a crowd-work) throughout the performance, will improve the audience's overall enjoyment of the show. We want to analyze the importance of this crowd-work relating to the central design of the project.
 Crowd-work should make the audience feel like they are a part of the show. This can be done in different ways - calling out and talking to the audience, watching the audience and incorporating them into the jokes, and asking them questions to keep them engaged, or to build off to make new jokes.
 
 \subsubsection{Methods}
-There are various kinds of crowd-work we want to test: one research question is whether crowdwork matters at all, and the second is does the crowdwork needs to be real or robot can just pretend it is paying attention? 
+There are various kinds of crowd-work we want to test: one research question is whether crowdwork matters at all, and the second is does the crowdwork needs to be real or robot can just pretend it is paying attention?
 
 To answer these questions we suggest three research conditions: (1) no crowdwork, (2) fake crowdwork, (3) real crowdwork. The first one would be no crowd-work whatsoever. The robot goes about performing its set and does not directly address the audience at all. The second could spanover-the-top and inaccurate crowd-work, or best-guess crowdwork, with the possibility of being real (e.g., predicting that most people in the audience were from Oregon, even if it didn't really hear what they said). The third case would integrate actual robot sensing. It would be important for conditions \#2 and \#3 to be parallel to assess whether crowdwork really matters.
 
@@ -162,7 +197,7 @@ As condition one is fairly obvious, let us discuss deeper possibilities for cond
 
 The other version of condition \#2 is realistic but premeditated. For example, pre-known facts about the audience could be built into the robot or guessed. These pre-known facts could include the location of the performance, age demographics of the audience. For example, if the audience is known to be college-aged, the robot could be fed input to make comments about things relevant to college students.
 
-Using actual robot sensing data is condition \#3, and is certainly the ideal model, but requires sensing capabilities, processing power and hardware, so it would be good to know if it is really necessary. In this condition, the robot would be actually looking for cues from the audience during certain situations. For example, one example is asking questions and capturing words from the audience, then using that same word later. For example, the robot could ask a simple question about the weather, or the audience member's hometown. In this case, the robot can listen for specific words and ask another question about that specific town or city. 
+Using actual robot sensing data is condition \#3, and is certainly the ideal model, but requires sensing capabilities, processing power and hardware, so it would be good to know if it is really necessary. In this condition, the robot would be actually looking for cues from the audience during certain situations. For example, one example is asking questions and capturing words from the audience, then using that same word later. For example, the robot could ask a simple question about the weather, or the audience member's hometown. In this case, the robot can listen for specific words and ask another question about that specific town or city.
 
 Another real sensing capability the robot could use is  audience volume levels after the delivery of jokes. The robot will keep track of the audience input. The robot could then acknowledge if the audience enjoyed the joke or did not enjoy the joke using these inputs. Additional sensors and processing abilities on the Nao robot include face-detection and bumper detection, so the exploration of audience sensing could potentially include speech, volume, vision, and touch.
 
@@ -235,7 +270,7 @@ Participants will be compensated with standard rates for watching brief videos a
 
 \section{Conclusion}
 
-Our project is coming together slowly, but surely. There are a lot of aspects we have accomplished successfully. It is just the matter of putting everything together and structuring the performances to make each one feel coherent and authentic. 
+Our project is coming together slowly, but surely. There are a lot of aspects we have accomplished successfully. It is just the matter of putting everything together and structuring the performances to make each one feel coherent and authentic.
 
 \pagebreak
 
