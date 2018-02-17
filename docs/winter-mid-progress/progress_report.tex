@@ -129,39 +129,24 @@ A lot of the machines that surround us aren't very engaging to interact with. Th
 An effective robot comedian should be able to entertain the audience and generate laughs. We hypothesize that the effectiveness is dependent on three major aspects - crowd-work or the ability to integrate the audience in the performance, portraying a coherent and convincing character, and the ability to adapt the performance based on audience feedback. We will base our performances and studies around these three areas.
 
 \section{Kevin Talik}
+    This section of the report will cover the adaptation algorithm in the scope of this project. First, there will be a review of the goals in studying adaptation during a performance. The next section will summarize the current progress that has been made in implementing adaptive transitions. Concluding this subsection of this group report will be a list of what next steps need to be taken, and current problems that are impeding the progress.   
+
+     At a high level, the adaptation algorithm in this project will structure individual jokes into one performance set. The two goals of this result are: (1) to transition to topics dependent on the
+  audience response, and (2) to present a crowd report upon completion of the set. The reason for presenting a crowd report back to the audience after the performance is that people may not notice actions the robot is taking to connect to the crowd. 
 \subsection{Progress So Far}
+    This term has been focusing on putting our individual work into one, cohesive program that will run. The adaptation algorithm needs multiple jokes during the same performing cycle to compare what the audience like.  We have animated eight jokes total, and have five that are currently in a single performance. Each joke that is physically animated in the robot will need a Python Object that describes the heuristics of the joke. Each joke object is appended to a list, and removed as they are performed. After the joke is told, the joke object will be pushed to a queue. The purpose of the queue is for the crowd report; each joke object will be popped off as they were told to construct the report of the audience. 
+
+
+ Below, is a code snippit of initializing and arranging an example performance. This is helpful in testing, because verifying the animations needs to happen manually. Before implementing the crowd report, each animation needs to be safe for the robot; our comedian needs to be able to survive each set. This requires careful iterations of movements to make sure that it does not fall over.
+
+    
+    
 \subsection{Left To Do}
-\subsection{Experimental Design}
-\subsubsection{Adaptation}
-\subsubsection{Goal}
-  We hypothesize that audiences will prefer a robot that acknowledges them, and integrates their data and responses into its set. To test this hypothesis we propose two tests: (1) to transition to topics dependent on the
-  audience response, and (2) to present a crowd report upon completion of the set. The goal of this portion of the project is to determine if incorporating the audience into the set will enhance the overall performance of the comedian. To evaluate these hypotheses, we will conduct live studies in which people experience different versions of the software described below.
 
 \subsubsection{Methods}
 Generally, the performance will have two to three parts: the Seed Jokes, the Middle Content, and the Close. The Seed will influence the Middle Content (which will be chosen themed jokes and basis of the show). The Middle Content will transition to a intelligent or generalized Closing Joke when it is time to end the show.
 
 Figure 2 depicts how a joke will be represented by the robot. It will perform the joke, collect audience feedback information, and branch to the joke that will best fit the response. At the end of the set, the robot will present a summary of what it thought that audience liked.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig0}
-  \caption{This shows how the algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of the set of all jokes, and may be outside of a specific theme. There could be different spanning trees of jokes that end at the same closing joke}
-\end{figure}
-
-\textit{TOPIC TRANSITIONS: }In the beginning of the set, the comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. From the Seed Jokes, one of the themes will be chosen. If there is time, we may also explore the choice of strategic closing jokes. These jokes might be stronger jokes than some of the others, and is helpful in ending the show on a stronger note.
-
-For example, if two of the seed jokes are about "food" and "Mindfulness", the performance will branch to the respective theme that matches the audience response (Branch 1 "Food" or Branch 2 "Mindfulness"). If jokes with a theme of "food" are not landing with the audience, the algorithm will need to know when to transition to a new theme, or when to end the set. When the robot tells a joke, it needs to be able to analyze the feedback and choose the next joke to perform. This needs to be done quickly, so that the robot is not spending noticeable time (for the audience) choosing a joke. There may not be a lot of jokes to choose from, but the choice needs to be made fast.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig1}
-  \caption{ This flow-chart depicts how, once the robot delivers a joke, will wait for feedback, interpret data, and then make a joke decision (Branch 1 and Branch 2)}
-\end{figure}
-
-\textit{AUDIENCE REPORT:} The close of the robot's act will include the robot's report of what attributes the audience responded to most. The hypothesis here is that getting insight into the robot's algorithms will increase the audience's perception of the robot's intelligence, and, second, that it will make them laugh. People enjoy hearing about themselves.
-
-All of the above behaviors, from adaptation to the end of performance audience report need to be evaluated with real people. Initial tests will be done on campus with small groups of people, the final test will be done in conjuction with the crowd-work and character manipulations, testing the entire algorithm together with a larger crowd, e.g., 10-25 people.
-
 
 \section{Anish Asrani}
 
