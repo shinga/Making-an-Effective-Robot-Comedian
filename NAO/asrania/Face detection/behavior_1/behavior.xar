@@ -362,7 +362,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>10</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -571,7 +571,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>10</language>
+                                                    <language>11</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -586,7 +586,7 @@ class MyClass(GeneratedClass):
                             </Timeline>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Face Reco." id="6" localization="8" tooltip="Detect people&apos;s face and recognize those which are known by the robot.&#x0A;&#x0A;Note: the robot needs to learn a face with the Learn Face box before he can recognize it." x="203" y="557">
+                        <Box name="Face Reco." id="6" localization="8" tooltip="Detect people&apos;s face and recognize those which are known by the robot.&#x0A;&#x0A;Note: the robot needs to learn a face with the Learn Face box before he can recognize it." x="207" y="548">
                             <bitmap>media/images/box/interaction/reco_face.png</bitmap>
                             <script language="4">
                                 <content>
@@ -669,7 +669,7 @@ class MyClass(GeneratedClass):
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="Sound Tracker" id="7" localization="-1" tooltip="This box makes the robot track a sound with different modes.&#x0A;&#x0A;V1.1.0" x="220" y="288">
+                        <Box name="Sound Tracker" id="7" localization="-1" tooltip="This box makes the robot track a sound with different modes.&#x0A;&#x0A;V1.1.0" x="268" y="238">
                             <bitmap>media/images/box/interaction/target_sound.png</bitmap>
                             <script language="4">
                                 <content>
@@ -911,7 +911,7 @@ class MyClass(GeneratedClass):
                             <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
-                            <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="115">
+                            <Timeline enable="1" fps="25" start_frame="1" end_frame="-1" size="-1">
                                 <BehaviorLayer name="behavior_layer1">
                                     <BehaviorKeyframe name="FaceLeds" index="1">
                                         <Diagram>
@@ -975,23 +975,7 @@ class MyClass(GeneratedClass):
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
                                 <ActuatorList model="Nao">
-                                    <ActuatorCurve name="value" actuator="HeadYaw" recordable="1" mute="0" unit="-1">
-                                        <Key frame="20" value="-7.73688" />
-                                        <Key frame="39" value="-20.1296" />
-                                        <Key frame="56" value="-23.8211" />
-                                        <Key frame="70" value="-23.9968" />
-                                        <Key frame="87" value="-29.7977" />
-                                        <Key frame="115" value="-21.5359" />
-                                    </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="HeadPitch" recordable="1" mute="0" unit="-1">
-                                        <Key frame="20" value="16.9607" />
-                                        <Key frame="39" value="-9.75839" />
-                                        <Key frame="56" value="-19.5144" />
-                                        <Key frame="70" value="-3.43018" />
-                                        <Key frame="87" value="-11.0768" />
-                                        <Key frame="115" value="-0.617646" />
-                                    </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="LShoulderPitch" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="LShoulderPitch" recordable="1" mute="1" unit="0">
                                         <Key frame="18" value="64.0707" />
                                         <Key frame="37" value="53.1721" />
                                         <Key frame="54" value="53.8752" />
@@ -999,7 +983,7 @@ class MyClass(GeneratedClass):
                                         <Key frame="85" value="51.4143" />
                                         <Key frame="113" value="48.2502" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="LShoulderRoll" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="LShoulderRoll" recordable="1" mute="1" unit="0">
                                         <Key frame="18" value="20.8279" />
                                         <Key frame="37" value="13.0056" />
                                         <Key frame="54" value="11.6872" />
@@ -1007,7 +991,7 @@ class MyClass(GeneratedClass):
                                         <Key frame="85" value="14.2361" />
                                         <Key frame="113" value="13.0056" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="LElbowYaw" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="LElbowYaw" recordable="1" mute="1" unit="0">
                                         <Key frame="18" value="-46.0577" />
                                         <Key frame="37" value="-39.6416" />
                                         <Key frame="54" value="-38.9384" />
@@ -1015,7 +999,7 @@ class MyClass(GeneratedClass):
                                         <Key frame="85" value="-43.1572" />
                                         <Key frame="113" value="-38.4111" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="LElbowRoll" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="LElbowRoll" recordable="1" mute="1" unit="0">
                                         <Key frame="18" value="-79.0123" />
                                         <Key frame="37" value="-73.9145" />
                                         <Key frame="54" value="-67.7621" />
@@ -1023,15 +1007,15 @@ class MyClass(GeneratedClass):
                                         <Key frame="85" value="-75.5845" />
                                         <Key frame="113" value="-67.85" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="LWristYaw" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="LWristYaw" recordable="1" mute="1" unit="0">
                                         <Key frame="37" value="8.4352" />
                                         <Key frame="113" value="6.85315" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="LHand" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="LHand" recordable="1" mute="1" unit="1">
                                         <Key frame="37" value="0.238207" />
                                         <Key frame="113" value="0.240025" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="RShoulderPitch" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="RShoulderPitch" recordable="1" mute="1" unit="0">
                                         <Key frame="16" value="14.153" />
                                         <Key frame="35" value="-67.1469" />
                                         <Key frame="52" value="-62.4007" />
@@ -1039,7 +1023,7 @@ class MyClass(GeneratedClass):
                                         <Key frame="83" value="-65.8285" />
                                         <Key frame="111" value="58.4504" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="RShoulderRoll" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="RShoulderRoll" recordable="1" mute="1" unit="0">
                                         <Key frame="16" value="-13.8893" />
                                         <Key frame="35" value="-54.6711" />
                                         <Key frame="52" value="-26.3699" />
@@ -1047,7 +1031,7 @@ class MyClass(GeneratedClass):
                                         <Key frame="83" value="-18.8112" />
                                         <Key frame="111" value="-14.3288" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="RElbowYaw" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="RElbowYaw" recordable="1" mute="1" unit="0">
                                         <Key frame="16" value="-17.9323" />
                                         <Key frame="35" value="32.3418" />
                                         <Key frame="52" value="22.41" />
@@ -1056,7 +1040,7 @@ class MyClass(GeneratedClass):
                                         <Key frame="93" value="56" />
                                         <Key frame="111" value="47.3712" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="RElbowRoll" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="RElbowRoll" recordable="1" mute="1" unit="0">
                                         <Key frame="16" value="79.3686" />
                                         <Key frame="35" value="13.8893" />
                                         <Key frame="42" value="20" />
@@ -1068,12 +1052,12 @@ class MyClass(GeneratedClass):
                                         <Key frame="93" value="58.4" />
                                         <Key frame="111" value="72.5131" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="RWristYaw" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="RWristYaw" recordable="1" mute="1" unit="0">
                                         <Key frame="35" value="-17.9323" />
                                         <Key frame="83" value="-17.405" />
                                         <Key frame="111" value="10.4567" />
                                     </ActuatorCurve>
-                                    <ActuatorCurve name="value" actuator="RHand" recordable="1" mute="0" unit="-1">
+                                    <ActuatorCurve name="value" actuator="RHand" recordable="1" mute="1" unit="1">
                                         <Key frame="35" value="0.853478" />
                                         <Key frame="83" value="0.854933" />
                                         <Key frame="111" value="0.425116" />
@@ -1085,7 +1069,7 @@ class MyClass(GeneratedClass):
                             <Resource name="Left eye leds" type="Lock" timeout="0" />
                             <Resource name="Right eye leds" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Stand Up" id="8" localization="8" tooltip="the robot tries to stand up from any position for a number of tries.&#x0A;&#x0A;Note: The number of tries can be set in parameters." x="94" y="414">
+                        <Box name="Stand Up" id="8" localization="8" tooltip="the robot tries to stand up from any position for a number of tries.&#x0A;&#x0A;Note: The number of tries can be set in parameters." x="126" y="348">
                             <bitmap>media/images/box/movement/stand.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1165,13 +1149,12 @@ class MyClass(GeneratedClass):
                             <Resource name="All motors" type="Lock" timeout="0" />
                         </Box>
                         <Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="6" />
-                        <Link inputowner="4" indexofinput="2" outputowner="2" indexofoutput="4" />
                         <Link inputowner="5" indexofinput="2" outputowner="2" indexofoutput="3" />
                         <Link inputowner="9" indexofinput="2" outputowner="5" indexofoutput="4" />
-                        <Link inputowner="10" indexofinput="2" outputowner="2" indexofoutput="3" />
                         <Link inputowner="7" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="1" indexofinput="2" outputowner="3" indexofoutput="4" />
                         <Link inputowner="8" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="2" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
