@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2017.5.22)  16 FEB 2018 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **progress_report.tex
 (./progress_report.tex
-LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (./IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
@@ -19,12 +19,12 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 503.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 -- Using IEEE Computer Society mode.
 -- Using 8.5in x 11in (letter) paper.
--- Using PDF output.
+-- Using DVI output.
 \@IEEEnormalsizeunitybaselineskip=\dimen105
 -- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen106
@@ -116,58 +116,49 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: dvips.def on input line 99.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count94
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pstricks/pstricks.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pstricks/pstricks.sty
 Package: pstricks 2017/03/17 v0.63 LaTeX wrapper for `PSTricks' (RN,HV)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: dvips.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -176,53 +167,53 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pstricks.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks16
 \XKV@tempa@toks=\toks17
 )
-\XKV@depth=\count95
+\XKV@depth=\count94
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pst-fp.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks/pst-fp.tex
 `pst-fp' v0.05, 2010/01/17 (hv)
-\pstFP@xs=\count96
-\pstFP@xia=\count97
-\pstFP@xib=\count98
-\pstFP@xfa=\count99
-\pstFP@xfb=\count100
-\pstFP@rega=\count101
-\pstFP@regb=\count102
-\pstFP@regs=\count103
-\pstFP@times=\count104
+\pstFP@xs=\count95
+\pstFP@xia=\count96
+\pstFP@xib=\count97
+\pstFP@xfa=\count98
+\pstFP@xfb=\count99
+\pstFP@rega=\count100
+\pstFP@regb=\count101
+\pstFP@regs=\count102
+\pstFP@times=\count103
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks18
 \pgfutil@tempdima=\dimen128
 \pgfutil@tempdimb=\dimen129
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks19
 \pgfkeys@temptoks=\toks20
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
 \pgfkeys@tmptoks=\toks21
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
 \pgf@x=\dimen130
 \pgf@xa=\dimen131
 \pgf@xb=\dimen132
@@ -231,50 +222,50 @@ ode.tex
 \pgf@ya=\dimen135
 \pgf@yb=\dimen136
 \pgf@yc=\dimen137
-\c@pgf@counta=\count105
-\c@pgf@countb=\count106
-\c@pgf@countc=\count107
-\c@pgf@countd=\count108
-\pgfutil@tempcnta=\count109
-\pgfutil@tempcntb=\count110
+\c@pgf@counta=\count104
+\c@pgf@countb=\count105
+\c@pgf@countc=\count106
+\c@pgf@countd=\count107
+\pgfutil@tempcnta=\count108
+\pgfutil@tempcntb=\count109
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen138
-\pgfmath@count=\count111
+\pgfmath@count=\count110
 \pgfmath@box=\box28
 \pgfmath@toks=\toks22
 \pgfmath@stack@operand=\toks23
 \pgfmath@stack@operation=\toks24
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
 .code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
 nometric.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
 m.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
 rison.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
 code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
 .code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
 code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count112
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count111
 ))
 \pgffor@iter=\dimen139
 \pgffor@skip=\dimen140
 \pgffor@stack=\toks25
 \pgffor@toks=\toks26
 )
-\psLoopIndex=\count113
+\psLoopIndex=\count112
 
-`PSTricks' v2.73  <2017/05/18> (tvz)
+`PSTricks' v2.72  <2017/04/06> (tvz)
 \pst@dima=\dimen141
 \pst@dimb=\dimen142
 \pst@dimc=\dimen143
@@ -288,23 +279,23 @@ erarithmetics.code.tex)))
 \pst@hbox=\box29
 \pst@ibox=\box30
 \pst@boxg=\box31
-\pst@cnta=\count114
-\pst@cntb=\count115
-\pst@cntc=\count116
-\pst@cntd=\count117
-\pst@cntg=\count118
-\pst@cnth=\count119
-\pst@cntm=\count120
-\pst@cntn=\count121
-\pst@cnto=\count122
-\pst@cntp=\count123
-\@zero=\count124
+\pst@cnta=\count113
+\pst@cntb=\count114
+\pst@cntc=\count115
+\pst@cntd=\count116
+\pst@cntg=\count117
+\pst@cnth=\count118
+\pst@cntm=\count119
+\pst@cntn=\count120
+\pst@cnto=\count121
+\pst@cntp=\count122
+\@zero=\count123
 \pst@toks=\toks27
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pstricks.con)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks/pstricks.con)
 \psunit=\dimen151
 \psxunit=\dimen152
 \psyunit=\dimen153
-\pst@C@@rType=\count125
+\pst@C@@rType=\count124
 \pslinewidth=\dimen154
 \psk@startLW=\dimen155
 \psk@endLW=\dimen156
@@ -320,69 +311,69 @@ erarithmetics.code.tex)))
 \sh@wgridYunit=\dimen164
 \pst@shift=\dimen165
 )
-File: pstricks.tex 2017/05/18 v2.73 `PSTricks' (tvz,hv)
+File: pstricks.tex 2017/04/06 v2.72 `PSTricks' (tvz,hv)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks/pst-fp.tex)
-File: pst-fp.tex 2017/05/18 v2.73 `PST-fp' (hv)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2017/04/06 v2.72 `PST-fp' (hv)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-plot/pst-plot.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pst-plot/pst-plot.sty
 Package: pst-plot 2011/06/05 v1.00 LaTeX wrapper for `pst-plot' (HV)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
 Package: pst-xkey 2005/11/25 v1.6 package wrapper for pst-xkey.tex (HA)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/multido/multido.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/multido/multido.sty
 Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
 
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/multido/multido.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/multido/multido.tex
  v1.42, 2010/05/14 <tvz>
-\multido@count=\count126
-\multidocount=\count127
+\multido@count=\count125
+\multidocount=\count126
 \multido@stuff=\toks30
 )
 File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
 )
 Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-plot/pst-plot.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-tools/pst-tools.tex
-`PST-tools' v0.06, 2017/05/12 (hv))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-node/pst-node.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-plot/pst-plot.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-tools/pst-tools.tex
+`PST-tools' v0.05, 2014/05/12 (hv))
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-node/pst-node.tex
  v1.39, 2017/01/20
-\psrow=\count128
-\pscol=\count129
-\psmatrixcnt=\count130
+\psrow=\count127
+\pscol=\count128
+\psmatrixcnt=\count129
 \psrowsep=\skip44
 \pscolsep=\skip45
-\pst@args=\count131
-\num@pts=\count132
-\pst@argcnt=\count133
+\pst@args=\count130
+\num@pts=\count131
+\pst@argcnt=\count132
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-arrow/pst-arrow.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-arrow/pst-arrow.tex
 `pst-arrow' v0.01, 2016/09/01 (dr,hv)
 \pshooklength=\dimen166
 \pshookwidth=\dimen167
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-3d/pst-3d.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-3d/pst-3d.tex
 `PST-3d' v1.11, 2010/02/14 (tvz))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-math/pst-math.tex
-`pst-math' v0.63 , (CJ,hv)) `pstricks-add' v3.83, 2017/05/10 (dr,hv)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-math/pst-math.tex
+`pst-math' v0.63 , (CJ,hv)) `pstricks-add' v3.82, 2016/09/01 (dr,hv)
 \psparallelogramsep=\dimen168
-\pst@cntC=\count134
+\pst@cntC=\count133
 \chart@ColorIndex=\dimen169
 \chart@ColorStep=\dimen170
 \pst@chartHeight=\dimen171
 \pst@chartStackDepth=\dimen172
 \pst@chartStackWidth=\dimen173
-\chart@Toggle=\count135
-\psVectorCtr=\count136
+\chart@Toggle=\count134
+\psVectorCtr=\count135
 )
- v1.78, 2017/04/16 (tvz,hv)
+ v1.77, 2017/03/20 (tvz,hv)
 \pstRadUnit=\dimen174
 \pstRadUnitInv=\dimen175
-\pst@linecnt=\count137
+\pst@linecnt=\count136
 \RCD@file=\read1
 \psxlabelsep=\dimen176
 \psylabelsep=\dimen177
@@ -393,7 +384,7 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 \pst@yticksizeA=\dimen182
 \pst@yticksizeB=\dimen183
 \pst@yticksizeC=\dimen184
-\@digitcounter=\count138
+\@digitcounter=\count137
 \psk@llx=\dimen185
 \psk@lly=\dimen186
 \psk@urx=\dimen187
@@ -401,47 +392,47 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 \pst@xunit=\dimen189
 \pst@yunit=\dimen190
 )
-File: pst-plot.tex 2017/04/16 1.78 `pst-plot' (tvz,hv)
+File: pst-plot.tex 2017/03/20 1.77 `pst-plot' (tvz,hv)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-node/pst-node.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pst-node/pst-node.sty
 Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
 Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-node/pst-node.tex)
-File: pst-node.tex 2017/04/16 1.78 `pst-node' (tvz,hv)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-node/pst-node.tex)
+File: pst-node.tex 2017/03/20 1.77 `pst-node' (tvz,hv)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-3d/pst-3d.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pst-3d/pst-3d.sty
 Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-3d/pst-3d.tex)
-File: pst-3d.tex 2017/04/16 v1.78 `PST-3d' (hv)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-3d/pst-3d.tex)
+File: pst-3d.tex 2017/03/20 v1.77 `PST-3d' (hv)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pst-math/pst-math.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pst-math/pst-math.sty
 Package: pst-math 2014/07/30 package wrapper for PSTricks pst-math.tex
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pst-math/pst-math.tex)
-File: pst-math.tex 2017/04/16 v1.78 `PST-math' (hv)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pst-math/pst-math.tex)
+File: pst-math.tex 2017/03/20 v1.77 `PST-math' (hv)
 )
 Package: pstricks-add 2010/02/11 v. 0.14 package wrapper for pstricks-add.tex (
 hv)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex)
-File: pstricks-add.tex 2017/04/16 v1.78 `PSTricks-add' (hv)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex)
+File: pstricks-add.tex 2017/03/20 v1.77 `PSTricks-add' (hv)
 Package pstricks-add Info: Local config file pstricks-add.cfg used on input lin
 e 20.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pstricks-add/pstricks-add.cfg
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pstricks-add/pstricks-add.cfg
 File: pstricks-add.cfg 2005/01/10 v0.1 addtional user stuff (hv)
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count139
+\c@float@type=\count138
 \float@exts=\toks31
 \float@box=\box32
 \@float@everytoks=\toks32
 \@floatcapt=\box33
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/soul/soul.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks33
 \SOUL@lasttoken=\toks34
@@ -453,47 +444,47 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen192
 \SOUL@ulht=\dimen193
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count140
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count139
 \lst@gtempboxa=\box34
 \lst@token=\toks38
-\lst@length=\count141
+\lst@length=\count140
 \lst@currlwidth=\dimen194
-\lst@column=\count142
-\lst@pos=\count143
+\lst@column=\count141
+\lst@pos=\count142
 \lst@lostspace=\dimen195
 \lst@width=\dimen196
-\lst@newlines=\count144
-\lst@lineno=\count145
+\lst@newlines=\count143
+\lst@lineno=\count144
 \lst@maxwidth=\dimen197
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count146
-\lst@skipnumbers=\count147
+\c@lstnumber=\count145
+\lst@skipnumbers=\count146
 \lst@framebox=\box35
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count148
-\Gm@cntv=\count149
-\c@Gm@tempcnt=\count150
+\Gm@cnth=\count147
+\Gm@cntv=\count148
+\c@Gm@tempcnt=\count149
 \Gm@bindingoffset=\dimen198
 \Gm@wd@mp=\dimen199
 \Gm@odd@mp=\dimen256
@@ -521,71 +512,11 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 
 -- Lines per column: 39 (approximate, difference = 14.73578pt).
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
-\scratchdimen=\dimen262
-\scratchbox=\box36
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count154
-\MPscratchDim=\dimen263
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
-\everyMPtoPDFconversion=\toks41
-) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\c@lstlisting=\count157
-
+\c@lstlisting=\count150
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: dvips
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -622,31 +553,19 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/sc' in size <24.09> not available
 (Font)              Font shape `OT1/ppl/b/sc' tried instead on input line 87.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 105.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1phv.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 105.
- [1
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/upd
-map/pdftex.map}]
+ [1]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 118.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 118.
- (./progress_report.toc
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 114.
+
+(./progress_report.toc
 LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9.53561> on input line 3.
@@ -659,84 +578,127 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `progress_report.toc'.
 
  [1]
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 132.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 135.
-
-<fig0.png, id=13, 1657.19125pt x 738.76pt>
-File: fig0.png Graphic file (type png)
- <use fig0.png>
-Package pdftex.def Info: fig0.png used on input line 147.
-(pdftex.def)             Requested size: 379.4012pt x 169.1334pt.
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8.03> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 148.
- [2
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 133.
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+Missing character: There is no ¬ in font pplr7t!
+Missing character: There is no † in font pplr7t!
+File: class_joke.eps Graphic file (type eps)
+ <class_joke.eps> [2
 
 ]
-<fig1.png, id=18, 1168.365pt x 599.23875pt>
-File: fig1.png Graphic file (type png)
- <use fig1.png>
-Package pdftex.def Info: fig1.png used on input line 157.
-(pdftex.def)             Requested size: 379.41106pt x 194.59483pt.
- [3 <./fig0.png>]
-[4 <./fig1.png>] [5]
+File: set_list.eps Graphic file (type eps)
+ <set_list.eps>
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ú in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ù in font pplr7t!
+ [3] [4]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 199.
 
-LaTeX Warning: Citation `Palmer:1993' on page 6 undefined on input line 214.
+[5] [6]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 232.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8.03> on input line 232.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.62097> on input line 232.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.015> on input line 232.
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¶ in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¶ in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+ [7]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¶ in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ¶ in font pplr7t!
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 303.
 
-
-LaTeX Warning: Citation `RobotsMakeThings:2008' on page 6 undefined on input li
-ne 218.
-
-
-LaTeX Warning: Citation `KatevasRobot:2014' on page 6 undefined on input line 2
-19.
-
-
-LaTeX Warning: Citation `KnightEightLessons:2011' on page 6 undefined on input 
-line 219.
-
-[6]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 233.
-
- (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsppl.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <8.03> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 233.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 303.
 
-<joke_writing_process.png, id=33, 723.70375pt x 332.24126pt>
-File: joke_writing_process.png Graphic file (type png)
-
-<use joke_writing_process.png>
-Package pdftex.def Info: joke_writing_process.png used on input line 258.
-(pdftex.def)             Requested size: 379.4201pt x 174.18593pt.
- [7 <./joke_writing_process.png>] [8]
-(./progress_report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[8]
+File: joke_writing_process.eps Graphic file (type eps)
+ <joke_writing_process.eps> [9] (./progress_report.aux) ) 
 Here is how much of TeX's memory you used:
- 13413 strings out of 492995
- 234975 string characters out of 6132704
- 394745 words of memory out of 5000000
- 16742 multiletter control sequences out of 15000+600000
- 49702 words of font info for 98 fonts, out of 8000000 for 9000
+ 12480 strings out of 493014
+ 220502 string characters out of 6133369
+ 421092 words of memory out of 5000000
+ 15859 multiletter control sequences out of 15000+600000
+ 31562 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,54p,814b,1136s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
-rw/palatino/uplri8a.pfb>
-Output written on progress_report.pdf (9 pages, 252099 bytes).
-PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 44i,7n,54p,835b,1469s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on progress_report.dvi (10 pages, 58568 bytes).

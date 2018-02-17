@@ -220,93 +220,83 @@ All of these conditions will be assessed with live audiences (even if its just a
 \subsection{Goal}
 The goal of this section of the project is to examine whether or not robot comedy can benefit from having jokes delivered from a robot's perspective. Our hypotheses are that a robot presenting jokes about technology or being a robot will be funnier than a human telling the same jokes, and that robots will be less funny than humans at telling jokes from a human perspective.
 \subsection{Progress So Far}
-So far, we have animated eight jokes. Of these eight animated jokes, three of them are working robot/human versions. This means we have five total unique jokes. In addition, we have three more written jokes that also have both human and robot versions, but have yet to be animated. Besides these, there are also roughly a dozen other jokes that our client has written for us and are in review. The animated jokes are mostly "romance" related jokes, an intentional choice on our part. With jokes under the same topic, it would be quicker for us to come out with a whole working set. As it stands, at this point in the term we have under half of a full working set with robot and human versions. In terms of scripting, a
+So far, we have animated eight jokes. Of these eight animated jokes, three of them are working robot/human versions. This means we have five total unique jokes. In addition, we have three more written jokes that also have both human and robot versions, but have yet to be animated. Besides these, there are also roughly a dozen other jokes that our client has written for us and are in review. The animated jokes are mostly "romance" related jokes, an intentional choice on our part. With jokes under the same topic, it would be quicker for us to come out with a whole working set. As it stands, at this point in the term we have under half of a full working set with robot and human versions. In terms of Choregraphe scripting, Kevin and I have recently been able to complete a working template for a full set. This was a huge step in our project.
 \subsection{Left To Do}
 By the end of the project, we aim to complete three full working sets, with each set having 7-10 jokes. We have decided along with our client that it may be more expedient to instead create romance-related/job-related/age-related versions of each joke, as coming up with \textit{good} jokes that can \textit{have} logical robot/human versions is difficult and time consuming. While this may cause us to end up with less interesting set variety, it will still be adequate for the purposes of our project. By the end of this term, we should have at least one full working set. An example of a joke that has romance/job/age and robot/human versions is as follows:
 
 
 \begin{lstlisting}
+Romance/Robot Version
+
 I actually went on a date with a modem last week.
 He was all -DIAL TONE, ACCOMPANIED WITH RAPID GESTURES.
 I know he was just trying to connect
-… but he’s definitely too old for me
+... but he’s definitely too old for me
 \end{lstlisting}
 
 \begin{lstlisting}
+Romance/Human Version
+
 I actually went on a date with this guy last week.
 He was all -BLAH BLAH WINE BLAH CHEESE BLAH. -
 I know he was just trying to connect
-… but he’s definitely too old for me.
+... but he’s definitely too old for me.
 \end{lstlisting}
-
-
-
-Whereas, the robot version of the above joke is shown below:
 
 \begin{lstlisting}
-Hey, hey, I got news. This is big.
-Ok, quiet down. Get this.
-That's RIGHT folks.
-I'm no longer single. *throws hands up*
-(*@  \hl{I met a robot on tinder. }  @*)
-(*@  \hl{His name's Data.  He's a really geeky robot.}  @*)
-(*@  \hl{Swiped right as fast as my motors could turn.}  @*)
+Job/Robot Version
+
+I actually went on a job interview last week.
+The interviewer was all -DIAL TONE, ACCOMPANIED WITH ANGRY GESTURES.-
+I tried to communicate why it should hire me,
+but I think they lost the packets.
 \end{lstlisting}
+
+\begin{lstlisting}
+Job/Human version
+
+I actually went on a job interview at a clothing store last week.
+They were all BLAH BLAH TEAM PLAYER BLAH BLAH CUSTOMERS.
+I think they almost hired me,
+but then I knocked over a rack of jackets.
+\end{lstlisting}
+
+\begin{lstlisting}
+Aging/Robot Version
+
+I actually tried to plan a vacation an iPhone 10 last week.
+I was all -DIAL TONE, ACCOMPANIED WITH RAPID GESTURES. -
+I thought I was being cute
+... but he said my techniques were outdated.
+\end{lstlisting}
+
+\begin{lstlisting}
+Aging/Human Version
+
+I actually tried to plan a hiking trip with my nephew last week.
+All he heard was: -BLAH BLAH STUCK IN CAR BLAH BLAH BLAH.-
+I thought the idea was cute
+... but he said my hobbies were outdated.
+
+\end{lstlisting}
+
 
 \subsection{Issues}
 The main issue we have encountered in the project is time consumption.
 Animating jokes is incredibly time consuming, with each joke requiring on average 3-4 hours of animating and debugging, with their corresponding robot/human versions requiring another 1-2 hours of work. To animate the robot, things such as balance, logic of movement, vocal delivery pitch/speed, and timing need to be taken into account. In addition to this, there are usually issues that pop up during animation, such as motors overheating or an inability to connect with the robot, which occurs quite frequently. Actual walking is also often a problem, as it sometimes falls down.
 Another issue we have encountered is our collective lack of comedic genius. This became clear at the beginning of the term, when we realized how hard it was to create good jokes, and how it was even harder to come up with good jokes that have logical robot/human versions. To combat this issue, our client has been gracious with us and given her own input on jokes that could be used.
 \subsection{Experimental Design}
-For this portion of the project, testing will be done on Amazon Mechanical Turk.
+
+\subsubsection{Joke Creation}
 First, each joke in a topical set (romance, jobs, or aging) will be created with a corresponding robot/human version.
-
-
-\subsubsection{Methods}
-To address this goal, jokes will be written from a human or robot perspective.
-The jokes written from a human perspective will have a corresponding robot version, ideally with as much one-to-one correspondence as possible in regards to cadence, length of joke, parrallel content, similar motions, and so forth.
-These jokes will be subject to intense scrutiny by members of the project and by the client, such that revisions and edits can be made to create funny jokes with a definite correspondence between the two versions.
-For example, a human version of a joke might look like the following (lines with a definite correspondence with the robot version are highlighted):
-
-\begin{lstlisting}
-Hey, hey, I got news. This is big.
-Ok, quiet down. Get this.
-That's RIGHT folks.
-I'm no longer single. *throws hands up*
-(*@  \hl{I met a man on tinder.}  @*)
-(*@  \hl{His name's Sebastian. He's a math nerd.}  @*)
-(*@  \hl{Swiped right as fast as my fingers could move.}  @*)
-\end{lstlisting}
-
-Whereas, the robot version of the above joke is shown below:
-
-\begin{lstlisting}
-Hey, hey, I got news. This is big.
-Ok, quiet down. Get this.
-That's RIGHT folks.
-I'm no longer single. *throws hands up*
-(*@  \hl{I met a robot on tinder. }  @*)
-(*@  \hl{His name's Data.  He's a really geeky robot.}  @*)
-(*@  \hl{Swiped right as fast as my motors could turn.}  @*)
-\end{lstlisting}
-
-\subsubsection{Development process of joke writing}
-These jokes will be scripted in Choregraphe, where adjustments to vocal tones and pausing will be made.
-Then, animating the robot for non-verbal gestures will be done to enhance the delivery.
-The overall process may look similar to Figure \ref{fig:write_process}.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{joke_writing_process}
-  \caption{The work flow from joke writing to testing.}
-	\label{fig:write_process}
-\end{figure}
+Ideally, these will have as much one-to-one correspondence as possible in regards to cadence, length of joke, parallel content, similar motions, and so forth.
+These jokes will be reviewed by members of the project and by the client, such that revisions and edits can be made to create funny jokes with a definite correspondence between the two versions.
 
 \subsubsection{Experimentation}
-The stand-up routine of the robot will comprise of text of the joke themselves, the motions that the robot uses to accompany them, and the way the robot surveys the audience after each punchline, e.g., in a human or robotic fashion.
+The stand-up routine of the robot will comprise of the text of the joke themselves, the motions that the robot uses to accompany them, and the way the robot surveys the audience after each punchline, e.g., in a human or robotic fashion.
 To determine the differences in audience response to the routines, studies will be done first on Amazon Mechanical Turk, and later with co-located audiences.
 Participants will be shown a video of the robot's stand-up routine, and then presented with a short survey.
-The routines will be between 5 and 10 minutes long, and the survey will include questions pertaining to each joke or routine.
+The routines will be between 2 and 7 minutes long, and the survey will include questions pertaining to each joke or routine.
 Participants will be compensated with standard rates for watching brief videos and answering survey questions.
 
 
