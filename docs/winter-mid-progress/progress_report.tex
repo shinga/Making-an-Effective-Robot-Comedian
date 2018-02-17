@@ -103,15 +103,11 @@
             \vspace{20pt}
         }
         \begin{abstract}
-Human-Robot interaction can learn a lot from stand-up comedy. A stand-up set has scripted jokes, statements that are predetermined,
-as well as improvisational statements, that give the performance a sense of liveliness and character. A comedian can observe
-an audience and improvise a delivery of a joke to connect the audience to the content. This makes the experience more authentic and
-genuine for the observer. The purpose of this project is to to discover what makes an entertaining interaction by studying a robot that
-performs comedy. We propose that a performance is enhanced when (1) the comedian interacts spontaneously with the audience,
-(2) the comedian has and conveys a coherent, well-developed character, and (3) the comedian adapts its act to cater to an audience
-based on their reaction. These propositions will be tested locally, remotely, and in a real stand-up setting.
-	\end{abstract}
-    \end{singlespace}
+					To make an Effective Robot Comedian, we have developed three research questions to investigate our approach to designing this system: Adapting to audience response to humor, incorporating the crowd into the performance, and the effect of characterization in anthropomorphizing the robot. This paper outlines how our research questions will be incorporated into a system, and how we will study the shared space between a robot and an audience.
+				
+
+				\end{abstract}
+		\end{singlespace}
 \end{titlepage}
 \newpage
 \pagenumbering{arabic}
@@ -128,51 +124,68 @@ A lot of the machines that surround us aren't very engaging to interact with. Th
 
 An effective robot comedian should be able to entertain the audience and generate laughs. We hypothesize that the effectiveness is dependent on three major aspects - crowd-work or the ability to integrate the audience in the performance, portraying a coherent and convincing character, and the ability to adapt the performance based on audience feedback. We will base our performances and studies around these three areas.
 
-\section{Kevin Talik}
+\section{Adaptation (Kevin Talik)}
+   This section of the report will cover the adaptation algorithm in the scope of this project. First, there will be a review of the goals in studying adaptation during a performance. The next section will summarize the current progress that has been made in implementing adaptive transitions. Concluding this subsection of this report will be a list of what next steps need to be taken, and current problems that are impeding the progress.   
+
+    At a high level, the adaptation algorithm in this project will structure individual jokes into one performance set. The two goals of this result are: (1) to transition to topics dependent on the
+ audience response, and (2) to present a crowd report upon completion of the set. The reason for presenting a crowd report back to the audience after the performance is that people may not notice actions the robot is taking to connect to the crowd.
+
 \subsection{Progress So Far}
+   This term has been focusing on putting our individually programmed joke behaviors into one, cohesive program that will run the performance. The adaptation algorithm needs multiple jokes during the same performing cycle to compare what the audience like.  We have animated eight jokes total, and have five that are currently in a single performance. Each joke that is physically animated in the robot will need a Python Object that describes the heuristics of the joke. Each joke object is appended to a list, and removed as they are performed. After the joke is told, the joke object will be pushed to a queue. The purpose of the queue is for the crowd report; each joke object will be popped off as they were told to construct the report of the audience. Below is a code example of the python joke object.
+%INSERT FIGURE 1
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{class_joke}
+  \caption{The joke object in Python.}
+	\label{fig:class_joke}
+\end{figure}
+
+User-defined classes can be added to the visual environment of \textit{Choreographe} by editing the generated code of a visual block. The class needs to be appended (with additional library imports) at the top of the generated code.
+
+The qualities dictionary member contains all of the essential information for tagging a joke. If there needs to be additional tags that are not in the dictionary, they can be appended to the \textit{heuristics} list. Every joke that is told needs to be initialized before the performance. This figure shows the process of appending jokes to a set list.
+%INSERT FIGURE 2
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth,height=0.95\textheight,keepaspectratio]{set_list}
+  \caption{A set of jokes in Python}
+	\label{fig:set_list}
+\end{figure}
+
+Each joke is initialized as an object with the correct arguments specifying the nature of the joke. Some of the more familiar arguments are easy to recognize: the name arg specifies the name of the joke behavior to run, the ID is a shorthand representation of the name, and the topic distinguishes the basis of different jokes.
+
+The other arguments, referenceSpace, human, and CW are used in differentiating the research goals our group is studying. The “human” category is used by Arthur to tell robot character jokes from human-character jokes, and the CW argument stands for “Crowd Work”, which will help Anish Identify different degrees of crowd word.
+The “referenceSpace” argument is limited to one of three categories; Shared, Robot, Crowd. These are used for adapting between types of jokes. This refers to substance of the joke, and how it connects the audience, the comedian, and the world around them. For example, imagine a robot and a human are watching a dog walk down the street. The both of them observing the dog would be a “shared” reference, the human observing the comedian look at the dog would be a “Crowd” reference, and the robot observing the human would be a “Robot” reference. These categories help distinguish the social space between the crowd and the robot, and depending on the reaction to a joke, may highlight a preference of reference.
+
+
+Generating our custom performance list speeds up testing, as animations need to be tested manually. Before the comedian is ready for the spotlight, each animation needs to be safe for the robot; our comedian needs to be able to survive each set. This requires careful iterations of movements to make sure that it does not fall over.
+
+Between developing and animating on the robot, I have also been writing a draft for the experiments that need to be run to test the effectiveness of adaptation. Three different types of adaptation needs to be tested: (1) Active Adaptation (2) Passive Adaptation, and finally (3) no adaptation. Active Adapting is different than passive in that the robot will use live information from the audience to change the performance. Passive adapting should feel less engaging, as the response is not taken into account during the performance, but transitional actions are still evident. No adaptation will have pausing, and no audience input between jokes.
+
+To summarize the work done for the adaptation algorithm thus far, I have collected our current jokes and put them into a single program, created a Python Class object for identifying jokes, implemented two data structures for remembering known jokes, and jokes told during a performance. By next term, we should be ready to experiment with our implementations.
+
 \subsection{Left To Do}
-\subsection{Experimental Design}
-\subsubsection{Adaptation}
-\subsubsection{Goal}
-  We hypothesize that audiences will prefer a robot that acknowledges them, and integrates their data and responses into its set. To test this hypothesis we propose two tests: (1) to transition to topics dependent on the
-  audience response, and (2) to present a crowd report upon completion of the set. The goal of this portion of the project is to determine if incorporating the audience into the set will enhance the overall performance of the comedian. To evaluate these hypotheses, we will conduct live studies in which people experience different versions of the software described below.
+By the end of this term, we need to have a working performance to test varying levels of adaptation from a bare-bones Crowd Report. Assembling all of our jokes into a standardized joke format with working data structures is a massive step in the right direction.
 
-\subsubsection{Methods}
-Generally, the performance will have two to three parts: the Seed Jokes, the Middle Content, and the Close. The Seed will influence the Middle Content (which will be chosen themed jokes and basis of the show). The Middle Content will transition to a intelligent or generalized Closing Joke when it is time to end the show.
+The next step is correlating a response to every joke told, so that our comedian can start making inferences about the audience from the performance. Once the responses can be validated with the corresponding joke, the robot can create a report of the responses that were witnessed.
 
-Figure 2 depicts how a joke will be represented by the robot. It will perform the joke, collect audience feedback information, and branch to the joke that will best fit the response. At the end of the set, the robot will present a summary of what it thought that audience liked.
+\subsection{Problems Impeding Progress}
+The animations are easiest and fastest to develop in the software \textit{Choreographe}, provided by \textit{Softbank Robotics}. However, remembering the jokes told during show is implemented in Python because input and output between functions is impossible with self defined data structures. Additionally, the Python 2.7 interpreter runs locally on the robot, and is difficult to test software on. This makes the developing and testing process slow and not automated.
+For animations, as our performance size scales upwards with more jokes, testing the safety of each performance permutation will take a lot of time to validate. Also, since our robot is a specific and expensive piece of hardware, finding information on bugs is both difficult and limited.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig0}
-  \caption{This shows how the algorithm will have up to \textit{k} Themes to choose from, determined from the seed joke. The closing joke is a subset of the set of all jokes, and may be outside of a specific theme. There could be different spanning trees of jokes that end at the same closing joke}
-\end{figure}
 
-\textit{TOPIC TRANSITIONS: }In the beginning of the set, the comedian will present an "initialization" procedure, known as the "Seed Jokes" to test the response of the audience to different jokes. Depending on their response, the comedian will transition to a theme that is evaluated to be the best fit. The robot comedian will have many jokes to choose from that contain different material, but not all audiences will like all of the jokes. Figure 1 shows how the theme will be chosen from a set of up to \textit{k} themes. From the Seed Jokes, one of the themes will be chosen. If there is time, we may also explore the choice of strategic closing jokes. These jokes might be stronger jokes than some of the others, and is helpful in ending the show on a stronger note.
 
-For example, if two of the seed jokes are about "food" and "Mindfulness", the performance will branch to the respective theme that matches the audience response (Branch 1 "Food" or Branch 2 "Mindfulness"). If jokes with a theme of "food" are not landing with the audience, the algorithm will need to know when to transition to a new theme, or when to end the set. When the robot tells a joke, it needs to be able to analyze the feedback and choose the next joke to perform. This needs to be done quickly, so that the robot is not spending noticeable time (for the audience) choosing a joke. There may not be a lot of jokes to choose from, but the choice needs to be made fast.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{fig1}
-  \caption{ This flow-chart depicts how, once the robot delivers a joke, will wait for feedback, interpret data, and then make a joke decision (Branch 1 and Branch 2)}
-\end{figure}
-
-\textit{AUDIENCE REPORT:} The close of the robot's act will include the robot's report of what attributes the audience responded to most. The hypothesis here is that getting insight into the robot's algorithms will increase the audience's perception of the robot's intelligence, and, second, that it will make them laugh. People enjoy hearing about themselves.
-
-All of the above behaviors, from adaptation to the end of performance audience report need to be evaluated with real people. Initial tests will be done on campus with small groups of people, the final test will be done in conjuction with the crowd-work and character manipulations, testing the entire algorithm together with a larger crowd, e.g., 10-25 people.
 
 
 \section{Anish Asrani}
 
 \subsection{Progress So Far}
-I have started to understand how the sensors work a lot better. More specifically, there's sensors to track audio and for facial recognition. The robot can turn its head to whatever direction it can detect sound coming from. It can determine if there is a face in its view and it can differentiate the number of faces it can see at a given time. These aspects will be integrated into the performance to make appropriate comments when it detects faces in the audience.
+I have started to understand how the sensors work a lot better. More specifically, there's sensors to track audio and for facial recognition. The robot can turn its head to whatever direction it can detect sound coming from. It can determine if there is a face in its view and it can differentiate the number of faces it can see at a given time. It can also follow a face as long as the face is moving at a reasonable pace. These aspects will be integrated into the performance to make appropriate comments when it detects faces in the audience.
 
 \subsection{Left To Do}
 
 While we have managed to execute many jokes on the robot and different sensor interactions, we have to determine a solid script that connects all the jokes and interactions together. The jokes interactions should feel fluid and not sudden. They should not break the flow of the performance.
 
-Once we accomplish some of these things, we can go ahead and perform shows with the robot. This will enable us to actually go ahead and perform the experiments and surveys which is the whole purpose of the project.
+Once we accomplish some of these things, we can go ahead and perform shows with the robot. This will enable us to actually go ahead and perform the experiments and research which is the whole purpose of the project.
 
 \subsection{Problems}
 
@@ -189,9 +202,9 @@ We hypothesize that generally interacting with the audience (a.k.a crowd-work) t
 Crowd-work should make the audience feel like they are a part of the show. This can be done in different ways - calling out and talking to the audience, watching the audience and incorporating them into the jokes, and asking them questions to keep them engaged, or to build off to make new jokes.
 
 \subsubsection{Methods}
-There are various kinds of crowd-work we want to test: one research question is whether crowdwork matters at all, and the second is does the crowdwork needs to be real or robot can just pretend it is paying attention?
+There are various kinds of crowd-work we want to test: one research question is whether crowd-work matters at all, and the second is does the crowd-work needs to be real or robot can just pretend it is paying attention?
 
-To answer these questions we suggest three research conditions: (1) no crowdwork, (2) fake crowdwork, (3) real crowdwork. The first one would be no crowd-work whatsoever. The robot goes about performing its set and does not directly address the audience at all. The second could spanover-the-top and inaccurate crowd-work, or best-guess crowdwork, with the possibility of being real (e.g., predicting that most people in the audience were from Oregon, even if it didn't really hear what they said). The third case would integrate actual robot sensing. It would be important for conditions \#2 and \#3 to be parallel to assess whether crowdwork really matters.
+To answer these questions we suggest three research conditions: (1) no crowd-work, (2) fake crowd-work, (3) real crowd-work. The first one would be no crowd-work whatsoever. The robot goes about performing its set and does not directly address the audience at all. The second could spanover-the-top and inaccurate crowd-work, or best-guess crowdwork, with the possibility of being real (e.g., predicting that most people in the audience were from Oregon, even if it didn't really hear what they said). The third case would integrate actual robot sensing. It would be important for conditions \#2 and \#3 to be parallel to assess whether crowdwork really matters.
 
 As condition one is fairly obvious, let us discuss deeper possibilities for condition \#2. In the obviously fake research condition, the robot will talk to the audience directly but it will be completely wrong in its observation. The absurdity of a robot trying to understand the audience and being completely off could be entertaining for the audience, or it may not connect with the audience at all. The exact reception of this sort of crowd-work is something we are trying to study.
 
@@ -203,7 +216,7 @@ Another real sensing capability the robot could use is  audience volume levels a
 
 All of these conditions will be assessed with live audiences (even if its just a few people in a classroom) to check to what degree is crowd-work important for a robot comedian. The audience's response will be used to see if they enjoy a humanized robot or if they prefer a more robotic one, or maybe even a combination of both. As crowd work is just a form of human interaction, we expect it will improve the audience's perception of the robot's intelligence, add surprise to the show, and increase audience enjoyment levels. On the other hand, perhaps faking it can get 80\% of the effect of the real version. That will be part of the evaluation.
 
-\section{Arthur Shing}
+\section{Character (Arthur Shing)}
 \subsection{Goal}
 The goal of this section of the project is to examine whether or not robot comedy can benefit from having jokes delivered from a robot's perspective. Our hypotheses are that a robot presenting jokes about technology or being a robot will be funnier than a human telling the same jokes, and that robots will be less funny than humans at telling jokes from a human perspective.
 \subsection{Progress So Far}
