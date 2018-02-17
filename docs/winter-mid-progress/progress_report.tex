@@ -131,26 +131,29 @@ All of the above behaviors, from adaptation to the end of performance audience r
 \section{Anish Asrani}
 
 \subsection{Progress So Far}
-
-We have started to execute a number of jokes on the robot; from one-liners to story-telling with a punchline. We have also started to make use of various sensors on the robot. There is an audio tracker which makes the robot look in the direction where any sound is coming from. This can be used to make the robot feel more natural during the performance and make relevant comments when there is a sudden spike in volume levels. 
+I have started to understand how the sensors work a lot better. More specifically, there's sensors to track audio and for facial recognition. The robot can turn its head to whatever direction it can detect sound coming from. It can determine if there is a face in its view and it can differentiate the number of faces it can see at a given time. These aspects will be integrated into the performance to make appropriate comments when it detects faces in the audience. 
 
 \subsection{Left To Do}
 
-While we have managed to execute many jokes on the robot, we have to determine a solid script that connects all these jokes together. Once we do that, we can go ahead and perform shows with the robot. This will enable to us get relevant data from the audience and analyze it to answer our research questions. 
+While we have managed to execute many jokes on the robot and different sensor interactions, we have to determine a solid script that connects all the jokes and interactions together. The jokes interactions should feel fluid and not sudden. They should not break the flow of the performance. 
+
+Once we accomplish some of these things, we can go ahead and perform shows with the robot. This will enable us to actually go ahead and perform the experiments and surveys which is the whole purpose of the project.
 
 \subsection{Problems}
+
+One of the problems we have is that the sensors can be unpredictable at times. It can capture some ambient background noise and ignore the louder sounds which can lead to delays in triggering the relevant events on the robot. Sometimes, the sensors can lead to the ongoing animations to stop completely which can break the flow of the performance. We need to experiment more with how the sensors (like sound and face tracking) interact with the various animations and the robot joint keyframes in order to ensure that we can execute a successful performance without major interruptions on the robot. 
 
 \subsection{Experimental Design}
 
 The comedian system that is implemented will test three critical areas of a comedic performance corresponding to our research. The first question is about \textbf{adaptation} of a performance -- how the robot and interpret an audience response. The second question studies \textbf{crowd work} during a show, and the choices a Comedian can make to engage the audience. Lastly, the third considers the implications of a perceivable \textbf{character} that the robot can portray, in particular robotic versus humanlike.
 
-\subsubsection{Crowd-work}
-\subsubsubsection{Goals}
+%\subsubsection{Crowd-work}
+\subsubsection{Goals}
 
-Similar to the crowd report described above, we hypothesize that generally interacting with the audience (a.k.a crowd-work) throughout the performance, will improve the audience's overall enjoyment of the show. We want to analyze the importance of this crowd-work relating to the central design of the project. 
+We hypothesize that generally interacting with the audience (a.k.a crowd-work) throughout the performance, will improve the audience's overall enjoyment of the show. We want to analyze the importance of this crowd-work relating to the central design of the project. 
 Crowd-work should make the audience feel like they are a part of the show. This can be done in different ways - calling out and talking to the audience, watching the audience and incorporating them into the jokes, and asking them questions to keep them engaged, or to build off to make new jokes.
 
-\subsubsubsection{Methods}
+\subsubsection{Methods}
 There are various kinds of crowd-work we want to test: one research question is whether crowdwork matters at all, and the second is does the crowdwork needs to be real or robot can just pretend it is paying attention? 
 
 To answer these questions we suggest three research conditions: (1) no crowdwork, (2) fake crowdwork, (3) real crowdwork. The first one would be no crowd-work whatsoever. The robot goes about performing its set and does not directly address the audience at all. The second could spanover-the-top and inaccurate crowd-work, or best-guess crowdwork, with the possibility of being real (e.g., predicting that most people in the audience were from Oregon, even if it didn't really hear what they said). The third case would integrate actual robot sensing. It would be important for conditions \#2 and \#3 to be parallel to assess whether crowdwork really matters.
