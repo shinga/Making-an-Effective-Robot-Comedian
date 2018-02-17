@@ -480,16 +480,36 @@ class MyClass(GeneratedClass):
                             </Timeline>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Init State" id="1" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="290" y="430">
+                        <Box name="Init State" id="1" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="593" y="304">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
                                     <![CDATA[import Queue
 import cPickle as pickle
-from jokeObj import joke
+
 
 q = Queue.Queue()
 q.put("#") #Start symbol for Queue
+class joke(object):
+    def __init__(self,name,ID,referenceSpace,topic,human=False,CW=False):
+        self.qualities = {"name":name,
+                            "ID":ID,
+                            "referenceSpace":referenceSpace,
+                            "topic":topic,
+                            "human":human,
+                            "CW:":CW}
+        self.heuristics = []
+
+    def addHeuristic(self,string):
+        self.heuristics.append(string)
+
+
+    def getHeuristics(self):
+        return self.heuristics
+
+    def getQualities(self):
+        return self.qualities
+
 class MyClass(GeneratedClass):
     def __init__(self):
         GeneratedClass.__init__(self)
@@ -506,13 +526,27 @@ class MyClass(GeneratedClass):
     def onInput_onStart(self):
         #self.onStopped() #activate the output of the box
 
-        self.logger.info("Loading pickled jokes")
-        fd = open("funnyJokes.p","rb")
-        jokes = pickle.load(fd)
-        for j in jokes:
-            self.logger.info("Joke" + str(j.getQualities()) )
+        pList = []
+        #print "Running"
+        j = joke(name="DialUpHuman",ID="#0001",referenceSpace="Crowd",topic="Dating",human=True,CW=False)
+        j.addHeuristic("Testing")
+        pList.append(j)
+        #print j.getHeuristics()
 
-        fd.close()
+        j = joke(name="DialUpRobot",ID="#0002",referenceSpace="Shared",topic="Dating",human=True,CW=False)
+        pList.append(j)
+
+        j = joke(name="BreakALegRobot",ID="#0003",referenceSpace="Robot",topic="Jobs",human=True,CW=False)
+        pList.append(j)
+
+        j = joke(name="CarbonDatingRobot",ID="#0004",referenceSpace="Shared",topic="Dating",human=True,CW=False)
+        pList.append(j)
+
+
+        self.logger.info("Loading pickled jokes")
+        for thing in pList:
+            self.logger.info("Joke" + str(thing.getQualities()) )
+
         #pass
 
     def onInput_onStop(self):
@@ -597,41 +631,39 @@ class MyClass(GeneratedClass):
                             <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                             <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
                         </Box>
-                        <Box name="Get Attached File" id="8" localization="8" tooltip="Use this box to choose an attached file in its parameters. The filename will be sent on&#x0A;the output when the input is stimulated." x="85" y="402">
-                            <bitmap>media/images/box/folder.png</bitmap>
+                        <Box name="Start Behavior" id="7" localization="0" tooltip="Starts the behavior of the name given as input." x="239" y="483">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
                             <script language="4">
                                 <content>
                                     <![CDATA[class MyClass(GeneratedClass):
     def __init__(self):
-        GeneratedClass.__init__(self, False)
+        GeneratedClass.__init__(self)
+        pass
 
     def onLoad(self):
-        self.framemanager = ALProxy("ALFrameManager")
-
-    def onInput_onStart(self,p):
-        self.foldername = self.framemanager.getBehaviorPath(self.behaviorId) + self.getParameter("File name")
-        import sys
-        if self.foldername not in sys.path:
-            sys.path.insert(0,self.foldername)
-        self.onStopped()
+        #~ puts code for box initialization here
+        pass
 
     def onUnload(self):
-        import sys
-        if self.foldername in sys.path:
-            sys.path.remove(self.foldername)]]>
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_startBehavior(self, p):
+        bm = ALProxy("ALBehaviorManager")
+        bm.startBehavior(p)
+        self.onBehaviorStarted(p) #~ activate output of the box]]>
 </content>
                             </script>
                             <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                            <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the filepath on the output." id="2" />
-                            <Output name="onStopped" type="1" type_size="1" nature="2" inner="0" tooltip="The filepath of the selected resource file." id="3" />
-                            <Parameter name="File name" inherits_from_parent="1" content_type="4" value="/.." default_value="" tooltip="Name of the file which is going to be sent on the box output.&#x0A;&#x0A;Note: You can click on the folder icon to browse the project content or import&#x0A;new files to the project." id="4" />
+                            <Input name="startBehavior" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Output name="onBehaviorStarted" type="3" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished. Recalls the behavior name." id="3" />
+                            <Output name="onError" type="3" type_size="1" nature="1" inner="0" tooltip="Triggered if an error occurs at behavior start." id="4" />
                         </Box>
                         <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="4" />
                         <Link inputowner="3" indexofinput="2" outputowner="4" indexofoutput="5" />
                         <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="4" />
                         <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
-                        <Link inputowner="8" indexofinput="2" outputowner="0" indexofoutput="2" />
-                        <Link inputowner="1" indexofinput="2" outputowner="8" indexofoutput="3" />
+                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>

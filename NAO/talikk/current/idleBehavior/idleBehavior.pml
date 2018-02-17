@@ -16,7 +16,5 @@
         <File name="jokeObj" src="jokeObj.pyc" />
     </Resources>
     <Topics />
-    <IgnoredPaths>
-        <Path src="behavior_1/.behavior.xar.swp" />
-    </IgnoredPaths>
+    <IgnoredPaths />
 </Package>
