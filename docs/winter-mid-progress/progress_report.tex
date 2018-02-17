@@ -204,21 +204,50 @@ Another real sensing capability the robot could use is  audience volume levels a
 All of these conditions will be assessed with live audiences (even if its just a few people in a classroom) to check to what degree is crowd-work important for a robot comedian. The audience's response will be used to see if they enjoy a humanized robot or if they prefer a more robotic one, or maybe even a combination of both. As crowd work is just a form of human interaction, we expect it will improve the audience's perception of the robot's intelligence, add surprise to the show, and increase audience enjoyment levels. On the other hand, perhaps faking it can get 80\% of the effect of the real version. That will be part of the evaluation.
 
 \section{Arthur Shing}
-\subsection{Progress So Far}
-\subsection{Left To Do}
-\subsection{Experimental Design}
-\subsection{Character}
-\subsubsection{Goal}
+\subsection{Goal}
 The goal of this section of the project is to examine whether or not robot comedy can benefit from having jokes delivered from a robot's perspective. Our hypotheses are that a robot presenting jokes about technology or being a robot will be funnier than a human telling the same jokes, and that robots will be less funny than humans at telling jokes from a human perspective.
+\subsection{Progress So Far}
+So far, we have animated eight jokes. Of these eight animated jokes, three of them are working robot/human versions. This means we have five total unique jokes. In addition, we have three more written jokes that also have both human and robot versions, but have yet to be animated. Besides these, there are also roughly a dozen other jokes that our client has written for us and are in review. The animated jokes are mostly "romance" related jokes, an intentional choice on our part. With jokes under the same topic, it would be quicker for us to come out with a whole working set. As it stands, at this point in the term we have under half of a full working set with robot and human versions. In terms of scripting, a
+\subsection{Left To Do}
+By the end of the project, we aim to complete three full working sets, with each set having 7-10 jokes. We have decided along with our client that it may be more expedient to instead create romance-related/job-related/age-related versions of each joke, as coming up with \textit{good} jokes that can \textit{have} logical robot/human versions is difficult and time consuming. While this may cause us to end up with less interesting set variety, it will still be adequate for the purposes of our project. By the end of this term, we should have at least one full working set. An example of a joke that has romance/job/age and robot/human versions is as follows:
 
-In Jerry Palmer's \textit{Taking Humor Seriously}, comic meaning is argued to depend on the interrelated factors of a joke's context and setting, its delivery, the identity of the deliverer, and the audience \cite{Palmer:1993}.
-Of specific interest to us are the factors of a joke's delivery and the identity of the deliverer.
-In previous studies, robot comedy has been used to analyze effective aspects of joke delivery.
-However, little has been done in discovering effective aspects of a joke's content as it relates to the identity of the deliverer.
-For example, Sj\"{o}bergh and Araki \cite{RobotsMakeThings:2008} found that jokes were perceived as funnier when delivered by a robot, rather than being delivered in text form.
-However, Sj\"{o}bergh and Araki used word-play jokes that were gathered from the internet, and delivered them through a robot by using a flat, machine-like sounding text-to-speech tool called AquesTalk. This form of delivery does not take into account the importance of effective joke delivery. While Sj\"{o}bergh and Araki did not implement measures for analyzing non-verbal delivery, other work has examined the importance of non-verbal signals in delivering jokes \cite{KatevasRobot:2014} \cite{KnightEightLessons:2011}.
-Despite this, there is little to no existing literature on the effectiveness of jokes related to the identity of the deliverer.
-In our context, this means examining the effectiveness of robot-specific jokes in robot comedy.
+
+\begin{lstlisting}
+I actually went on a date with a modem last week.
+He was all -DIAL TONE, ACCOMPANIED WITH RAPID GESTURES.
+I know he was just trying to connect
+… but he’s definitely too old for me
+\end{lstlisting}
+
+\begin{lstlisting}
+I actually went on a date with this guy last week.
+He was all -BLAH BLAH WINE BLAH CHEESE BLAH. -
+I know he was just trying to connect
+… but he’s definitely too old for me.
+\end{lstlisting}
+
+
+
+Whereas, the robot version of the above joke is shown below:
+
+\begin{lstlisting}
+Hey, hey, I got news. This is big.
+Ok, quiet down. Get this.
+That's RIGHT folks.
+I'm no longer single. *throws hands up*
+(*@  \hl{I met a robot on tinder. }  @*)
+(*@  \hl{His name's Data.  He's a really geeky robot.}  @*)
+(*@  \hl{Swiped right as fast as my motors could turn.}  @*)
+\end{lstlisting}
+
+\subsection{Issues}
+The main issue we have encountered in the project is time consumption.
+Animating jokes is incredibly time consuming, with each joke requiring on average 3-4 hours of animating and debugging, with their corresponding robot/human versions requiring another 1-2 hours of work. To animate the robot, things such as balance, logic of movement, vocal delivery pitch/speed, and timing need to be taken into account. In addition to this, there are usually issues that pop up during animation, such as motors overheating or an inability to connect with the robot, which occurs quite frequently. Actual walking is also often a problem, as it sometimes falls down.
+Another issue we have encountered is our collective lack of comedic genius. This became clear at the beginning of the term, when we realized how hard it was to create good jokes, and how it was even harder to come up with good jokes that have logical robot/human versions. To combat this issue, our client has been gracious with us and given her own input on jokes that could be used.
+\subsection{Experimental Design}
+For this portion of the project, testing will be done on Amazon Mechanical Turk.
+First, each joke in a topical set (romance, jobs, or aging) will be created with a corresponding robot/human version.
+
 
 \subsubsection{Methods}
 To address this goal, jokes will be written from a human or robot perspective.
