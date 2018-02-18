@@ -224,7 +224,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>5</language>
+                                                                        <language>10</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -657,7 +657,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>5</language>
+                                                                        <language>10</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1293,7 +1293,7 @@ class MyClass(GeneratedClass):
                                                 </Timeline>
                                                 <Resource name="Speech" type="Lock" timeout="0" />
                                             </Box>
-                                            <Box name="Move To" id="10" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="372" y="133">
+                                            <Box name="Move To (1)" id="7" localization="8" tooltip="Make the robot move to a configured point relative to its current location." x="368" y="137">
                                                 <bitmap>media/images/box/movement/walk_forward.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -1325,6 +1325,7 @@ class MyClass(GeneratedClass):
         self.motion.moveTo(self.getParameter("Distance X (m)"),
             self.getParameter("Distance Y (m)"),
             self.getParameter("Theta (deg)") * almath.PI / 180)
+
         # The move is finished so output
         realEndPosition = almath.Pose2D(self.motion.getRobotPosition(False))
         positionError = realEndPosition.diff(expectedEndPosition)
@@ -1359,11 +1360,11 @@ class MyClass(GeneratedClass):
                                             <Link inputowner="14" indexofinput="2" outputowner="5" indexofoutput="4" />
                                             <Link inputowner="2" indexofinput="2" outputowner="14" indexofoutput="4" />
                                             <Link inputowner="9" indexofinput="2" outputowner="0" indexofoutput="1" />
-                                            <Link inputowner="10" indexofinput="3" outputowner="1" indexofoutput="3" />
-                                            <Link inputowner="10" indexofinput="3" outputowner="6" indexofoutput="3" />
-                                            <Link inputowner="3" indexofinput="2" outputowner="10" indexofoutput="4" />
-                                            <Link inputowner="10" indexofinput="2" outputowner="4" indexofoutput="3" />
-                                            <Link inputowner="3" indexofinput="2" outputowner="10" indexofoutput="5" />
+                                            <Link inputowner="7" indexofinput="2" outputowner="4" indexofoutput="3" />
+                                            <Link inputowner="7" indexofinput="3" outputowner="1" indexofoutput="3" />
+                                            <Link inputowner="7" indexofinput="3" outputowner="6" indexofoutput="3" />
+                                            <Link inputowner="3" indexofinput="2" outputowner="7" indexofoutput="4" />
+                                            <Link inputowner="3" indexofinput="2" outputowner="7" indexofoutput="5" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
@@ -1652,7 +1653,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>5</language>
+                                                                        <language>10</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />

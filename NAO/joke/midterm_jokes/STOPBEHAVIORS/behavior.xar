@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3">
+    <Box name="root" id="-1" localization="8" tooltip="Root box of Choregraphe&apos;s behavior. Highest level possible." x="0" y="0">
+        <bitmap>media/images/box/root.png</bitmap>
+        <script language="4">
+            <content>
+                <![CDATA[]]>
+</content>
+        </script>
+        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+        <Timeline enable="0">
+            <BehaviorLayer name="behavior_layer1">
+                <BehaviorKeyframe name="keyframe1" index="1">
+                    <Diagram>
+                        <Box name="Stop Behavior" id="10" localization="0" tooltip="Stops the behavior given as an argument." x="555" y="190">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class joke(object):
+    def __init__(self,name,ID,referenceSpace,topic,human=False,CW=False):
+        self.qualities = {"name":name,
+                            "ID":ID,
+                            "referenceSpace":referenceSpace,
+                            "topic":topic,
+                            "human":human,
+                            "CW:":CW}
+        self.heuristics = []
+
+    def addHeuristic(self,string):
+        self.heuristics.append(string)
+
+
+    def getHeuristics(self):
+        return self.heuristics
+
+    def getQualities(self):
+        return self.qualities
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        pass
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        pass
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_stopBehavior(self, p):
+        self.logger.info("Size of p:" + str(len(pList)))
+        bm = ALProxy("ALBehaviorManager")
+
+        self.logger.info("STARTING P")
+        p = pList[0].getQualities()["name"]
+        self.logger.info("PUT IN Q")
+        q.put(p)
+        self.logger.info("Loaded " + p)
+#        p = "dummy"
+        bm.stopBehavior(p)
+
+        pList.remove(pList[0])
+
+        self.onBehaviorStopped(p)]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="stopBehavior" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Output name="onBehaviorStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished. Recalls the behavior name." id="3" />
+                            <Output name="onError" type="3" type_size="1" nature="1" inner="0" tooltip="Triggered if an error occurs while stopping a behavior." id="4" />
+                        </Box>
+                        <Box name="Init State" id="1" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="459" y="48">
+                            <bitmap>media/images/box/box-python-script.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import Queue
+import cPickle as pickle
+
+
+pList = []
+
+q = Queue.Queue()
+#q.put("#") #Start symbol for Queue
+class joke(object):
+    def __init__(self,name,ID,referenceSpace,topic,human=False,CW=False):
+        self.qualities = {"name":name,
+                            "ID":ID,
+                            "referenceSpace":referenceSpace,
+                            "topic":topic,
+                            "human":human,
+                            "CW:":CW}
+        self.heuristics = []
+
+    def addHeuristic(self,string):
+        self.heuristics.append(string)
+
+
+    def getHeuristics(self):
+        return self.heuristics
+
+    def getQualities(self):
+        return self.qualities
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+#        self.onStopped() #activate the output of the box
+
+        #print "Running"
+        j = joke(name="DialUpHuman",ID="#0001",referenceSpace="Crowd",topic="Dating",human=True,CW=False)
+        j.addHeuristic("Testing")
+        pList.append(j)
+        #print j.getHeuristics()
+
+        j = joke(name="DialUpRobot",ID="#0002",referenceSpace="Shared",topic="Dating",human=False,CW=False)
+        pList.append(j)
+
+        j = joke(name="BreakALegRobot",ID="#0003",referenceSpace="Robot",topic="Jobs",human=False,CW=False)
+        pList.append(j)
+
+        j = joke(name="CarbonDatingRobot",ID="#0004",referenceSpace="Shared",topic="Dating",human=False,CW=False)
+        pList.append(j)
+
+        j = joke(name="CarbonDatingHuman",ID="#0005",referenceSpace="Shared",topic="Dating",human=True,CW=False)
+        pList.append(j)
+
+        j = joke(name="face_detect",ID="#0006",referenceSpace="Crowd",topic="Dating",human=False,CW=True)
+        pList.append(j)
+
+        self.logger.info("Loading pickled jokes")
+#        for thing in pList:
+#            self.logger.info("Joke" + str(thing.getQualities()) )
+        #pass
+
+        self.onStopped("no") #activate the output of the box
+
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped("no") #activate the output of the box]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                        </Box>
+                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="10" indexofinput="2" outputowner="1" indexofoutput="4" />
+                        <Link inputowner="1" indexofinput="2" outputowner="10" indexofoutput="3" />
+                        <Link inputowner="1" indexofinput="2" outputowner="10" indexofoutput="4" />
+                        <Link inputowner="0" indexofinput="4" outputowner="10" indexofoutput="3" />
+                    </Diagram>
+                </BehaviorKeyframe>
+            </BehaviorLayer>
+        </Timeline>
+    </Box>
+</ChoregrapheProject>
