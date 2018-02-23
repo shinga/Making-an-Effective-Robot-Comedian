@@ -19,6 +19,7 @@
         <BehaviorDescription name="behavior" src="JOB JOKES/DialUpRobotJob" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="HelpMeHuman" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="HelpMeRobot" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="SoundPeakTest" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
