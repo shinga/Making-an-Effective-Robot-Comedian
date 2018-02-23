@@ -15,6 +15,10 @@
         <BehaviorDescription name="behavior" src="adaptive_set" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="Close" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="STOPBEHAVIORS" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="JOB JOKES/DialUpHumanJob" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="JOB JOKES/DialUpRobotJob" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="HelpMeHuman" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="HelpMeRobot" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
