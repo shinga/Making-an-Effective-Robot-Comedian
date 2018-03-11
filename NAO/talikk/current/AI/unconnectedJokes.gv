@@ -1,14 +1,6 @@
 digraph "Unconnected Jokes" {
 	node [shape=circle]
-	oil
-	sandiwch
-	cereal
-	"Break a leg"
-	"Break a leg"
-	"Tinder Boyfriend"
-	"Tinder Robofriend"
-	Sandwich
-	"Carbon dating"
-	"Dial up boyfriend"
-	"Dial up boyfriend"
+	"Test 1"
+	"Test 2"
+	"Test 3"
 }

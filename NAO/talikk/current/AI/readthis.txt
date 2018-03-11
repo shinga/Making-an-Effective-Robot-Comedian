@@ -5,3 +5,15 @@ To view the graph (it has no edges), run main_ai.py
 You can enter jokes in from there.
 
 just to view what objects are in the pickle, run python test.py
+
+
+TO RUN THE FLASK SERVER:
+
+install all the necessary shit first.
+then in this directory, run:
+
+    FLASK_APP=test.py flask run
+
+then visit this site:
+
+    http://127.0.0.1:5000/
