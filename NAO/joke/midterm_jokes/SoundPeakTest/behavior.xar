@@ -28,7 +28,7 @@
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stops the recording of the sound." id="3" />
                             <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Returns the absolute path of the output sound file at the end of the recording" id="4" />
                             <Parameter name="File name" inherits_from_parent="0" content_type="3" value="recording" default_value="recording" custom_choice="0" tooltip="Name of the destination file without its extension." id="5" />
-                            <Parameter name="Microphones used" inherits_from_parent="0" content_type="3" value="Front, sides and rear head microphones (.wav)" default_value="Front, sides and rear head microphones (.wav)" custom_choice="0" tooltip="Microphones used to record the sound.&#x0A;&#x0A;Note: If you use only the front head microphone the file will be saved in ogg format. If you use the&#x0A;front, sides and rear head microphones it will be saved in wav format." id="6">
+                            <Parameter name="Microphones used" inherits_from_parent="0" content_type="3" value="Front head microphone only (.ogg)" default_value="Front, sides and rear head microphones (.wav)" custom_choice="0" tooltip="Microphones used to record the sound.&#x0A;&#x0A;Note: If you use only the front head microphone the file will be saved in ogg format. If you use the&#x0A;front, sides and rear head microphones it will be saved in wav format." id="6">
                                 <Choice value="Front head microphone only (.ogg)" />
                                 <Choice value="Front, sides and rear head microphones (.wav)" />
                             </Parameter>
