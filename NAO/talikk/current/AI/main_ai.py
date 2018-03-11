@@ -70,10 +70,8 @@ def getUserInput():
         return userWords
 
 if __name__=="__main__":
-    g = Digraph('Jokes',filename='jokeset.gv')
-
-    print "Here is where you can add jokes."
-    print "type 'q' to exit\n\n"
+    print "This is the script for adding jokes"
+    print "type 'q' to exit at any time" + " '*'*20"+ "\n\n"
 
     qList = []
     qList.append("Name of the joke?") #0
@@ -109,7 +107,7 @@ if __name__=="__main__":
 
 
 
-    #Done adding nodes, time to append these jokes to the joke graph
+    #appending these nodes to the list of jokes
     #filestring = time.strftime("%Y%m%d--%H:%M:%S") + ".p"
     filestring = "jokePickle.p"
 
@@ -119,11 +117,6 @@ if __name__=="__main__":
         pickle.dump(previousPickle,open(filestring,"wb"))
     else:
         pickle.dump(jokeObjs,open(filestring,"wb" ))
-
-
-    
-
-    #g.view()
 
     print "Here is the filename:"
     print filestring
