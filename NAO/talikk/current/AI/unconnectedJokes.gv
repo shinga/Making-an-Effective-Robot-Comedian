@@ -1,6 +1,19 @@
 digraph "Unconnected Jokes" {
 	node [shape=circle]
-	"Test 1"
-	"Test 2"
-	"Test 3"
+	"Break a Leg
+"
+	"Autonomous Car
+"
+	"Carbon Dating Human
+"
+	"Carbon Dating Robot
+"
+	"Tinder Human
+"
+	"Tinder Robot
+"
+	"Dial-Up Human
+"
+	"Dial-Up Robot
+"
 }

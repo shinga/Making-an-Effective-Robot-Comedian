@@ -20,6 +20,7 @@
         <BehaviorDescription name="behavior" src="HelpMeHuman" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="HelpMeRobot" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="SoundPeakTest" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="SpeechRecognition" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
@@ -28,5 +29,7 @@
         <File name="dialUptone" src="dialUptone.mp3" />
     </Resources>
     <Topics />
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src=".DS_Store" />
+    </IgnoredPaths>
 </Package>
