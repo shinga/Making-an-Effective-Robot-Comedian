@@ -3,6 +3,8 @@ import cPickle as pickle
 from main_ai import *
 from flask import Flask
 from flask_cors import CORS
+import time
+import random
 from main_ai import *
 app = Flask(__name__)
 CORS(app)
@@ -18,22 +20,38 @@ def helloWorld():
 if __name__=="__main__":
     g = Digraph('Unconnected Jokes', filename="unconnectedJokes.gv")
     g.attr('node',shape='circle')
-    #from main_ai import *
+    random.seed()
+
+
+    #this is the sim for getting audience input for jokes
+    done = False
+    setRespAvg = 0
+    jokesTold = 0
+    while not done: #loop for performance
+        counter=0
+        jokeRespAvg = 0
+        for x in xrange(0,random.randrange(6,12)): #Samples in a joke told
+            sample = random.randrange(0,32768) #simulated response from the microphones
+            counter = counter + 1
+            jokeRespAvg=(jokeRespAvg+sample)/counter
+
+
+        #Averages of the performance
+        jokesTold = jokesTold + 1
+        print "Here is the Avg Resp from a joke:", jokeRespAvg
+        print "Here is the Set Avg Resp:", setRespAvg
+        setRespAvg=(setRespAvg+jokeRespAvg)/jokesTold
+        
+        if jokesTold > 5:
+            done = True
+        
+    #prints the graph of all of the jokes
     temp = pickle.load(open("jokePickle.p","rb"))
     for joke in temp:
         g.node(joke[0]._getName())
         print "\nHere is a joke"
         joke[0]._printInfo()
-    '''
-    This is the range of the energy value: [0,32768]
-    Start of a joke, start sampling the energy of the microphones
-    When joke is finished, take the mean energy. If the newest sample is lower 
-    than the mean, the currrent joke heuristics are a failure, and the discount
-    factor is applied to the probability of global heuristics.
 
-    The sample is avg'd with the current shows average energy
-    After this computation, the robot needs to decide which joke to do. It computes the probability of success of each joke, and adds them to a priority queue
-    It pops the top joke off and performs it
-    '''
-    app.run()
     g.view()
+
+app.run()
