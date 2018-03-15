@@ -20,16 +20,17 @@
         <BehaviorDescription name="behavior" src="HelpMeHuman" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="HelpMeRobot" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="SoundPeakTest" xar="behavior.xar" />
-        <BehaviorDescription name="behavior" src="SpeechRecognition" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="CHARISMA_SHOW" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="HEATHERS_KNIGHTS" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="INTERLUDE_CHARISMA" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
         <File name="rimshot" src="rimshot.wav" />
         <File name="dial_up_internet_1" src="dial_up_internet_1.mp3" />
         <File name="dialUptone" src="dialUptone.mp3" />
+        <File name="swiftswords_ext" src="swiftswords_ext.mp3" />
     </Resources>
     <Topics />
-    <IgnoredPaths>
-        <Path src=".DS_Store" />
-    </IgnoredPaths>
+    <IgnoredPaths />
 </Package>

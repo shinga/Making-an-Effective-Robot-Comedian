@@ -627,7 +627,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1649,7 +1649,7 @@ class MyClass(GeneratedClass):
 
 		self.tts = ALProxy("ALTextToSpeech")
 		self.sentences = {
-			"Arabic" : " مرحبا ",
+			"Arabic" : "  ",
 			"Czech" : " Ahoj ",
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
@@ -1679,7 +1679,7 @@ class MyClass(GeneratedClass):
                                                 </script>
                                                 <pluginContent>
                                                     <arabic>
-                                                        <![CDATA[مرحبا]]>
+                                                        <![CDATA[]]>
 </arabic>
                                                     <czech>
                                                         <![CDATA[Ahoj]]>
@@ -1741,7 +1741,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1858,7 +1858,7 @@ class MyClass(GeneratedClass):
 
 		self.tts = ALProxy("ALTextToSpeech")
 		self.sentences = {
-			"Arabic" : " مرحبا ",
+			"Arabic" : "  ",
 			"Czech" : " Ahoj ",
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
@@ -1888,7 +1888,7 @@ class MyClass(GeneratedClass):
                                                 </script>
                                                 <pluginContent>
                                                     <arabic>
-                                                        <![CDATA[مرحبا]]>
+                                                        <![CDATA[]]>
 </arabic>
                                                     <czech>
                                                         <![CDATA[Ahoj]]>
@@ -1950,7 +1950,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2067,7 +2067,7 @@ class MyClass(GeneratedClass):
 
 		self.tts = ALProxy("ALTextToSpeech")
 		self.sentences = {
-			"Arabic" : " مرحبا ",
+			"Arabic" : "  ",
 			"Czech" : " Ahoj ",
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
@@ -2097,7 +2097,7 @@ class MyClass(GeneratedClass):
                                                 </script>
                                                 <pluginContent>
                                                     <arabic>
-                                                        <![CDATA[مرحبا]]>
+                                                        <![CDATA[]]>
 </arabic>
                                                     <czech>
                                                         <![CDATA[Ahoj]]>
@@ -2159,7 +2159,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2291,7 +2291,7 @@ class MyClass(GeneratedClass):
 
 		self.tts = ALProxy("ALTextToSpeech")
 		self.sentences = {
-			"Arabic" : " مرحبا ",
+			"Arabic" : "  ",
 			"Czech" : " Ahoj ",
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
@@ -2321,7 +2321,7 @@ class MyClass(GeneratedClass):
                                                                     </script>
                                                                     <pluginContent>
                                                                         <arabic>
-                                                                            <![CDATA[مرحبا]]>
+                                                                            <![CDATA[]]>
 </arabic>
                                                                         <czech>
                                                                             <![CDATA[Ahoj]]>
@@ -2383,7 +2383,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>5</language>
+                                                                        <language>6</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2942,7 +2942,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -3166,7 +3166,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>5</language>
+                                                                        <language>6</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />

@@ -82,7 +82,11 @@
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="SpeechRecognition">
+  <behaviorContent path="HEATHERS_KNIGHTS">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="INTERLUDE_CHARISMA">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>

@@ -122,7 +122,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " That\'s all folks. Good night! ",
+			"English" : " That\'s all folks. ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -162,7 +162,7 @@ class MyClass(GeneratedClass):
                                                         <![CDATA[]]>
 </greek>
                                                     <english>
-                                                        <![CDATA[That's all folks. Good night!]]>
+                                                        <![CDATA[That's all folks.]]>
 </english>
                                                     <spanish>
                                                         <![CDATA[Hola]]>
@@ -209,7 +209,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>6</language>
+                                                    <language>5</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
