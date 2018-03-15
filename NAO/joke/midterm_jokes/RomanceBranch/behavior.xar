@@ -65,7 +65,7 @@ class MyClass(GeneratedClass):
 
         #print "Running"
 
-        j = joke(name="CarbonDatingRobot",ID="#0015",referenceSpace="R    obot",topic="Jobs",human=False,CW=False)
+        j = joke(name="CarbonDatingRobot",ID="#0015",referenceSpace="R    obot",topic="Romance",human=False,CW=False)
         pList.append(j)
 
         j = joke(name="BreakALegRobot",ID="#0014",referenceSpace="Robot",topic="Jobs",human=False,CW=False)
@@ -345,7 +345,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>9</language>
+                                                    <language>10</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />

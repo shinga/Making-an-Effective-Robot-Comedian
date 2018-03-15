@@ -26,6 +26,7 @@
         <BehaviorDescription name="behavior" src="RomanceBranch" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="." xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="JobsBranch" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="branchChoice" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
