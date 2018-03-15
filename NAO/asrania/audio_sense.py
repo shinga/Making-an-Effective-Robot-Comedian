@@ -8,6 +8,7 @@ import qi
 import argparse
 import sys
 import time
+import datetime
 import numpy as np
 
 
@@ -53,12 +54,17 @@ class SoundProcessingModule(object):
         """
         self.framesCount = self.framesCount + 1
 
+        text_file = open("logs.txt", "a")
+
+
         if (self.framesCount <= self.nbOfFramesToProcess):
             # convert inputBuffer to signed integer as it is interpreted as a string by python
             self.micFront=self.convertStr2SignedInt(inputBuffer)
             #compute the rms level on front mic
             rmsMicFront = self.calcRMSLevel(self.micFront)
             print "rms level mic front = " + str(rmsMicFront)
+            text_file.write(datetime.datetime.now().strftime("%a, %d %B %Y %I:%M:%S") 
+                + " front mic level = " + str(rmsMicFront) + "\n")
         else :
             self.isProcessingDone=True
 
@@ -93,7 +99,7 @@ class SoundProcessingModule(object):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", type=str, default="192.168.0.102",
+    parser.add_argument("--ip", type=str, default="192.168.0.103",
                         help="Robot IP address. On robot or Local Naoqi: use '127.0.0.1'.")
     parser.add_argument("--port", type=int, default=9559,
                         help="Naoqi port number")
