@@ -23,6 +23,9 @@
         <BehaviorDescription name="behavior" src="CHARISMA_SHOW" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="HEATHERS_KNIGHTS" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="INTERLUDE_CHARISMA" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="RomanceBranch" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="." xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="JobsBranch" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
