@@ -1,0 +1,72 @@
+Break a Leg
+Aging
+x
+no
+Robot
+2
+None
+-----
+
+Autonomous Car
+Jobs
+x
+no
+Robot
+3
+None
+-----
+
+Carbon Dating Human
+romance
+x
+1
+human
+1
+None
+-----
+
+Carbon Dating Robot
+romance
+x
+1
+Robot
+1
+None
+-----
+
+Tinder Human
+romance
+x
+2
+Human
+2
+None
+-----
+
+Tinder Robot
+romance
+x
+2
+Robot
+2
+None
+-----
+
+Dial-Up Human
+romance
+x
+3
+Human
+2
+None
+-----
+
+Dial-Up Robot
+romance
+x
+3
+Robot
+2
+None
+-----
+
