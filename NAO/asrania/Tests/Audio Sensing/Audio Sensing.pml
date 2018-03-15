@@ -9,5 +9,7 @@
         <File name="qimsg" src="qimsg.py" />
     </Resources>
     <Topics />
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src="behavior_1/behavior 2.xar" />
+    </IgnoredPaths>
 </Package>

@@ -15,7 +15,7 @@
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
                     <Diagram>
-                        <Box name="StackOver Test" id="1" localization="8" tooltip="" x="176" y="340">
+                        <Box name="StackOver Test" id="1" localization="8" tooltip="" x="238" y="133">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
@@ -204,60 +204,6 @@ def main():
 
 if __name__ == "__main__":
     main()]]>
-</content>
-                            </script>
-                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
-                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
-                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
-                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
-                        </Box>
-                        <Box name="SoundLevels" id="2" localization="8" tooltip="" x="132" y="158">
-                            <bitmap>media/images/box/box-python-script.png</bitmap>
-                            <script language="4">
-                                <content>
-                                    <![CDATA[#https://community.ald.softbankrobotics.com/en/forum/get-audio-sound-6432
-import time
-from naoqi import ALProxy
-
-NAOip = ""
-NAOport = ""
-
-audioFile = "/home/nao/recording.wav"
-recorder = ALProxy("ALAudioRecorder", NAOip, NAOport)
-audioClient = recorder.subscribe(self.getName())
-
-class MyClass(GeneratedClass):
-    def __init__(self):
-        GeneratedClass.__init__(self)
-
-    def onLoad(self):
-        #put initialization code here
-        pass
-
-    def onUnload(self):
-        #put clean-up code here
-        pass
-
-    def onInput_onStart(self):
-        #self.onStopped() #activate the output of the box
-
-        recorder.enableEnergyComputation()
-
-        leftMic = recorder.getLeftMicEnergy()
-        frontMic = recorder.getFrontMicEnergy()
-        rightMic = recorder.getRightMicEnergy()
-
-#        recorder.startMicrophonesRecording(audioFile, "wav", 48000, (0, 0, 1, 0))
-#        time.sleep(2)
-#        recorder.stopMicrophonesRecording()
-
-        return leftMic, frontMic, rightMic
-
-        pass
-
-    def onInput_onStop(self):
-        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
-        self.onStopped() #activate the output of the box]]>
 </content>
                             </script>
                             <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
