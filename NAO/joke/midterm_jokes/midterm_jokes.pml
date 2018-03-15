@@ -27,6 +27,7 @@
         <BehaviorDescription name="behavior" src="." xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="JobsBranch" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="branchChoice" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="SoundDetect" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
@@ -36,5 +37,9 @@
         <File name="swiftswords_ext" src="swiftswords_ext.mp3" />
     </Resources>
     <Topics />
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src=".DS_Store" />
+        <Path src="SpeechRecognition/behavior.xar" />
+        <Path src="SpeechRecognition" />
+    </IgnoredPaths>
 </Package>
