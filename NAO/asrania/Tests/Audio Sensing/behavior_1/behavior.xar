@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3">
+    <Box name="root" id="-1" localization="8" tooltip="Root box of Choregraphe&apos;s behavior. Highest level possible." x="0" y="0">
+        <bitmap>media/images/box/root.png</bitmap>
+        <script language="4">
+            <content>
+                <![CDATA[]]>
+</content>
+        </script>
+        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+        <Timeline enable="0">
+            <BehaviorLayer name="behavior_layer1">
+                <BehaviorKeyframe name="keyframe1" index="1">
+                    <Diagram>
+                        <Box name="New Test" id="3" localization="8" tooltip="" x="153" y="114">
+                            <bitmap>media/images/box/box-python-script.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import qi
+import argparse
+import sys
+import time
+import numpy as np
+
+class MyClass(object):
+    def __init__(self, app):
+#        GeneratedClass.__init__(self)
+        super(MyClass, self).__init__()
+        app.start()
+        session = app.session
+
+        # Get the service ALAudioDevice.
+        self.audio_service = session.service("ALAudioDevice")
+        self.isProcessingDone = False
+        self.nbOfFramesToProcess = 20
+        self.framesCount=0
+        self.micFront = []
+        self.module_name = "MyClass "
+
+    def startProcessing(self):
+
+        # ask for the front microphone signal sampled at 16kHz
+        # if you want the 4 channels call setClientPreferences(self.module_name, 48000, 0, 0)
+        self.audio_service.setClientPreferences(self.module_name, 16000, 3, 0)
+        self.audio_service.subscribe(self.module_name)
+
+        while self.isProcessingDone == False:
+            time.sleep(1)
+
+        self.audio_service.unsubscribe(self.module_name)
+
+    def processRemote(self, nbOfChannels, nbOfSamplesByChannel, timeStamp, inputBuffer):
+
+        self.framesCount = self.framesCount + 1
+
+        if (self.framesCount <= self.nbOfFramesToProcess):
+            # convert inputBuffer to signed integer as it is interpreted as a string by python
+            self.micFront=self.convertStr2SignedInt(inputBuffer)
+            #compute the rms level on front mic
+            rmsMicFront = self.calcRMSLevel(self.micFront)
+            print "rms level mic front = " + str(rmsMicFront)
+        else :
+            self.isProcessingDone=True
+
+    def calcRMSLevel(self,data) :
+
+        rms = 20 * np.log10( np.sqrt( np.sum( np.power(data,2) / len(data)  )))
+        return rms
+
+    def convertStr2SignedInt(self, data) :
+
+        signedData=[]
+        ind=0;
+        for i in range (0,len(data)/2) :
+            signedData.append(data[ind]+data[ind+1]*256)
+            ind=ind+2
+
+        for i in range (0,len(signedData)) :
+            if signedData[i]>=32768 :
+                signedData[i]=signedData[i]-65536
+
+        for i in range (0,len(signedData)) :
+            signedData[i]=signedData[i]/32768.0
+
+        return signedData
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        #self.onStopped() #activate the output of the box
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--ip", type=str, default="192.168.0.102",
+                        help="Robot IP address. On robot or Local Naoqi: use '127.0.0.1'.")
+        parser.add_argument("--port", type=int, default=9559,
+                        help="Naoqi port number")
+
+        args = parser.parse_args()
+
+
+        MySoundProcessingModule = MyClass(app)
+        app.session.registerService("MyClass", MySoundProcessingModule)
+        MySoundProcessingModule.startProcessing()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                        </Box>
+                        <Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="2" />
+                    </Diagram>
+                </BehaviorKeyframe>
+            </BehaviorLayer>
+        </Timeline>
+    </Box>
+</ChoregrapheProject>
