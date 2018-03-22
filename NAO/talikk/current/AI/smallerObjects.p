@@ -18,7 +18,7 @@ p9
 aS'3\n'
 p10
 aa(lp11
-S'Carbon Dating Human\n'
+S'Carbon Dating human\n'
 p12
 aS'romance\n'
 p13
@@ -36,11 +36,11 @@ p19
 aS'1\n'
 p20
 aa(lp21
-S'Tinder Human\n'
+S'Tinder human\n'
 p22
 aS'romance\n'
 p23
-aS'Human\n'
+aS'human\n'
 p24
 aS'2\n'
 p25
@@ -54,11 +54,11 @@ p29
 aS'2\n'
 p30
 aa(lp31
-S'Dial-Up Human\n'
+S'Dial-Up human\n'
 p32
 aS'romance\n'
 p33
-aS'Human\n'
+aS'human\n'
 p34
 aS'2\n'
 p35

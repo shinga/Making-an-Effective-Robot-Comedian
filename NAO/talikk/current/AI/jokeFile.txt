@@ -16,7 +16,7 @@ Robot
 None
 -----
 
-Carbon Dating Human
+Carbon Dating human
 romance
 x
 1
@@ -34,11 +34,11 @@ Robot
 None
 -----
 
-Tinder Human
+Tinder human
 romance
 x
 2
-Human
+human
 2
 None
 -----
@@ -52,11 +52,11 @@ Robot
 None
 -----
 
-Dial-Up Human
+Dial-Up human
 romance
 x
 3
-Human
+human
 2
 None
 -----
