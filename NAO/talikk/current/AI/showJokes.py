@@ -88,7 +88,7 @@ class performance(object):
     def reportFailure(self,tempH):
 	for h in self.allH:
 	    if h.getType() in tempH:
-	    	print "HERE IS A FAILING HEURISTIC: ", h
+	    	#print "HERE IS A FAILING HEURISTIC: ", h
 	    	h.failSelf()
 	
 
