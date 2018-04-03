@@ -27,9 +27,12 @@
         <BehaviorDescription name="behavior" src="SoundPeakTest" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="STOPBEHAVIORS" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="testing" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="Pirate" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
-    <Resources />
+    <Resources>
+        <File name="jokes" src="jokes.txt" />
+    </Resources>
     <Topics />
     <IgnoredPaths>
         <Path src="dummy" />
