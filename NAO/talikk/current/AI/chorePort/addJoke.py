@@ -9,10 +9,16 @@ def getUserInput():
         return False
     else:
         return userWords
-
+def writeJokesToFile(jokeObjs, fileName ):
+    with open(fileName,"a") as fd:
+        for joke in jokeObjs:
+            fd.write("*"*20)
+            for heuristic in joke:
+                fd.write(str(heuristic) + "\n")
+    
 if __name__=="__main__":
     print "This is the script for adding jokes"
-    print "type 'q' to exit at any time" +'*'*20+ "\n\n"
+    print "type 'q' to exit at any time\n" + '*'*20+ "\n\n"
 
     qList = []
     qList.append("Name of the joke?") #0
@@ -25,9 +31,9 @@ if __name__=="__main__":
     while not done:
         #get responses for the questions in qList
         respList = []
+        print "\n"
         for question in qList:
             print question
-            print "\n"
             tempInput = getUserInput()
             if tempInput is 'no':
                 break
@@ -52,11 +58,10 @@ if __name__=="__main__":
     filestring = "jokeFile.txt"
 
     if os.path.exists(filestring):
-        previousPickle = pickle.load(open(filestring,"rb") )
-        previousPickle = jokeObjs + previousPickle
-        pickle.dump(previousPickle,open(filestring,"wb"))
+       writeJokesToFile(jokeObjs,filestring)
     else:
-        pickle.dump(jokeObjs,open(filestring,"wb" ))
+       print "File does not exist, creating" 
+       writeJokesToFile(jokeObjs,filestring)
 
     print "Here is the filename:"
     print filestring
