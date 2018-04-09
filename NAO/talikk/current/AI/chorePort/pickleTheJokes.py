@@ -10,12 +10,10 @@ for line in open("jokeFile.txt","r"):
         tmpObj.append(line)
     elif lineCounter is 2:
         tmpObj.append(line)
-    elif lineCounter is 5:
+    elif lineCounter is 3:
         tmpObj.append(line)
-    elif lineCounter is 6:
+    elif lineCounter is 4:
         tmpObj.append(line)
-    elif lineCounter is 9:
-        lst.append(tmpObj)
         tmpObj = []
         lineCounter = 0
 

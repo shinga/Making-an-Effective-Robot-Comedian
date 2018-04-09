@@ -1,14 +1,7 @@
-from graphviz import Digraph
 import cPickle as pickle
-from main_ai import *
-from flask import Flask, jsonify
-from flask_cors import CORS
 from sets import Set
 import time
 import random
-from main_ai import *
-app = Flask(__name__)
-CORS(app)
 
 MAX_VAL=2
 MIN_VAL=0
@@ -24,40 +17,14 @@ def _getSample():
     return random.randrange(MIN_VAL,MAX_VAL + 1)
 
 
-prior = 1 #initiliaze the pryor 
-jokesAndResponses = {}
+prior = 1 #initiliaze the richard 
+jokesAndResponses = {} #set of told jokes, and their response
 jokesTold = 0
 heuristics = Set()
 '''
-App Route Decorators for Flask interoperability
-'''
-
-@app.route("/")
-def helloWorld():
-    
-    return "Hello, World"
-
-@app.route("/pryor")
-def returnPriorValue():
-    return jsonify(pryor=prior)
-
-@app.route("/sampleValue")
-def returnTestSample():
-    return jsonify(minVal=0,maxVal=2,sample=_getSample())
-
-@app.route("/showPerformance")
-def returnShowPerformance():
-    if jokesTold == 0:
-	    return "No Current Performance Running!"
-    else:
-	    return jsonify(currentPerformance=jokesAndResponses)
-
-@app.route("/showHeuristics")
-def returnPerformanceHeuristics():
-    return jsonify(hSet=list(heuristics) )
-'''
 Main Function Here
 '''
+
 class heuristic(object):
     def __init__(self,t):
 	self.type = t
@@ -70,9 +37,7 @@ class heuristic(object):
 	    return self.type
 
     def failSelf(self):
-	    print "FUCK"
 	    self.fails = self.fails + 1
-	
 	    self.prob = self.prob/ (2**self.fails)
 
  
@@ -102,13 +67,13 @@ class performance(object):
 	
 
 if __name__=="__main__":
-    g = Digraph('Unconnected Jokes', filename="unconnectedJokes.gv")
-    g.attr('node',shape='circle')
     random.seed()
 
     #this is the sim for getting audience input for jokes
     allJokes = pickle.load(open("smallerObjects.p","rb"))
 
+    print "HEY THIS IS ALL OF OUR JOKES:"
+    print allJokes
     #create set for heuristics
     for joke in allJokes:
 	    heuristics.add(joke[1])
@@ -119,8 +84,6 @@ if __name__=="__main__":
     p = performance(heuristics)
     p.getInfo() 
     for joke in allJokes:
-
-
         #Current Joke Heuristics
         tempH = []
         tempH.append(joke[1])
@@ -130,8 +93,7 @@ if __name__=="__main__":
         #joke = [ Name,	Category, Version,  Length ]
         print "*"*20
         print "\n\nTELLING JOKE: ", joke[0]
-        print joke
-        g.node(joke[0])      
+        print joke 
 
         #Gets Reponse after telling a joke
         jokeResp = _getSample()
@@ -141,18 +103,17 @@ if __name__=="__main__":
         print "SIMULATED RESPONSE VAL: ", jokeResp       
         
         print "ROBOT RESPONSE:"
-        if jokeResp > prior:
-            print "Whoops, that joke didnt go well!"
+        if jokeResp < prior:
+            print "Whoops"
             binaryResponse = "BAD"
             p.reportFailure(tempH)
+            jokesAndResponses.update({joke[0]:binaryResponse})
+            p.getInfo()
         else:
-            print "The joke went well"
+            print "Good!"
             binaryResponse = "GOOD"
+            jokesAndResponses.update({joke[0]:binaryResponse})
+            p.getInfo()
 
-	    jokesAndResponses.update({joke[0]:binaryResponse})
-	    p.getInfo()
-
-    print "DONE WITH PERFORMANCE"
-    #prints the graph, and runs the flask server 
-    g.view()
-    app.run()
+print "DONE WITH PERFORMANCE"
+    

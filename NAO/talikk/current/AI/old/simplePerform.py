@@ -3,7 +3,15 @@ import cPickle as pickle
 import time
 import random
 from addJokes import *
+'''
 
+This is a depreciated and inactive file.
+
+This was a performing script, that had a weird
+idea for audience input. 
+
+Binary input works better than this
+'''
 class heuristic(object):
     def __init__(self,name=None):
         if name is not None:

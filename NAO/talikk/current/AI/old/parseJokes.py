@@ -4,7 +4,7 @@ import pickle
 lst = []
 lineCounter=0
 tmpObj=[]
-for line in open("tempParse.txt","r"):
+for line in open("jokesFile.txt","r"):
     lineCounter+=1
     if lineCounter is 1:
         tmpObj.append(line)
