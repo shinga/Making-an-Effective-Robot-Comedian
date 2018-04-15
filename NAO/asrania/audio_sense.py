@@ -4,7 +4,7 @@
 """Example: Get Signal from Front Microphone & Calculate its rms Power"""
 
 
-import qi
+import naoqi
 import argparse
 import sys
 import time
