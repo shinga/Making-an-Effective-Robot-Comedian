@@ -1,0 +1,15 @@
+
+
+heather wants a one single performance
+
+Bayesian Network on a TV, with basic input, (tv shows the jokes we have made)
+
+
+Adaptation is transitioning and dismounting the jokes, depending on how the crowd reacts.
+If people are laughing, they are paying attention = 1
+If they arent, dismount.
+
+
+TODO:
+Make the survey questions
++Smiley-o-meter
