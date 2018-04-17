@@ -7,7 +7,5 @@
     <Dialogs />
     <Resources />
     <Topics />
-    <IgnoredPaths>
-        <Path src=".DS_Store" />
-    </IgnoredPaths>
+    <IgnoredPaths />
 </Package>
