@@ -15,7 +15,7 @@
             <BehaviorLayer name="behavior_layer1">
                 <BehaviorKeyframe name="keyframe1" index="1">
                     <Diagram>
-                        <Box name="tried auto car" id="1" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="88" y="45">
+                        <Box name="tried auto car" id="1" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="98" y="10">
                             <bitmap>media/images/box/movement/move.png</bitmap>
                             <script language="4">
                                 <content>
@@ -59,7 +59,7 @@
                                                 <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
                                                 <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
                                                 <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="110" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
-                                                <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
+                                                <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="97" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
                                                 <Timeline enable="0">
                                                     <BehaviorLayer name="behavior_layer1">
                                                         <BehaviorKeyframe name="keyframe1" index="1">
@@ -138,7 +138,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " I recently tried being a driver for an autonomous car. \\\\mrk=11\\\\ \\\\pau=300\\\\ It did not, go, very well.\n ",
+			"English" : " I recently tried to drive for \\\\rspd=70\\\\ \\\\vct=110\\\\ \\\\mrk=11\\\\  Oober. \\\\rspd=100\\\\ \\\\vct=100\\\\\n\n\\\\pau=300\\\\ It did not go, very well.\n ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -178,7 +178,9 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[I recently tried being a driver for an autonomous car. \\mrk=11\\ \\pau=300\\ It did not, go, very well.
+                                                                            <![CDATA[I recently tried to drive for \\rspd=70\\ \\vct=110\\ \\mrk=11\\  Oober. \\rspd=100\\ \\vct=100\\
+
+\\pau=300\\ It did not go, very well.
 ]]>
 </english>
                                                                         <spanish>
@@ -582,12 +584,13 @@ class MyClass(GeneratedClass):
                                             <Link inputowner="4" indexofinput="2" outputowner="0" indexofoutput="4" />
                                             <Link inputowner="5" indexofinput="2" outputowner="4" indexofoutput="3" />
                                             <Link inputowner="3" indexofinput="3" outputowner="5" indexofoutput="4" />
+                                            <Link inputowner="2" indexofinput="3" outputowner="4" indexofoutput="3" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="Close" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="462" y="49">
+                        <Box name="Close" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="434" y="26">
                             <bitmap>media/images/box/movement/move.png</bitmap>
                             <script language="4">
                                 <content>
@@ -630,7 +633,7 @@ class MyClass(GeneratedClass):
                                                 <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
                                                 <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
                                                 <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
-                                                <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="107" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
+                                                <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="103" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
                                                 <Timeline enable="0">
                                                     <BehaviorLayer name="behavior_layer1">
                                                         <BehaviorKeyframe name="keyframe1" index="1">
@@ -709,7 +712,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " She did not even, say, \\\\vct=115\\\\thank you.\n ",
+			"English" : " She did not even say, \\\\vct=115\\\\thank you.\n ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -749,7 +752,7 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[She did not even, say, \\vct=115\\thank you.
+                                                                            <![CDATA[She did not even say, \\vct=115\\thank you.
 ]]>
 </english>
                                                                         <spanish>
@@ -927,7 +930,7 @@ class MyClass(GeneratedClass):
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="felt so bad" id="3" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="248" y="226">
+                        <Box name="felt so bad" id="3" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="220" y="203">
                             <bitmap>media/images/box/movement/move.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1049,7 +1052,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " I felt, so, bad. She landed on my hood, so, I decided to take her to where she wanted to go. ",
+			"English" : " I \\\\vct=130\\\\felt\\\\vct=100\\\\, so, bad. \\\\pau=600\\\\ She landed on my hood, so, I decided to take her to where she wanted to go. ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -1089,7 +1092,7 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[I felt, so, bad. She landed on my hood, so, I decided to take her to where she wanted to go.]]>
+                                                                            <![CDATA[I \\vct=130\\felt\\vct=100\\, so, bad. \\pau=600\\ She landed on my hood, so, I decided to take her to where she wanted to go.]]>
 </english>
                                                                         <spanish>
                                                                             <![CDATA[Hola]]>
@@ -1413,16 +1416,16 @@ class MyClass(GeneratedClass):
                                                 <Output name="signalsReceived" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when both inputs have been stimulated." id="4" />
                                             </Box>
                                             <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="1" />
-                                            <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="1" />
                                             <Link inputowner="3" indexofinput="2" outputowner="1" indexofoutput="4" />
                                             <Link inputowner="3" indexofinput="3" outputowner="2" indexofoutput="4" />
                                             <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="4" />
+                                            <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="1" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="hit old lady" id="4" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="245" y="49">
+                        <Box name="hit old lady" id="4" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="217" y="26">
                             <bitmap>media/images/box/movement/move.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1544,7 +1547,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " I hit, an old, woman, with my car.\n ",
+			"English" : " I \\\\vct=110\\\\  hit, an old woman, \\\\vct=100\\\\ with my car.\n ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -1584,7 +1587,7 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[I hit, an old, woman, with my car.
+                                                                            <![CDATA[I \\vct=110\\  hit, an old woman, \\vct=100\\ with my car.
 ]]>
 </english>
                                                                         <spanish>
@@ -1828,7 +1831,7 @@ class MyClass(GeneratedClass):
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="Go to position Stand" id="2" localization="8" tooltip="Robot will go to the position Stand&lt;br/&gt;Position description : Standing position with low power consumption. " x="641" y="90">
+                        <Box name="Go to position Stand" id="2" localization="8" tooltip="Robot will go to the position Stand&lt;br/&gt;Position description : Standing position with low power consumption. " x="613" y="67">
                             <bitmap>media/images/positions/Stand.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1875,12 +1878,12 @@ class MyClass(GeneratedClass):
                             <Resource name="All motors" type="Lock" timeout="0" />
                             <Resource name="Stiffness" type="Lock" timeout="0" />
                         </Box>
-                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="5" indexofinput="2" outputowner="3" indexofoutput="4" />
                         <Link inputowner="4" indexofinput="2" outputowner="1" indexofoutput="5" />
-                        <Link inputowner="3" indexofinput="2" outputowner="4" indexofoutput="4" />
                         <Link inputowner="2" indexofinput="2" outputowner="5" indexofoutput="4" />
                         <Link inputowner="0" indexofinput="4" outputowner="2" indexofoutput="4" />
+                        <Link inputowner="3" indexofinput="2" outputowner="4" indexofoutput="4" />
+                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>

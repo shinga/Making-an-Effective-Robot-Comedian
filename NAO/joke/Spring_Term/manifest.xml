@@ -10,7 +10,11 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path="PirateRobot">
+  <behaviorContent path="JOBS/DrivingHuman">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="JOBS/BreakALegHuman">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
