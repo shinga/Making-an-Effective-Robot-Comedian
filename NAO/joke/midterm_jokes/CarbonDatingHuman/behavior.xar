@@ -300,7 +300,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>9</language>
+                                                                        <language>8</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -727,7 +727,7 @@ class MyClass(GeneratedClass):
                                                 <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                                                 <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently delaying at least one signal and cancelled, output will be stimulated." id="6" />
                                             </Box>
-                                            <Box name="Say" id="9" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="175" y="4">
+                                            <Box name="Say" id="9" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="283" y="11">
                                                 <bitmap>media/images/box/interaction/say.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -921,7 +921,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>5</language>
+                                                                        <language>7</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -936,7 +936,7 @@ class MyClass(GeneratedClass):
                                                 </Timeline>
                                                 <Resource name="Speech" type="Lock" timeout="0" />
                                             </Box>
-                                            <Box name="cane" id="11" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="308" y="78">
+                                            <Box name="cane" id="11" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="311" y="107">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -1449,7 +1449,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>9</language>
+                                                                        <language>8</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1880,7 +1880,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>5</language>
+                                                                        <language>8</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />

@@ -382,7 +382,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>6</language>
+                                                    <language>7</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -441,7 +441,7 @@ class MyClass(GeneratedClass):
                             <Output name="behaviorStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Sent when the given behavior is stopped." id="4" />
                             <Output name="behaviorNotInstalled" type="3" type_size="1" nature="1" inner="0" tooltip="Sent the behavior does not exist." id="5" />
                         </Box>
-                        <Box name="Tactile Head" id="9" localization="8" tooltip="Detect touch on head tactile sensor." x="212" y="395">
+                        <Box name="Tactile Head" id="9" localization="8" tooltip="Detect touch on head tactile sensor." x="156" y="382">
                             <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
                             <script language="4">
                                 <content>
@@ -885,7 +885,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>12</language>
+                                                    <language>13</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />

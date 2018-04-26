@@ -98,19 +98,7 @@
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="React">
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
   <behaviorContent path="dontCare">
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
-  <behaviorContent path="doingGood">
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
-  <behaviorContent path="dataPrivacy">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>

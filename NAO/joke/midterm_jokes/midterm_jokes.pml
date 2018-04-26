@@ -28,10 +28,8 @@
         <BehaviorDescription name="behavior" src="JobsBranch" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="branchChoice" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="SoundDetect" xar="behavior.xar" />
-        <BehaviorDescription name="behavior" src="React" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="dontCare" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="doingGood" xar="behavior.xar" />
-        <BehaviorDescription name="behavior" src="dataPrivacy" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources>
@@ -41,5 +39,13 @@
         <File name="swiftswords_ext" src="swiftswords_ext.mp3" />
     </Resources>
     <Topics />
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src=".DS_Store" />
+        <Path src="dataPrivacy" />
+        <Path src="SpeechRecognition/behavior.xar" />
+        <Path src="React/behavior.xar" />
+        <Path src="SpeechRecognition" />
+        <Path src="dataPrivacy/behavior.xar" />
+        <Path src="React" />
+    </IgnoredPaths>
 </Package>
