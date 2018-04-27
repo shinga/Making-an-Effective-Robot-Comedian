@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="spring-f0baa7">
+<package uuid="springterm-40e5b9">
  <names>
-  <name lang="en_US">Spring Term</name>
+  <name lang="en_US">SpringTerm</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>
@@ -10,11 +10,7 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path="JOBS/DrivingHuman">
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
-  <behaviorContent path="JOBS/BreakALegHuman">
+  <behaviorContent path="behavior_1">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
