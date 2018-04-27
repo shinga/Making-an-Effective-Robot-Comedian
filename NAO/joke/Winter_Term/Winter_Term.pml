@@ -35,6 +35,7 @@
     </Resources>
     <Topics />
     <IgnoredPaths>
+        <Path src=".DS_Store" />
         <Path src="dummy" />
         <Path src="dummy/behavior.xar" />
     </IgnoredPaths>
