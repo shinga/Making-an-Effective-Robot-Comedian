@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3">
+    <Box name="root" id="-1" localization="8" tooltip="Root box of Choregraphe&apos;s behavior. Highest level possible." x="0" y="0">
+        <bitmap>media/images/box/root.png</bitmap>
+        <script language="4">
+            <content>
+                <![CDATA[]]>
+</content>
+        </script>
+        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+        <Input name="ALTextToSpeech/CurrentWord" type="0" type_size="1" nature="4" stm_value_name="ALTextToSpeech/CurrentWord" inner="1" tooltip="ALTextToSpeech/CurrentWord desc" id="4" />
+        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
+        <Timeline enable="0">
+            <BehaviorLayer name="behavior_layer1">
+                <BehaviorKeyframe name="keyframe1" index="1">
+                    <Diagram>
+                        <Box name="Record Sound" id="1" localization="8" tooltip='Record a sound on the robot. You can choose to record only with one&#x0A;microphone (the front head microphone) in ogg format, or with four microphones&#x0A;(front, sides and rear head microphones) in wav format.&#x0A;&#x0A;If &quot;Temporary storage&quot; isn&apos;t checked, the output sound file is located in &quot;~/recordings/microphones/&lt;File name&gt;&quot;.&#x0A;Else, it is located in a temporary directory&#x0A;&#x0A;The onStopped output is stimulated at the end of the recording and contains the absolute path to the output sound file&#x0A;&#x0A;V1.1.0&#x0A;' x="240" y="118">
+                            <bitmap>media/images/box/interaction/rec_sound.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Launches the recording of the sound." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stops the recording of the sound." id="3" />
+                            <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Returns the absolute path of the output sound file at the end of the recording" id="4" />
+                            <Parameter name="File name" inherits_from_parent="0" content_type="3" value="recording" default_value="recording" custom_choice="0" tooltip="Name of the destination file without its extension." id="5" />
+                            <Parameter name="Microphones used" inherits_from_parent="0" content_type="3" value="Front head microphone only (.ogg)" default_value="Front, sides and rear head microphones (.wav)" custom_choice="0" tooltip="Microphones used to record the sound.&#x0A;&#x0A;Note: If you use only the front head microphone the file will be saved in ogg format. If you use the&#x0A;front, sides and rear head microphones it will be saved in wav format." id="6">
+                                <Choice value="Front head microphone only (.ogg)" />
+                                <Choice value="Front, sides and rear head microphones (.wav)" />
+                            </Parameter>
+                            <Parameter name="Temporary storage" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Choose if the file should be stored as a temporary file so it is removed as soon&#x0A;as the behavior is unloaded.&#x0A;&#x0A;When this option is disabled the file is stored in ~/recordings/microphones. You can&#x0A;then get it on your computer using the menu Connection/File transfer.&#x0A;&#x0A;When this option is enabled the file is stored in the temporary folder of the behavior." id="7" />
+                            <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="2" default_value="5" min="0.1" max="60" tooltip="Duration of the recording in seconds." id="8" />
+                            <Timeline enable="0">
+                                <BehaviorLayer name="behavior_layer1">
+                                    <BehaviorKeyframe name="keyframe1" index="1">
+                                        <Diagram>
+                                            <Box name="Rec. Sound File" id="4" localization="8" tooltip="Record a sound on the robot. You can choose to record only with one&#x0A;microphone (the front head microphone) in ogg format, or with four microphones&#x0A;(front, sides and rear head&#x0A;microphones) in wav format." x="562" y="100">
+                                                <bitmap>media/images/box/interaction/rec_sound.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        try:
+            self.ad = ALProxy("ALAudioDevice")
+        except Exception as e:
+            self.ad = None
+            self.logger.error(e)
+        self.filepath = ""
+
+    def onLoad(self):
+        self.bIsRecording = False
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+        if( self.bIsRecording ):
+            self.ad.stopMicrophonesRecording()
+            self.bIsRecording = False
+
+    def onInput_onStart(self, p):
+        if(self.bIsRunning):
+            return
+        self.bIsRunning = True
+        sExtension = self.toExtension( self.getParameter("Microphones used") )
+        self.filepath = p + sExtension
+        if self.ad:
+            self.ad.startMicrophonesRecording( self.filepath )
+            self.bIsRecording = True
+        else:
+            self.logger.warning("No sound recorded")
+
+    def onInput_onStop(self):
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped(self.filepath)
+
+    def toExtension(self, sMicrophones):
+        if( sMicrophones == "Front head microphone only (.ogg)" ):
+            return ".ogg"
+        else:
+            return ".wav"]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Launches the recording of the sound. The data received on this input must be the&#x0A;filename of the sound." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stops the recording of the sound." id="3" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Returns the absolute path of the output sound file at the end of the recording" id="4" />
+                                                <Parameter name="Microphones used" inherits_from_parent="1" content_type="3" value="Front, sides and rear head microphones (.wav)" default_value="Front, sides and rear head microphones (.wav)" custom_choice="0" tooltip="Microphones used to record the sound.&#x0A;&#x0A;Note: If you use only the front head microphone the file will be saved in ogg format. If you use the&#x0A;front, sides and rear head microphones it will be saved in wav format." id="5">
+                                                    <Choice value="Front head microphone only (.ogg)" />
+                                                    <Choice value="Front, sides and rear head microphones (.wav)" />
+                                                </Parameter>
+                                            </Box>
+                                            <Box name="Wait" id="13" localization="8" tooltip="Wait a moment before sending a bang on the output. The wait can be stopped any&#x0A;time. You may restart it any time, and it will start over." x="420" y="161">
+                                                <bitmap>media/images/box/wait.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.waiting = None
+
+    def onUnload(self):
+        self.cancelWaiting()
+
+    def triggerOutput(self):
+        self.timerOutput()
+
+    def cancelWaiting(self):
+        if self.waiting:
+            self.waiting.cancel()
+        self.waiting = None
+
+    def onInput_onStart(self):
+        self.cancelWaiting()
+        import qi
+        self.waiting = qi.async(self.triggerOutput, delay=int(self.getParameter("Timeout (s)") * 1000 * 1000))
+
+    def onInput_onStop(self):
+        if self.getParameter("Trigger timerOutput if cancelled") and self.waiting and self.waiting.isRunning():
+            self.timerOutput()
+        self.onUnload()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" />
+                                                <Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is ellapsed, or if the box is stopped." id="4" />
+                                                <Parameter name="Timeout (s)" inherits_from_parent="1" content_type="2" value="5" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
+                                            </Box>
+                                            <Box name="Get File Name" id="10" localization="8" tooltip="Use this box to choose an attached file in its parameters. The filename will be sent on&#x0A;the output when the input is stimulated." x="234" y="95">
+                                                <bitmap>media/images/box/folder.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[import os
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.framemanager = ALProxy("ALFrameManager")
+
+    def onInput_onStart(self):
+        if( self.getParameter("Temporary storage") ):
+            import tempfile
+            path = tempfile.mkdtemp() + "/"
+        else:
+            path = os.path.expanduser('~') + "/recordings/microphones/"
+        self.onStopped( path + self.getParameter("File name") )]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the filepath on the output." id="2" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="2" inner="0" tooltip="The filepath of the selected resource file." id="3" />
+                                                <Parameter name="File name" inherits_from_parent="1" content_type="3" value="recording" default_value="" custom_choice="0" tooltip="Name of the file." id="4" />
+                                                <Parameter name="Temporary storage" inherits_from_parent="1" content_type="0" value="1" default_value="1" tooltip="Choose if the file should be stored as a temporary file so it is removed as soon&#x0A;as the behavior is unloaded.&#x0A;&#x0A;When this option is enabled the file is stored in ~/.cache/currentChoregrapheBehavior&#x0A;or in ~/.cache/&lt;project_name&gt; when you play the behavior from the&#x0A;behavior manager.&#x0A;&#x0A;When it is disabled the file is stored in ~/recordedSounds. You can&#x0A;then get it on your computer using the menu Connection/File transfer." id="5" />
+                                            </Box>
+                                            <Link inputowner="0" indexofinput="4" outputowner="4" indexofoutput="4" />
+                                            <Link inputowner="4" indexofinput="3" outputowner="13" indexofoutput="4" />
+                                            <Link inputowner="10" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                            <Link inputowner="13" indexofinput="2" outputowner="10" indexofoutput="3" />
+                                            <Link inputowner="4" indexofinput="2" outputowner="10" indexofoutput="3" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                </BehaviorLayer>
+                            </Timeline>
+                            <Resource name="Audio recorder" type="Lock" timeout="0" />
+                        </Box>
+                        <Box name="Say" id="2" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="75" y="28">
+                            <bitmap>media/images/box/interaction/say.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+
+    def onInput_onStop(self):
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped()]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
+                            <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
+                            <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
+                            <Timeline enable="0">
+                                <BehaviorLayer name="behavior_layer1">
+                                    <BehaviorKeyframe name="keyframe1" index="1">
+                                        <Diagram>
+                                            <Box name="Say Text" id="2" localization="8" tooltip="Say the text received on its input." x="422" y="65">
+                                                <bitmap>media/images/box/interaction/say.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.tts = ALProxy('ALTextToSpeech')
+        self.ttsStop = ALProxy('ALTextToSpeech', True) #Create another proxy as wait is blocking if audioout is remote
+
+    def onLoad(self):
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.post.say(str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id, 0)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                                                <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+                                                <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+                                            </Box>
+                                            <Box name="Localized Text" id="5" localization="8" tooltip="Send on the output the text associated with the robot&apos;s current voice language.&#x0A;You can display and edit the text associated with any language by&#x0A;selecting the language in the combobox.&#x0A;&#x0A;!!Warning!! The text sent on the output is NOT the displayed one but the one&#x0A;associated with the robot&apos;s current voice language." plugin="localizationbox_plugin" x="114" y="68">
+                                                <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		try: # disable autoBind
+			GeneratedClass.__init__(self, False)
+		except TypeError: # if NAOqi < 1.14
+			GeneratedClass.__init__( self )
+
+		self.tts = ALProxy("ALTextToSpeech")
+		self.sentences = {
+			"Arabic" : "  ",
+			"Czech" : " Ahoj ",
+			"Danish" : " Hej ",
+			"German" : " Hallo ",
+			"Greek" : "  ",
+			"English" : " What\'s \\\\pau=15\\\\ your \\\\pau=15\\\\ name? ",
+			"Spanish" : " Hola ",
+			"Finnish" : " Hei ",
+			"French" : " Bonjour ",
+			"Italian" : " Ciao ",
+			"Japanese" : " こんにちは ",
+			"Korean" : " 안녕하세요 ",
+			"Dutch" : " Hallo ",
+			"Norwegian" : "  ",
+			"Polish" : " Cześć ",
+			"Brazilian" : " Olá ",
+			"Portuguese" : " Olá ",
+			"Russian" : " Привет ",
+			"Swedish" : " Hallå ",
+			"Turkish" : " Merhaba ",
+			"Chinese" : "  "
+		}
+
+	def onInput_onStart(self):
+		sDefaultLang = self.tts.getLanguage()
+		self.onStopped(self.sentences[sDefaultLang])]]>
+</content>
+                                                </script>
+                                                <pluginContent>
+                                                    <arabic>
+                                                        <![CDATA[]]>
+</arabic>
+                                                    <czech>
+                                                        <![CDATA[Ahoj]]>
+</czech>
+                                                    <danish>
+                                                        <![CDATA[Hej]]>
+</danish>
+                                                    <german>
+                                                        <![CDATA[Hallo]]>
+</german>
+                                                    <greek>
+                                                        <![CDATA[]]>
+</greek>
+                                                    <english>
+                                                        <![CDATA[What's \\pau=15\\ your \\pau=15\\ name?]]>
+</english>
+                                                    <spanish>
+                                                        <![CDATA[Hola]]>
+</spanish>
+                                                    <finnish>
+                                                        <![CDATA[Hei]]>
+</finnish>
+                                                    <french>
+                                                        <![CDATA[Bonjour]]>
+</french>
+                                                    <italian>
+                                                        <![CDATA[Ciao]]>
+</italian>
+                                                    <japanese>
+                                                        <![CDATA[こんにちは]]>
+</japanese>
+                                                    <korean>
+                                                        <![CDATA[안녕하세요]]>
+</korean>
+                                                    <dutch>
+                                                        <![CDATA[Hallo]]>
+</dutch>
+                                                    <norwegian>
+                                                        <![CDATA[]]>
+</norwegian>
+                                                    <polish>
+                                                        <![CDATA[Cześć]]>
+</polish>
+                                                    <brazilian>
+                                                        <![CDATA[Olá]]>
+</brazilian>
+                                                    <portuguese>
+                                                        <![CDATA[Olá]]>
+</portuguese>
+                                                    <russian>
+                                                        <![CDATA[Привет]]>
+</russian>
+                                                    <swedish>
+                                                        <![CDATA[Hallå]]>
+</swedish>
+                                                    <turkish>
+                                                        <![CDATA[Merhaba]]>
+</turkish>
+                                                    <chinese>
+                                                        <![CDATA[]]>
+</chinese>
+                                                    <language>6</language>
+                                                </pluginContent>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" />
+                                            </Box>
+                                            <Link inputowner="0" indexofinput="4" outputowner="2" indexofoutput="4" />
+                                            <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                            <Link inputowner="2" indexofinput="2" outputowner="5" indexofoutput="3" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                </BehaviorLayer>
+                            </Timeline>
+                            <Resource name="Speech" type="Lock" timeout="0" />
+                        </Box>
+                        <Box name="If" id="3" localization="8" tooltip="Test a condition and stimulate the then or else outputs depending on the boolean&#x0A;value of the condition.&#x0A;The condition can be set in parameters." x="94" y="219">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        pass
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_onData(self, p):
+        param = self.getParameter("Value to compare")
+        try:
+            p = float(p)
+            param = float(param)
+        except:
+            p = str(p)
+            param = str(param)
+        operator = self.getParameter("Condition operator")
+        if( operator == "<" ):
+            self.outputTrueOrFalse( p < param, p )
+        elif( operator == "< or =" ):
+            self.outputTrueOrFalse( p <= param, p )
+        elif( operator == "=" ):
+            self.outputTrueOrFalse( p == param, p )
+        elif( operator == "> or =" ):
+            self.outputTrueOrFalse( p >= param, p )
+        elif( operator == ">" ):
+            self.outputTrueOrFalse( p > param, p )
+        elif( operator == "≠" ):
+            self.outputTrueOrFalse( p != param, p )
+        else:
+            raise Exception( "Operator not known: " + str(operator) )
+
+    def outputTrueOrFalse(self, condition, p):
+        if( condition ):
+            self.output_then(p)
+        else:
+            self.output_else(p)]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onData" type="0" type_size="1" nature="1" inner="0" tooltip="The data to test." id="2" />
+                            <Output name="output_then" type="0" type_size="1" nature="2" inner="0" tooltip="Signal sent if the condition is true." id="3" />
+                            <Output name="output_else" type="0" type_size="1" nature="2" inner="0" tooltip="Signal sent if the condition is false." id="4" />
+                            <Parameter name="Condition operator" inherits_from_parent="0" content_type="3" value="=" default_value="≠" custom_choice="0" tooltip='Choose the condition operator.&#x0A;&#x0A;For example:&#x0A;If you choose &quot;&gt; or =&quot;, the condition will be: is the input is higher or equal&#x0A;than the parameter?' id="5">
+                                <Choice value="&lt;" />
+                                <Choice value="&lt; or =" />
+                                <Choice value="=" />
+                                <Choice value="&gt; or =" />
+                                <Choice value="&gt;" />
+                                <Choice value="≠" />
+                            </Parameter>
+                            <Parameter name="Value to compare" inherits_from_parent="0" content_type="3" value="you," default_value="0" custom_choice="0" tooltip="This is the value which is compared to the input value." id="6" />
+                        </Box>
+                        <Box name="Play Sound" id="4" localization="8" tooltip="Play a sound file. Select the file in parameters. The format of the file can be wav or ogg (on virtual robot) and also mp3 (on a real robot).&#x0A;&#x0A;Note: There can be some delay to play ogg or mp3 (on a robot) files. We advise you to use wav if&#x0A;you want a fast play of the file." x="563" y="152">
+                            <bitmap>media/images/box/interaction/play_music.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+
+    def onInput_onStop(self):
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped()]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                            <Input name="onStart" type="0" type_size="1" nature="2" inner="0" tooltip="Starts the music." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stops the music." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
+                            <Parameter name="File name" inherits_from_parent="0" content_type="4" value="recording" default_value="" tooltip="Name of the file you want to play.&#x0A;&#x0A;Note: You can click on the folder icon to browse the project content or import&#x0A;new files to the project." id="5" />
+                            <Parameter name="Begin position (s)" inherits_from_parent="0" content_type="2" value="0.3" default_value="0" min="0" max="600" tooltip="Position in seconds where the playing must start." id="6" />
+                            <Parameter name="Volume (%)" inherits_from_parent="0" content_type="1" value="72" default_value="100" min="0" max="100" tooltip="Volume the file is played with." id="7" />
+                            <Parameter name="Balance L/R" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-1" max="1" tooltip="Value which determines if the sound is played more on the robot&apos;s left or right.&#x0A;You can particularly set it to:&#x0A;- -1 to play only on the left loudspeaker.&#x0A;- 0 to play on both loudspeakers.&#x0A;- 1 to play only on the right loudspeaker." id="8" />
+                            <Parameter name="Play in loop" inherits_from_parent="0" content_type="0" value="0" default_value="0" tooltip="This parameter allows to play the file in loop. The playing will start each time at&#x0A;the beginning of the file." id="9" />
+                            <Timeline enable="0">
+                                <BehaviorLayer name="behavior_layer1">
+                                    <BehaviorKeyframe name="keyframe1" index="1">
+                                        <Diagram>
+                                            <Box name="Play Sound File" id="2" localization="8" tooltip="Play the sound." x="442" y="70">
+                                                <bitmap>media/images/box/interaction/play_music.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.player = ALProxy('ALAudioPlayer')
+        self.playerStop = ALProxy('ALAudioPlayer', True) #Create another proxy as wait is blocking if audioout is remote
+
+    def onLoad(self):
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.playerStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            if (self.getParameter("Play in loop")) :
+               id = self.player.post.playFileInLoop(p,self.getParameter("Volume (%)")/100.,self.getParameter("Balance L/R"))
+            else :
+               id = self.player.post.playFileFromPosition(p,self.getParameter("Begin position (s)"),self.getParameter("Volume (%)")/100.,self.getParameter("Balance L/R"))
+            self.ids.append(id)
+            self.player.wait(id, 0)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                                                <Parameter name="Begin position (s)" inherits_from_parent="1" content_type="2" value="0" default_value="0" min="0" max="600" tooltip="Position in seconds where the playing must start." id="5" />
+                                                <Parameter name="Volume (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="0" max="100" tooltip="Volume the file is played with." id="6" />
+                                                <Parameter name="Balance L/R" inherits_from_parent="1" content_type="2" value="0" default_value="0" min="-1" max="1" tooltip="Value which determines if the sound is played more on the robot&apos;s left or right.&#x0A;You can particularly set it to:&#x0A;- -1 to play only on the left loudspeaker.&#x0A;- 0 to play on both loudspeakers.&#x0A;- 1 to play only on the right loudspeaker." id="7" />
+                                                <Parameter name="Play in loop" inherits_from_parent="1" content_type="0" value="0" default_value="0" tooltip="This parameter allows to play the file in loop. The playing will start each time at&#x0A;the beginning of the file." id="8" />
+                                            </Box>
+                                            <Link inputowner="0" indexofinput="4" outputowner="2" indexofoutput="4" />
+                                            <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                </BehaviorLayer>
+                            </Timeline>
+                            <Resource name="Audio player" type="Lock" timeout="0" />
+                        </Box>
+                        <Box name="Say (1)" id="5" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="391" y="23">
+                            <bitmap>media/images/box/interaction/say.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def onInput_onStart(self):
+        self.bIsRunning = True
+
+    def onInput_onStop(self):
+        if( self.bIsRunning ):
+            self.onUnload()
+            self.onStopped()]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
+                            <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
+                            <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
+                            <Timeline enable="0">
+                                <BehaviorLayer name="behavior_layer1">
+                                    <BehaviorKeyframe name="keyframe1" index="1">
+                                        <Diagram>
+                                            <Box name="Say Text" id="2" localization="8" tooltip="Say the text received on its input." x="422" y="65">
+                                                <bitmap>media/images/box/interaction/say.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+        self.tts = ALProxy('ALTextToSpeech')
+        self.ttsStop = ALProxy('ALTextToSpeech', True) #Create another proxy as wait is blocking if audioout is remote
+
+    def onLoad(self):
+        self.bIsRunning = False
+        self.ids = []
+
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.post.say(str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id, 0)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                                                <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+                                                <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+                                            </Box>
+                                            <Box name="Localized Text" id="5" localization="8" tooltip="Send on the output the text associated with the robot&apos;s current voice language.&#x0A;You can display and edit the text associated with any language by&#x0A;selecting the language in the combobox.&#x0A;&#x0A;!!Warning!! The text sent on the output is NOT the displayed one but the one&#x0A;associated with the robot&apos;s current voice language." plugin="localizationbox_plugin" x="114" y="68">
+                                                <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		try: # disable autoBind
+			GeneratedClass.__init__(self, False)
+		except TypeError: # if NAOqi < 1.14
+			GeneratedClass.__init__( self )
+
+		self.tts = ALProxy("ALTextToSpeech")
+		self.sentences = {
+			"Arabic" : " مرحبا ",
+			"Czech" : " Ahoj ",
+			"Danish" : " Hej ",
+			"German" : " Hallo ",
+			"Greek" : "  ",
+			"English" : " Wow! Nice to meet you,  ",
+			"Spanish" : " Hola ",
+			"Finnish" : " Hei ",
+			"French" : " Bonjour ",
+			"Italian" : " Ciao ",
+			"Japanese" : " こんにちは ",
+			"Korean" : " 안녕하세요 ",
+			"Dutch" : " Hallo ",
+			"Norwegian" : "  ",
+			"Polish" : " Cześć ",
+			"Brazilian" : " Olá ",
+			"Portuguese" : " Olá ",
+			"Russian" : " Привет ",
+			"Swedish" : " Hallå ",
+			"Turkish" : " Merhaba ",
+			"Chinese" : "  "
+		}
+
+	def onInput_onStart(self):
+		sDefaultLang = self.tts.getLanguage()
+		self.onStopped(self.sentences[sDefaultLang])]]>
+</content>
+                                                </script>
+                                                <pluginContent>
+                                                    <arabic>
+                                                        <![CDATA[مرحبا]]>
+</arabic>
+                                                    <czech>
+                                                        <![CDATA[Ahoj]]>
+</czech>
+                                                    <danish>
+                                                        <![CDATA[Hej]]>
+</danish>
+                                                    <german>
+                                                        <![CDATA[Hallo]]>
+</german>
+                                                    <greek>
+                                                        <![CDATA[]]>
+</greek>
+                                                    <english>
+                                                        <![CDATA[Wow! Nice to meet you, ]]>
+</english>
+                                                    <spanish>
+                                                        <![CDATA[Hola]]>
+</spanish>
+                                                    <finnish>
+                                                        <![CDATA[Hei]]>
+</finnish>
+                                                    <french>
+                                                        <![CDATA[Bonjour]]>
+</french>
+                                                    <italian>
+                                                        <![CDATA[Ciao]]>
+</italian>
+                                                    <japanese>
+                                                        <![CDATA[こんにちは]]>
+</japanese>
+                                                    <korean>
+                                                        <![CDATA[안녕하세요]]>
+</korean>
+                                                    <dutch>
+                                                        <![CDATA[Hallo]]>
+</dutch>
+                                                    <norwegian>
+                                                        <![CDATA[]]>
+</norwegian>
+                                                    <polish>
+                                                        <![CDATA[Cześć]]>
+</polish>
+                                                    <brazilian>
+                                                        <![CDATA[Olá]]>
+</brazilian>
+                                                    <portuguese>
+                                                        <![CDATA[Olá]]>
+</portuguese>
+                                                    <russian>
+                                                        <![CDATA[Привет]]>
+</russian>
+                                                    <swedish>
+                                                        <![CDATA[Hallå]]>
+</swedish>
+                                                    <turkish>
+                                                        <![CDATA[Merhaba]]>
+</turkish>
+                                                    <chinese>
+                                                        <![CDATA[]]>
+</chinese>
+                                                    <language>5</language>
+                                                </pluginContent>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Data sent when asked." id="3" />
+                                            </Box>
+                                            <Link inputowner="0" indexofinput="4" outputowner="2" indexofoutput="4" />
+                                            <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                            <Link inputowner="2" indexofinput="2" outputowner="5" indexofoutput="3" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                </BehaviorLayer>
+                            </Timeline>
+                            <Resource name="Speech" type="Lock" timeout="0" />
+                        </Box>
+                        <Box name="Wait For Signals" id="7" localization="8" tooltip="Wait for both inputs to be stimulated before stimulating its output." x="401" y="168">
+                            <bitmap>media/images/box/wait.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.ok = [False]*2
+        self.filePath = "nopath"
+
+    def onUnload(self):
+        #puts code for box cleanup here
+        ""
+
+    def onStart(self, nInput, p="none"):
+        self.ok[nInput-1] = True
+        bOutput = True
+        if (nInput == 1):
+            self.filePath = p
+        for bOk in self.ok:
+            bOutput = bOutput and bOk
+        if( bOutput ):
+            self.ok = [False]*2
+            self.signalsReceived(self.filePath)
+
+    def onInput_signal1(self, p):
+        self.onStart(1, p)
+
+    def onInput_signal2(self):
+        self.onStart(2)]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                            <Input name="signal1" type="0" type_size="1" nature="1" inner="0" tooltip="First signal to wait." id="2" />
+                            <Input name="signal2" type="1" type_size="1" nature="1" inner="0" tooltip="Second signal to wait." id="3" />
+                            <Output name="signalsReceived" type="0" type_size="1" nature="2" inner="0" tooltip="Signal sent when both inputs have been stimulated." id="4" />
+                        </Box>
+                        <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="0" indexofinput="5" outputowner="4" indexofoutput="4" />
+                        <Link inputowner="5" indexofinput="2" outputowner="1" indexofoutput="4" />
+                        <Link inputowner="7" indexofinput="2" outputowner="1" indexofoutput="4" />
+                        <Link inputowner="4" indexofinput="2" outputowner="7" indexofoutput="4" />
+                        <Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="4" />
+                        <Link inputowner="1" indexofinput="2" outputowner="2" indexofoutput="4" />
+                        <Link inputowner="7" indexofinput="3" outputowner="3" indexofoutput="3" />
+                    </Diagram>
+                </BehaviorKeyframe>
+            </BehaviorLayer>
+        </Timeline>
+    </Box>
+</ChoregrapheProject>

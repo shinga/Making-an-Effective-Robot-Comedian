@@ -2,7 +2,6 @@
 <Package name="SpringTerm" format_version="4">
     <Manifest src="manifest.xml" />
     <BehaviorDescriptions>
-        <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="ADAPTIVE_SETS/adaptive_set_template" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="ADAPTIVE_SETS/human_set" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="ADAPTIVE_SETS/robot_set" xar="behavior.xar" />
@@ -22,6 +21,10 @@
         <BehaviorDescription name="behavior" src="ROMANCE/dialUpRobot" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="ROMANCE/tinderHuman" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="ROMANCE/tinderRobot" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="AGING/dialUpHuman" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="AGING/dialUpRobot" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="JOBS/dialUpRobot" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="shortRomance" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
     <Resources />
