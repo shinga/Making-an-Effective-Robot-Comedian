@@ -125,7 +125,7 @@
                             <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="The camera change is done." id="4" />
                             <Resource name="Camera setting" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="299" y="269">
+                        <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="392" y="227">
                             <bitmap>media/images/box/interaction/choice.png</bitmap>
                             <script language="4">
                                 <content>
@@ -362,7 +362,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -799,7 +799,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>6</language>
+                                                    <language>7</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -814,7 +814,7 @@ class MyClass(GeneratedClass):
                             </Timeline>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Say" id="9" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="395" y="433">
+                        <Box name="Say" id="9" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="328" y="376">
                             <bitmap>media/images/box/interaction/say.png</bitmap>
                             <script language="4">
                                 <content>
@@ -921,7 +921,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " You have been a great audience. ",
+			"English" : " Have you ever been on a date?  ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -961,7 +961,7 @@ class MyClass(GeneratedClass):
                                                         <![CDATA[]]>
 </greek>
                                                     <english>
-                                                        <![CDATA[You have been a great audience.]]>
+                                                        <![CDATA[Have you ever been on a date? ]]>
 </english>
                                                     <spanish>
                                                         <![CDATA[Hola]]>
@@ -1008,7 +1008,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1023,7 +1023,7 @@ class MyClass(GeneratedClass):
                             </Timeline>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Say (3)" id="11" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="713" y="402">
+                        <Box name="Say (3)" id="11" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="69" y="356">
                             <bitmap>media/images/box/interaction/say.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1217,7 +1217,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>8</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1232,6 +1232,38 @@ class MyClass(GeneratedClass):
                             </Timeline>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
+                        <Box name="launchBehavior" id="4" localization="8" tooltip="" x="740" y="164">
+                            <bitmap>media/images/box/box-python-script.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[from naoqi import ALProxy
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        managerProxy = ALProxy("ALBehaviorManager", "127.0.0.1", 9559)
+        managerProxy.runBehavior("DialUpRobot")
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                        </Box>
                         <Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="6" />
                         <Link inputowner="5" indexofinput="2" outputowner="2" indexofoutput="3" />
                         <Link inputowner="1" indexofinput="2" outputowner="3" indexofoutput="4" />
@@ -1240,7 +1272,6 @@ class MyClass(GeneratedClass):
                         <Link inputowner="7" indexofinput="2" outputowner="6" indexofoutput="4" />
                         <Link inputowner="3" indexofinput="2" outputowner="7" indexofoutput="5" />
                         <Link inputowner="9" indexofinput="2" outputowner="5" indexofoutput="4" />
-                        <Link inputowner="11" indexofinput="2" outputowner="9" indexofoutput="4" />
                         <Link inputowner="1" indexofinput="3" outputowner="2" indexofoutput="3" />
                         <Link inputowner="7" indexofinput="3" outputowner="2" indexofoutput="3" />
                     </Diagram>
