@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package uuid="springterm-40e5b9">
+<package uuid="makerfair-b5014e">
  <names>
-  <name lang="en_US">SpringTerm</name>
+  <name lang="en_US">MakerFair</name>
  </names>
  <supportedLanguages>
   <language>en_US</language>
@@ -10,27 +10,27 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path="AGING/dialUpHuman">
+  <behaviorContent path="makeherfair">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="AGING/dialUpRobot">
+  <behaviorContent path="HelpMeRobot">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="JOBS/dialUpRobot">
+  <behaviorContent path="HelpMeHuman">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="shortRomance">
+  <behaviorContent path="makeherfairer">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="CROWDWORK/interactRomance">
+  <behaviorContent path="whatUrName">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="CROWDWORK/threeButton">
+  <behaviorContent path="BreakALegRobot">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
