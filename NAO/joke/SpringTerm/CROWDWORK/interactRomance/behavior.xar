@@ -2349,7 +2349,7 @@ class MyClass(GeneratedClass):
                                 <BehaviorLayer name="behavior_layer1">
                                     <BehaviorKeyframe name="keyframe1" index="1">
                                         <Diagram>
-                                            <Box name="Face Detection" id="1" localization="8" tooltip="Detect people&apos;s face and return the number of detected faces.&#x0A;&#x0A;Note: Detect even faces that are not registered in the faces database (that&#x0A;you can teach him with the Learn Face box)." x="678" y="80">
+                                            <Box name="Face Detection" id="1" localization="8" tooltip="Detect people&apos;s face and return the number of detected faces.&#x0A;&#x0A;Note: Detect even faces that are not registered in the faces database (that&#x0A;you can teach him with the Learn Face box)." x="684" y="107">
                                                 <bitmap>media/images/box/interaction/face.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2428,7 +2428,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="Select Camera" id="3" localization="8" tooltip="Change the currently used camera." x="520" y="32">
+                                            <Box name="Select Camera" id="3" localization="8" tooltip="Change the currently used camera." x="584" y="21">
                                                 <bitmap>media/images/box/interaction/look.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2459,7 +2459,7 @@ class MyClass(GeneratedClass):
                                                 <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="The camera change is done." id="4" />
                                                 <Resource name="Camera setting" type="Lock" timeout="0" />
                                             </Box>
-                                            <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="139" y="346">
+                                            <Box name="Switch Case" id="2" localization="8" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." plugin="dispatcher_plugin" x="123" y="314">
                                                 <bitmap>media/images/box/interaction/choice.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2502,7 +2502,7 @@ class MyClass(GeneratedClass):
                                                 <Output name="output_1" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="4" />
                                                 <Output name="output_2" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="5" />
                                             </Box>
-                                            <Box name="Say" id="5" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="873" y="286">
+                                            <Box name="Say" id="5" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="909" y="252">
                                                 <bitmap>media/images/box/interaction/say.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2711,7 +2711,7 @@ class MyClass(GeneratedClass):
                                                 </Timeline>
                                                 <Resource name="Speech" type="Lock" timeout="0" />
                                             </Box>
-                                            <Box name="Sound Tracker" id="7" localization="-1" tooltip="This box makes the robot track a sound with different modes.&#x0A;&#x0A;V1.1.0" x="316" y="84">
+                                            <Box name="Sound Tracker" id="7" localization="-1" tooltip="This box makes the robot track a sound with different modes.&#x0A;&#x0A;V1.1.0" x="416" y="0">
                                                 <bitmap>media/images/box/interaction/target_sound.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2858,7 +2858,7 @@ class MyClass(GeneratedClass):
                                                 <Parameter name="Threshold to be sure of the location (%)" inherits_from_parent="0" content_type="1" value="50" default_value="50" min="1" max="100" tooltip="If a sound is localized with a threshold higher than this value, then the sound&#x0A;location will be sent on the output. Else, the robot will consider that the sound is not&#x0A;localized at the right location and he will not take it into account." id="9" />
                                                 <Parameter name="Distance (m)" inherits_from_parent="0" content_type="2" value="0.3" default_value="0.3" min="0.01" max="5" tooltip="Distance the robot will try to maintain from its target in move modes." id="10" />
                                                 <Parameter name="Threshold X (m)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="1" tooltip="Threshold above which the robot will move to track its target in move modes." id="11" />
-                                                <Parameter name="Sensitivity" inherits_from_parent="0" content_type="2" value="0.7" default_value="0.7" min="0.01" max="1" tooltip="Sensitivity to adjust the capacity of the robot to locate quiet sounds." id="12" />
+                                                <Parameter name="Sensitivity" inherits_from_parent="0" content_type="2" value="0.25" default_value="0.7" min="0.01" max="1" tooltip="Sensitivity to adjust the capacity of the robot to locate quiet sounds." id="12" />
                                             </Box>
                                             <Box name="Say (1)" id="6" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="118" y="69">
                                                 <bitmap>media/images/box/interaction/say.png</bitmap>
@@ -3069,7 +3069,7 @@ class MyClass(GeneratedClass):
                                                 </Timeline>
                                                 <Resource name="Speech" type="Lock" timeout="0" />
                                             </Box>
-                                            <Box name="Wait" id="18" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="589" y="383">
+                                            <Box name="Wait" id="18" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="625" y="349">
                                                 <bitmap>media/images/box/wait.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -3109,7 +3109,7 @@ class MyClass(GeneratedClass):
                                                 <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="2" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                                                 <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
                                             </Box>
-                                            <Box name="Tactile Head" id="4" localization="8" tooltip="Detect touch on head tactile sensor." x="531" y="618">
+                                            <Box name="Tactile Head" id="4" localization="8" tooltip="Detect touch on head tactile sensor." x="535" y="638">
                                                 <bitmap>media/images/box/sensors/tactileHead.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -3455,6 +3455,46 @@ class MyClass(GeneratedClass):
                                                 <Resource name="Left eye leds" type="Lock" timeout="0" />
                                                 <Resource name="Right eye leds" type="Lock" timeout="0" />
                                             </Box>
+                                            <Box name="Wait (1)" id="9" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="414" y="132">
+                                                <bitmap>media/images/box/wait.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.waiting = None
+
+    def onUnload(self):
+        self.cancelWaiting()
+
+    def triggerOutput(self):
+        self.timerOutput()
+
+    def cancelWaiting(self):
+        if self.waiting:
+            self.waiting.cancel()
+        self.waiting = None
+
+    def onInput_onStart(self):
+        self.cancelWaiting()
+        import qi
+        self.waiting = qi.async(self.triggerOutput, delay=int(self.getParameter("Timeout (s)") * 1000 * 1000))
+
+    def onInput_onStop(self):
+        if self.getParameter("Trigger timerOutput if cancelled") and self.waiting and self.waiting.isRunning():
+            self.timerOutput()
+        self.onUnload()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" />
+                                                <Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" />
+                                                <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
+                                                <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
+                                            </Box>
                                             <Link inputowner="1" indexofinput="2" outputowner="3" indexofoutput="4" />
                                             <Link inputowner="7" indexofinput="2" outputowner="6" indexofoutput="4" />
                                             <Link inputowner="1" indexofinput="3" outputowner="2" indexofoutput="3" />
@@ -3470,9 +3510,9 @@ class MyClass(GeneratedClass):
                                             <Link inputowner="0" indexofinput="4" outputowner="4" indexofoutput="9" />
                                             <Link inputowner="0" indexofinput="4" outputowner="4" indexofoutput="10" />
                                             <Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="6" />
-                                            <Link inputowner="3" indexofinput="2" outputowner="7" indexofoutput="6" />
-                                            <Link inputowner="3" indexofinput="2" outputowner="7" indexofoutput="5" />
                                             <Link inputowner="8" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                            <Link inputowner="9" indexofinput="2" outputowner="6" indexofoutput="4" />
+                                            <Link inputowner="3" indexofinput="2" outputowner="9" indexofoutput="4" />
                                         </Diagram>
                                     </BehaviorKeyframe>
                                 </BehaviorLayer>
@@ -5768,7 +5808,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " Thanks for your help, human. You can sit down. \\\\pau=1500\\\\ Are you ready for some comedy? \\\\pau=2000\\\\ Let\'s do this! Dating is hard \\\\pau=500\\\\ ",
+			"English" : " Thanks for your help, human. You can sit down. \\\\pau=1500\\\\ Are you ready for some comedy? \\\\pau=1500\\\\ Let\'s do this! \\\\pau=2000\\\\ Dating is hard \\\\pau=500\\\\ ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -5808,7 +5848,7 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[Thanks for your help, human. You can sit down. \\pau=1500\\ Are you ready for some comedy? \\pau=2000\\ Let's do this! Dating is hard \\pau=500\\]]>
+                                                                            <![CDATA[Thanks for your help, human. You can sit down. \\pau=1500\\ Are you ready for some comedy? \\pau=1500\\ Let's do this! \\pau=2000\\ Dating is hard \\pau=500\\]]>
 </english>
                                                                         <spanish>
                                                                             <![CDATA[Hola]]>
@@ -6017,7 +6057,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " You were supposed to be helping me! It is all good. You can sit down. \\\\pau=1500\\\\ Are you all ready for some comedy? \\\\pau=2000\\\\ Let\'s do this. \\\\pau=2000\\\\ Dating is hard \\\\pau=500\\\\ ",
+			"English" : " You were supposed to be helping me! It is all good. You can sit down. \\\\pau=1500\\\\ Are you all ready for some comedy? \\\\pau=1500\\\\ Let\'s do this. \\\\pau=2000\\\\ Dating is hard \\\\pau=500\\\\ ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -6057,7 +6097,7 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[You were supposed to be helping me! It is all good. You can sit down. \\pau=1500\\ Are you all ready for some comedy? \\pau=2000\\ Let's do this. \\pau=2000\\ Dating is hard \\pau=500\\]]>
+                                                                            <![CDATA[You were supposed to be helping me! It is all good. You can sit down. \\pau=1500\\ Are you all ready for some comedy? \\pau=1500\\ Let's do this. \\pau=2000\\ Dating is hard \\pau=500\\]]>
 </english>
                                                                         <spanish>
                                                                             <![CDATA[Hola]]>
