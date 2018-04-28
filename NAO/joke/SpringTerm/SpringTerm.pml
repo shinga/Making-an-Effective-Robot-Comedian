@@ -25,9 +25,13 @@
         <BehaviorDescription name="behavior" src="AGING/dialUpRobot" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="JOBS/dialUpRobot" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="shortRomance" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="CROWDWORK/interactRomance" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="CROWDWORK/threeButton" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs />
-    <Resources />
+    <Resources>
+        <File name="dialUptone" src="dialUptone.mp3" />
+    </Resources>
     <Topics />
     <IgnoredPaths />
 </Package>
