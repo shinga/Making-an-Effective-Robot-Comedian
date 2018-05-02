@@ -10,19 +10,7 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <behaviorContent path="AGING/dialUpHuman">
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
-  <behaviorContent path="AGING/dialUpRobot">
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
-  <behaviorContent path="JOBS/dialUpRobot">
-   <nature>interactive</nature>
-   <permissions/>
-  </behaviorContent>
-  <behaviorContent path="shortRomance">
+  <behaviorContent path="behavior_1">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
@@ -31,6 +19,34 @@
    <permissions/>
   </behaviorContent>
   <behaviorContent path="CROWDWORK/threeButton">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="MakerFair/BreakALegRobot">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="MakerFair/HelpMeHuman">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="MakerFair/HelpMeRobot">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="MakerFair/makeherfair">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="MakerFair/makeherfairer">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="MakerFair/whatUrName">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="runBehavior">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>

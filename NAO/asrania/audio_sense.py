@@ -4,7 +4,7 @@
 """Example: Get Signal from Front Microphone & Calculate its rms Power"""
 
 
-import naoqi
+import qi
 import argparse
 import sys
 import time
@@ -99,7 +99,7 @@ class SoundProcessingModule(object):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", type=str, default="192.168.0.103",
+    parser.add_argument("--ip", type=str, default="192.168.0.100",
                         help="Robot IP address. On robot or Local Naoqi: use '127.0.0.1'.")
     parser.add_argument("--port", type=int, default=9559,
                         help="Naoqi port number")
