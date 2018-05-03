@@ -7,21 +7,21 @@
 \geometry{textheight=9.5in, textwidth=7in}
 
 % 1. Fill in these details
-\def \CapstoneTeamName{		The Cleverly Named Team}
-\def \CapstoneTeamNumber{		777}
-\def \GroupMemberOne{			David Hume}
-\def \GroupMemberTwo{			Thomas Kuhn}
-\def \GroupMemberThree{			Karl Popper}
-\def \CapstoneProjectName{		Building a Robot Using Only Philosophy}
-\def \CapstoneSponsorCompany{	Cheap Robots, Inc}
-\def \CapstoneSponsorPerson{		Roger Bacon}
+\def \CapstoneTeamName{	Short Circut Comedy Club	}
+\def \CapstoneTeamNumber{		CS13}
+\def \GroupMemberOne{			Kevin Talik}
+\def \GroupMemberTwo{			Arthur Shing}
+\def \GroupMemberThree{			Anish Asrani}
+\def \CapstoneProjectName{		How to Build an Effective Robot Comedian}
+\def \CapstoneSponsorCompany{	Oregon State University}
+\def \CapstoneSponsorPerson{		Dr. Heather Knight}
 
 % 2. Uncomment the appropriate line below so that the document type works
-\def \DocType{		Problem Statement
+\def \DocType{		%Problem Statement
 				%Requirements Document
 				%Technology Review
 				%Design Document
-				%Progress Report
+				Progress Report
 				}
 			
 \newcommand{\NameSigPair}[1]{\par
@@ -51,24 +51,21 @@
             {\large Prepared for}\par
             \Huge \CapstoneSponsorCompany\par
             \vspace{5pt}
-            {\Large\NameSigPair{\CapstoneSponsorPerson}\par}
             {\large Prepared by }\par
             Group\CapstoneTeamNumber\par
             % 5. comment out the line below this one if you do not wish to name your team
             \CapstoneTeamName\par 
             \vspace{5pt}
-            {\Large
-                \NameSigPair{\GroupMemberOne}\par
-                \NameSigPair{\GroupMemberTwo}\par
-                \NameSigPair{\GroupMemberThree}\par
-            }
             \vspace{20pt}
         }
         \begin{abstract}
-        % 6. Fill in your abstract    
-        	This document is written using one sentence per line.
-        	This allows you to have sensible diffs when you use \LaTeX with version control, as well as giving a quick visual test to see if sentences are too short/long.
-        	If you have questions, ``The Not So Short Guide to LaTeX'' is a great resource (\url{https://tobi.oetiker.ch/lshort/lshort.pdf})
+  	     % 6. Fill in your abstract    
+			The purpose of this document is to outline the research papers that this team will create to conclude during Spring Term 2018. 
+			The three Members of the \textit{Short Circut Comedy Club} have spent their time during winter term perfomring research under Dr. Heather Knight at Oregon State University.
+			The focus of this project is to study the effect a robot comedian can have on a crowd of humans.
+			Kevin Talik's research has been spent understanding what a Comedian can do to "Adapt" to a performance. 
+			Arthur Shing has been studying the voice of the robot, and the difference between "Robot and Human" character.
+			One final aspect of Stand-Up Comedy that we studied "Crowd Work". Anish Asrani has spent most of his time developing spontaneous Crowd-Interactions during the set.
         \end{abstract}     
     \end{singlespace}
 \end{titlepage}
@@ -81,12 +78,18 @@
 \clearpage
 
 % 8. now you write!
-\section{The First Section}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Etiam elementum mi at magna imperdiet, sit amet feugiat ligula maximus. 
-Ut ultrices viverra est, ac condimentum massa scelerisque tincidunt. 
-Mauris lacus nunc, suscipit at risus sit amet, viverra bibendum dui. 
-Maecenas eu urna et lorem dapibus tincidunt quis sit amet neque. 
-Vivamus ac felis fermentum, blandit mauris in, posuere libero. 
+\section{Overview}
+This paper will have three separate sections written by each respective member of the \textit{Short Circut Comedy Club}. 
+Each section will be prefaced with a summary of the work that has been done during the first five weeks of Spring Term.
+Our largest problem that has been impeding our progress is Audience Sensing. 
+We had intended to use only microphones for the sensing, however after testing, we realized that the background sound of a room can vary so much that using the microphone is unreliable.
+Since we had reached our 1.0 requirements for our software, we have been investigating how to make our performance \textit{Coherent}. Kevin Talik has sinched down his "Mechanical Engineering hat" and started developing controllers for the crowd to interface with the show.
+Arthur Shing has spent a heavy amount of time writing parallel jokes between topics to test research categories. We hope that another team will be able to pick up our work after we leave this term, and we need to be able to have many of variants of our jokes to test the delivery of different jokes across different "topics".
+
+Another large problem with our performance is \textit{Coherence}. If people cannot hear, or understand what the robot is trying to do, the audience often misses the punch of the joke.
+This makes setting up a premise of a joke fail, leaving the human in a state of confusion. The jokes we have written are clean, simple, and stupid. If a human misses one sentence of the currently running behavior, the joke fails.
+Anish Asrani has been working on transitioning in between jokes, and getting the audience interacting with the robot before the bot starts telling a joke.
+
+Concluding this document will be a section expanding the tasks that need to be done before the Expo. We ideally have more time to write our research papers after the big event, and will be spending our time perfecting our performance before showing humans.
 
 \end{document}
