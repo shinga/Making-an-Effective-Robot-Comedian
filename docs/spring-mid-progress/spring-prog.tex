@@ -98,7 +98,7 @@ Anish Asrani has been working on transitioning in between jokes, and getting the
 
 Concluding this document will be a section expanding the tasks that need to be done before the Expo. We ideally have more time to write our research papers after the big event, and will be spending our time perfecting our performance before showing humans the system.
 
-\section{Adpation}
+\section{Adapation}
 \subsection{Summary of Work Done}
  This section is written by Kevin Talik. I have been developing controllers and working closely with our TA, Behnam Saeedi. Additionally, I have been working meticulously with my team to make our systems work together. Similar to physical systems, virtual systems need to be able to be comprehensible to one human in order to make the system "human-readable".
 
@@ -131,6 +131,9 @@ In situations where the robot does not hear what the audience says or does not g
 
 One of the scripts that I tested a lot during the Corvallis Maker Fair involved asking the audience questions about a specific topic, make a few comments about it, and then phase into a joke about that specific topic (e.g. dating as a topic in this case). People seemed to enjoy that since it did not abruptly throw a random topic at them, it made them think about it which helped make the joke relatable. 
 
+\subsection{Left To Do}
+All of the functionality and systems on the robot are already in place. It's just a matter of mixing and matching various behaviors to figure out the optimal set when demoing to people at the Expo. Apart from that, we need to optimize the controller functionality to properly communicate with the robot. We will also use the observations of people's reactions from the events we attended (including Expo) as preliminary results for the research paper. 
+
 \subsection{Problems}
 The volume levels on the robot is one major issue. People need to really focus on the robot's audio to understand it sometimes as well as the robot looking for audio input. This became very evident during Corvallis Maker Fair when it was fairly loud all around. So in situations where we anticipate loud noises (e.g. Atrium area during Expo), keeping the robot's dialog simple and focusing more on animation and movement would be the right idea. However, this would only affect about half of our time during the Expo since we will have a classroom where we can have shows in a quieter environment. 
 
@@ -143,7 +146,7 @@ The volume levels on the robot is one major issue. People need to really focus o
 
 One issue that came up during HWeekend was that the face detection freaked out when there were multiple faces and sounds from the audience. I added some conditions for number of faces (as well as the timer system mentioned earlier) that fixed the issue and it worked successfully during Corvallis Maker Fair. Fixing issues like is where exposure to real audience really helped.
 
-In situations like Maker Fair where it was \textit{fair}ly loud, I had to improvise and I decided to use the Choregraphe emulator as a backup. I put my laptop screen with the emulator shown in Fig 2 behind the robot, so people could read it as they go. This seemed to help a lot. While it is not perfect and can distract people away from the robot, it was a decent way to get our jokes across in an unfavored environment.
+In situations like Maker Fair where it was \textit{fair}ly loud, I had to improvise and I decided to use the Choregraphe emulator as a backup. I put my laptop screen with the emulator (shown in Fig 2) behind the robot, so people could read it as they go. This seemed to help a lot. While it is not perfect and can distract people away from the robot, it was a decent way to get our jokes across in an unfavorable environment.
 
 \begin{figure}[H]
   \centering
@@ -153,8 +156,12 @@ In situations like Maker Fair where it was \textit{fair}ly loud, I had to improv
 \end{figure}
 
 \subsection{Outline of Research Paper}
-\subsection{Concluding Thoughts}
+In my research paper, I will be discussing the importance of crowd-work for a robot performing comedy. The aspects of crowd-work were: (1) No crowd-work (2) Fake crowd-work (3) Real crowd-work. The first part involves not acknowledging the audience at all. The second is making educated guesses about the audience demographic and using that to make comments. The final one is real crowd-work where the robot uses the in-built sensors to listen to the audience.
 
+From the performances we have had so far, I hypothesize that crowd-work does not matter initially. The sheer novelty of the robot telling jokes is enough to fascinate the audience and pull them in. Crowd-work starts to matter after the audience has already heard a couple jokes. Using those spontaneous interactions when the audience's fascination is about to wear off throws them off and breaks their expectations. It adds a new layer of comedy that the audience did not expect at first. Obviously, our sample spaces are not the biggest and this is just a theory that would require further testing; testing during Expo and beyond. 
+
+\subsection{Concluding Thoughts}
+Overall, the project is coming together pretty well. We have preliminary observations for the research. We need to optimize our sets for Expo using those observations to try and get better reception at the Expo. 
 
 \section{Final Tasks for Spring Term Progress}
 
