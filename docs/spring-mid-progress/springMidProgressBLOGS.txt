@@ -1,0 +1,15 @@
+Week 1: I met with Heather, and discussed why I got a B for the last term. I was able to explain the team dynamics of creating software with three different people working in different directions. If you make machines alone, you make machines that work alone. All of my work was virtual, and she never looked at my code for either the \textit{Haiku Bot} that I made, and the virtual \textit{Bayesian Network} implementation of our jokes Additionally, I could never get my team to use the scripting tools to insert jokes into a pickle library.
+
+Winter term, we spent so much time apart, that while we all me the requirements for 1.0, we had a bunch of things that were not being tested together. I told Heather that I started performing stand-up comedy, and went to two open mic events at bombs away during winter term.
+
+Since all of our requirements were met, I started to get creative and mechanical about how we could solve some of the problems with our robot comedian. Another problem is communication, and using the same Reference of Language during our team meetings.
+
+I have been talking to Heather about the "Mythical Man Month", and how there is No Silver Bullet to software engineering. We made a design document to flesh out the details of software so that the expectation is understood. When my client edited my portions of my design document without my conformation, I was unaware of the software that she expected me to make. Even though I thought I had made it, my client did not.
+
+Week 2: "Using machines as an end to means, not a means to an end." Robots can switch context impeccably fast, and cannot be trusted the same way a human can be trusted. Experiences for humans have value for the human, where the only value we put on the jokes are the one we, as humans and comedians, value.
+
+Week 3: I realized that I know nothing about building mechanical machines. Anish and I went to Hweekend and I finally learned the difference between a volt, watt and amp (please don’t hurt me).
+
+Week 4: TCP server works on the controller, and it can send commands to the NAO. I think this is beta functionality for the controller.
+
+Week 5: I finished my final design of the controller, and I want to make an image to put onto the RPIs, so that when they fail during expo, we can reflash the units quickly. We also did the maker fare this last weekend, and we got crazy feedback about how to make our controllers better. Decided to just run with a two button design. It will be easier to branch between two options over three. Kids stop listening when you give them a controller.
