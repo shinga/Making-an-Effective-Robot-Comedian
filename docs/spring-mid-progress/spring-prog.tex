@@ -4,6 +4,41 @@
 \usepackage{setspace}
 \usepackage{csquotes}
 \usepackage{float}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{pstricks-add}
+
+\usepackage{listings}
+
+% COLOR DEFINITIONS FOR CODE LISTINGS
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{
+	escapeinside={(*@}{@*)},
+	style=mystyle
+}
 
 \usepackage{geometry}
 \geometry{textheight=9.5in, textwidth=7in}
@@ -81,11 +116,7 @@
 
 % 8. now you write!
 \section{Overview}
-<<<<<<< HEAD
 	This paper will have three separate sections written by each respective member of the \textit{Short Circuit Comedy Club}.
-=======
-	This paper will have three separate sections written by each respective member of the \textit{Short Circut Comedy Club}. 
->>>>>>> 513a8f578b4640c0ff6ac2be206a7dca0793d93a
 Each section will be prefaced with a summary of the work that has been done during the first five weeks of Spring Term.
 
 
@@ -102,7 +133,7 @@ Anish Asrani has been working on transitioning in between jokes, and getting the
 
 Concluding this document will be a section expanding the tasks that need to be done before the Expo. We ideally have more time to write our research papers after the big event, and will be spending our time perfecting our performance before showing humans the system.
 
-\section{Adapation}
+\section{Adaptation}
 \subsection{Summary of Work Done}
  This section is written by Kevin Talik. I have been developing controllers and working closely with our TA, Behnam Saeedi. Additionally, I have been working meticulously with my team to make our systems work together. Similar to physical systems, virtual systems need to be able to be comprehensible to one human in order to make the system "human-readable".
 
@@ -159,7 +190,7 @@ In situations where the robot does not hear what the audience says or does not g
 One of the scripts that I tested a lot during the Corvallis Maker Fair involved asking the audience questions about a specific topic, make a few comments about it, and then phase into a joke about that specific topic (e.g. dating as a topic in this case). People seemed to enjoy that since it did not abruptly throw a random topic at them, it made them think about it which helped make the joke relatable.
 
 \subsection{Left To Do}
-All of the functionality and systems on the robot are already in place. It's just a matter of mixing and matching various behaviors to figure out the optimal set when demoing to people at the Expo. Apart from that, we need to optimize the controller functionality to properly communicate with the robot. We will also use the observations of people's reactions from the events we attended (including Expo) as preliminary results for the research paper. 
+All of the functionality and systems on the robot are already in place. It's just a matter of mixing and matching various behaviors to figure out the optimal set when demoing to people at the Expo. Apart from that, we need to optimize the controller functionality to properly communicate with the robot. We will also use the observations of people's reactions from the events we attended (including Expo) as preliminary results for the research paper.
 
 \subsection{Problems}
 The volume levels on the robot is one major issue. People need to really focus on the robot's audio to understand it sometimes as well as the robot looking for audio input. This became very evident during Corvallis Maker Fair when it was fairly loud all around. So in situations where we anticipate loud noises (e.g. Atrium area during Expo), keeping the robot's dialog simple and focusing more on animation and movement would be the right idea. However, this would only affect about half of our time during the Expo since we will have a classroom where we can have shows in a quieter environment.
@@ -185,25 +216,64 @@ In situations like Maker Fair where it was \textit{fair}ly loud, I had to improv
 \subsection{Outline of Research Paper}
 In my research paper, I will be discussing the importance of crowd-work for a robot performing comedy. The aspects of crowd-work were: (1) No crowd-work (2) Fake crowd-work (3) Real crowd-work. The first part involves not acknowledging the audience at all. The second is making educated guesses about the audience demographic and using that to make comments. The final one is real crowd-work where the robot uses the in-built sensors to listen to the audience.
 
-From the performances we have had so far, I hypothesize that crowd-work does not matter initially. The sheer novelty of the robot telling jokes is enough to fascinate the audience and pull them in. Crowd-work starts to matter after the audience has already heard a couple jokes. Using those spontaneous interactions when the audience's fascination is about to wear off throws them off and breaks their expectations. It adds a new layer of comedy that the audience did not expect at first. Obviously, our sample spaces are not the biggest and this is just a theory that would require further testing; testing during Expo and beyond. 
+From the performances we have had so far, I hypothesize that crowd-work does not matter initially. The sheer novelty of the robot telling jokes is enough to fascinate the audience and pull them in. Crowd-work starts to matter after the audience has already heard a couple jokes. Using those spontaneous interactions when the audience's fascination is about to wear off throws them off and breaks their expectations. It adds a new layer of comedy that the audience did not expect at first. Obviously, our sample spaces are not the biggest and this is just a theory that would require further testing; testing during Expo and beyond.
 
 \subsection{Concluding Thoughts}
-Overall, the project is coming together pretty well. We have preliminary observations for the research. We need to optimize our sets for Expo using those observations to try and get better reception at the Expo. 
-
-\section{Final Tasks for Spring Term Progress}
-
-
-
+Overall, the project is coming together pretty well. We have preliminary observations for the research. We need to optimize our sets for Expo using those observations to try and get better reception at the Expo.
 
 
 
 
 % thus begins shing's portion
-\section{Ginger: A robot, or a human? A brief report of joke creation and character.}
+\section{Robot vs. Human Character}
 \subsection{Goal}
 This section of the report will cover the work and progress achieved over the robot/human character portion of the research project. Human-Robot interaction is inherently different from Human-Human interaction, and this portion of research is an exploration of how some of these differences could be exploited to create a more enjoyable interaction with a robot. The goal of this portion of the project was to examine the benefit of having jokes delivered from a robot's perspective, over jokes delivered from a human's perspective.
 
+\subsection{Summary of Work Done}
+Over the last five weeks, joke creation has slowed down as we rushed to piece things together for HWeekend and the Corvallis Maker Fair. A misunderstanding of what our client expected from this portion of the project also led to some progress in the wrong direction, but ultimately progress that could be salvaged for use.
+Our client made it clear this term that she expected jokes that could be parallelized to different topics, to offset the time it took to animate jokes. This way, jokes could reuse animations and tests could still be completed for different topics.
+To fulfill this, I first picked out some of the jokes we had made over the last two terms that could have believable topical variations, that originally were only planned to span for one topic. For instance, the pirate joke, which we made this term:
 
+\begin{lstlisting}
+Human Version
+
+I've heard that piracy is really bad.
+So I decided to talk to a real pirate about the dangers of piracy.
+I went down to the docks to find the first person who looked like a pirate.
+I found an old man with a peg leg, hooked hand, and an eyepatch.
+I asked him how he lost his leg.
+“A shark bit my leg off”
+“What about your hand?”
+“I got in a fight, and got my arm cut off” he said.
+“What about the eye?”
+He said, “It was my first day with the hook.”
+\end{lstlisting}
+
+\begin{lstlisting}
+Robot Version
+
+I’ve heard that piracy is really bad.
+So I decided to talk to a real pirate about the dangers of piracy.
+I went down to the Pirate Bay and talked to the first person I saw.
+I found a guy with a peg leg, hooked hand, and an eyepatch.
+I asked him how he lost his leg.
+“A coworker took it for bootlegging”
+“What about your hand?”
+“I got in a fight with some hackers” he said.
+“What about the eye?”
+He said, “It was my first day with the hook”
+\end{lstlisting}
+
+A simple change could be made to the premise, such as "I met a guy in a pirate costume during halloween last year. He was pretty cute, so I decided to talk to him." to make it a romance-related joke. Or to make it ageing related, "As you get older, you see stranger things. This other day..." etc.
+
+Aside from this, we also planned to showcase some robot and human jokes at the maker fair. However, the background volume was way too loud for anyone to hear the jokes, much less laugh at them. People found the physical humor to be significantly more humorous than the quiet mumblings of the robot. While the area of robot vs human physical movement is an available area for research, it is a stretch goal at the moment.
+
+\subsection{Left to Do / Other Problems}
+With most of our jokes written and animated, some fine-tuning still has to be done for the jokes to be successful. Preliminary tests at the maker fair has shown that the dial-up joke, while funny, might be a bit too long. In addition, more jokes are hoped to be added.
+
+
+\subsection{Concluding Thoughts}
+Overall, there is still a lot of fine-tuning to be done, and some more jokes could still be made. In addition, the system we have built must be refactored and easily-readable to the next batch of researchers that will work on this project. 
 
 
 
