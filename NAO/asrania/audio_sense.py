@@ -8,7 +8,6 @@ import qi
 import argparse
 import sys
 import time
-import datetime
 import numpy as np
 
 
@@ -29,8 +28,9 @@ class SoundProcessingModule(object):
         # Get the service ALAudioDevice.
         self.audio_service = session.service("ALAudioDevice")
         self.isProcessingDone = False
-        self.nbOfFramesToProcess = 20
-        self.framesCount=0
+        self.nbOfFramesToProcess = 20.0
+        self.framesCount = 0
+        self.sum = 0.0
         self.micFront = []
         self.module_name = "SoundProcessingModule"
 
@@ -54,17 +54,13 @@ class SoundProcessingModule(object):
         """
         self.framesCount = self.framesCount + 1
 
-        text_file = open("logs.txt", "a")
-
-
         if (self.framesCount <= self.nbOfFramesToProcess):
             # convert inputBuffer to signed integer as it is interpreted as a string by python
             self.micFront=self.convertStr2SignedInt(inputBuffer)
             #compute the rms level on front mic
             rmsMicFront = self.calcRMSLevel(self.micFront)
+            self.sum += float(rmsMicFront)
             print "rms level mic front = " + str(rmsMicFront)
-            text_file.write(datetime.datetime.now().strftime("%a, %d %B %Y %I:%M:%S") 
-                + " front mic level = " + str(rmsMicFront) + "\n")
         else :
             self.isProcessingDone=True
 
@@ -116,3 +112,4 @@ if __name__ == "__main__":
     MySoundProcessingModule = SoundProcessingModule(app)
     app.session.registerService("SoundProcessingModule", MySoundProcessingModule)
     MySoundProcessingModule.startProcessing()
+    print MySoundProcessingModule.sum / MySoundProcessingModule.nbOfFramesToProcess
