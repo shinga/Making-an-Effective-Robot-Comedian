@@ -31,7 +31,7 @@ class heuristic(object):
     def __init__(self,t):
 	self.type = t
 	self.fails = 0 
-	self.prob = 100 #out of a hundred percent
+	self.prob = 99 #out of a hundred percent
     def getInfo(self):
 	    return [self.type,self.fails,self.prob]
 
@@ -57,7 +57,7 @@ class performance(object):
         for elm in self.allH:
             tempList.append(elm.getInfo())
 
-	sorted(tempList,key=itemgetter(2))
+	tempList=list(sorted(tempList,key=itemgetter(2)))
 	pprint(tempList)
 
 
@@ -99,7 +99,7 @@ if __name__=="__main__":
   
         #joke = [ Name,	Category, Version,  Length ]
         print "*"*20
-        print joke 
+        print "\n\nTELLING THIS JOKE: ",joke[0] 
 
         #Gets Reponse after telling a joke
         jokeResp = _getSample()
