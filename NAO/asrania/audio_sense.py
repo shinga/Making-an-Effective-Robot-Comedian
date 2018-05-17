@@ -8,7 +8,6 @@ import qi
 import argparse
 import sys
 import time
-import datetime
 import numpy as np
 
 
@@ -29,8 +28,9 @@ class SoundProcessingModule(object):
         # Get the service ALAudioDevice.
         self.audio_service = session.service("ALAudioDevice")
         self.isProcessingDone = False
-        self.nbOfFramesToProcess = 20
-        self.framesCount=0
+        self.nbOfFramesToProcess = 15.0
+        self.framesCount = 0
+        self.sum = 0
         self.micFront = []
         self.module_name = "SoundProcessingModule"
 
@@ -42,11 +42,15 @@ class SoundProcessingModule(object):
         # if you want the 4 channels call setClientPreferences(self.module_name, 48000, 0, 0)
         self.audio_service.setClientPreferences(self.module_name, 16000, 3, 0)
         self.audio_service.subscribe(self.module_name)
-
+        self.sum = 0
+        self.framesCount = 0
+        self.isProcessingDone = False
         while self.isProcessingDone == False:
-            time.sleep(1)
+            time.sleep(2)
 
         self.audio_service.unsubscribe(self.module_name)
+        print "sum ====== " + str(self.sum) 
+        return (self.sum / self.nbOfFramesToProcess)
 
     def processRemote(self, nbOfChannels, nbOfSamplesByChannel, timeStamp, inputBuffer):
         """
@@ -54,19 +58,18 @@ class SoundProcessingModule(object):
         """
         self.framesCount = self.framesCount + 1
 
-        text_file = open("logs.txt", "a")
-
-
         if (self.framesCount <= self.nbOfFramesToProcess):
             # convert inputBuffer to signed integer as it is interpreted as a string by python
             self.micFront=self.convertStr2SignedInt(inputBuffer)
             #compute the rms level on front mic
             rmsMicFront = self.calcRMSLevel(self.micFront)
+            self.sum += float(rmsMicFront)
             print "rms level mic front = " + str(rmsMicFront)
-            text_file.write(datetime.datetime.now().strftime("%a, %d %B %Y %I:%M:%S") 
-                + " front mic level = " + str(rmsMicFront) + "\n")
         else :
             self.isProcessingDone=True
+            
+        return (self.sum / self.nbOfFramesToProcess)
+
 
     def calcRMSLevel(self,data) :
         """
@@ -97,22 +100,3 @@ class SoundProcessingModule(object):
         return signedData
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", type=str, default="192.168.0.100",
-                        help="Robot IP address. On robot or Local Naoqi: use '127.0.0.1'.")
-    parser.add_argument("--port", type=int, default=9559,
-                        help="Naoqi port number")
-
-    args = parser.parse_args()
-    try:
-        # Initialize qi framework.
-        connection_url = "tcp://" + args.ip + ":" + str(args.port)
-        app = qi.Application(["SoundProcessingModule", "--qi-url=" + connection_url])
-    except RuntimeError:
-        print ("Can't connect to Naoqi at ip \"" + args.ip + "\" on port " + str(args.port) +".\n"
-               "Please check your script arguments. Run with -h option for help.")
-        sys.exit(1)
-    MySoundProcessingModule = SoundProcessingModule(app)
-    app.session.registerService("SoundProcessingModule", MySoundProcessingModule)
-    MySoundProcessingModule.startProcessing()

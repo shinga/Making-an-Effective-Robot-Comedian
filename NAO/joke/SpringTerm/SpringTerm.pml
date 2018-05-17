@@ -30,8 +30,11 @@
         <BehaviorDescription name="behavior" src="MakerFair/makeherfairer" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="MakerFair/whatUrName" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="runBehavior" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="CROWDWORK/interactJobs" xar="behavior.xar" />
     </BehaviorDescriptions>
-    <Dialogs />
+    <Dialogs>
+        <Dialog name="ExampleDialog" src="CROWDWORK/interactJobs/ExampleDialog/ExampleDialog.dlg" />
+    </Dialogs>
     <Resources>
         <File name="dialUptone" src="dialUptone.mp3" />
         <File name="MakerFair" src="MakerFair/MakerFair.pml" />
@@ -39,7 +42,9 @@
         <File name="choice_sentences" src="MakerFair/whatUrName/Aldebaran/choice_sentences.xml" />
         <File name="swiftswords_ext" src="CROWDWORK/threeButton/swiftswords_ext.mp3" />
     </Resources>
-    <Topics />
+    <Topics>
+        <Topic name="ExampleDialog_enu" src="CROWDWORK/interactJobs/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
+    </Topics>
     <IgnoredPaths>
         <Path src="JOBS/dialUpRobot" />
         <Path src="shortRomance/behavior.xar" />
@@ -47,7 +52,6 @@
         <Path src="AGING/dialUpRobot/behavior.xar" />
         <Path src="AGING/dialUpRobot" />
         <Path src="AGING" />
-        <Path src="behavior.xar" />
         <Path src="AGING/dialUpHuman/behavior.xar" />
         <Path src="JOBS/dialUpRobot/behavior.xar" />
         <Path src="shortRomance" />
