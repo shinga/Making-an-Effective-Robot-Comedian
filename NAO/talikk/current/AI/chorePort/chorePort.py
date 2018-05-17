@@ -2,6 +2,8 @@ import cPickle as pickle
 from sets import Set
 import time
 import random
+from operator import itemgetter
+from pprint import pprint
 
 MAX_VAL=2
 MIN_VAL=0
@@ -50,14 +52,19 @@ class performance(object):
 
     def getInfo(self):
         print "Printing the set of heuristics:\n"
+
+	tempList=[]
         for elm in self.allH:
-            print elm.getInfo()
+            tempList.append(elm.getInfo())
+
+	sorted(tempList,key=itemgetter(2))
+	pprint(tempList)
 
 
     def reportFailure(self,tempH):
         for h in self.allH:
             if h.getType() in tempH:
-                #print "HERE IS A FAILING HEURISTIC: ", h
+                print "HERE IS A FAILING HEURISTIC: ", h.getType()
                 h.failSelf()
 
     def getSuccessProb(self,tempH):
@@ -72,10 +79,10 @@ if __name__=="__main__":
     #this is the sim for getting audience input for jokes
     allJokes = pickle.load(open("smallerObjects.p","rb"))
 
-    print "HEY THIS IS ALL OF OUR JOKES:"
-    print allJokes
+    print "This is all of our jokes:"
     #create set for heuristics
     for joke in allJokes:
+	    print joke
 	    heuristics.add(joke[1])
 	    heuristics.add(joke[2])
 	    heuristics.add(joke[3])
@@ -92,7 +99,6 @@ if __name__=="__main__":
   
         #joke = [ Name,	Category, Version,  Length ]
         print "*"*20
-        print "\n\nTELLING JOKE: ", joke[0]
         print joke 
 
         #Gets Reponse after telling a joke
@@ -104,16 +110,15 @@ if __name__=="__main__":
         
         print "ROBOT RESPONSE:"
         if jokeResp < prior:
-            print "Whoops"
+            print "Whoops!"
             binaryResponse = "BAD"
             p.reportFailure(tempH)
-            jokesAndResponses.update({joke[0]:binaryResponse})
-            p.getInfo()
         else:
-            print "Good!"
+	    print "Good!"
             binaryResponse = "GOOD"
-            jokesAndResponses.update({joke[0]:binaryResponse})
-            p.getInfo()
+
+        jokesAndResponses.update({joke[0]:binaryResponse})
+        p.getInfo()
 
 print "DONE WITH PERFORMANCE"
     
