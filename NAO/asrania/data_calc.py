@@ -8,23 +8,20 @@ import naoqi
 import time
 import sys
 
-#def getAverage(MySoundProcessingModule):
-
-#    MySoundProcessingModule.startProcessing()
-#    print "Here is the sum!:" + str(MySoundProcessingModule.sum)
-    
-#    return (MySoundProcessingModule.sum / MySoundProcessingModule.nbOfFramesToProcess)
-
 def doJoke(MySoundProcessingModule):
     manager = naoqi.ALProxy("ALBehaviorManager", "192.168.0.100", 9559)
 
-    print "counting average now.."
-    high = MySoundProcessingModule.startProcessing()
-    print "BEFORE ===== " + str(high)
-    print "HELLO THIS IS A JOKE"
-    manager.startBehavior("dontCare")
-    lo = MySoundProcessingModule.startProcessing()
-    print "AFTER ===== " + str(lo)
+    current_behavior = manager.getRunningBehaviors()
+    for x in current_behavior:
+        manager.stopBehavior(x)
+    
+    behavior_name = "too-lazy-to-make-branch-05092018-0f50fa/ROMANCE/tinderHuman"
+    manager.startBehavior(behavior_name)
+    print "Behavior ==== " + str(behavior_name)
+
+    sound_level = MySoundProcessingModule.startProcessing()
+
+    print "Sound Average ==== " + str(sound_level)
 
 def main():
     parser = argparse.ArgumentParser()

@@ -5,6 +5,7 @@
 
 
 import qi
+import naoqi
 import argparse
 import sys
 import time
@@ -28,10 +29,11 @@ class SoundProcessingModule(object):
         # Get the service ALAudioDevice.
         self.audio_service = session.service("ALAudioDevice")
         self.isProcessingDone = False
-        self.nbOfFramesToProcess = 15.0
+        self.nbOfFramesToProcess = 20.0
         self.framesCount = 0
         self.sum = 0
         self.micFront = []
+        self.current_behavior = ""
         self.module_name = "SoundProcessingModule"
 
     def startProcessing(self):
@@ -45,31 +47,29 @@ class SoundProcessingModule(object):
         self.sum = 0
         self.framesCount = 0
         self.isProcessingDone = False
-        while self.isProcessingDone == False:
-            time.sleep(2)
+        manager = naoqi.ALProxy("ALBehaviorManager", "192.168.0.100", 9559)
+        all_behaviors = manager.getRunningBehaviors()
+        self.current_behavior = all_behaviors[0]
 
+        while manager.isBehaviorRunning(self.current_behavior):
+            time.sleep(1)
         self.audio_service.unsubscribe(self.module_name)
-        print "sum ====== " + str(self.sum) 
-        return (self.sum / self.nbOfFramesToProcess)
+
+        return (self.sum / self.framesCount)
 
     def processRemote(self, nbOfChannels, nbOfSamplesByChannel, timeStamp, inputBuffer):
         """
         Compute RMS from mic.
         """
         self.framesCount = self.framesCount + 1
+        #convert inputBuffer to signed integer as it is interpreted as a string by python
+        self.micFront=self.convertStr2SignedInt(inputBuffer)
+        #compute the rms level on front mic
+        rmsMicFront = self.calcRMSLevel(self.micFront)
+        self.sum += float(rmsMicFront)
+        #print "rms level mic front = " + str(rmsMicFront)
 
-        if (self.framesCount <= self.nbOfFramesToProcess):
-            # convert inputBuffer to signed integer as it is interpreted as a string by python
-            self.micFront=self.convertStr2SignedInt(inputBuffer)
-            #compute the rms level on front mic
-            rmsMicFront = self.calcRMSLevel(self.micFront)
-            self.sum += float(rmsMicFront)
-            print "rms level mic front = " + str(rmsMicFront)
-        else :
-            self.isProcessingDone=True
             
-        return (self.sum / self.nbOfFramesToProcess)
-
 
     def calcRMSLevel(self,data) :
         """
