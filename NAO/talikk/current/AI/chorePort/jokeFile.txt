@@ -18,3 +18,23 @@ Autonomous Car
 Jobs
 2
 Robot
+********************
+Sandwiches
+Self Depreciation
+2
+human
+********************
+Sandwiches
+Self Depreciation
+2
+robot
+********************
+Paglacio the clown
+Jobs
+1
+Robot
+********************
+Paglacio the clown
+Jobs
+2
+Robot

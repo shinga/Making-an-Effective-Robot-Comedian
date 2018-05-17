@@ -1,21 +1,31 @@
 import pickle
 
+print "This file formats the jokeFile.txt into a pickle file for easy reading and writing during the performance"
+jokeCount=0
+jokeList=[]
+totalHeuristics=4
+tempJoke=[]
+tempHeuristicCount=0
 
-lst = []
-lineCounter=0
-tmpObj=[]
+
+
+print "Printing the lines of a file"
 for line in open("jokeFile.txt","r"):
-    lineCounter+=1
-    if lineCounter is 1:
-        tmpObj.append(line)
-    elif lineCounter is 2:
-        tmpObj.append(line)
-    elif lineCounter is 3:
-        tmpObj.append(line)
-    elif lineCounter is 4:
-        tmpObj.append(line)
-        tmpObj = []
-        lineCounter = 0
-
-
-pickle.dump(lst,open("smallerObjects.p", "wb"))
+    line = str(line).replace("\n","")
+    if "*" in line:
+    	print line
+    	jokeCount+=1
+	jokeStart=True
+	continue
+    if jokeStart is True:
+	tempJoke.append(line)
+	tempHeuristicCount+=1
+	if tempHeuristicCount is totalHeuristics:
+		jokeList.append(tempJoke)
+		tempJoke=[]
+		jokeStart=False
+		tempHeuristicCount=0
+	
+        
+print "There were this many jokes in the file: ", jokeCount
+pickle.dump(jokeList,open("smallerObjects.p", "wb"))
