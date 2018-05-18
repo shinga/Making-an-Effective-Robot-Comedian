@@ -92,6 +92,13 @@
   </behaviorContent>
   <behaviorContent path="calibrateFunnyRobot">
    <nature>interactive</nature>
+   <triggerSentences/>
+   <loadingResponses/>
+   <autonomous/>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="crowdReport">
+   <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
  </contents>

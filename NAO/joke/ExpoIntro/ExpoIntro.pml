@@ -20,6 +20,7 @@
         <BehaviorDescription name="behavior" src="setAgingHuman" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="setJobsHuman" xar="behavior.xar" />
         <BehaviorDescription name="behavior" src="setRomanceHuman" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="crowdReport" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="ExampleDialog" src="interactJobs/ExampleDialog/ExampleDialog.dlg" />
