@@ -9,7 +9,7 @@ import naoqi
 import time
 import sys
 
-def doJoke(MySoundProcessingModule):
+def doJoke(MySoundProcessingModule, state):
     manager = naoqi.ALProxy("ALBehaviorManager", "192.168.0.100", 9559)
 
     running_behaviors = manager.getRunningBehaviors()
@@ -41,13 +41,25 @@ def doJoke(MySoundProcessingModule):
     if (dict_behavior["expointro-a9caec/askAging"] > dict_behavior["expointro-a9caec/askJobs"] and 
     dict_behavior["expointro-a9caec/askAging"] > dict_behavior["expointro-a9caec/askRomance"]): 
         manager.startBehavior("expointro-a9caec/confirmAging")
+        if state == "h":
+            manager.startBehavior("expointro-a9caec/setAgingHuman")
+        else:
+            manager.stateBehavior("expointro-a9caec/setAgingRobot")
 
     elif (dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askAging"] and 
     dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askRomance"]): 
         manager.startBehavior("expointro-a9caec/confirmJobs")
+        if state == "h":
+            manager.startBehavior("expointro-a9caec/setJobsHuman")
+        else:
+            manager.stateBehavior("expointro-a9caec/setJobsRobot")
 
     else:
         manager.startBehavior("expointro-a9caec/confirmRomance")
+        if state == "h":
+            manager.startBehavior("setRomanceHuman")
+        else:
+            manager.stateBehavior("setRomanceRobot")
 
 
 
@@ -57,8 +69,12 @@ def main():
                         help="Robot IP address. On robot or Local Naoqi: use '127.0.0.1'.")
     parser.add_argument("--port", type=int, default=9559,
                         help="Naoqi port number")
+    parser.add_argument("--state", type=str, default="robot",
+                        help="Insert robot or human")
 
     args = parser.parse_args()
+    state = args.state
+    print "Got state - " + state
     try:
         # Initialize qi framework.
         connection_url = "tcp://" + args.ip + ":" + str(args.port)
@@ -71,7 +87,7 @@ def main():
     MySoundProcessingModule = ad.SoundProcessingModule(app)
     app.session.registerService("SoundProcessingModule", MySoundProcessingModule)
 
-    doJoke(MySoundProcessingModule)
+    doJoke(MySoundProcessingModule, state)
 
 if __name__ == "__main__":
     main()
