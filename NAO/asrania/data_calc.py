@@ -46,9 +46,12 @@ def doJoke(MySoundProcessingModule, state):
         if state == "h":
             manager.runBehavior("expointro-a9caec/interactAging")
             manager.startBehavior("expointro-a9caec/setAgingHuman")
+            sound_level = MySoundProcessingModule.startProcessing()
+
         else:
             manager.runBehavior("expointro-a9caec/interactAging")
             manager.startBehavior("expointro-a9caec/setAgingRobot")
+            sound_level = MySoundProcessingModule.startProcessing()
 
     elif (dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askAging"] and 
     dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askRomance"]): 
@@ -56,18 +59,25 @@ def doJoke(MySoundProcessingModule, state):
         if state == "h":
             manager.runBehavior("expointro-a9caec/interactJobs")
             manager.startBehavior("expointro-a9caec/setJobsHuman")
+            sound_level = MySoundProcessingModule.startProcessing()
         else:
             manager.runBehavior("expointro-a9caec/interactJobs")
             manager.startBehavior("expointro-a9caec/setJobsRobot")
+            sound_level = MySoundProcessingModule.startProcessing()
 
     else:
         manager.runBehavior("expointro-a9caec/confirmRomance")
         if state == "h":
             manager.runBehavior("expointro-a9caec/interactRomance")
             manager.startBehavior("expointro-a9caec/setRomanceHuman")
+            sound_level = MySoundProcessingModule.startProcessing()
+
         else:
             manager.runBehavior("expointro-a9caec/interactRomance")
             manager.startBehavior("expointro-a9caec/setRomanceRobot")
+            sound_level = MySoundProcessingModule.startProcessing()
+
+    
 
 
 
