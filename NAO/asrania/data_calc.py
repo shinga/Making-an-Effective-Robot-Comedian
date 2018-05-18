@@ -11,7 +11,7 @@ import sys
 
 def doJoke(MySoundProcessingModule, state):
     manager = naoqi.ALProxy("ALBehaviorManager", "192.168.0.100", 9559)
-
+    sound_level = 0.0
     running_behaviors = manager.getRunningBehaviors()
     for x in running_behaviors:
         manager.stopBehavior(x)
@@ -47,11 +47,15 @@ def doJoke(MySoundProcessingModule, state):
             manager.runBehavior("expointro-a9caec/interactAging")
             manager.startBehavior("expointro-a9caec/setAgingHuman")
             sound_level = MySoundProcessingModule.startProcessing()
+            print "Behavior ---- " + "expointro-a9caec/setAgingHuman"
+            print "Sound Average ---- " + str(sound_level)
 
         else:
             manager.runBehavior("expointro-a9caec/interactAging")
             manager.startBehavior("expointro-a9caec/setAgingRobot")
             sound_level = MySoundProcessingModule.startProcessing()
+            print "Behavior ---- " + "expointro-a9caec/setAgingRobot"
+            print "Sound Average ---- " + str(sound_level)
 
     elif (dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askAging"] and 
     dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askRomance"]): 
@@ -60,10 +64,15 @@ def doJoke(MySoundProcessingModule, state):
             manager.runBehavior("expointro-a9caec/interactJobs")
             manager.startBehavior("expointro-a9caec/setJobsHuman")
             sound_level = MySoundProcessingModule.startProcessing()
+            print "Behavior ---- " + "expointro-a9caec/setJobsHuman"
+            print "Sound Average ---- " + str(sound_level)
+
         else:
             manager.runBehavior("expointro-a9caec/interactJobs")
             manager.startBehavior("expointro-a9caec/setJobsRobot")
             sound_level = MySoundProcessingModule.startProcessing()
+            print "Behavior ---- " + "expointro-a9caec/setJobsRobot"
+            print "Sound Average ---- " + str(sound_level)
 
     else:
         manager.runBehavior("expointro-a9caec/confirmRomance")
@@ -71,11 +80,22 @@ def doJoke(MySoundProcessingModule, state):
             manager.runBehavior("expointro-a9caec/interactRomance")
             manager.startBehavior("expointro-a9caec/setRomanceHuman")
             sound_level = MySoundProcessingModule.startProcessing()
+            print "Behavior ---- " + "expointro-a9caec/setRomanceHuman"
+            print "Sound Average ---- " + str(sound_level)
 
         else:
             manager.runBehavior("expointro-a9caec/interactRomance")
             manager.startBehavior("expointro-a9caec/setRomanceRobot")
             sound_level = MySoundProcessingModule.startProcessing()
+            print "Behavior ---- " + "expointro-a9caec/setRomanceRobot"
+            print "Sound Average ---- " + str(sound_level)
+
+    if(sound_level - dict_behavior["expointro-a9caec/calibrateFunnyRobot"] 
+        < sound_level - dict_behavior["expointro-a9caec/calibrateLameRobot"]):
+        manager.runBehavior("expointro-a9caec/crowdReportLame")
+
+    else:
+        manager.runBehavior("expointro-a9caec/crowdReportFunny")
 
     
 
