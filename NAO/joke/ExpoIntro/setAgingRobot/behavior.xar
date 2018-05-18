@@ -1917,7 +1917,7 @@ class MyClass(GeneratedClass):
                                 <BehaviorLayer name="behavior_layer1">
                                     <BehaviorKeyframe name="keyframe1" index="1">
                                         <Diagram>
-                                            <Box name="piracy setup" id="1" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="91" y="17">
+                                            <Box name="piracy setup" id="1" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="91" y="24">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2039,7 +2039,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " I\'ve heard that, the older you are, the easier it is, for people to steal from you. ",
+			"English" : " I\'ve heard that the older you are, the easier it is, for others to breach your security. ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -2079,7 +2079,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[]]>
 </greek>
                                                                                             <english>
-                                                                                                <![CDATA[I've heard that, the older you are, the easier it is, for people to steal from you.]]>
+                                                                                                <![CDATA[I've heard that the older you are, the easier it is, for others to breach your security.]]>
 </english>
                                                                                             <spanish>
                                                                                                 <![CDATA[Hola]]>
@@ -2238,7 +2238,7 @@ class MyClass(GeneratedClass):
                                                     </ActuatorList>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="so i decided" id="2" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="221" y="16">
+                                            <Box name="so i decided" id="2" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="221" y="23">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2522,7 +2522,7 @@ class MyClass(GeneratedClass):
                                                     </ActuatorList>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="went to shipyard" id="3" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="354" y="17">
+                                            <Box name="went to shipyard" id="3" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="354" y="24">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2644,7 +2644,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " I went to the shipyard, to find the first person, who looked like a pirate. ",
+			"English" : " I went to the Pirate Bay, and talked to the first person I saw. ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -2684,7 +2684,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[]]>
 </greek>
                                                                                             <english>
-                                                                                                <![CDATA[I went to the shipyard, to find the first person, who looked like a pirate.]]>
+                                                                                                <![CDATA[I went to the Pirate Bay, and talked to the first person I saw.]]>
 </english>
                                                                                             <spanish>
                                                                                                 <![CDATA[Hola]]>
@@ -2731,7 +2731,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>11</language>
+                                                                                            <language>9</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2803,7 +2803,7 @@ class MyClass(GeneratedClass):
                                                     </ActuatorList>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="he had stuff" id="4" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="482" y="15">
+                                            <Box name="he had stuff" id="4" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="482" y="22">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -2925,7 +2925,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " I found an old man, with a peg leg, hooked hand, and an eyepatch ",
+			"English" : " I found a guy with a peg leg, hooked hand, and an eyepatch ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -2965,7 +2965,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[]]>
 </greek>
                                                                                             <english>
-                                                                                                <![CDATA[I found an old man, with a peg leg, hooked hand, and an eyepatch]]>
+                                                                                                <![CDATA[I found a guy with a peg leg, hooked hand, and an eyepatch]]>
 </english>
                                                                                             <spanish>
                                                                                                 <![CDATA[Hola]]>
@@ -3012,7 +3012,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>9</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -3220,7 +3220,7 @@ class MyClass(GeneratedClass):
                                                     </ActuatorList>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="i asked" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="92" y="144">
+                                            <Box name="i asked" id="5" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="92" y="151">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -3429,7 +3429,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>12</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -3615,7 +3615,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="punch" id="9" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="285" y="140">
+                                            <Box name="punch" id="9" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="285" y="147">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -3657,7 +3657,7 @@ class MyClass(GeneratedClass):
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
                                                                     <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
                                                                     <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
-                                                                    <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="75" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
+                                                                    <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="85" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
                                                                     <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="90" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
                                                                     <Timeline enable="0">
                                                                         <BehaviorLayer name="behavior_layer1">
@@ -3737,7 +3737,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " A shark bit me leg off ",
+			"English" : " A co worker took it for boott legging ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -3777,7 +3777,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[]]>
 </greek>
                                                                                             <english>
-                                                                                                <![CDATA[A shark bit me leg off]]>
+                                                                                                <![CDATA[A co worker took it for boott legging]]>
 </english>
                                                                                             <spanish>
                                                                                                 <![CDATA[Hola]]>
@@ -3824,7 +3824,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>6</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -4161,7 +4161,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="i asked (1)" id="6" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="463" y="143">
+                                            <Box name="i asked (1)" id="6" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="463" y="150">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -4370,7 +4370,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>12</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -4558,7 +4558,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="punch (1)" id="7" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="109" y="269">
+                                            <Box name="punch (1)" id="7" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="109" y="276">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -4600,7 +4600,7 @@ class MyClass(GeneratedClass):
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
                                                                     <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
                                                                     <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
-                                                                    <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="75" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
+                                                                    <Parameter name="Voice shaping (%)" inherits_from_parent="0" content_type="1" value="80" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean.' id="5" />
                                                                     <Parameter name="Speed (%)" inherits_from_parent="0" content_type="1" value="90" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed.&#x0A;&#x0A;!Warning! This feature is not available yet in Japanese, Chinese and Korean." id="6" />
                                                                     <Timeline enable="0">
                                                                         <BehaviorLayer name="behavior_layer1">
@@ -4680,7 +4680,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " I got in a fight, and got me arm cut off ",
+			"English" : " I got in a fight with some \\\\vct=90\\\\ hackers, \\\\vct=100\\\\ \\\\rspd=100\\\\ he said ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -4720,7 +4720,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[]]>
 </greek>
                                                                                             <english>
-                                                                                                <![CDATA[I got in a fight, and got me arm cut off]]>
+                                                                                                <![CDATA[I got in a fight with some \\vct=90\\ hackers, \\vct=100\\ \\rspd=100\\ he said]]>
 </english>
                                                                                             <spanish>
                                                                                                 <![CDATA[Hola]]>
@@ -4782,7 +4782,7 @@ class MyClass(GeneratedClass):
                                                                     </Timeline>
                                                                     <Resource name="Speech" type="Lock" timeout="0" />
                                                                 </Box>
-                                                                <Box name="Say (1)" id="2" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="276" y="23">
+                                                                <Box name="Say (1)" id="2" localization="8" tooltip="Say some text. Note that you must open the box to enter the text." x="73" y="163">
                                                                     <bitmap>media/images/box/interaction/say.png</bitmap>
                                                                     <script language="4">
                                                                         <content>
@@ -5303,18 +5303,17 @@ class MyClass(GeneratedClass):
                                                                     </Timeline>
                                                                 </Box>
                                                                 <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="1" />
-                                                                <Link inputowner="2" indexofinput="2" outputowner="1" indexofoutput="4" />
                                                                 <Link inputowner="3" indexofinput="2" outputowner="4" indexofoutput="4" />
                                                                 <Link inputowner="0" indexofinput="4" outputowner="3" indexofoutput="3" />
-                                                                <Link inputowner="4" indexofinput="2" outputowner="2" indexofoutput="4" />
                                                                 <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="1" />
                                                                 <Link inputowner="4" indexofinput="3" outputowner="5" indexofoutput="4" />
+                                                                <Link inputowner="4" indexofinput="2" outputowner="1" indexofoutput="4" />
                                                             </Diagram>
                                                         </BehaviorKeyframe>
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="i asked (2)" id="8" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="284" y="273">
+                                            <Box name="i asked (2)" id="8" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="284" y="280">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -5523,7 +5522,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>9</language>
+                                                                                            <language>11</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -5709,7 +5708,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="punch (2)" id="12" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="464" y="276">
+                                            <Box name="punch (2)" id="12" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="464" y="283">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -5831,7 +5830,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " He said, \\\\vct=75\\\\ \\\\rspd=90\\\\It was my first day with the hook ",
+			"English" : " He said \\\\vct=75\\\\ \\\\pau=200\\\\ \\\\rspd=90\\\\It was my first day with the hook ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -5871,7 +5870,7 @@ class MyClass(GeneratedClass):
                                                                                                 <![CDATA[]]>
 </greek>
                                                                                             <english>
-                                                                                                <![CDATA[He said, \\vct=75\\ \\rspd=90\\It was my first day with the hook]]>
+                                                                                                <![CDATA[He said \\vct=75\\ \\pau=200\\ \\rspd=90\\It was my first day with the hook]]>
 </english>
                                                                                             <spanish>
                                                                                                 <![CDATA[Hola]]>
@@ -6287,7 +6286,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="Python Script" id="13" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="270" y="391">
+                                            <Box name="Python Script" id="13" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="270" y="398">
                                                 <bitmap>media/images/box/box-python-script.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -6331,7 +6330,7 @@ class MyClass(GeneratedClass):
                                                 <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                                                 <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
                                             </Box>
-                                            <Box name="punch (3)" id="10" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="425" y="397">
+                                            <Box name="punch (3)" id="10" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="425" y="404">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -6540,7 +6539,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>9</language>
+                                                                                            <language>11</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -6877,7 +6876,7 @@ class MyClass(GeneratedClass):
                                                     </BehaviorLayer>
                                                 </Timeline>
                                             </Box>
-                                            <Box name="i asked (3)" id="11" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="559" y="399">
+                                            <Box name="i asked (3)" id="11" localization="8" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." x="559" y="406">
                                                 <bitmap>media/images/box/movement/move.png</bitmap>
                                                 <script language="4">
                                                     <content>
@@ -7086,7 +7085,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>12</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -8036,7 +8035,7 @@ class MyClass(GeneratedClass):
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Starts the music." id="2" />
                                                 <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stops the music." id="3" />
                                                 <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished or stopped." id="4" />
-                                                <Parameter name="File name" inherits_from_parent="0" content_type="4" value="/home/nao/dialUptone.mp3" default_value="" tooltip="Name of the file you want to play.&#x0A;&#x0A;Note: You can click on the folder icon to browse the project content or import&#x0A;new files to the project." id="5" />
+                                                <Parameter name="File name" inherits_from_parent="0" content_type="4" value="/../dialUptone.mp3" default_value="" tooltip="Name of the file you want to play.&#x0A;&#x0A;Note: You can click on the folder icon to browse the project content or import&#x0A;new files to the project." id="5" />
                                                 <Parameter name="Begin position (s)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="0" max="600" tooltip="Position in seconds where the playing must start." id="6" />
                                                 <Parameter name="Volume (%)" inherits_from_parent="0" content_type="1" value="100" default_value="100" min="0" max="100" tooltip="Volume the file is played with." id="7" />
                                                 <Parameter name="Balance L/R" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-1" max="1" tooltip="Value which determines if the sound is played more on the robot&apos;s left or right.&#x0A;You can particularly set it to:&#x0A;- -1 to play only on the left loudspeaker.&#x0A;- 0 to play on both loudspeakers.&#x0A;- 1 to play only on the right loudspeaker." id="8" />

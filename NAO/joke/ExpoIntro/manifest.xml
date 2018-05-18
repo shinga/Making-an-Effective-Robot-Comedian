@@ -97,7 +97,11 @@
    <autonomous/>
    <permissions/>
   </behaviorContent>
-  <behaviorContent path="crowdReport">
+  <behaviorContent path="crowdReportFunny">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="crowdReportLame">
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
