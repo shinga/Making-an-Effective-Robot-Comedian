@@ -32,5 +32,8 @@
     <Topics>
         <Topic name="ExampleDialog_enu" src="interactJobs/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
     </Topics>
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src=".DS_Store" />
+        <Path src="interactRomance/dialUptone.mp3" />
+    </IgnoredPaths>
 </Package>
