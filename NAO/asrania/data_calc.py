@@ -29,7 +29,9 @@ def doJoke(MySoundProcessingModule, state):
                     "expointro-a9caec/askRomance",
                     "expointro-a9caec/askJobs",
                     "expointro-a9caec/askAging"]
-                     
+
+    print "Got state ---- " + state     
+
     for behav in list_behavior:
         manager.startBehavior(behav)
         sound_level = MySoundProcessingModule.startProcessing()
@@ -40,26 +42,32 @@ def doJoke(MySoundProcessingModule, state):
 
     if (dict_behavior["expointro-a9caec/askAging"] > dict_behavior["expointro-a9caec/askJobs"] and 
     dict_behavior["expointro-a9caec/askAging"] > dict_behavior["expointro-a9caec/askRomance"]): 
-        manager.startBehavior("expointro-a9caec/confirmAging")
+        manager.runBehavior("expointro-a9caec/confirmAging")
         if state == "h":
+            manager.runBehavior("expointro-a9caec/interactAging")
             manager.startBehavior("expointro-a9caec/setAgingHuman")
         else:
-            manager.stateBehavior("expointro-a9caec/setAgingRobot")
+            manager.runBehavior("expointro-a9caec/interactAging")
+            manager.startBehavior("expointro-a9caec/setAgingRobot")
 
     elif (dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askAging"] and 
     dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askRomance"]): 
-        manager.startBehavior("expointro-a9caec/confirmJobs")
+        manager.runBehavior("expointro-a9caec/confirmJobs")
         if state == "h":
+            manager.runBehavior("expointro-a9caec/interactJobs")
             manager.startBehavior("expointro-a9caec/setJobsHuman")
         else:
-            manager.stateBehavior("expointro-a9caec/setJobsRobot")
+            manager.runBehavior("expointro-a9caec/interactJobs")
+            manager.startBehavior("expointro-a9caec/setJobsRobot")
 
     else:
-        manager.startBehavior("expointro-a9caec/confirmRomance")
+        manager.runBehavior("expointro-a9caec/confirmRomance")
         if state == "h":
-            manager.startBehavior("setRomanceHuman")
+            manager.runBehavior("expointro-a9caec/interactRomance")
+            manager.startBehavior("expointro-a9caec/setRomanceHuman")
         else:
-            manager.stateBehavior("setRomanceRobot")
+            manager.runBehavior("expointro-a9caec/interactRomance")
+            manager.startBehavior("expointro-a9caec/setRomanceRobot")
 
 
 
@@ -74,7 +82,6 @@ def main():
 
     args = parser.parse_args()
     state = args.state
-    print "Got state - " + state
     try:
         # Initialize qi framework.
         connection_url = "tcp://" + args.ip + ":" + str(args.port)
