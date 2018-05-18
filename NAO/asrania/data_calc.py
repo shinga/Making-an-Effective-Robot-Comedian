@@ -2,6 +2,7 @@
 # -*- encoding: UTF-8 -*-
 
 import audio_sense as ad
+import frame_sense as fs
 import argparse
 import qi
 import naoqi
@@ -11,17 +12,44 @@ import sys
 def doJoke(MySoundProcessingModule):
     manager = naoqi.ALProxy("ALBehaviorManager", "192.168.0.100", 9559)
 
-    current_behavior = manager.getRunningBehaviors()
-    for x in current_behavior:
+    running_behaviors = manager.getRunningBehaviors()
+    for x in running_behaviors:
         manager.stopBehavior(x)
     
-    behavior_name = "too-lazy-to-make-branch-05092018-0f50fa/ROMANCE/tinderHuman"
-    manager.startBehavior(behavior_name)
-    print "Behavior ==== " + str(behavior_name)
+    dict_behavior = {"expointro-a9caec/calibrateFunnyRobot": 0.0, 
+                     "expointro-a9caec/calibrateLameRobot": 0.0 ,
+                     "expointro-a9caec/topics": 0.0,
+                     "expointro-a9caec/askRomance": 0.0,
+                     "expointro-a9caec/askJobs": 0.0,
+                     "expointro-a9caec/askAging": 0.0 }
 
-    sound_level = MySoundProcessingModule.startProcessing()
+    list_behavior = ["expointro-a9caec/calibrateFunnyRobot", 
+                    "expointro-a9caec/calibrateLameRobot",
+                    "expointro-a9caec/topics",
+                    "expointro-a9caec/askRomance",
+                    "expointro-a9caec/askJobs",
+                    "expointro-a9caec/askAging"]
+                     
+    for behav in list_behavior:
+        manager.startBehavior(behav)
+        sound_level = MySoundProcessingModule.startProcessing()
+        dict_behavior[behav] = sound_level
 
-    print "Sound Average ==== " + str(sound_level)
+        print "Behavior ---- " + str(behav)
+        print "Sound Average ---- " + str(sound_level)
+
+    if (dict_behavior["expointro-a9caec/askAging"] > dict_behavior["expointro-a9caec/askJobs"] and 
+    dict_behavior["expointro-a9caec/askAging"] > dict_behavior["expointro-a9caec/askRomance"]): 
+        manager.startBehavior("expointro-a9caec/confirmAging")
+
+    elif (dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askAging"] and 
+    dict_behavior["expointro-a9caec/askJobs"] > dict_behavior["expointro-a9caec/askRomance"]): 
+        manager.startBehavior("expointro-a9caec/confirmJobs")
+
+    else:
+        manager.startBehavior("expointro-a9caec/confirmRomance")
+
+
 
 def main():
     parser = argparse.ArgumentParser()
