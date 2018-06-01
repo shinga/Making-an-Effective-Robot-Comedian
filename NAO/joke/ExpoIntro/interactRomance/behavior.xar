@@ -4197,7 +4197,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " You were supposed to be helping me! It is all good. You can sit down. \\\\pau=1500\\\\ Are you all ready for some comedy? \\\\pau=1500\\\\ Let\'s do this. \\\\pau=2000\\\\ Dating is hard  ",
+			"English" : " You were supposed to be helping me! It is all good. You can sit down. \\\\pau=1500\\\\ Are you all ready for some comedy? \\\\pau=1500\\\\ Let\'s do this. \\\\pau=1500\\\\ Dating is hard  ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -4237,7 +4237,7 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[You were supposed to be helping me! It is all good. You can sit down. \\pau=1500\\ Are you all ready for some comedy? \\pau=1500\\ Let's do this. \\pau=2000\\ Dating is hard ]]>
+                                                                            <![CDATA[You were supposed to be helping me! It is all good. You can sit down. \\pau=1500\\ Are you all ready for some comedy? \\pau=1500\\ Let's do this. \\pau=1500\\ Dating is hard ]]>
 </english>
                                                                         <spanish>
                                                                             <![CDATA[Hola]]>
