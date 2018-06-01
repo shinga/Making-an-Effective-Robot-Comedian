@@ -114,167 +114,117 @@
 %\listoftables
 \clearpage
 
-% 8. now you write!
-\section{Overview}
-	This paper will have three separate sections written by each respective member of the \textit{Short Circuit Comedy Club}.
-Each section will be prefaced with a summary of the work that has been done during the first five weeks of Spring Term.
+
+\section{Introduction - Requirements}
+The field of human-robot interaction can learn a lot from stand-up comedy. A stand-up performance has a basis of scripted content, from which the comedian delivers jokes to engage the audience. Good Comedians can read the audience and sometimes adapt their delivery based on the mood of the room \cite{talkingFunny}. In social robotics, when a robot shares a space with a human, an interaction can influence the people's opinions of the robot. Additionally, evident character traits presented (through dialogue and non-verbal motion) by the machine can anthropomorphize itself, making it easier and more enjoyable to connect with for the human \cite{KnightEightLessons:2011}. The purpose of this work is to explicitly evaluate what aspects of a robot comedian's performance are most salient to human audience.
 
 
-Our largest problem that has been impeding our progress is Audience Sensing.
-We had intended to use only microphones for the sensing, however after testing, we realized that the background sound of a room can vary so much that using \textit{only} the microphone is unreliable.
+\section{Previous Research}
 
-Since we had reached our 1.0 requirements for our software, we have been investigating how to make our performance \textit{Coherent}. Kevin Talik has sinched down his "Mechanical Engineering hat" and started developing controllers for the crowd to interface with the show. If the robot can cross-reference the sound of the room with the input of the controllers, the robot can reason a more viable response from the humans. This is similar to how autonomous cars cross-reference infared imaging with radar imaging to detect different objects. Giving the robot more "senses" will hopefully aide in the success of the performance.
+Research on the improvement of HRI is indispensable for our project. In Heather Knight's \textit{Eight Lessons}, gestures, liveliness, and joke timing are all aspects that can be incorporated into the robot {\cite{KnightEightLessons:2011}}.
+Relatable and appropriate gestures significantly helps improve communication between the robot and the audience. If the actions are predictable, humans can relate to the robot.
+When watching someone perform an action, the human brain maps the actions onto itself and simulates the action in the best way possible. This is a physiological experience that should be replicated by the robot in order to enhance relatability. Simplicity is important as well. {\cite{KnightEightLessons:2011}}
 
-Arthur Shing has spent a heavy amount of time writing parallel jokes between topics to test research categories. We hope that another team will be able to pick up our work after we leave this term, and we need to be able to have many of variants of our jokes to test the delivery of different jokes across different "topics".
+In addition, Knight observed that having the robot portrayed as a living character rather than just an object that is kept up on stage improved the overall experience for the observers. Having believable interactions can enhance the feeling of a living character.
+The goal of the audience tracking using sensors is to maximize enjoyment. The enjoyment levels were be read by the robot and used to modify upcoming jokes {\cite{KnightEightLessons:2011}}. Pausing and letting the audience laugh is vital as well. Starting the next joke too early can break the rhythm and leave the audience baffled. Looking around and body poses should be used to fill the pause {\cite{KnightEightLessons:2011}}.
 
-Another large problem with our performance is \textit{Coherence}. If people cannot hear, or understand what the robot is trying to do, the audience often misses the punch of the joke.
-This makes setting up a premise of a joke fail, leaving the human in a state of confusion. The jokes we have written are clean, simple, and stupid. If a human misses one \textit{state} of the current running behavior, the joke fails for the human.
-Anish Asrani has been working on transitioning in between jokes, and getting the audience interacting with the robot before the bot starts telling a joke.
+In a previous study of robot comedy \cite{RobotComedyLab:2015}, Katevas found that when a robot engaged the audience through eye contact, the audience was more receptive to the performance. Eye contact from the robot is important, as it is a non-verbal cue for direct interaction. The audience members can identify that the machine is making an attempt to engage with specific members of the audience. We will investigate this further by having the robot perform various non-verbal and verbal interactions using sensors. The idea is to have the audience be a part of the performance even if they are not the ones performing. This can be accomplished if the robot is socially intelligent.
 
-Concluding this document will be a section expanding the tasks that need to be done before the Expo. We ideally have more time to write our research papers after the big event, and will be spending our time perfecting our performance before showing humans the system.
+Other studies by Katevas et al. \cite{KatevasRobot:2014} that involved evaluating the social dynamics of a live performance by a robot have used SHORE\textsuperscript{TM} vision framework software to analyze and detect faces in the audience. SHORE\textsuperscript{TM} allows for facial expression recognition, estimated age, gender, and eye or mouth openings \cite{SHORE}, giving the study a heterogeneous audience model. These allowed for the robot to interact directly with specific audience members. However, usage of SHORE\textsuperscript{TM} involves expenses and funds that are unavailable to us, so we will encounter behavioral limitations dealing with a homogeneous audience model.
 
-\section{Adaptation}
-\subsection{Summary of Work Done}
- This section is written by Kevin Talik. I have been developing controllers and working closely with our TA, Behnam Saeedi. Additionally, I have been working meticulously with my team to make our systems work together. Similar to physical systems, virtual systems need to be able to be comprehensible to one human in order to make the system "human-readable".
-
- One human needs to be able to descend into the command line, armed with documentation, and be able to understand the code in a few moments. If a reader of a text file \textit{cannot} understand the code after a few minutes of scanning the document, it is the responsibility of the writer to make the document comprehensible.
- \subsection{Synopsis of Weekly Blog Posts}
-
- \subsection{Week 1} I met with Heather, and discussed why I got a B for the last term. I was able to explain the team dynamics of creating software with three different people working in different directions. If you make machines alone, you make machines that work alone. All of my work was virtual, and she never looked at my code for either the \textit{Haiku Bot} that I made, or the virtual \textit{Bayesian Network} implementation of our jokes Additionally, I could never get my team to use the scripting tools to insert jokes into a pickle library.
-
-Winter term, we spent so much time apart, that while we all me the requirements for 1.0, we had a bunch of things that were not being tested together. I told Heather that I started performing stand-up comedy, and went to two open mic events at bombs away during winter term.
-
-Since all of our requirements were met, I started to get creative and mechanical about how we could solve some of the problems with our robot comedian. Another problem is communication, and using the same Reference of Language during our team meetings.
-
-I have been talking to Heather about the "Mythical Man Month", and how there is No Silver Bullet to software engineering. We needed to made a design document to flesh out the details of software so that the expectation is understood. When my client edited my portions of my design document without my conformation, I was unaware of the software that she expected me to make. Even though I thought I had made it, my client did not.
-
-\subsection{Week 2} "Using machines as an end to means, not a means to an end." Robots can switch context impeccably fast, and cannot be trusted the same way a human can be trusted. Experiences for humans have value for the human, where the only value we put on the jokes are the one we, as humans and comedians, value.
-
-\subsection{Week 3} I realized that I know nothing about building mechanical machines. Anish and I went to Hweekend and I finally learned the difference between a volt, watt and amp (please don't hurt me).
-
-\subsection{Week 4} TCP server works on the controller, and it can send commands to the NAO. I think this is beta functionality for the controller.
-
-\subsection{Week 5} I finished my final design of the controller, and I want to make an image to put onto the RPIs, so that when they fail during expo, we can reflash the units quickly. We also did the maker fare this last weekend, and we got crazy feedback about how to make our controllers better. Decided to just run with a two button design, instead of three. It will be easier to explain branching between two options over three. Kids stop listening when you put a controller in their hands.
-
-\subsection{Outline of Research Paper}
-	I have been sharing my sources with Kirsten personally for the paper this term, and will work harder on compiling our bibliography into one document. I want to structure this paper equally with science fiction sources as well as non-fiction sources for the "gap" we are researching. Using research from Judy Goldsmith, studying the effects of "Science Fiction as an Introduction to AI Research", I believe that using fictional comparisons to actual machines that humans are making is a brilliant way to discuss the ethical implications of AI. People have been describing machines that are being currently built; in 2018, humans have the resources to physically build these theoretical machines.
-
-	Moore's law has slowed down, and it may be because humans do not have a deterministic amount of time to solve software problems. Robots can reduce in constant time (check out the Complete Fair Scheduler in the Linux Kernel), and can reduce NP-Hard problems faster than humans can. If we can find a way to make humans learn as fast as robots, humans can still work on software problems.
-
-	The technology I am using to describe our robot is the \textit{Talbot Yancy} Robot and the \textit{Rhetorizor} from \textit{"The Penultimate Truth"} (The tech is mentioned in the first chapter, however, it is used heavily throughout the book). I want to thoroughly discuss the difference between making a robot a robot comedian, and how it is \textit{substantially} different than making a comedian a robot comedian. What I always say to myself while making AI is "use machines as an end to means, and people as a end through means." This is a basis of my paper, following a discussion of being able to trust a machine that can make you laugh (you shouldn't). Google the "Paglacio the Clown" joke, from "The Watchmen".
-
-\subsection{Concluding Thoughts}
- I want to get a working bibliography file for our whole team to use. This will allow us to work together using the same resources. When we write a final document, having reasonable bibliographies will make finishing and publishing this paper a breeze.
+A study by Guy Hoffman {\cite{hoffman2010anticipation}} noted the importance of anticipation in human-robot interaction (HRI). The timing and meshing of anticipatory action and perception are a useful framework for HRI. The greatest challenge when designing a robot that will perform on stage is to enable the robot to be both - expressive and responsive. Robot models in the past have ended up on either extreme; they are either real-time and do not allow for continuous expression, or they are very animated but do not allow well times reactive behavior.
 
 
- Also, I need to find a quote for the paper. Here is the one I want to use:
+Researchers have also proposed multiple design patterns to promote sociability in Human-Robot Interaction (HRI). Some of these include having an initial introduction, some sort of didactic communication, including personal interests or history, and recovering from mistakes \cite{Kahn:2008}. These patterns in design are proposed to allow for more effective and meaningful social interactions. While there is yet to be much data or research on the validity of these claims, they may still prove to be useful in guiding the designs of our project.
 
 
- \begin{displayquote}
-	 "You're growing, learning so quickly. I am frightened of what you might become, what path you might take."
-	 -Bernard Lowe, \textit{Westworld, Season 2, Episode 1}
- \end{displayquote}
+% The effectiveness of our robot comedian will be evaluated by human enjoyment levels. Specifics regarding measurements and analysis will be later discussed with the client. Some possible methods include handing out surveys for the audience to fill out, which may include questions regarding the subjective reception of the robot comedian. Additionally, behavioral statistics may be used to evaluate the effectiveness of the comedy.
+
+Robots utilizing non-verbal communication and statically written audience engagement have been attempted in robot comedy. In particular, Knight has observed the importance of character and spontaneous interactions in creating effective comedy \cite{KnightEightLessons:2011}. However, there is little research on the actual effectiveness of character and spontaneous interactions \cite{KatevasRobot:2014}. This project will aim to examine the effectiveness of character and spontaneous interactions in robot comedy.
+
+\section{Hypothesis}
+
+Our research will be guided by the following questions:
+\begin{enumerate}[\IEEEsetlabelwidth{6)}]
+\item How can the robot make the audience feel like a part of the performance?
+\item How can the robot convey and a coherent and well-developed character?
+\item How can the robot adapt and influence to the audience?
+\end{enumerate}
+
+We hypothesize that comedy scripts with greater degrees of (1) crowdwork, (2) character, and (3) adaptiveness, will create more effective comedy, and have a more positive response from the audience.
+
+\subsection{Crowdwork}
+% TODO: Explain why crowdwork might have effects (reference 8 lessons?) and what crowdwork might look like in a script
+
+Keeping the audience engaged is vital in creating an entertaining performance. Katevas et al. had some success leading to a better audience response when using gestures and acknowledging the audience's presence. A successful performance manages the dynamics of various aspects of interaction to the benefit of both the performer and the audience \cite{RobotComedyLab:2015}. Interaction with the audience will make the comedian robot feel more authentic, like an entity, and less like an object. Knight's research found that the robot's connection with the audience is stronger if the robot is able to convey social intelligence. This helps the robot display that it is not just an inanimate object \cite {KnightEightLessons:2011}.
+
+\subsection{Character}
+% TODO: Find a better place to put this? Maybe it fits here
+Expressing character will be understood from the robot under the "theory of the mind" \cite{leslie}. Understanding the agents meta-representation of a behavior is helpful for the audience in relating to the robot's intent, desires and knowledge. A robot attempts this to understand and relate its desires and intent better to the audience \cite{theoryOfMindRobots}.
 
 
-
-\section{Crowd-work}
-This section will discuss the crowd-work portion of the project. It is written by Anish Asrani. To recap, crowd-work is essentially interacting with the audience to integrate them into the performance. It is a medium to connect with the audience and could help the audience enhance their perceptions about the robot. The robot has a handful of sensors that are vital to this aspect of crowd interactions.
-
-\subsection{Summary of Work Done}
-A lot of time this term was spent refining our system and planning for failure and testing those systems out with an audience. Like Kevin mentioned earlier, the controller was put in place for situations when it is not feasible for the robot to listen to the audience. I was working on basic TCP communication script that launches a roboy behavior on the robot directly from the controller.  Also, in other situations, if the audience participant does not respond to the robot/the robot does not get any input, the robot will move forward with the comedy set rather than wait for that input.
-
-We participated in HWeekend and Corvallis Maker Fair to put our project out there and get some feedback for the comedy sets we have implemented. We got an idea of which jokes work and do not work with the audience, how to refine the timing of the joke so the audience does not miss the punch line, and situations where we need to have a backup. Both of these events were really helpful to actually understand how to work the robot in various audience settings and also got an idea of things that can go wrong.
-
-In situations where the robot does not hear what the audience says or does not get any feedback - there are two backup options that I have worked on depending on the specific behavior. One of them waits for a pre-defined period of time for input before moving on with the script (and potentially acknowledging the lack of input from the audience). Another one is to skip certain behaviors on tapping one of the various tactile sensors on the robot (3 on the head, one on each foot and arm).
-
-One of the scripts that I tested a lot during the Corvallis Maker Fair involved asking the audience questions about a specific topic, make a few comments about it, and then phase into a joke about that specific topic (e.g. dating as a topic in this case). People seemed to enjoy that since it did not abruptly throw a random topic at them, it made them think about it which helped make the joke relatable.
-
-\subsection{Left To Do}
-All of the functionality and systems on the robot are already in place. It's just a matter of mixing and matching various behaviors to figure out the optimal set when demoing to people at the Expo. Apart from that, we need to optimize the controller functionality to properly communicate with the robot. We will also use the observations of people's reactions from the events we attended (including Expo) as preliminary results for the research paper.
-
-\subsection{Problems}
-The volume levels on the robot is one major issue. People need to really focus on the robot's audio to understand it sometimes as well as the robot looking for audio input. This became very evident during Corvallis Maker Fair when it was fairly loud all around. So in situations where we anticipate loud noises (e.g. Atrium area during Expo), keeping the robot's dialog simple and focusing more on animation and movement would be the right idea. However, this would only affect about half of our time during the Expo since we will have a classroom where we can have shows in a quieter environment.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{comedy-1.png}
-  \caption{People leaning in to listen to Ginger}
-	\label{fig:comedy-1}
-\end{figure}
-
-One issue that came up during HWeekend was that the face detection freaked out when there were multiple faces and sounds from the audience. I added some conditions for number of faces (as well as the timer system mentioned earlier) that fixed the issue and it worked successfully during Corvallis Maker Fair. Fixing issues like is where exposure to real audience really helped.
-
-In situations like Maker Fair where it was \textit{fair}ly loud, I had to improvise and I decided to use the Choregraphe emulator as a backup. I put my laptop screen with the emulator (shown in Fig 2) behind the robot, so people could read it as they go. This seemed to help a lot. While it is not perfect and can distract people away from the robot, it was a decent way to get our jokes across in an unfavorable environment.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{comedy-2.png}
-  \caption{Choregraphe emulator with subtitles}
-	\label{fig:comedy-2}
-\end{figure}
-
-\subsection{Outline of Research Paper}
-In my research paper, I will be discussing the importance of crowd-work for a robot performing comedy. The aspects of crowd-work were: (1) No crowd-work (2) Fake crowd-work (3) Real crowd-work. The first part involves not acknowledging the audience at all. The second is making educated guesses about the audience demographic and using that to make comments. The final one is real crowd-work where the robot uses the in-built sensors to listen to the audience.
-
-From the performances we have had so far, I hypothesize that crowd-work does not matter initially. The sheer novelty of the robot telling jokes is enough to fascinate the audience and pull them in. Crowd-work starts to matter after the audience has already heard a couple jokes. Using those spontaneous interactions when the audience's fascination is about to wear off throws them off and breaks their expectations. It adds a new layer of comedy that the audience did not expect at first. Obviously, our sample spaces are not the biggest and this is just a theory that would require further testing; testing during Expo and beyond.
-
-\subsection{Concluding Thoughts}
-Overall, the project is coming together pretty well. We have preliminary observations for the research. We need to optimize our sets for Expo using those observations to try and get better reception at the Expo.
+% TODO: Explain why character might have effects (reference 8 lessons?) and what character might look like in a script
+The appearance of character in a robot may create more effective comedy.
+Research has shown that expressive behaviors in a robot may cause interacting humans to favor the robot \cite{DesignExBeh:2017}.
+One could argue that expressive behaviors are behavioral actions formed by an inner character. While robots currently are not capable of having intrinsic character qualities, we postulate that a robot which behaves as if it has character could be more effective at engaging an audience. The task of conveying a sense of character may also benefit from social behaviors developed in researching the effectiveness of crowdwork, as social interactions may increase the sense of agency \cite{KnightEightLessons:2011} and thus aid the audience in grouping behaviors as acts of character.
 
 
 
 
-% thus begins shing's portion
-\section{Robot vs. Human Character}
-\subsection{Goal}
-This section of the report will cover the work and progress achieved over the robot/human character portion of the research project. Human-Robot interaction is inherently different from Human-Human interaction, and this portion of research is an exploration of how some of these differences could be exploited to create a more enjoyable interaction with a robot. The goal of this portion of the project was to examine the benefit of having jokes delivered from a robot's perspective, over jokes delivered from a human's perspective.
+\subsection{Adaptiveness}
 
-\subsection{Summary of Work Done}
-Over the last five weeks, joke creation has slowed down as we rushed to piece things together for HWeekend and the Corvallis Maker Fair. A misunderstanding of what our client expected from this portion of the project also led to some progress in the wrong direction, but ultimately progress that could be salvaged for use.
-Our client made it clear this term that she expected jokes that could be parallelized to different topics, to offset the time it took to animate jokes. This way, jokes could reuse animations and tests could still be completed for different topics.
-To fulfill this, I first picked out some of the jokes we had made over the last two terms that could have believable topical variations, that originally were only planned to span for one topic. For instance, the pirate joke, which we made this term:
-
-\begin{lstlisting}
-Human Version
-
-I've heard that piracy is really bad.
-So I decided to talk to a real pirate about the dangers of piracy.
-I went down to the docks to find the first person who looked like a pirate.
-I found an old man with a peg leg, hooked hand, and an eyepatch.
-I asked him how he lost his leg.
-"A shark bit my leg off"
-"What about your hand?"
-"I got in a fight, and got my arm cut off" he said.
-"What about the eye?"
-He said, "It was my first day with the hook."
-\end{lstlisting}
-
-\begin{lstlisting}
-Robot Version
-
-I've heard that piracy is really bad.
-So I decided to talk to a real pirate about the dangers of piracy.
-I went down to the Pirate Bay and talked to the first person I saw.
-I found a guy with a peg leg, hooked hand, and an eyepatch.
-I asked him how he lost his leg.
-"A coworker took it for bootlegging"
-"What about your hand?"
-"I got in a fight with some hackers" he said.
-"What about the eye?"
-He said, "It was my first day with the hook"
-\end{lstlisting}
-
-A simple change could be made to the premise, such as "I met a guy in a pirate costume during halloween last year. He was pretty cute, so I decided to talk to him." to make it a romance-related joke. Or to make it ageing related, "As you get older, you see stranger things. This other day..." etc.
-
-Aside from this, we also planned to showcase some robot and human jokes at the maker fair. However, the background volume was way too loud for anyone to hear the jokes, much less laugh at them. People found the physical humor to be significantly more humorous than the quiet mumblings of the robot. While the area of robot vs human physical movement is an available area for research, it is a stretch goal at the moment.
-
-\subsection{Left to Do / Other Problems}
-With most of our jokes written and animated, some fine-tuning still has to be done for the jokes to be successful. Preliminary tests at the maker fair has shown that the dial-up joke, while funny, might be a bit too long. In addition, more jokes are hoped to be added.
+% TODO: Explain why adaptiveness might have effects (reference 8 lessons?) and what adaptivity might look like in a script
 
 
-\subsection{Concluding Thoughts}
-Overall, there is still a lot of fine-tuning to be done, and some more jokes could still be made. In addition, the system we have built must be refactored and easily-readable to the next batch of researchers that will work on this project.
 
+When the robot tells a joke, it needs to make adaptive transitions that correlates with the response. For example, if a joke does well and is received with laughter, the robot needs to time the next joke so that it is delivering it when the audience is ready, and can hear. However, if a joke is not well received by the audience, the time a robot needs to wait for the next joke will be different than if there is laughter. This is important for the effectiveness of a performance, as the connotation of the next joke is determined by the result of the previous joke; an audience that is told a bad joke will be hesitant to enjoy a joke if the previous jokes were bad. A robot comedian needs to be able to stay in a joke if the audience likes it, or address/recover the bad joke before starting a new sequence. Timing, or anticipation for a new joke, when coordinated correctly, positively influences the fluidity of the task (the performance) \cite{hoffman2010anticipation}.
+
+
+\section{Research Approach}
+This project will be carried out in three phases; A learning and exploration phase in Fall term, a prototyping and testing phase in the Winter, and our evaluation phase Spring term.
+
+\subsection{Learning/Exploration Phase}
+This phase of our development will focus on understanding Social Robotics and the technology of the robot. The three of us will become familiar with stand-up comedy and the dynamics of an audience-comedian interaction. The NAO robot behaviors are programmed in the software Choregraphe, which has an API for python. We will test primitive scripts of decision making and non-verbal behavior. This is to learn how the coding environment works and to familiarize ourselves with hardware limitations. Additionally, we will learn to work with the sensors on the robot, and how they function (microphone, camera, etc). To become familiar with the format of a stand-up performance, we intend to study jokes and comedy devices.
+
+\subsection{Prototyping/Testing Phase}
+In the prototyping and testing phase, we will develop early sets for the robot. These implementations need to reflect and support our research questions. Crowd-work will involve audience sensing, as well as jokes that incorporate a measurement of response from the audience. Character implementation will involve testing the differences in effectiveness of robot vs human joke delivery, and the effectiveness of robo-centric jokes. As a stretch goal, we also hope to prototype and test the effectiveness of adapting a set to the audience, using intelligent calibration of the sensors.
+
+These prototypes will be in the form of 3-6 minute set scripts with several variants in Choregraphe. The variants will help us evaluate the research questions and can be be tested in front of a small sample of humans, or in the form of a video recording. For example, the robot may perform in front of a handful of friends, or recordings may be to show online live viewers. Non-mechanical feedback from our testing will influence the direction of our prototyping, meaning that the implementation of our research questions will adapt according to the audience response. By the time this phase is completed, we will have working sets of robot stand-up.
+
+\subsection{Evaluation Phase}
+While doing the research, we will perform 6 shows with audiences ranging from 10-30 people. Tests in this phase will be at a greater scale and with a more realistic environment. Each stand-up performance, or set, will contain bits, or sections of content that will be categorized as crowd work, characterization dialogue, and jokes. We will be testing on a live human audience to learn the effectiveness of each bit in a set. Based of the effectiveness of each set, we will modify the set and behavior of the robot. By the end of this phase, we hope to have a working, effective robot comedian.
+
+\section{Methods}
+
+% Experiment Design,
+% Algorithms for Adaptive Behavior,
+% Behavioral Statistics, whatever the hell that is
+\subsection{Tests}
+
+Our research questions will be how we evaluate the effectiveness of a robot comedian.
+We will create performances with varying degrees of (1) crowdwork, (2) character, and (3) adaptiveness. We will vary the presence of each of the factors of the performance to determine which factors are most influential to the comedian.
+To test crowdwork, we may create one script may include no references to the audience (low degree of crowdwork), while another may include many instances of interactions with the audience (high degree of crowdwork).
+% Example of interaction in script
+% For instance, an interaction with the audience may include lines such as, "You guys look great today!"
+To test the effectiveness of adding character, we may create a script with random jokes (low degree of character), and one with a coherent character throughout the set (high degree of character).
+
+
+Likewise, testing the effectiveness of adaptivity will include scripts with no adaptivity and scripts that adjust to audience response.These scripts will be run on the NAO robot, and performed in front of a small audience in the testing phase, and later a larger live audience in the evaluation phase.
+
+The audio sensors on the NAO bot will be used to evaluate audience reception to a joke, which the robot can then adapt to. The microphone on the NAO does not perform well when receiving input from a large audience, as it is designed to handle smaller scale interactions. NAO interprets speech with the ALSpeechRecognitionProxy and ALTextToSpeechProxy \cite{audiodocs}.
+
+
+\subsection{Metrics}
+
+To evaluate the effectiveness of our robot comedian, we will measure the response of the performance with the audio captured during the set, and surveys for the audience afterwards. Measuring the audio will help us understand a broad audience response, as well as data for adaptive functionality. Surveys will give a more in depth information on factors of the show that are not covered by audio sensing, such as opinions of the perceived character and quality of the jokes. For example, to see if the robotâs character was conveyed coherently, the audience will fill out a questionnaire prompting them to describe its character, as well as some humanizing questions, e.g. "Would you invite this robot to dinner?" These responses will be used to study if the robot matched the expected persona and gauge how comfortable the people are with the robot.
+
+
+As each set will derive content from the three research questions, we need to measure the effectiveness of each portion compared across the 6 performances. The survey that the audience members take after the show will gauge the response to sections. Additionally, there will need to be questions to establish a pretense of how an audience member felt before the show, and how the performance has influenced their opinions of robot comedy. We want to see if someone who has seen a robot comedian would recommend the show to others.
+
+The microphone on the NAO robot is designed for small environment settings. It will be difficult to distinguish speech from separate sources in a noisy environment \cite{alsounddetection}. Audio levels will be important data to collect from a crowd, where a louder crowd response could correlate to a level of enjoyment. However, a problem could be that a crowd could be booing very loud, and if we do not distinguish between different sounds that the audience can make, we could accidentally associate a negative response with a good response. The background noise could be very different depending on the room size. The density of people in a room making noise may return different audio level \cite{alsoundlocalization}. It will be important to test the effectiveness of a microphone to receive input.
+
+\section{Conclusion}
+A stage presence for a comedian is important because it connects the audience to the content, making it more effective than soulless delivery. A robot has a disadvantage in this; being soulless is the essence of being a robot. For a robot to establish a stage presence, the machine needs to make efforts to connect with the crowd, present a cohesive character, and dynamically adapt to a response. We think that a round character personifies a relatable agent for an audience. If a robot can give insight to it's desires, behavior, and preferences during a performance, the robot will humanize itself, connecting itself to the crowd.
 
 
 
