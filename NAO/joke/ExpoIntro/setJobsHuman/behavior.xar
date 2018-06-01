@@ -243,7 +243,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>8</language>
+                                                                                            <language>9</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -815,7 +815,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>8</language>
+                                                                                            <language>9</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1154,7 +1154,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>8</language>
+                                                                                            <language>9</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1650,7 +1650,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>8</language>
+                                                                                            <language>9</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2130,7 +2130,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>7</language>
+                                                                                            <language>8</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2521,7 +2521,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>7</language>
+                                                                                            <language>8</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -3195,7 +3195,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>7</language>
+                                                                                            <language>8</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -3866,7 +3866,7 @@ class MyClass(GeneratedClass):
 			"Danish" : " Hej ",
 			"German" : " Hallo ",
 			"Greek" : "  ",
-			"English" : " Blah bla blah bla blah bla blah bla \\\\mrk=012\\\\ \\\\pau=500\\\\ \\\\vct=100\\\\ \\\\rspd=90\\\\ CHEESE \\\\vct=50\\\\ \\\\rspd=85\\\\  \\\\pau=500\\\\ \\\\mrk=112\\\\ bla blah bla blah bla blah \\\\mrk=012\\\\bla \\\\pau=300\\\\ \\\\vct=90\\\\ \\\\rspd=80\\\\ WINE \\\\vct=50\\\\ \\\\rspd=85\\\\  \\\\pau=500\\\\ \\\\mrk=112\\\\bla blah bla blah bla blah bla \\\\vct=100\\\\ \\\\rspd=100\\\\\n ",
+			"English" : " Blah bla blah bla blah bla blah bla \\\\mrk=012\\\\ \\\\pau=500\\\\ \\\\vct=100\\\\ \\\\rspd=90\\\\ customer service \\\\vct=50\\\\ \\\\rspd=85\\\\  \\\\pau=500\\\\ \\\\mrk=112\\\\ bla blah bla blah bla blah \\\\mrk=012\\\\bla \\\\pau=300\\\\ \\\\vct=90\\\\ \\\\rspd=80\\\\ team player \\\\vct=50\\\\ \\\\rspd=85\\\\  \\\\pau=500\\\\ \\\\mrk=112\\\\bla blah bla blah bla blah bla \\\\vct=100\\\\ \\\\rspd=100\\\\\n ",
 			"Spanish" : " Hola ",
 			"Finnish" : " Hei ",
 			"French" : " Bonjour ",
@@ -3906,7 +3906,7 @@ class MyClass(GeneratedClass):
                                                                             <![CDATA[]]>
 </greek>
                                                                         <english>
-                                                                            <![CDATA[Blah bla blah bla blah bla blah bla \\mrk=012\\ \\pau=500\\ \\vct=100\\ \\rspd=90\\ CHEESE \\vct=50\\ \\rspd=85\\  \\pau=500\\ \\mrk=112\\ bla blah bla blah bla blah \\mrk=012\\bla \\pau=300\\ \\vct=90\\ \\rspd=80\\ WINE \\vct=50\\ \\rspd=85\\  \\pau=500\\ \\mrk=112\\bla blah bla blah bla blah bla \\vct=100\\ \\rspd=100\\
+                                                                            <![CDATA[Blah bla blah bla blah bla blah bla \\mrk=012\\ \\pau=500\\ \\vct=100\\ \\rspd=90\\ customer service \\vct=50\\ \\rspd=85\\  \\pau=500\\ \\mrk=112\\ bla blah bla blah bla blah \\mrk=012\\bla \\pau=300\\ \\vct=90\\ \\rspd=80\\ team player \\vct=50\\ \\rspd=85\\  \\pau=500\\ \\mrk=112\\bla blah bla blah bla blah bla \\vct=100\\ \\rspd=100\\
 ]]>
 </english>
                                                                         <spanish>
@@ -3954,7 +3954,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>9</language>
+                                                                        <language>5</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -4821,7 +4821,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>7</language>
+                                                                                            <language>8</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -5142,7 +5142,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>7</language>
+                                                                                            <language>8</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -5426,7 +5426,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>11</language>
+                                                                                            <language>12</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -5707,7 +5707,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>11</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -6124,7 +6124,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>11</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -6519,7 +6519,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>11</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -7065,7 +7065,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>11</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -7462,7 +7462,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>9</language>
+                                                                                            <language>10</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -7671,7 +7671,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>9</language>
+                                                                                            <language>10</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -8218,7 +8218,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>9</language>
+                                                                                            <language>10</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -8613,7 +8613,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>9</language>
+                                                                                            <language>10</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -9235,7 +9235,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>9</language>
+                                                                                            <language>10</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -9781,7 +9781,7 @@ class MyClass(GeneratedClass):
                                                                                             <chinese>
                                                                                                 <![CDATA[]]>
 </chinese>
-                                                                                            <language>10</language>
+                                                                                            <language>11</language>
                                                                                         </pluginContent>
                                                                                         <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                                         <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -10109,7 +10109,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>7</language>
+                                                                        <language>8</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -10481,7 +10481,7 @@ class MyClass(GeneratedClass):
                                                                         <chinese>
                                                                             <![CDATA[]]>
 </chinese>
-                                                                        <language>7</language>
+                                                                        <language>8</language>
                                                                     </pluginContent>
                                                                     <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                                     <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -10799,7 +10799,7 @@ class MyClass(GeneratedClass):
                             <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Wait box with the configured timeout value." id="2" />
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" />
                             <Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once time set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" />
-                            <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1.75" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
+                            <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                             <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently waiting and cancelled, output will be stimulated." id="6" />
                         </Box>
                         <Box name="Wait (2)" id="7" localization="8" tooltip="Wait a moment before sending a signal on the output. &#x0A;Can be stopped anytime. &#x0A;Stimulating the input again before output is activated restarts the waiting period.&#x0A;" x="466" y="319">

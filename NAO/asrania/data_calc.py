@@ -19,16 +19,16 @@ def doJoke(MySoundProcessingModule, state):
     dict_behavior = {"expointro-a9caec/calibrateFunnyRobot": 0.0, 
                      "expointro-a9caec/calibrateLameRobot": 0.0 ,
                      "expointro-a9caec/topics": 0.0,
-                     "expointro-a9caec/askRomance": 0.0,
                      "expointro-a9caec/askJobs": 0.0,
-                     "expointro-a9caec/askAging": 0.0 }
+                     "expointro-a9caec/askAging": 0.0,
+                     "expointro-a9caec/askRomance": 0.0, }
 
     list_behavior = ["expointro-a9caec/calibrateFunnyRobot", 
                     "expointro-a9caec/calibrateLameRobot",
                     "expointro-a9caec/topics",
-                    "expointro-a9caec/askRomance",
                     "expointro-a9caec/askJobs",
-                    "expointro-a9caec/askAging"]
+                    "expointro-a9caec/askAging",
+                    "expointro-a9caec/askRomance"]
 
     print "Got state ---- " + state     
 

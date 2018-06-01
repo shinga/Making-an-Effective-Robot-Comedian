@@ -34,6 +34,7 @@
     </Topics>
     <IgnoredPaths>
         <Path src=".DS_Store" />
+        <Path src="expo-log-1pm.txt" />
         <Path src="interactRomance/dialUptone.mp3" />
     </IgnoredPaths>
 </Package>
