@@ -96,3 +96,16 @@ Whenever she moved in a way that was unexpected and not human, people thought it
     This is where we implemented the "Crowd Report", that told the audience how the robot thought the show went.
     The Crowd Report was intended to collect information during the show, and present the robot's insinuations about the crowd back.
     A common, written, response on the survey question "What did you find was surprising about the show?" was that most people did not know that the robot was collecting data on the crowd.
+
+\subsection{Technical Resources}
+
+    The NAOqi API was challenging to work with. The documentation is scarce, all over the place, and often outdated.
+    Some of the example code is in C++, while some is in Python. This makes it hard to interpret what each of the functions do.
+    However, using it is the only way to operate the robot without using the clunky Choregrahe GUI. 
+    The NAOqi API came particularly handy during the shows and helped launch behaviors without much delay, unlike Choregraphe. \\
+    Setting up the NAOqi SDK was a doozy in itself. For setting it up on a Mac, it needs to run on the built-in Python version, 
+    NOT the one from the official Python website. This is fine, but it does not work with the built-in Python version on the latest versions of OS X.
+    While not knowing this, and trying to get around it took a while, there is a Bash script \cite{BashScript}
+    that "fixes" the Python installation to match the NAOqi requirements. \\
+    There are similar issues with the NAOqi SDK on Ubuntu 16.04 (and probably other versions as well). StackOverflow had some takes 
+    on what could fix the issue \cite{naoUbuntu}. It involved modifying some of the installation files as well. \\
