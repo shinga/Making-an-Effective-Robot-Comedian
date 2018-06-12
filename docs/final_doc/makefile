@@ -113,10 +113,10 @@ $(MAINTEXFILE) : $(SUBTEXFILES) $(BIBFILES)
 				egrep -i "(Reference|Citation).*undefined" $*.log ; true
 
 %.ps:			%.dvi
-#				dvips -T 7.875in,10.75in -Ppdf -G0 $< -o $@  #use tvcgpapersize
-#				dvips -Ppdf -G0 $< -o $@
-				dvips $(DVIPSPAPERSIZE) -Pdownload35 -Ppdf -G0 $< -o $@
-#				dvips $< -o $@
+	#				dvips -T 7.875in,10.75in -Ppdf -G0 $< -o $@  #use tvcgpapersize
+	#				dvips -Ppdf -G0 $< -o $@
+					dvips $(DVIPSPAPERSIZE) -Pdownload35 -Ppdf -G0 $< -o $@
+	#				dvips $< -o $@
 
 
 %.pdf7:			%.ps
