@@ -54,13 +54,30 @@ Whenever she moved in a way that was unexpected and not human, people thought it
 
 \subsection{Research Categories}
 
+    During this project, we spent time researching three different aspects of robot comedy. 
+    This is the order in which we think Robot Comedy is most effective:
+
 		\begin{enumerate}
-			\item Crowd Work
-			\item Robot VS Human Character
-			\item Performance Adaptation
+			\item{Crowd Work}
+			\item{Robot VS Human Character}
+			\item{Performance Adaptation}
 		\end{enumerate}
 
+    \subsubsection{Crowd Work}
+    \subsubsection{Robot VS Human Character}
+    \subsubsection{Performance Adaptation}
+        The performance branched depending on what the crowd chose for a topic, either "Jobs, Romance, or Aging."
+        We had the crowd make some noise for the topic they would like to hear.
+        Out of the 9 shows that we performed at Expo, 8 of the shows picked the last topic.
+        This method of branching is not advised, as the crowd should not be in control of the show ("See 'Designing a Performance'").
+
+        We collected audio information for each behavior, and then averaged the result to get an "average response" for the show.
+        This did not result in a better show. It is more effective to design 1 show, instead of the three (between the three topics).
+        Most people only saw the show once, and these crowds saw "Aging", as it was a choice that was presented last.
+        It was hard to tell if the audience was intentionally choosing "Aging", or if they cheered for the last response so that their response was chosen.
+        
 \subsection{Animating the NAO}
+%TODO
 \subsection{Designing a Performance}
 
     \subsubsection{The Room}
@@ -88,6 +105,10 @@ Whenever she moved in a way that was unexpected and not human, people thought it
     We knew Ginger could perform about 5 minutes of Comedy, so we had the robot tell 4 jokes from the topic that was branched to during the Seed portion of the show.
     Since we had the same 4 jokes that had modified setups (depending on the branched topic), it is better to find the best version of a single joke, and tell the audience that version. We found that it was better tell our better jokes during the beginning, as the audience was hooked into the rest of the set.
 
+    We used the NAO microphones to collect audio information, and correlate that to the behavior of the current running joke.
+    If the crowd was louder during the middle of a joke, they often could not hear the end of the joke.
+    It is better to use external recording, and then give the simple response back to the robot.
+
     \subsubsection{Ending the Show}
 
     This is when the Robot is out of jokes, and needs to end the show.
@@ -96,3 +117,24 @@ Whenever she moved in a way that was unexpected and not human, people thought it
     This is where we implemented the "Crowd Report", that told the audience how the robot thought the show went.
     The Crowd Report was intended to collect information during the show, and present the robot's insinuations about the crowd back.
     A common, written, response on the survey question "What did you find was surprising about the show?" was that most people did not know that the robot was collecting data on the crowd.
+
+    Not storing information about the show could make the crowd feel more comfortable.
+
+
+\subsection{Audience Input}
+    We tried using two methods of audience input: Microphone Decibel Level, and Hand Held Controllers.
+    These two methods are ineffective at collecting data, as the crowd did not know how to interact with the robot.
+    The crowd should instead be instructed, as simply as possible, how to interact with the robot.
+
+
+    The Microphone Decibel level was poor at receiving information because the mic was centered on the robots head.
+    Using decibel level alone, the microphone was unable to distinguish between booing and cheering.
+    Additionally, clapping was significantly louder than laughing. 
+    If one person clapped in the front, the response (according to the robot), was louder than if the whole crowd was listening.
+    It is more effective if there are multiple microphones distributed around the room.
+
+
+    We also tried using controllers with buttons to receive audience input.
+    This was ineffective, because when the crowd was given the controllers, the focus was taken off of the robot.
+    The audience should only be listening to the robot, and not paying attention to the controllers in their hands.
+    More work should be done to investigate how to model a physical audience into a virtual audience for the robot.
