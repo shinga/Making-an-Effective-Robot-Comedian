@@ -54,7 +54,7 @@ Whenever she moved in a way that was unexpected and not human, people thought it
 
 \subsection{Research Categories}
 
-    During this project, we spent time researching three different aspects of robot comedy. 
+    During this project, we spent time researching three different aspects of robot comedy.
     This is the order in which we think Robot Comedy is most effective:
 
 		\begin{enumerate}
@@ -75,9 +75,12 @@ Whenever she moved in a way that was unexpected and not human, people thought it
         This did not result in a better show. It is more effective to design 1 show, instead of the three (between the three topics).
         Most people only saw the show once, and these crowds saw "Aging", as it was a choice that was presented last.
         It was hard to tell if the audience was intentionally choosing "Aging", or if they cheered for the last response so that their response was chosen.
-        
+
 \subsection{Animating the NAO}
-%TODO
+Animating the NAO robot could be done virtually, and hands-on.
+Animations are done in the Choregraphe environment. 
+
+
 \subsection{Designing a Performance}
 
     \subsubsection{The Room}
@@ -130,7 +133,7 @@ Whenever she moved in a way that was unexpected and not human, people thought it
 
     The Microphone Decibel level was poor at receiving information because the mic was centered on the robots head.
     Using decibel level alone, the microphone was unable to distinguish between booing and cheering.
-    Additionally, clapping was significantly louder than laughing. 
+    Additionally, clapping was significantly louder than laughing.
     If one person clapped in the front, the response (according to the robot), was louder than if the whole crowd was listening.
     It is more effective if there are multiple microphones distributed around the room.
 
@@ -145,18 +148,18 @@ Whenever she moved in a way that was unexpected and not human, people thought it
     The NAOqi API was challenging to work with. The documentation is scarce, all over the place, and often outdated.
     Some of the example code is in C++, while some is in Python. Also, there are two versions of the NAOqi SDK, both of which seem to be intercompatible.
     This makes it hard to interpret what each of the functions do.
-    However, using it is the only way to operate the robot without using the clunky Choregrahe GUI. 
+    However, using it is the only way to operate the robot without using the clunky Choregrahe GUI.
     The NAOqi API came particularly handy during the shows and helped launch behaviors without much delay, unlike Choregraphe.
 
-    Setting up the NAOqi SDK was a doozy in itself. For setting it up on a Mac, it needs to run on the built-in Python version, 
+    Setting up the NAOqi SDK was a doozy in itself. For setting it up on a Mac, it needs to run on the built-in Python version,
     NOT the one from the official Python website. This is fine, but it does not work with the built-in Python version on the latest versions of OS X.
     I understand that this is due to the security measures in the newer versions of OS X, but the documentation hasn't been updated to reflect that.
     While not knowing this, and trying to get around it took a while, there is a Bash script \cite{BashScript}
-    that "fixes" the Python installation to match the NAOqi requirements. 
+    that "fixes" the Python installation to match the NAOqi requirements.
 
-    There are similar issues with the NAOqi SDK on Ubuntu 16.04 (and probably other versions as well). StackOverflow had some takes 
+    There are similar issues with the NAOqi SDK on Ubuntu 16.04 (and probably other versions as well). StackOverflow had some takes
     on what could fix the issue \cite{naoUbuntu}. It involved modifying some of the installation files as well.
 
     Once all of that is set up, the documentation provided on the Aldebaran website \cite{AldebaranDoc} has some example code for various different functionalities on the robot.
-    As mentioned earlier, some of the documentation is in C++ and some of the documentation from the older NAOqi version is intercompatible as well. 
+    As mentioned earlier, some of the documentation is in C++ and some of the documentation from the older NAOqi version is intercompatible as well.
     This requires some trial and error to see what function calls work with Python.
