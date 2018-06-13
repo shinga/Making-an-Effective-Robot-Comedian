@@ -78,7 +78,28 @@ Whenever she moved in a way that was unexpected and not human, people thought it
 
 \subsection{Animating the NAO}
 Animating the NAO robot could be done virtually, and hands-on.
-Animations are done in the Choregraphe environment. 
+Animations are done in the Choregraphe environment. Figure \ref{fig:choregraphe-movement} shows how certain limbs can be manipulated on the computer to achieve positions and postures that are desired. Figure \ref{fig:timeline} shows the virtual animating environment. At the top of this environment is the timeline, which contains keyframes, shown as the small grey rectangles. Each of these frames contain data that pertains to certain joint positions. As the name suggests, when running the behavior, the robot will go through the timeline from frame to frame, moving to the set positions.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth,height=0.75\textheight,keepaspectratio]{timeline}
+  \caption{The timeline feature in Choregraphe.}
+	\label{fig:timeline}
+\end{figure}
+
+As some more complicated animations are harder to create on the virtual robot, animating hands-on with the NAO robot can also be done. This is usually easier with two people, where one person manipulates the robot, and another stands by the computer to save postures into keyframes. This way, the process is usually something as follows:
+\begin{enumerate}
+	\item {Assume Person A is by the computer, and Person B is by the robot.}
+	\item {Person A loosens the limbs that are to be animated, using the "Stiffen chain" button as shown in Figure \ref{fig:choregraphe-movement}.}
+	\item{Person B manipulates the robot to the desired position.}
+	\item{Person A stores the position data to a keyframe at a desired place in the timeline.}
+	\item{Repeat.}
+\end{enumerate}
+This is the process that we used for movements such as pointing at a leg, or mimicking a car crash with the robot's hands.
+By organizing certain movements into separate boxes, it is also easier to copy and paste certain motions.
+Because of the nature of Choregraphe's behavior when saving positions, the animators should be wary of which limbs are being saved.
+While only a few select limbs may be used for animation, storing all of the robot's limbs positions may yield unexpected results when paired with a preceding or proceeding animation that involves separate limbs. It is usually best to only store the position of the limbs that are intended to move, to prevent knee-jerk reactions from the robot.
+
 
 
 \subsection{Designing a Performance}
