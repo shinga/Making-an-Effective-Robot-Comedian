@@ -1,9 +1,9 @@
 
-\section{Introduction - Design Document}
-
+\section{Design Document}
+\subsection{Introduction}
   Comedy can come from robots of any kind. A carpet cleaning bot could miscalculate the end of a floor and tumble down a flight of stairs, or a voice-assisted tool might accidentally confuse a \textit{Dinnertime Jazz} playlist for \textit{Death Metal Essentials}. These actions that happen around a human can become shared experiences and references for the observer. For every shared task between a robot and a human, the human will often feel more empathetic towards a robot that makes an effort to be more aware of surroundings\cite{DesignExBeh:2017}. If the robot wants to become an effective comedian, it will have to attempt to be empathetic as well; it has to listen to the response of a completed action, and consider the change the bot brought to the setting.
 
-\subsection{Scope}
+\subsubsection{Scope}
 This paper covers the research questions that will guide the investigation of the interaction between a crowd and
 a comedian robot, as well as the main design goals for implementing comedy behaviors on a NAO Robot. There
 are three areas of intended research. These areas include the development of the intelligent adaptions to the crowd
@@ -15,18 +15,18 @@ by the NAO robot, and the analysis of audience responses to our manipulations in
 and robot or human-like character. Both of these will be described in our final paper.
 
 
-  \subsection{Purpose}
+  \subsubsection{Purpose}
 	The purpose of this document is to describe the development of the robot comedian, which involves: (1) the three
 main research questions, (2) the robot behavior implementations, and (3) the experiments we plan to use to answer the
 research questions.
 
-\subsection{Intended Audience}
+\subsubsection{Intended Audience}
 	This document is intended for stakeholders and developers in the research project \textit{How to Make an Effective Robot Comedian}.
 
-	% The first section covers the adaptation algorithm, the components of a stand-up set, and audience response comprehension. The next section explains "crowd-work", and how we will examine the influence of incorporating the audience into the robot's performance. Finally, the last section will cover the diversity of being a robot comedian, and how the qualities of a robot characterize the comedian.
+	% The first subsection covers the adaptation algorithm, the components of a stand-up set, and audience response comprehension. The next subsection explains "crowd-work", and how we will examine the influence of incorporating the audience into the robot's performance. Finally, the last subsection will cover the diversity of being a robot comedian, and how the qualities of a robot characterize the comedian.
 
-\section{Research Design Overview}
-This section will cover the research questions for evaluating the effectiveness of a robot comedian. These questions will
+\subsection{Research Design Overview}
+This subsection will cover the research questions for evaluating the effectiveness of a robot comedian. These questions will
 be the basis of the implementation of the comedian system. All three research questions will be presented including
 software requirements needed to answer the questions, and the experimental methods that will generate quantitative
 data about what impacts audience experience, participation, and reactions.
@@ -36,14 +36,14 @@ response. The second question studies \textbf{crowd work} during a show, and the
 audience. Lastly, the third considers the implications of a perceivable \textbf{character} that the robot can portray, in particular robotic versus human-like.
 
 
-\subsection{Adaptation}
-\subsubsection{Goal}
+\subsubsection{Adaptation}
+\paragraph{Goal}
 We hypothesize that audiences will prefer a robot that acknowledges them, and integrates their data and responses into
 its set. To test this hypothesis we propose two tests: (1) to transition to topics dependent on the audience response,
 and (2) to present a crowd report upon completion of the set. The goal of this portion of the project is to determine
 if incorporating the audience into the set will enhance the overall performance of the comedian. To evaluate these
 hypotheses, we will conduct live studies in which people experience different versions of the software described below.
-\subsubsection{Methods}
+\paragraph{Methods}
 Generally, the performance will have two to three parts: the Seed Jokes, the Middle Content, and the Close. The Seed
 will influence the Middle Content (which will be chosen themed jokes and basis of the show). The Middle Content will
 transition to a intelligent or generalized Closing Joke when it is time to end the show.
@@ -90,8 +90,8 @@ with the crowd-work and character manipulations, testing the entire algorithm to
 people.
 
 
-\subsection{Crowd-work}
-\subsubsection{Goals}
+\subsubsection{Crowd-work}
+\paragraph{Goals}
 
 Similar to the crowd report described above, we hypothesize that generally interacting with the audience (a.k.a crowd-
 work) throughout the performance, will improve the audience’s overall enjoyment of the show. We want to analyze the
@@ -101,7 +101,7 @@ like they are a part of the show. This can be done in different ways - calling o
 the audience and incorporating them into the jokes, and asking them questions to keep them engaged, or to build off to
 make new jokes.
 
-\subsubsection{Methods}
+\paragraph{Methods}
 There are various kinds of crowd-work we want to test: one research question is whether crowdwork matters at all, and
 the second is does the crowdwork needs to be real or robot can just pretend it is paying attention?
 
@@ -143,9 +143,9 @@ the real version. That will be part of the evaluation.
 
 
 
-\subsection{Character}
-\subsubsection{Goal}
-The goal of this section of the project is to examine whether or not robot comedy can benefit from having jokes delivered
+\subsubsection{Character}
+\paragraph{Goal}
+The goal of this subsection of the project is to examine whether or not robot comedy can benefit from having jokes delivered
 from a robot’s perspective. Our hypotheses are that a robot presenting jokes about technology or being a robot will be
 funnier than a human telling the same jokes, and that robots will be less funny than humans at telling jokes from a
 human perspective.
@@ -159,7 +159,7 @@ However, Sj\"{o}bergh and Araki used word-play jokes that were gathered from the
 Despite this, there is little to no existing literature on the effectiveness of jokes related to the identity of the deliverer.
 In our context, this means examining the effectiveness of robot-specific jokes in robot comedy.
 
-\subsubsection{Methods}
+\paragraph{Methods}
 To address this goal, jokes will be written from a human or robot perspective. The jokes written from a human
 perspective will have a corresponding robot version, ideally with as much one-to-one correspondence as possible in
 regards to cadence, length of joke, parallel content, similar motions, and so forth. These jokes will be subject to intense
@@ -189,7 +189,7 @@ I'm no longer single. *throws hands up*
 (*@  \hl{Swiped right as fast as my motors could turn.}  @*)
 \end{lstlisting}
 
-\subsubsection{Development process of joke writing}
+\paragraph{Development process of joke writing}
 These jokes will be scripted in Choreographe, where adjustments to vocal tones and pausing will be made.
 Then, animating the robot for non-verbal gestures will be done to enhance the delivery.
 The overall process may look similar to Figure \ref{fig:write_process}.
@@ -201,7 +201,7 @@ The overall process may look similar to Figure \ref{fig:write_process}.
 	\label{fig:write_process}
 \end{figure}
 
-\subsubsection{Experimentation}
+\paragraph{Experimentation}
 The stand-up routine of the robot will comprise of text of the joke themselves, the motions that the robot uses to
 accompany them, and the way the robot surveys the audience after each punchline, e.g., in a human or robotic fashion.
 To determine the differences in audience response to the routines, studies will be done first on Amazon Mechanical
@@ -210,7 +210,7 @@ presented with a short survey. The routines will be between 5 and 10 minutes lon
 pertaining to each joke or routine. Participants will be compensated with standard rates for watching brief videos and
 answering survey questions.
 
-\section{Conclusion}
+\subsection{Conclusion}
 This document overviews our main Robot Comedy research questions, and the three software implementation targets
 for the capstone: adaptation, crowd work, and robotic versus human-like character. We hypothesize that all three will
 play a role in designing an effective robot comedian.
